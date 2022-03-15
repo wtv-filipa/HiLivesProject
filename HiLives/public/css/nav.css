@@ -1,0 +1,44 @@
+/*Profile img*/
+.profileImg {
+  position: relative;
+  border-radius: 50%;
+}
+
+/*Nav properties*/
+.navColor {
+  background-color: #ffffff;
+}
+.navbar {
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+a.nav-link {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  color: #000000 !important;
+  font-weight: 400;
+}
+
+span.name {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  color: #000000 !important;
+  font-weight: 400;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 69px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .logo {
+    width: 69px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 75px;
+  }
+}

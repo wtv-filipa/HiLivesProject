@@ -1,0 +1,30 @@
+/*Banner img*/
+.bg-cover {
+  background-size: cover !important;
+  min-height: 70vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.textBanner {
+  margin-top: 12rem;
+}
+
+/*Scroll down button*/
+.arrow a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+.arrow {
+  text-align: center;
+  margin: 18% 0 0 0;
+}
+
+/*About HiLives row*/
+
+.imgHome {
+  max-height: 500px;
+}

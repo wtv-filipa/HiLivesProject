@@ -1,0 +1,194 @@
+/*Fonts*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  color: #000000 !important;
+}
+
+p {
+  font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
+  color: #2f2f2f !important;
+  font-size: 16px !important;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.fontWhite {
+  color: #ffffff !important;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 8px !important;
+  background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(#005e89, #ae0168);
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/*Buttons*/
+.buttonDesign {
+  padding: 0.1rem;
+  font-size: 16px;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  border-radius: 5px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.buttonStudy {
+  border: 0.1em solid #ae0168;
+  color: #ae0168;
+}
+
+.buttonStudy:hover {
+  background-color: #ae0168;
+  color: #ffffff;
+  border: 0.1em solid #ae0168;
+}
+
+.buttonWork {
+  border: 0.1em solid #005e89;
+  color: #005e89;
+}
+
+.buttonWork:hover {
+  background-color: #005e89;
+  color: #ffffff;
+  border: 0.1em solid #005e89;
+}
+
+.buttonLoginSize {
+  width: 8rem;
+}
+
+.buttonLoginSize a {
+  text-decoration: none;
+  color: #005e89;
+}
+
+.buttonLoginSize a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.buttonHome {
+  border: 0.1em solid #000000;
+  color: #000000;
+}
+
+.buttonHome:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.1em solid #000000;
+}
+
+.buttonRegisterSize {
+  width: 8rem;
+}
+.buttonRegisterSizeHEI {
+  width: 16rem;
+}
+
+.buttonRegisterSize a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.buttonRegisterSize a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.buttonRegisterSizeHEI a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.buttonRegisterSizeHEI a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*backgrounds*/
+.greyBg {
+  background-color: #f8f8f8;
+}
+
+/*No horizontal scroll*/
+body {
+  overflow-x: hidden;
+}
+
+/*Footer*/
+.footer {
+  background: #EEEEEE;
+  color: #000000;
+}
+.footer .links ul {
+  list-style-type: none;
+}
+.footer .links li a {
+  color: #000000;
+  transition: color 0.2s;
+}
+.footer .links li a:hover {
+  text-decoration: none;
+  color: #4180CB;
+}
+.footer .about-company i {
+  font-size: 25px;
+}
+.footer .about-company a {
+  color: #000000;
+  transition: color 0.2s;
+}
+.footer .about-company a:hover {
+  color: #4180CB;
+}
+.footer .location i {
+  font-size: 16px;
+}
+.footer .copyright p {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
