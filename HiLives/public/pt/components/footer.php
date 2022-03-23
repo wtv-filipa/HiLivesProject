@@ -1,33 +1,48 @@
-<div class="mt-5 pt-5 pb-5 footer">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-5 col-xs-12 about-company">
-      <h2>Heading</h2>
-      <p class="pr-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
-      <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i class="fa fa-linkedin-square"></i></a></p>
-    </div>
-    <div class="col-lg-3 col-xs-12 links">
-      <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+<div class="pt-5 pb-5 footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-xs-12 aboutCompany">
+        <h3>HiLives</h3>
+        <p class="pr-5">A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
+        <p class="socialLinks">
+          <a href="http://hilives.web.ua.pt/" class="me-3">
+          <i class="fa-solid fa-globe"></i>
+          </a>
+          <a href="https://www.facebook.com/HiLives_Erasmus-111765073655672/" class="me-3">
+          <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/HiLives_Erasmus">
+          <i class="fa-brands fa-twitter"></i>
+          </a>
+        </p>
+      </div>
+      <div class="col-lg-3 col-xs-12 links">
+        <h4 class="mt-lg-0 mt-sm-3">Parceiros</h4>
         <ul class="m-0 p-0">
-          <li>- <a href="#">Lorem ipsum</a></li>
-          <li>- <a href="#">Nam mauris velit</a></li>
-          <li>- <a href="#">Etiam vitae mauris</a></li>
-          <li>- <a href="#">Fusce scelerisque</a></li>
-          <li>- <a href="#">Sed faucibus</a></li>
-          <li>- <a href="#">Mauris efficitur nulla</a></li>
+          <li><a href="https://www.ua.pt/">Universidade de Aveiro</a></li>
+          <li><a href="https://english.hi.is/university_of_iceland">Universidade da Islândia (UI)</a></li>
+          <li><a href="https://www.usal.es/">Universidade de Salamanca</a></li>
+          <li><a href="https://www.ugent.be/en">Universidade de Ghent</a></li>
+          <li><a href="https://assol.pt/">ASSOL</a></li>
+          <li><a href="https://www.formem.org.pt/">FORMEM</a></li>
+          <li><a href="https://paisemrede.pt/">Pais em Rede</a></li>
+          <li><a href="https://www.facebook.com/pages/category/Organization/AVISPT21-Associa%C3%A7%C3%A3o-de-Viseu-de-Portadores-de-Trissomia-21-1642598149403790/">AVISPT21</a></li>
         </ul>
+      </div>
+      <div class="col-lg-4 col-xs-12 links">
+        <h4 class="mt-lg-0 mt-sm-4">Outros</h4>
+        <ul class="m-0 p-0">
+          <li><a href="#">Acessibilidade</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li><a href="#">Mapa da Plataforma</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-lg-4 col-xs-12 location">
-      <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-      <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-      <p class="mb-0"><i class="fa fa-phone mr-3"></i>(541) 754-3010</p>
-      <p><i class="fa fa-envelope-o mr-3"></i>info@hsdf.com</p>
+    <hr>
+    <div class="row mt-2">
+      <div class="col copyright">
+        <p><small> Copyright © HiLives 2022. Todos os direitos reservados.</small></p>
+      </div>
     </div>
   </div>
-  <div class="row mt-5">
-    <div class="col copyright">
-      <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
-    </div>
-  </div>
-</div>
 </div>
