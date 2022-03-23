@@ -1,3 +1,4 @@
+/*Homepage without login*/
 /*Banner img*/
 .bg-cover {
   background-size: cover !important;
@@ -27,4 +28,10 @@ body {
 
 .imgHome {
   max-height: 500px;
+}
+
+/********************************************************************************************************************/
+
+.imgHomePerson {
+  max-width: 718px;
 }

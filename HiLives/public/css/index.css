@@ -102,6 +102,20 @@ h5 {
   width: 8rem;
 }
 
+.buttonHomeSize {
+  width: 14rem;
+}
+
+.buttonHomeSize a {
+  text-decoration: none;
+  color: #005e89;
+}
+
+.buttonHomeSize a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .buttonLoginSize a {
   text-decoration: none;
   color: #005e89;
@@ -157,12 +171,12 @@ h5 {
 
 /*No horizontal scroll*/
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 /*Footer*/
 .footer {
-  background: #EEEEEE;
+  background: #eeeeee;
   color: #000000;
 }
 .footer .links ul {
@@ -176,7 +190,7 @@ body {
 }
 .footer .links li a:hover {
   text-decoration: none;
-  color: #005E89;
+  color: #005e89;
 }
 .footer .aboutCompany i {
   font-size: 25px;
@@ -186,13 +200,13 @@ body {
   transition: color 0.2s;
 }
 .footer .aboutCompany a:hover {
-  color: #005E89;
+  color: #005e89;
 }
 
 .footer .copyright p {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer .socialLinks a{
+.footer .socialLinks a {
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 <!--Navbar WITHOUT login-->
-<nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
+<!-- <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
     <div class="container">
         <a class="navbar-brand me-5" href="index.php">
             <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-responsive logo" title="HiLives">
@@ -21,12 +21,12 @@
             </div>
         </div>
     </div>
-</nav>
-<!--Navbar WITH login
+</nav> -->
+<!--Navbar WITH login-->
 <nav class="navbar navbar-expand-lg navbar-light navColor">
     <div class="container">
         <a class="navbar-brand me-5" href="index.php">
-            <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-responsive logo" title="HiLives">
+            <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-responsive logo" title="HiLives">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
             </ul>
             <div class="d-flex align-middle">
                 <div>
-                    <img src="public/img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
+                    <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
                     <span class="name ms-1 align-middle">
                         A minha área
                     </span>
@@ -56,7 +56,7 @@
                     </span>
                     </div>
                     <div>
-                    <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
+                    <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
                     <span class="name ms-1 align-middle">
                        Português
                     </span>
@@ -64,4 +64,4 @@
             </div>
         </div>
     </div>
-</nav>-->
+</nav>
