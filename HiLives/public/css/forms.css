@@ -1,0 +1,93 @@
+/*Geral*/
+.weightTitle{
+    font-weight: 600 !important;
+}
+
+.greyFont {
+  border: 1px solid #d3d3d3;
+}
+
+.boldFont {
+  font-weight: 500;
+}
+
+label,
+input,
+textarea,
+a.small,
+option {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+}
+
+a.small {
+  text-decoration: none;
+  color: #000000;  
+  font-size: 14px;
+}
+a.small:hover {
+  color: #005E89 !important;
+}
+
+.asterisk {
+  color: #005E89 !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.reSize {
+  width: 150px;
+  height: auto;
+}
+
+/*Login*/
+
+.bg_login {
+  background-image: url("../img/fundo_cinza.png");
+  width: 100%;
+  background-size: cover;
+}
+
+/*Register*/
+.descricao {
+  font-size: 14px;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+}
+
+.bg_login_reg {
+  background-image: url("../img/fundo_cinza_g_reg.png");
+  width: 100%;
+  background-size: cover;
+}
+
+.label_margin {
+  margin-left: -1%;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #005E89;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .label_margin {
+    margin-left: 0;
+  }
+}

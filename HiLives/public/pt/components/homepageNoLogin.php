@@ -38,7 +38,7 @@
         </div>
         <h3 class="pt-5 pb-3">Já tens conta?</h3>
         <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-            <a href="#">Inicia sessão</a>
+            <a href="public/pt/pages/login.php">Inicia sessão</a>
         </button>
     </div>
 </section>

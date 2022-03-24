@@ -7,7 +7,7 @@
         <div class=" navbar-nav ms-auto">
             <div>
                 <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
-                    <a href="login.php">Iniciar Sessão</a>
+                    <a href="public/pt/pages/login.php">Iniciar Sessão</a>
                 </button>
                 <span class="name ms-2 me-2 align-middle">
                     |
