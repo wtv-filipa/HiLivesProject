@@ -15,21 +15,21 @@
         <p class="pb-3">Escolhe uma opção para dares início ao registo</p>
         <div class="row">
             <div class="col-12 col-md-4">
-                <img src="public/img/Person.svg" alt="Ícone da Pessoa com DID" class="img-responsive" title="Pessoa">
+                <img src="public/img/Person.svg" alt="Ícone da Pessoa com DID" class="img-fluid" title="Pessoa">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
                     <a href="#">Pessoa</a>
                 </button>
             </div>
             <div class="col-12 col-md-4">
-                <img src="public/img/HEI.svg" alt="Ícone da Instituição de Ensino Superior" class="img-responsive" title="Instituição de Ensino Superior">
+                <img src="public/img/HEI.svg" alt="Ícone da Instituição de Ensino Superior" class="img-fluid" title="Instituição de Ensino Superior">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">
                     <a href="#">Instituição de Ensino Superior</a>
                 </button>
             </div>
             <div class="col-12 col-md-4">
-                <img src="public/img/Comp.svg" alt="Ícone da Empresa" class="img-responsive" title="Empresa">
+                <img src="public/img/Comp.svg" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
                     <a href="#">Empresa</a>
@@ -46,7 +46,7 @@
 <section class="container-fluid">
     <div class="row">
         <div class="col-md-5 p-0">
-            <img src="public/img/homeAbout.webp" alt="Ícone da Empresa" class="img-responsive imgHome" title="Empresa">
+            <img src="public/img/homeAbout.webp" alt="Ícone da Empresa" class="img-fluid imgHome" title="Empresa">
         </div>
         <div class="col-md-5">
             <h3 class="pt-5">O que é o HiLives?</h3>
@@ -63,7 +63,7 @@
             <p>Se gostavas de trabalhar numa empresa experimenta connosco!</p>
         </div>
         <div class="col-md-2">
-            <img src="public/img/homeAbout2.webp" alt="Ícone da Empresa" class="img-responsive imgHome" title="Empresa">
+            <img src="public/img/homeAbout2.webp" alt="Ícone da Empresa" class="img-fluid imgHome" title="Empresa">
         </div>
     </div>
 </section>

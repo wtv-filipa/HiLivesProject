@@ -14,7 +14,7 @@
         <h2 class="pb-4">Porquê a HiLives?</h2>
         <div class="row">
             <div class="col-12 col-md-6 ps-4 pe-4">
-                <img src="../../img/study.svg" alt="Ícone de um livro" class="img-responsive" title="Pessoa">
+                <img src="../../img/study.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Curso</h3>
                 <p>Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
                 <br>
@@ -23,7 +23,7 @@
                 </button>
             </div>
             <div class="col-12 col-md-6 ps-4 pe-4">
-                <img src="../../img/work.svg" alt="Ícone de uma paste de trabalho" class="img-responsive" title="Instituição de Ensino Superior">
+                <img src="../../img/work.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Emprego</h3>
                 <p>Se queres entrar no mundo do trabalho e não sabes quais são as vagas que podes preencher, a HiLives ajuda-te a encontrar vagas com base nas tuas preferências.</p>
                 <br>
@@ -38,13 +38,13 @@
 <section class="container-fluid">
     <div class="row">
         <div class="col-md-6 p-0">
-            <img src="../../img/homeStories.webp" alt="Ícone da Empresa" class="img-responsive imgHomePerson" title="Empresa">
+            <img src="../../img/homeStories.webp" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
         </div>
-        <div class="col-md-5">
-            <h3 class="pt-5 pb-3">Queres ver histórias de outras pessoas?</h3>
+        <div class="col-md-4 ps-4 pe-4">
+            <h3 class="pt-5 pb-3 text-center">Queres ver histórias de outras pessoas?</h3>
             <ul>
-                <li class="pb-4">Tens acesso a histórias através de vídeos, textos, áudio e imagens.</li>
-                <li class="pt-4 pb-4">Podes partilhar as tuas histórias com as outras pessoas.</li>
+                <li class="pb-3">Tens acesso a histórias através de vídeos, textos, áudio e imagens.</li>
+                <li class="pb-4">Podes partilhar as tuas histórias com as outras pessoas.</li>
             </ul>
             <div class="text-center">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
@@ -52,8 +52,8 @@
                 </button>
             </div>
         </div>
-        <div class="col-md-1">
-            <img src="../../img/homeStories2.png" alt="Ícone da Empresa" class="img-responsive imgHomePerson" title="Empresa">
+        <div class="col-md-2">
+            <img src="../../img/homeStories2.png" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
         </div>
     </div>
 </section>
