@@ -25,14 +25,14 @@
                 <img src="public/img/HEI.svg" alt="Ícone da Instituição de Ensino Superior" class="img-fluid" title="Instituição de Ensino Superior">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">
-                    <a href="#">Instituição de Ensino Superior</a>
+                    <a href="public/pt/pages/registerHei.php">Instituição de Ensino Superior</a>
                 </button>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/Comp.svg" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-                    <a href="#">Empresa</a>
+                    <a href="public/pt/pages/registerComp.php">Empresa</a>
                 </button>
             </div>
         </div>
