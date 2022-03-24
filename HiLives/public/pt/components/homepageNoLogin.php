@@ -18,7 +18,7 @@
                 <img src="public/img/Person.svg" alt="Ícone da Pessoa com DID" class="img-fluid" title="Pessoa">
                 <br>
                 <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-                    <a href="#">Pessoa</a>
+                    <a href="public/pt/pages/registerPerson.php">Pessoa</a>
                 </button>
             </div>
             <div class="col-12 col-md-4">

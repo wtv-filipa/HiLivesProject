@@ -1,9 +1,9 @@
 /*Geral*/
-.weightTitle{
-    font-weight: 600 !important;
+.weightTitle {
+  font-weight: 600 !important;
 }
 
-.greyFont {
+.greyBorder {
   border: 1px solid #d3d3d3;
 }
 
@@ -15,21 +15,27 @@ label,
 input,
 textarea,
 a.small,
-option {
+option,
+.form-select {
   font-family: "Quicksand", "Montserrat", sans-serif !important;
+}
+
+.form-select,
+#data_nasc {
+  color: #6C757D !important;
 }
 
 a.small {
   text-decoration: none;
-  color: #000000;  
+  color: #000000;
   font-size: 14px;
 }
 a.small:hover {
-  color: #005E89 !important;
+  color: #005e89 !important;
 }
 
 .asterisk {
-  color: #005E89 !important;
+  color: #005e89 !important;
   font-weight: bold;
   font-size: 20px;
 }
@@ -63,27 +69,8 @@ a.small:hover {
   margin-left: -1%;
 }
 
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #005E89;
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
 input.invalid {
   background-color: #ffdddd;
-}
-
-.tab {
-  display: none;
 }
 
 @media only screen and (max-width: 600px) {

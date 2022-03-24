@@ -18,14 +18,14 @@
                                     <div class="form-group pb-4">
                                         <label class="boldFont mt-3 pb-2" for="inputEmail">Email</label>
                                         <div class="p-0 m-0">
-                                            <input type="email" class="form-control greyFont" id="inputEmail" name="email" placeholder="Escreve aqui o email da tua conta no HiLives" aria-required="true" required="required">
+                                            <input type="email" class="form-control greyBorder" id="inputEmail" name="email" placeholder="Escreve aqui o email da tua conta no HiLives" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <div class="form-group pb-4">
                                         <label class="boldFont mt-3 pb-2" for="password">Palavra-passe</label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyFont" id="password" name="password" placeholder="Escreve aqui a tua palavra-passe do HiLives" aria-required="true" required="required">
+                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Escreve aqui a tua palavra-passe do HiLives" aria-required="true" required="required">
                                         </div>
                                     </div>
 
