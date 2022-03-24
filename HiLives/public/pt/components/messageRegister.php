@@ -15,9 +15,11 @@
                                     <p class="mb-4 descricao">Para teres acesso à Plataforma HiLives, precisas de esperar que alguém te contacte para uma entrevista. Entraremos em contacto contigo, no máximo, em duas semanas.</p>
 
                                     <hr class="mt-4 mb-4">
-                                    <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">
-                                        <a href="../../../index.php">Voltar à página inicial</a>
-                                    </button>
+                                    <a href="../../../index.php">
+                                        <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">
+                                            Voltar à página inicial
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -6,9 +6,11 @@
         </a>
         <div class=" navbar-nav ms-auto">
             <div>
-                <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
-                    <a href="public/pt/pages/login.php">Iniciar Sessão</a>
+                <a href="public/pt/pages/login.php">
+                    <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
+                    Iniciar Sessão
                 </button>
+            </a>
                 <span class="name ms-2 me-2 align-middle">
                     |
                 </span>
@@ -49,18 +51,18 @@
                     <span class="name ms-1 align-middle">
                         A minha área
                     </span>
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <span class="name ms-2 me-2 align-middle">
                         |
                     </span>
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
                     <span class="name ms-1 align-middle">
-                       Português
+                        Português
                     </span>
-                    </div>
+                </div>
             </div>
         </div>
     </div>

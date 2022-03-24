@@ -17,53 +17,46 @@
             <div class="col-12 col-md-4">
                 <img src="public/img/Person.svg" alt="Ícone da Pessoa com DID" class="img-fluid" title="Pessoa">
                 <br>
-                <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-                    <a href="public/pt/pages/registerPerson.php">Pessoa</a>
-                </button>
+                <a href="public/pt/pages/registerPerson.php">
+                    <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Pessoa</button>
+                </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/HEI.svg" alt="Ícone da Instituição de Ensino Superior" class="img-fluid" title="Instituição de Ensino Superior">
                 <br>
-                <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">
-                    <a href="public/pt/pages/registerHei.php">Instituição de Ensino Superior</a>
-                </button>
+                <a href="public/pt/pages/registerHei.php">
+                    <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">Instituição de Ensino Superior</button>
+                </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/Comp.svg" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
                 <br>
-                <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-                    <a href="public/pt/pages/registerComp.php">Empresa</a>
-                </button>
+                <a href="public/pt/pages/registerComp.php">
+                    <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Empresa</button>
+                </a>
             </div>
         </div>
         <h3 class="pt-5 pb-3">Já tens conta?</h3>
-        <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">
-            <a href="public/pt/pages/login.php">Inicia sessão</a>
-        </button>
+        <a href="public/pt/pages/login.php">
+            <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Inicia sessão</button>
+        </a>
     </div>
 </section>
 <!-- About HiLives -->
-<section class="container-fluid">
-    <div class="row">
-        <div class="col-md-5 p-0">
-            <img src="public/img/homeAbout.webp" alt="Ícone da Empresa" class="img-fluid imgHome" title="Empresa">
-        </div>
-        <div class="col-md-5">
-            <h3 class="pt-5">O que é o HiLives?</h3>
-            <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia. </p>
+<section style="background: url(public/img/homeAbout.png)" class="jumbotron bgCoverSection">
+    <div class="bg-white ps-5 pe-3">
+        <h3 class="pt-5 text-center">O que é o HiLives?</h3>
+        <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia. </p>
 
-            <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
+        <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
 
-            <p>Esta plataforma permite o registo de três entidades diferentes: pessoas com DID, Instituições de Ensino Superior e empresas.</p>
-
+        <p>Esta plataforma permite o registo de três entidades diferentes: pessoas com DID, Instituições de Ensino Superior e empresas.</p>
+        <div class="ps-4">
             <h4>Queres estudar?</h4>
             <p>Gostas de artes? Línguas? Tecnologias? Gostavas de aprender numa universidade? Regista-te!</p>
 
             <h4>Procuras trabalhar?</h4>
             <p>Se gostavas de trabalhar numa empresa experimenta connosco!</p>
-        </div>
-        <div class="col-md-2">
-            <img src="public/img/homeAbout2.webp" alt="Ícone da Empresa" class="img-fluid imgHome" title="Empresa">
         </div>
     </div>
 </section>
