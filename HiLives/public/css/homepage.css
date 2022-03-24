@@ -5,22 +5,6 @@
   min-height: 70vh;
 }
 
-.bgCoverSection{
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: 468px;
-}
-
-.bg-white{
-  max-width: 555px;
-  min-height: 468px;
-  background-color: #FFFFFF;
-  float: right;
-  margin-left: 28%;
-  margin-right: 28%;
-}
-
 body {
   min-height: 100vh;
 }
@@ -50,4 +34,71 @@ body {
 
 .imgHomePerson {
   max-width: 718px;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 320px) {
+}
+
+@media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1580px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (min-width: 1901px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
 }
