@@ -102,6 +102,14 @@ h5 {
   border: 0.1em solid #005e89;
 }
 
+.buttonWork a {
+  color: #005e89 !important;
+}
+
+.buttonWork a:hover {
+  color: #ffffff !important;
+}
+
 .buttonLoginSize {
   width: 8rem;
 }
