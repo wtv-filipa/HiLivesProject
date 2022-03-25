@@ -236,3 +236,21 @@ body {
 .shadowCard{
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
+
+/*Breadcrumbs*/
+
+.breadcrumb-item, .breadcrumb-item a {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  color: #000000 !important;
+  font-size: 14px !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover{
+  font-weight: 600 !important;
+  color: #005E89 !important;
+}
+
+.breadcrumb-item.active{
+  font-weight: 600 !important;
+}

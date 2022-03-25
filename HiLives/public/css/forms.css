@@ -21,7 +21,8 @@ option,
 }
 
 .form-select,
-#data_nasc {
+#data_nasc,
+#data {
   color: #6C757D !important;
 }
 
@@ -36,6 +37,12 @@ a.small:hover {
 
 .asterisk {
   color: #005e89 !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.asteriskPink {
+  color: #AE0168 !important;
   font-weight: bold;
   font-size: 20px;
 }
@@ -77,4 +84,11 @@ input.invalid {
   .label_margin {
     margin-left: 0;
   }
+}
+
+/*Upload course*/
+.bg_horizontal_28 {
+  background-image: url("../img/fundo_cinza_28.png");
+  width: 100%;
+  background-size: cover;
 }
