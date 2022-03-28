@@ -9,8 +9,9 @@
 </head>
 
 <body class="bg_horizontal_28">
-        <?php include "../components/navbar.php"; ?>
-        <?php include "../components/editCourse.php"; ?>
+    <?php include "../components/navbar.php"; ?>
+    <?php include "../components/editCourse.php"; ?>
+    <?php include "../components/footer.php"; ?>
 </body>
 
 </html>

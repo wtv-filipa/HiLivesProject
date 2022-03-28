@@ -25,7 +25,7 @@
     </div>
 </nav> -->
 <!--Navbar WITH login-->
-<nav class="navbar navbar-expand-lg navbar-light navColor">
+<nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
     <div class="container">
         <a class="navbar-brand me-5" href="index.php">
             <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">

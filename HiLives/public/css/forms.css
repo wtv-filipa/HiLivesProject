@@ -16,13 +16,16 @@ input,
 textarea,
 a.small,
 option,
-.form-select {
+.form-select,
+input.file-upload.mb-3,
+div.alert.alert-warning {
   font-family: "Quicksand", "Montserrat", sans-serif !important;
 }
 
 .form-select,
 #data_nasc,
-#data {
+#data,
+input#file-upload-button {
   color: #6C757D !important;
 }
 
@@ -91,4 +94,68 @@ input.invalid {
   background-image: url("../img/fundo_cinza_28.png");
   width: 100%;
   background-size: cover;
+}
+
+/*Upload HiLives Stories*/
+div.alert.alert-warning {
+  font-weight: 600;
+}
+
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  margin: 0;
+  opacity: 0;
+}
+
+.custom-file-input:focus~.custom-file-label {
+  border-color: #bac8f3;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.custom-file-input:disabled~.custom-file-label {
+  background-color: #eaecf4;
+}
+
+.custom-file-input:lang(pt)~.custom-file-label::after {
+  content: "Procurar";
+}
+
+.custom-file-input~.custom-file-label[data-browse]::after {
+  content: attr(data-browse);
+}
+
+.custom-file-label {
+  position: absolute;
+  right: 47px;
+  left: 47px;
+  z-index: 1;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4E4E4E;
+  background-color: #fff;
+  border: 1px solid #d1d3e2;
+  border-radius: 0.35rem;
+}
+
+.custom-file-label::after {
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  height: calc(1.5em + 0.75rem);
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+  content: "Procurar";
+  background-color: #005E89;
+  border-left: inherit;
+  border-radius: 0 0.35rem 0.35rem 0;
 }
