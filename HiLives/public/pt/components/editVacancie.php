@@ -105,7 +105,7 @@
 
                             <div class="form-group text-center mt-4">
                                 <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                    <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Adicionar</button>
+                                    <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Guardar</button>
                                 </div>
                             </div>
                         </form>
