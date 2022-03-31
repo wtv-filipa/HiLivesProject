@@ -159,3 +159,11 @@ div.alert.alert-warning {
   border-left: inherit;
   border-radius: 0 0.35rem 0.35rem 0;
 }
+
+/*Upload vacancie*/
+
+.bg_vertical_28 {
+  background-image: url("../img/fundo_cinza_g_reg_28.png");
+  width: 100%;
+  background-size: cover;
+}
