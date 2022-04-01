@@ -1,0 +1,8 @@
+.subtitulo {
+    color: #005E89 !important;
+}
+
+ol.infoSize li {
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
+    font-size: 14px;
+}
