@@ -15,8 +15,8 @@
         <div class="row">
             <div class="col-12 col-md-6 ps-4 pe-4">
                 <img src="../../img/study.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
-                <h3 class="mt-4 pb-2">Ajudamo-lo a procurar candidatos</h3>
-                <p>Se está à procura de recursos humanos para a sua empresa, a HiLives vai indicar-lhe quais são os candidatos que melhor se enquadram nas características pretendidas.</p>
+                <h3 class="mt-4 pb-2">Contacto com Pessoas com DID</h3>
+                <p>Se tem um curso adequado a pessoas com DID, a HiLives vai indicar-lhe quais são os candidatos que melhor se enquadram nas características do curso.</p>
                 <br>
                 <a href="#">
                     <button class="btn buttonDesign buttonWork buttonHomeCompSize m-0">
@@ -26,8 +26,8 @@
             </div>
             <div class="col-12 col-md-6 ps-4 pe-4">
                 <img src="../../img/work.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
-                <h3 class="mt-4 pb-2">Ajudamo-lo a divulgar vagas de trabalho</h3>
-                <p>Se tem vagas disponíveis na sua empresa basta publicá-las nesta plataforma e a HiLives ajuda-o na sua divulgação junta das Pessoas com DID.</p>
+                <h3 class="mt-4 pb-2">Ajudamo-lo a divulgar cursos</h3>
+                <p>Se tem cursos disponíveis na sua instituição basta publicá-los nesta plataforma e a HiLives ajuda-o na sua divulgação junta das Pessoas com DID.</p>
                 <br>
                 <a href="#">
                     <button class="btn buttonDesign buttonWork buttonHomeCompSize m-0">
@@ -44,7 +44,7 @@
         <h3 class="pt-5 pb-5 text-center">Quer ver histórias das Pessoas com DID?</h3>
         <ul>
             <li class="pb-5">Tem acesso a histórias através de vídeos, textos, áudio e imagens.</li>
-            <li class="pb-5">Pode partilhar as histórias das pessoas com DID que trabalham na empresa.</li>
+            <li class="pb-5">Pode partilhar as histórias das pessoas com DID que frequentam a sua instituição.</li>
         </ul>
         <div class="text-center">
             <a href="#">
