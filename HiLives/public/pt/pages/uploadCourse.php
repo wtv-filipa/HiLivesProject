@@ -12,6 +12,8 @@
     <?php include "../components/navbar.php"; ?>
     <?php include "../components/uploadCourse.php"; ?>
     <?php include "../components/footer.php"; ?>
+
+    <?php include "../../helpers/js.php"; ?>
 </body>
 
 </html>

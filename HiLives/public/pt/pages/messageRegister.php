@@ -10,6 +10,7 @@
 
 <body class="bg_login_reg">
     <?php include "../components/messageRegister.php"; ?>
+    
     <?php include "../../helpers/js.php"; ?>
 </body>
 

@@ -10,6 +10,8 @@
 
 <body class="bg_login">
         <?php include "../components/login.php"; ?>
+
+        <?php include "../../helpers/js.php"; ?>
 </body>
 
 </html>

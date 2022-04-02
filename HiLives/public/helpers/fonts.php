@@ -13,4 +13,3 @@
 
 <!--CSS fontawesome-->
 <link rel="stylesheet" href="https://static.ua.pt/css/font-awesome-pro/5.8.1/css/all.min.css" />
-<script src="https://kit.fontawesome.com/55f787b303.js" crossorigin="anonymous"></script>

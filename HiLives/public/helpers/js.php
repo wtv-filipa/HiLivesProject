@@ -6,3 +6,6 @@
 
 <!--userway-->
 <script data-account="9sijSpsZ5M" src="https://cdn.userway.org/widget.js"></script>
+
+<!--fontawesome-->
+<script src="https://kit.fontawesome.com/55f787b303.js" crossorigin="anonymous"></script>
