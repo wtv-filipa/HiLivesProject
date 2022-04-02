@@ -152,8 +152,13 @@ h5 {
 .buttonRegisterSize {
   width: 8rem;
 }
+
 .buttonRegisterSizeHEI {
   width: 16rem;
+}
+
+.buttonHomeCompSize {
+  width: 10rem;
 }
 
 .buttonRegisterSize a {
