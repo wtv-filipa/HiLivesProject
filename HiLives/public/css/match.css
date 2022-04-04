@@ -32,18 +32,6 @@
 }
 
 /*I want to study*/
-ul#cardMatch {
-  margin: 0 auto;
-  padding: 0 !important;
-  max-height: 390px;
-  overflow-y: auto;
-  padding: 5px 5px 0 5px;
-  border-left: none;
-  border-right: none;
-  display: block;
-  width: 100%;
-}
-
 .list {
   font-family: "Quicksand", "Montserrat", sans-serif !important;
   list-style: none;

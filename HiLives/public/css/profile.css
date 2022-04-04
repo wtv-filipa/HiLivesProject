@@ -1,0 +1,97 @@
+.imgProfile {
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 152px;
+  height: 152px;
+}
+
+.textEdit{
+    font-family: "Quicksand", "Montserrat", sans-serif !important;
+    font-size: 15px !important;
+}
+
+a.buttonEdit{
+    color: #000000;
+    text-decoration: none;
+}
+
+a.buttonEdit:hover{
+    color: #005E89;
+}
+
+/*Tabs*/
+.profileTabs .nav-link {
+  color: #858585 !important;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+}
+
+.profileTabs .nav-link.active {
+  color: #000000 !important;
+}
+
+.nav-tabs.profileTabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-color: #000000 #ffffff #ffffff !important;
+}
+
+.nav-tabs.profileTabs {
+  border-top: 1px solid #dee2e6 !important;
+  border-bottom: none !important;
+}
+
+.nav-tabs.profileTabs .nav-link {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.nav-tabs.profileTabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: #ffffff #ffffff #ffffff;
+  isolation: isolate;
+}
+
+/*cards*/
+.items {
+  list-style: none;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+
+.itemsBigger {
+    padding: 15px 15px 15px 25px;
+  }
+
+.itemsSmaller {
+    padding: 10px 15px 10px 25px;
+  }
+
+.itemsStudy {
+  background-image: linear-gradient(
+    90deg,
+    #ae0168 10px,
+    #ffffff 10px,
+    #ffffff 11px,
+    transparent 11px
+  );
+}
+
+.itemsWork {
+    background-image: linear-gradient(
+      90deg,
+      #005E89 10px,
+      #ffffff 10px,
+      #ffffff 11px,
+      transparent 11px
+    );
+  }
+
+.cardInfo14{
+    font-size: 14px !important;
+}
+
+.cardInfo13{
+    font-size: 13px !important;
+}
