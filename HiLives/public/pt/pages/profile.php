@@ -10,7 +10,7 @@
 
 <body>
     <?php include "../components/navbar.php"; ?>
-    <?php include "../components/profilePerson.php"; ?>
+    <?php include "../components/profileHei.php"; ?>
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>
