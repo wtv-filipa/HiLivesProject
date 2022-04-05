@@ -1,0 +1,145 @@
+/*Geral*/
+.bgGreyInfo {
+  background-color: #f8f8f8;
+}
+
+.breadcrumb.infosbreadcrumb{
+    margin-bottom: 0 !important;
+    padding-bottom: 1rem !important;
+}
+
+/*Courses*/
+.textPink {
+  color: #ae0168 !important;
+}
+
+/*Tabs*/
+.infoTabs .nav-link {
+  color: #858585 !important;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+}
+
+.infoTabs .nav-link.active {
+  color: #000000 !important;
+}
+
+.nav-tabs.infoTabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-color: #000000 #ffffff #ffffff !important;
+}
+
+.nav-tabs.infoTabs {
+  border-top: 1px solid #dee2e6 !important;
+  border-bottom: none !important;
+}
+
+.nav-tabs.infoTabs .nav-link {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.nav-tabs.infoTabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: #ffffff #ffffff #ffffff;
+  isolation: isolate;
+}
+
+/*Cards*/
+.infos {
+  list-style: none;
+  background-color: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+
+.infosSmaller {
+  padding: 10px 15px 10px 25px;
+}
+
+.itemsInfosCourses {
+  background-image: linear-gradient(
+    90deg,
+    #ae0168 10px,
+    #ffffff 10px,
+    #ffffff 11px,
+    transparent 11px
+  );
+}
+
+a.linkContacts {
+  text-decoration: none !important;
+  color: #000000 !important;
+}
+
+a.linkContacts:hover {
+  color: #005e89 !important;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 320px) {
+}
+
+@media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1580px) {
+  .bgCoverSectionInfo {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .bgCoverSectionInfo {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (min-width: 1901px) {
+  .bgCoverSectionInfo {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
