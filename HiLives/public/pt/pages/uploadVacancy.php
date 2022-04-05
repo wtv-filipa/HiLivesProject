@@ -10,7 +10,7 @@
 
 <body class="bg_vertical_28">
     <?php include "../components/navbar.php"; ?>
-    <?php include "../components/uploadVacancie.php"; ?>
+    <?php include "../components/uploadVacancy.php"; ?>
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>

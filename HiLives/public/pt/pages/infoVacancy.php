@@ -3,18 +3,17 @@
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Adicionar um curso</title>
+    <title>Ligações com IES</title>
     <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_forms.php"; ?>
+    <?php include "../../helpers/css_info.php"; ?>
 </head>
 
-<body class="bg_vertical_28">
+<body>
     <?php include "../components/navbar.php"; ?>
-    <?php include "../components/editVacancie.php"; ?>
+    <?php include "../components/infoVacancy.php"; ?>
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>
-    <?php include "../../helpers/js_upload.php"; ?>
 </body>
 
 </html>

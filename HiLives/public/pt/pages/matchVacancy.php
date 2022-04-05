@@ -10,7 +10,7 @@
 
 <body>
     <?php include "../components/navbar.php"; ?>
-    <?php include "../components/matchVacancie.php"; ?>
+    <?php include "../components/matchVacancy.php"; ?>
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>
