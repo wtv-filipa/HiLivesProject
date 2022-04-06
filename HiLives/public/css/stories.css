@@ -1,0 +1,29 @@
+/*Add stories nav*/
+.navBgColor {
+  background-color: #005e89;
+}
+
+.navBgColor.sticky-top {
+  top: 6.5% !important;
+  z-index: 500 !important;
+}
+
+.navbar-text.navstories {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  font-size: 20px;
+  font-weight: 800;
+  width: 100%;
+}
+
+.navbar-text.navstories a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-text.navstories a:hover{
+    color: #ffffff;
+}
+
+.arrowRight {
+  padding-left: 85%;
+}
