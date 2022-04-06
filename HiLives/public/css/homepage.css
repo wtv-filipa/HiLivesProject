@@ -36,6 +36,18 @@ body {
   max-width: 718px;
 }
 
+/*Tutor*/
+.heightEqual{
+  min-height: 96px !important;
+}
+
+.imgProfilePerson{
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  border: 7px solid #ae0168;
+}
+
 /*Media queries*/
 @media only screen and (max-width: 320px) {
 }

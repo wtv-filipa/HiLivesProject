@@ -1,0 +1,10 @@
+.heightEqual{
+    min-height: 96px !important;
+  }
+  
+  .imgProfilePerson{
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    border: 7px solid #ae0168;
+  }
