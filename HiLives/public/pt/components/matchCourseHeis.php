@@ -10,7 +10,7 @@
     <p class="pb-4">Nesta página encontra todas as suas ligações com possíveis candidatos a Cursos nas Instituições de Ensino Superior.</p>
 
     <section class="row pb-5">
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-3">
+        <div id="cardMatch" class="col-md-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">

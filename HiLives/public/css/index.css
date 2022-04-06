@@ -54,6 +54,16 @@ a.linkIcons:hover{
   color: #005e89;
 }
 
+a.linkIconsStudy{
+  text-decoration: none;
+  color: #000000;
+}
+
+a.linkIconsStudy:hover{
+  text-decoration: none;
+  color: #ae0168;
+}
+
 /************************************************************************************/
 
 /*scrollbar*/
