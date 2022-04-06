@@ -44,6 +44,16 @@ h5 {
   color: #ffffff !important;
 }
 
+a.linkIcons{
+  text-decoration: none;
+  color: #000000;
+}
+
+a.linkIcons:hover{
+  text-decoration: none;
+  color: #005e89;
+}
+
 /************************************************************************************/
 
 /*scrollbar*/
