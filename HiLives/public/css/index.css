@@ -130,6 +130,17 @@ a.linkIconsStudy:hover{
   color: #ffffff !important;
 }
 
+.buttonCancel {
+  border: 0.1em solid #000000;
+  color: #000000;
+}
+
+.buttonCancel:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.1em solid #000000;
+}
+
 .buttonLoginSize {
   width: 8rem;
 }

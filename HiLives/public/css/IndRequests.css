@@ -1,0 +1,155 @@
+/*Geral*/
+.accordion-button {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.accordion-item {
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+
+.bgGreyReq,
+.accordion-body {
+  background-color: #f8f8f8;
+}
+
+.breadcrumb.reqBreadcrumb {
+  margin-bottom: 0 !important;
+  padding-bottom: 1rem !important;
+}
+
+.textPink {
+  color: #ae0168 !important;
+}
+
+.textBlue {
+  color: #005e89 !important;
+}
+
+.imageLearn {
+  width: 100%;
+  display: block !important;
+  margin: auto !important;
+  text-align: center;
+}
+
+/*Match cards*/
+.list {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  list-style: none;
+  background-color: #ffffff;
+  padding: 15px 15px 15px 25px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+
+.listStudy {
+  background-image: linear-gradient(
+    90deg,
+    #ae0168 10px,
+    #ffffff 10px,
+    #ffffff 11px,
+    transparent 11px
+  );
+}
+
+.listWork {
+  background-image: linear-gradient(
+    90deg,
+    #005e89 10px,
+    #ffffff 10px,
+    #ffffff 11px,
+    transparent 11px
+  );
+}
+
+/*Media queries*/
+@media only screen and (max-width: 320px) {
+}
+
+@media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1580px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
+
+@media only screen and (min-width: 1901px) {
+  .bgCoverSection {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 468px;
+  }
+
+  .bg-white {
+    max-width: 555px;
+    min-height: 468px;
+    background-color: #ffffff;
+    float: right;
+    margin-left: 28%;
+    margin-right: 28%;
+  }
+}
