@@ -3,7 +3,48 @@
     <div class="row justify-content-center">
 
         <div class="col-md-10 col-lg-6">
+            <?php
+            if (isset($_SESSION["login"])) {
+                $msg_show = true;
+                switch ($_SESSION["login"]) {
+                    case 1:
+                        $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                        $class = "alert-warning";
+                        $_SESSION["login"] = 0;
+                        break;
+                    case 2:
+                        $message = "É necessário ter todos os campos preenchidos.";
+                        $class = "alert-warning";
+                        $_SESSION["login"] = 0;
+                        break;
+                    case 3:
+                        $message = "Dados inseridos incorretos, por favor tente novamente.";
+                        $class = "alert-warning";
+                        $_SESSION["login"] = 0;
+                        break;
+                    case 4:
+                        $message = "Registo efetuado com sucesso!";
+                        $class = "alert-success";
+                        $_SESSION["login"] = 0;
+                        break;
+                    case 0:
+                        $msg_show = false;
+                        break;
+                    default:
+                        $msg_show = false;
+                        $_SESSION["login"] = 0;
+                }
 
+                if ($msg_show == true) {
+                    echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                                <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                                <span title=\"Fechar\" aria-hidden=\"true\">&times;</span>
+                                </button>
+                                </div>";
+                    echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                }
+            }
+            ?>
             <div class="card o-hidden border-0 shadowCard my-5">
                 <div class="card-body p-0">
                     <div class="row">
