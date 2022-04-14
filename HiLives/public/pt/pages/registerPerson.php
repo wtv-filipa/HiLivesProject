@@ -1,50 +1,70 @@
-<!DOCTYPE html>
-<html lang="pt">
+<?php
+session_start();
+if (!isset($_SESSION["idUser"])) {
+?>
+    <!DOCTYPE html>
+    <html lang="pt">
 
-<head>
-    <?php include "../../helpers/meta.php"; ?>
-    <title>Iniciar sessão</title>
-    <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_forms.php"; ?>
-</head>
+    <head>
+        <?php include "../../helpers/meta.php"; ?>
+        <title>Registo</title>
+        <?php include "../../helpers/fonts.php"; ?>
+        <?php include "../../helpers/css_forms.php"; ?>
+    </head>
 
-<body class="bg_login_reg">
-    <?php include "../components/registerPerson.php"; ?>
+    <body class="bg_vertical_28">
+        <?php include "../components/registerPerson.php"; ?>
 
-    <script>
-        function checkPass() {
-         //Store the password field objects into variables ...
-         var pass1 = $("#register-form #password");
-         var pass2 = $("#register-form #password_confirm");
+        <script>
+            /*Password check*/
+            function checkPass() {
+                var pass1 = $("#register-form #password");
+                var pass2 = $("#register-form #password_confirm");
 
-         console.log(pass1.value, pass2);
-         //Store the Confimation Message Object ...
-         var message = $('#confirmMessage');
-         //Set the colors we will be using ...
-         var goodColor = "#66cc66";
-         var badColor = "#ff6666";
-         var opacidade = "0.7";
-         //Compare the values in the password field
-         //and the confirmation field
-         if (pass1.val() == pass2.val()) {
-             //The passwords match.
-             //Set the color to the good color and inform
-             //the user that they have entered the correct password
-             pass2.css("backgroundColor", goodColor);
-             message.css("color", goodColor);
-             message.html("As palavras-passe estão iguais!");
-         } else {
-             //The passwords do not match.
-             //Set the color to the bad color and
-             //notify the user.
-             pass2.css("backgroundColor", badColor);
-             pass2.css("opacity", opacidade);
-             message.css("color", badColor);
-             message.html("As palavras-passe estão diferentes!");
-         }
-     }
-    </script>
-    <?php include "../../helpers/js.php"; ?>
-</body>
+                console.log(pass1.value, pass2);
+                var message = $('#confirmMessage');
+                var goodColor = "#66cc66";
+                var badColor = "#ff6666";
+                var opacidade = "0.7";
+                if (pass1.val() == pass2.val()) {
+                    //The passwords match.
+                    pass2.css("backgroundColor", goodColor);
+                    message.css("color", goodColor);
+                    message.html("As palavras-passe estão iguais!");
+                } else {
+                    //The passwords do not match.
+                    pass2.css("backgroundColor", badColor);
+                    pass2.css("opacity", opacidade);
+                    message.css("color", badColor);
+                    message.html("As palavras-passe estão diferentes!");
+                }
+            }
 
-</html>
+            /*Change regions*/
+            var select = document.getElementById("pais");
+            var formularios = document.querySelectorAll('.formulario');
+
+            select.onchange = function() {
+                for (var i = 0; i < formularios.length; i++) formularios[i].style.display = 'none';
+                var divID = select.options[select.selectedIndex].value;
+                var div = document.getElementById(divID);
+                div.style.display = 'block';
+            };
+        </script>
+        <?php include "../../helpers/js.php"; ?>
+    </body>
+
+    </html>
+<?php
+} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
+    header("Location: admin/index.php");
+} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 7) {
+    header("Location: homeComp.php");
+} else  if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
+    header("Location: homePerson.php");
+} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 13) {
+    header("Location: homeHei.php");
+} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 16) {
+    header("Location: homeTutor.php");
+}
+?>

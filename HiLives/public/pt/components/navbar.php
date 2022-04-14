@@ -1,44 +1,11 @@
 <?php
-require_once("connections/connection.php");
-if (isset($_SESSION["type"]) && isset($_SESSION["idUser"])) {
-    $User_type = $_SESSION["type"];
-    $idUser = $_SESSION["idUser"];
-}
+require_once("../../connections/connection.php");
 $link = new_db_connection();
 $stmt = mysqli_stmt_init($link);
 
-?>
-<!--Navbar WITHOUT login-->
-<?php
-if (!isset($_SESSION["idUser"])) {
-?>
-    <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
-        <div class="container">
-            <a class="navbar-brand me-5" href="index.php">
-                <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
-            </a>
-            <div class=" navbar-nav ms-auto">
-                <div>
-                    <a href="public/pt/pages/login.php">
-                        <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
-                            Iniciar Sessão
-                        </button>
-                    </a>
-                    <span class="name ms-2 me-2 align-middle">
-                        |
-                    </span>
-                </div>
-                <div class="align-middle">
-                    <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
-                    <span class="name ms-1 align-middle">
-                        Português
-                    </span>
-                </div>
-            </div>
-        </div>
-    </nav>
-<?php
-} else {
+if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
+    $User_type = $_SESSION["type"];
+    $idUser = $_SESSION["idUser"];
 ?>
     <!--Navbar WITH login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
@@ -79,6 +46,35 @@ if (!isset($_SESSION["idUser"])) {
                             Português
                         </span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<?php
+} else {
+?>
+    <!--Navbar WITHOUT login-->
+    <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
+        <div class="container">
+            <a class="navbar-brand me-5" href="index.php">
+                <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+            </a>
+            <div class=" navbar-nav ms-auto">
+                <div>
+                    <a href="public/pt/pages/login.php">
+                        <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
+                            Iniciar Sessão
+                        </button>
+                    </a>
+                    <span class="name ms-2 me-2 align-middle">
+                        |
+                    </span>
+                </div>
+                <div class="align-middle">
+                    <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
+                    <span class="name ms-1 align-middle">
+                        Português
+                    </span>
                 </div>
             </div>
         </div>

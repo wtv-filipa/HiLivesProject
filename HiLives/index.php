@@ -13,7 +13,7 @@ if (!isset($_SESSION["idUser"])) {
     </head>
 
     <body>
-        <?php include "public/pt/components/navbar.php"; ?>
+        <?php include "public/pt/components/navbarHomeNoLogin.php"; ?>
         <?php include "public/pt/components/homepageNoLogin.php"; ?>
         <?php include "public/pt/components/footer.php"; ?>
 

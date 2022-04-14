@@ -55,6 +55,9 @@ a.small:hover {
   height: auto;
 }
 
+.paddingCheck{
+  padding-left: 2.3rem !important;
+}
 /*Login*/
 
 .bg_login {
