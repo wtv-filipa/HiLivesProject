@@ -1,7 +1,7 @@
 <div class="col-12 text-center mt-5">
     <h1>Página em construção!</h1>
     <p>Lamentamos, mas esta página ainda não se encontra finalizada...</p>
-    <a href="../../../index.php">
+    <a href="homePerson.php">
         <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">
             Voltar à página inicial
         </button>
