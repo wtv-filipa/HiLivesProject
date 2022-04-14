@@ -1,9 +1,60 @@
+<?php
+require_once("../../connections/connection.php");
+
+//querys
+$query2 = "SELECT idRegion, name_region FROM region 
+INNER JOIN country ON region.country_idcountry = country.idcountry
+WHERE name_country = 'Portugal'";
+
+$query3 = "SELECT idRegion, name_region FROM region 
+INNER JOIN country ON region.country_idcountry = country.idcountry
+WHERE name_country = 'Espanha'";
+
+$query4 = "SELECT idRegion, name_region FROM region 
+INNER JOIN country ON region.country_idcountry = country.idcountry
+WHERE name_country = 'Bélgica'";
+
+$query5 = "SELECT idRegion, name_region FROM region 
+INNER JOIN country ON region.country_idcountry = country.idcountry
+WHERE name_country = 'Islândia'";
+?>
 <div class="container">
 
     <div class="row justify-content-center">
 
         <div class="col-md-10 col-lg-6">
+            <?php
+            if (isset($_SESSION["register"])) {
+                $msg_show = true;
+                switch ($_SESSION["register"]) {
+                    case 1:
+                        $message = "Ocorreu um erro no registo, por favor tente novamente.";
+                        $class = "alert-warning";
+                        $_SESSION["register"] = 0;
+                        break;
+                    case 2:
+                        $message = "É necessário preencher todos os campos obrigatórios.";
+                        $class = "alert-warning";
+                        $_SESSION["register"] = 0;
+                        break;
+                    case 0:
+                        $msg_show = false;
+                        break;
+                    default:
+                        $msg_show = false;
+                        $_SESSION["register"] = 0;
+                }
 
+                if ($msg_show == true) {
+                    echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                                <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                                <span title=\"Fechar\" aria-hidden=\"true\">&times;</span>
+                                </button>
+                                </div>";
+                    echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                }
+            }
+            ?>
             <div class="card o-hidden border-0 shadowCard my-5">
                 <div class="card-body p-0">
                     <div class="row">
@@ -13,7 +64,7 @@
                                     <a href="../../../index.php"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
                                     <h1 class="mb-4 weightTitle">Junte-se a nós!</h1>
                                 </div>
-                                <form method="post" role="form" id="register-form" action="scripts/login.php">
+                                <form method="post" role="form" id="register-form" action="../../scripts/registerComp.php">
                                     <p style="font-size: 14px; color: #005E89 !important;">* Preenchimento
                                         obrigatório</p>
                                     <!--NAME-->
@@ -74,14 +125,87 @@
                                         </select>
                                     </div>
 
-                                    <!--REGION-->
-                                    <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="pais">Região da empresa <span class="asterisk">*</span></label>
-                                        <select class="form-select greyBorder" id="pais">
-                                            <option value="pt">Portugal</option>
-                                            <option value="es">Espanha</option>
-                                            <option value="be">Bélgica</option>
-                                            <option value="ic">Islândia</option>
+                                    <!--REGION PORTUGAL-->
+                                    <div class="form-group pb-4 formulario" id="pt">
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                        <select class="form-select greyBorder" id="regiao" name="regiao">
+                                            <option selected disabled>Selecione uma opção</option>
+                                            <?php
+                                            $link = new_db_connection();
+                                            $stmt = mysqli_stmt_init($link);
+                                            if (mysqli_stmt_prepare($stmt, $query2)) {
+                                                if (mysqli_stmt_execute($stmt)) {
+                                                    mysqli_stmt_bind_result($stmt, $idRegion, $name_region);
+                                                    while (mysqli_stmt_fetch($stmt)) {
+                                                        echo "\n\t\t<option value=\"$idRegion\">$name_region</option>";
+                                                    }
+                                                    mysqli_stmt_close($stmt);
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+
+                                    <!--REGION SPAIN-->
+                                    <div class="form-group pb-4 formulario" style="display:none;" id="es">
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                        <select class="form-select greyBorder" id="regiao" name="regiao">
+                                            <option selected disabled>Selecione uma opção</option>
+                                            <?php
+                                            $link = new_db_connection();
+                                            $stmt = mysqli_stmt_init($link);
+                                            if (mysqli_stmt_prepare($stmt, $query3)) {
+                                                if (mysqli_stmt_execute($stmt)) {
+                                                    mysqli_stmt_bind_result($stmt, $idRegion, $name_region);
+                                                    while (mysqli_stmt_fetch($stmt)) {
+                                                        echo "\n\t\t<option value=\"$idRegion\">$name_region</option>";
+                                                    }
+                                                    mysqli_stmt_close($stmt);
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+
+                                    <!--REGION BELGIUM-->
+                                    <div class="form-group pb-4 formulario" style="display:none;" id="be">
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                        <select class="form-select greyBorder" id="regiao" name="regiao">
+                                            <option selected disabled>Selecione uma opção</option>
+                                            <?php
+                                            $link = new_db_connection();
+                                            $stmt = mysqli_stmt_init($link);
+                                            if (mysqli_stmt_prepare($stmt, $query4)) {
+                                                if (mysqli_stmt_execute($stmt)) {
+                                                    mysqli_stmt_bind_result($stmt, $idRegion, $name_region);
+                                                    while (mysqli_stmt_fetch($stmt)) {
+                                                        echo "\n\t\t<option value=\"$idRegion\">$name_region</option>";
+                                                    }
+                                                    mysqli_stmt_close($stmt);
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+
+                                    <!--REGION ICELAND-->
+                                    <div class="form-group pb-4 formulario" style="display:none;" id="ic">
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                        <select class="form-select greyBorder" id="regiao" name="regiao">
+                                            <option selected disabled>Selecione uma opção</option>
+                                            <?php
+                                            $link = new_db_connection();
+                                            $stmt = mysqli_stmt_init($link);
+                                            if (mysqli_stmt_prepare($stmt, $query5)) {
+                                                if (mysqli_stmt_execute($stmt)) {
+                                                    mysqli_stmt_bind_result($stmt, $idRegion, $name_region);
+                                                    while (mysqli_stmt_fetch($stmt)) {
+                                                        echo "\n\t\t<option value=\"$idRegion\">$name_region</option>";
+                                                    }
+                                                    mysqli_stmt_close($stmt);
+                                                }
+                                            }
+                                            ?>
                                         </select>
                                     </div>
 
