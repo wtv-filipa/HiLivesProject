@@ -12,6 +12,10 @@
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
 }
 
+a{
+  text-decoration: none !important;
+}
+
 a.nav-link {
   font-family: "Quicksand", "Montserrat", sans-serif !important;
   color: #000000 !important;

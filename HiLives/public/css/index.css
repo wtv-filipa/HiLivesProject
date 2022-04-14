@@ -122,11 +122,11 @@ a.linkIconsStudy:hover{
   border: 0.1em solid #005e89;
 }
 
-.buttonWork a {
+a .buttonWork {
   color: #005e89 !important;
 }
 
-.buttonWork a:hover {
+a .buttonWork:hover {
   color: #ffffff !important;
 }
 
@@ -149,25 +149,25 @@ a.linkIconsStudy:hover{
   width: 14rem;
 }
 
-.buttonHomeSize a {
+/* a .buttonHomeSize {
   text-decoration: none;
   color: #005e89;
 }
 
-.buttonHomeSize a:hover {
+a .buttonHomeSize:hover {
   text-decoration: none;
   color: #ffffff;
 }
 
-.buttonLoginSize a {
+a .buttonLoginSize {
   text-decoration: none;
   color: #005e89;
 }
 
-.buttonLoginSize a:hover {
+a .buttonLoginSize:hover {
   text-decoration: none;
   color: #ffffff;
-}
+} */
 
 .buttonHome {
   border: 0.1em solid #000000;
@@ -192,7 +192,7 @@ a.linkIconsStudy:hover{
   width: 10rem;
 }
 
-.buttonRegisterSize a {
+/* .buttonRegisterSize a {
   text-decoration: none;
   color: #000000;
 }
@@ -210,7 +210,7 @@ a.linkIconsStudy:hover{
 .buttonRegisterSizeHEI a:hover {
   text-decoration: none;
   color: #ffffff;
-}
+} */
 
 /************************************************************************************/
 
