@@ -38,7 +38,11 @@
                 if ($msg_show == true) {
                     echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
                                 <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                                <span title=\"Fechar\" aria-hidden=\"true\">&times;</span>
+                                <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                                top: 0;
+                                right: 0;
+                                padding: 0.75rem 1.25rem;
+                                color: inherit;\">&times;</span>
                                 </button>
                                 </div>";
                     echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
@@ -54,7 +58,7 @@
                                     <a href="../../../index.php"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
                                     <h1 class="mb-4 weightTitle">Bem-vindo!</h1>
                                 </div>
-                                <form method="post" role="form" id="register-form" action="scripts/login.php">
+                                <form method="post" role="form" id="register-form" action="../../scripts/login.php">
 
                                     <div class="form-group pb-4">
                                         <label class="boldFont mt-3 pb-2" for="inputEmail">Email</label>

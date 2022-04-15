@@ -10,17 +10,16 @@ if (!empty($_POST["nome"]) && !empty($_POST["email"]) && !empty($_POST["password
 
     $stmt = mysqli_stmt_init($link);
 
-    $query = "INSERT INTO users (name_user, email_user, contact_user, birth_date, password, active, user_type_iduser_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO users (name_user, email_user, contact_user, birth_date, password, user_type_iduser_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
     if (mysqli_stmt_prepare($stmt, $query)) {
-        mysqli_stmt_bind_param($stmt, 'sssssii', $name_user, $email_user, $contact_user, $birth_date, $password, $active, $user_type_iduser_type);
+        mysqli_stmt_bind_param($stmt, 'sssssii', $name_user, $email_user, $contact_user, $birth_date, $password, $user_type_iduser_type);
 
         $name_user = $_POST['nome'];
         $email_user = $_POST['email'];
         $contact_user = $_POST['phone'];
         $birth_date = $_POST['data_nasc'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $active = 0;
         $user_type_iduser_type = $type;
 
         if (mysqli_stmt_execute($stmt)) {

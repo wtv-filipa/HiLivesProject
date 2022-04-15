@@ -44,22 +44,22 @@ h5 {
   color: #ffffff !important;
 }
 
-a.linkIcons{
+a.linkIcons {
   text-decoration: none;
   color: #000000;
 }
 
-a.linkIcons:hover{
+a.linkIcons:hover {
   text-decoration: none;
   color: #005e89;
 }
 
-a.linkIconsStudy{
+a.linkIconsStudy {
   text-decoration: none;
   color: #000000;
 }
 
-a.linkIconsStudy:hover{
+a.linkIconsStudy:hover {
   text-decoration: none;
   color: #ae0168;
 }
@@ -339,7 +339,7 @@ audio {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .close:hover {
@@ -349,7 +349,7 @@ audio {
 
 .close:not(:disabled):not(.disabled):hover,
 .close:not(:disabled):not(.disabled):focus {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 button.close {
