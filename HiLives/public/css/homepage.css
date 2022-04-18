@@ -2,15 +2,14 @@
 /*Banner img*/
 .bg-cover {
   background-size: cover !important;
-  min-height: 70vh;
 }
 
 body {
   min-height: 100vh;
 }
 
-.textBanner {
-  margin-top: 12rem;
+.startBgPerson .container{
+  text-shadow: 2px 2px rgb(0 0 0 / 50%);
 }
 
 /*Scroll down button*/
@@ -37,80 +36,331 @@ body {
 }
 
 /*Tutor*/
-.heightEqual{
+.heightEqual {
   min-height: 96px !important;
 }
 
-.imgProfilePerson{
+.imgProfilePerson {
   border-radius: 100%;
   width: 130px;
   height: 130px;
   border: 7px solid #ae0168;
 }
 
+/*HiLives Stories banner*/
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bgCoverSection {
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 /*Media queries*/
-@media only screen and (max-width: 320px) {
-}
-
-@media only screen and (max-width: 380px) {
-}
-
-@media only screen and (max-width: 767px) {
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-}
-
-@media only screen and (max-width: 1580px) {
-  .bgCoverSection {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+@media only screen and (min-width: 1901px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MinWidth_1901.png");
+    width: 100%;
+    background-position: center;
   }
 
   .bg-white {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
     float: right;
     margin-left: 28%;
     margin-right: 28%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MinWidth_1901.png");
+  }
+
+  .bg-cover {
+    min-height: 650px;
   }
 }
 
 @media only screen and (max-width: 1900px) {
-  .bgCoverSection {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1900.png");
   }
 
   .bg-white {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
     float: right;
     margin-left: 28%;
     margin-right: 28%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1900.png");
+  }
+
+  .bg-cover {
+    height: 650px;
   }
 }
 
-@media only screen and (min-width: 1901px) {
-  .bgCoverSection {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+@media only screen and (max-width: 1580px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1580.png");
   }
 
   .bg-white {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
+    float: right;
+    margin-left: 42%;
+    margin-right: 23%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1580.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1350.png");
+  }
+  .bg-white {
+    max-width: 555px;
+    float: right;
+    margin-left: 50%;
+    margin-right: 10%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1350.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1260.png");
+  }
+  .bg-white {
+    max-width: 555px;
     float: right;
     margin-left: 28%;
-    margin-right: 28%;
+    margin-right: 13%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1260.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1199.png");
+  }
+  .bg-white {
+    max-width: 555px;
+    float: right;
+    margin-left: 28%;
+    margin-right: 9%;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1199.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_1024.png");
+  }
+  .bg-white {
+    max-width: 555px;
+    float: right;
+    margin-left: 50%;
+    margin-right: 0;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_1024.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bg-white {
+    max-width: 555px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_800.png");
+  }
+  .bg-white {
+    max-width: 555px;
+    float: right;
+    margin-left: 53%;
+    margin-right: 0;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_800.png");
+  }
+
+  .bg-cover {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/maxWidth_767.png");
+  }
+
+  .bg-white {
+    max-width: 767px;
+    min-height: 358px;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/maxWidth_767.png");
+  }
+
+  .bg-cover {
+    height: 410px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_420.png");
+  }
+  .bg-white {
+    max-width: 420px;
+    min-height: 396px;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_420.png");
+  }
+
+  .bg-cover {
+    height: 410px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_380.png");
+  }
+  .bg-white {
+    max-width: 420px;
+    min-height: 421px;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson/banner/MaxWidth_380.png");
+  }
+
+  .bg-cover {
+    height: 410px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .homePersonBg {
+    background-image: url("../img/homePerson/MaxWidth_320.png");
+  }
+  .bg-white {
+    max-width: 767px;
+    min-height: 421px;
+  }
+
+  .startBgPerson{
+    background-image: url("../img/homePerson//banner/MaxWidth_320.png");
+  }
+
+  .bg-cover {
+    height: 410px;
+  }
+}
+
+/*Media Queries hide section*/
+@media only screen and (max-width: 767px) {
+  .smallBg {
+    display: block;
+  }
+
+  .bigBg {
+    display: none;
+  }
+
+  .bgCoverSection {
+    min-height: 250px;
+  }
+
+  .whiteBg {
+    background-color: #ffffff;
+  }
+
+  .bg-white {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  ul {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .textBanner {
+    margin-top: 10rem;
+  }
+
+  .marginBottomSmall{
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .smallBg {
+    display: none;
+  }
+
+  .bigBg {
+    display: block;
+  }
+
+  .bgCoverSection {
+    min-height: 468px;
+  }
+
+  .bg-white {
+    min-height: 469px;
+  }
+
+  .textBanner {
+    margin-top: 15rem;
   }
 }
