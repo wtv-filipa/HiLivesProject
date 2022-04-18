@@ -53,7 +53,7 @@
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="p-5">
+                            <div class="paddingForms">
                                 <div class="text-center">
                                     <a href="../../../index.php"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
                                     <h1 class="mb-4 weightTitle">Bem-vindo!</h1>

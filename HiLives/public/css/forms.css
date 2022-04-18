@@ -26,7 +26,7 @@ div.alert.alert-warning {
 #data_nasc,
 #data,
 input#file-upload-button {
-  color: #6C757D !important;
+  color: #6c757d !important;
 }
 
 a.small {
@@ -45,7 +45,7 @@ a.small:hover {
 }
 
 .asteriskPink {
-  color: #AE0168 !important;
+  color: #ae0168 !important;
   font-weight: bold;
   font-size: 20px;
 }
@@ -55,7 +55,7 @@ a.small:hover {
   height: auto;
 }
 
-.paddingCheck{
+.paddingCheck {
   padding-left: 2.3rem !important;
 }
 /*Login*/
@@ -113,20 +113,20 @@ div.alert.alert-warning {
   opacity: 0;
 }
 
-.custom-file-input:focus~.custom-file-label {
+.custom-file-input:focus ~ .custom-file-label {
   border-color: #bac8f3;
   box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
 }
 
-.custom-file-input:disabled~.custom-file-label {
+.custom-file-input:disabled ~ .custom-file-label {
   background-color: #eaecf4;
 }
 
-.custom-file-input:lang(pt)~.custom-file-label::after {
+.custom-file-input:lang(pt) ~ .custom-file-label::after {
   content: "Procurar";
 }
 
-.custom-file-input~.custom-file-label[data-browse]::after {
+.custom-file-input ~ .custom-file-label[data-browse]::after {
   content: attr(data-browse);
 }
 
@@ -139,7 +139,7 @@ div.alert.alert-warning {
   padding: 0.375rem 0.75rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #4E4E4E;
+  color: #4e4e4e;
   background-color: #fff;
   border: 1px solid #d1d3e2;
   border-radius: 0.35rem;
@@ -156,9 +156,9 @@ div.alert.alert-warning {
   height: calc(1.5em + 0.75rem);
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #ffffff;
   content: "Procurar";
-  background-color: #005E89;
+  background-color: #005e89;
   border-left: inherit;
   border-radius: 0 0.35rem 0.35rem 0;
 }
@@ -210,7 +210,7 @@ label.label {
   width: 34px;
   height: 34px;
   border-radius: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid transparent;
   box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -224,35 +224,45 @@ label.label {
 
 @media only screen and (max-width: 600px) {
   .guardar_btn {
-      width: 50%!important;
+    width: 50% !important;
   }
   .guardar_btn:hover {
-      width: 50%!important;
+    width: 50% !important;
   }
   .cancel_btn {
-      width: 50%!important;
-      margin-top: 2%;
+    width: 50% !important;
+    margin-top: 2%;
   }
   .cancel_btn:hover {
-      width: 50%!important;
-      margin-top: 2%;
+    width: 50% !important;
+    margin-top: 2%;
   }
   .avatar-edit {
-      top: 12%;
+    top: 12%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .paddingForms {
+    padding: 1rem !important;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .avatar-edit {
-      top: 7%;
-      right: -21%;
+    top: 7%;
+    right: -21%;
+  }
+
+  .paddingForms {
+    padding: 3rem !important;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .avatar-edit {
-      right: -1%;
-      top: 7%;
+    right: -1%;
+    top: 7%;
   }
 }
 

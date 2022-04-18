@@ -192,6 +192,10 @@ a .buttonLoginSize:hover {
   width: 10rem;
 }
 
+.buttonMessageRegisterSize{
+  width: 13rem;
+}
+
 /* .buttonRegisterSize a {
   text-decoration: none;
   color: #000000;
@@ -323,12 +327,16 @@ a.linkStory {
 }
 
 .img-content {
-  max-width: 600px;
   margin-bottom: 11px;
 }
 
 audio {
   width: 96%;
+}
+
+.videoStory video {
+  width: 100%;
+  height: auto;
 }
 
 /*BUTTON CLOSE*/

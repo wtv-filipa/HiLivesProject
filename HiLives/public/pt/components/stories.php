@@ -33,7 +33,7 @@
             <p class="cardInfo13">A 15 de Fevereiro</p>
         </header>
         <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
-        <div class="text-center">
+        <div class="text-center videoStory">
             <video width="600" controls>
                 <source src="mov_bbb.mp4" type="video/mp4">
                 <source src="mov_bbb.ogg" type="video/ogg">
@@ -90,7 +90,7 @@
         </header>
         <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
         <div class="text-center">
-            <img class="img-content" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
+            <img class="img-content img-fluid" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
         </div>
     </div>
 </div>

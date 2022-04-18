@@ -3,13 +3,13 @@
     <div class="container py-5 text-center">
         <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
         <div class="arrow">
-            <a class="fa-solid fa-circle-chevron-down" href="#"></a>
+            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionPerson"></a>
         </div>
     </div>
 </div>
 
 <!-- Matchs -->
-<section class="conatiner-fluid greyBg">
+<section id="firstSectionPerson" class="conatiner-fluid greyBg">
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-4">Porquê a HiLives?</h2>
         <div class="row">
@@ -42,7 +42,7 @@
 <section class="jumbotron bgCoverSection homePersonBg bigBg">
     <div class="bg-white ps-3 pe-3">
         <h3 class="pt-5 pb-5 text-center">Queres ver histórias de outras pessoas?</h3>
-        <ul>
+        <ul class="ulStories">
             <li class="pb-5">Tens acesso a histórias através de vídeos, textos, áudio e imagens.</li>
             <li class="pb-5">Podes partilhar as tuas histórias com as outras pessoas.</li>
         </ul>
@@ -61,7 +61,7 @@
     <div class="jumbotron bgCoverSection homePersonBg smallBg"></div>
     <div class="bg-white ps-3 pe-3">
         <h3 class="pt-5 pb-5 text-center">Queres ver histórias de outras pessoas?</h3>
-        <ul>
+        <ul class="ulStories">
             <li class="pb-5">Tens acesso a histórias através de vídeos, textos, áudio e imagens.</li>
             <li class="pb-5">Podes partilhar as tuas histórias com as outras pessoas.</li>
         </ul>
@@ -79,7 +79,7 @@
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-3">Aprende a utilizar a HiLives</h2>
         <div class="videoContainer" controls>
-            <iframe width="320" height="75" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="75" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </section>

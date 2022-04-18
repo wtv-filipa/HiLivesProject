@@ -106,3 +106,19 @@ a.linkContacts {
 a.linkContacts:hover {
   color: #005e89 !important;
 }
+
+@media only screen and (max-width: 767px) {
+  .textHideSmall{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .marginButtonProfile {
+   margin-top: 1.5rem;
+  }
+
+  .textHideSmall{
+    display: inline;
+  }
+}

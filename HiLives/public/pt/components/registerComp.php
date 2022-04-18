@@ -63,7 +63,7 @@ WHERE name_country = 'Islândia'";
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="p-5">
+                            <div class="paddingForms">
                                 <div class="text-center">
                                     <a href="../../../index.php"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
                                     <h1 class="mb-4 weightTitle">Junte-se a nós!</h1>
@@ -250,7 +250,9 @@ WHERE name_country = 'Islândia'";
                                     </div>
                                 </form>
                                 <hr>
-
+                                <div class="text-center textForm">
+                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="construction.php">Esqueceu-se da sua palavra-passe?</a>
+                                </div>
                                 <div class="text-center textForm">
                                     <a class="small" title="Clica para te registares" href="login.php">Já está inscrito? Inicie sessão!</a>
                                 </div>

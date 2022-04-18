@@ -11,7 +11,7 @@
 
     <section class="pb-5">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card text-center shadowCard o-hidden border-0">
                     <div class="card-body">
                         <img class="imgProfilePerson borderPink mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card text-center shadowCard o-hidden border-0">
                     <div class="card-body">
                         <img class="imgProfilePerson borderPink mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card text-center shadowCard o-hidden border-0">
                     <div class="card-body">
                         <img class="imgProfilePerson borderPink mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />

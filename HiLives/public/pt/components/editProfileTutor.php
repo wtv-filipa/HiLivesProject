@@ -6,7 +6,7 @@
             <li class="breadcrumb-item active" aria-current="page">Editar perfil</li>
         </ol>
     </nav>
-    <div class="card o-hidden border-0 shadowCard my-5 p-5">
+    <div class="card o-hidden border-0 shadowCard my-5 paddingForms">
         <div class="card-body p-0">
             <h1 class="text-center">Editar Perfil</h1>
             <hr>

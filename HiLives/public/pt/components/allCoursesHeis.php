@@ -10,7 +10,7 @@
     <p class="pb-4">Aqui pode gerir todos os seus cursos publicados até ao momento.</p>
 
     <section class="row pb-5">
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>
@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>
@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>
@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>
@@ -115,7 +115,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <h4>Novas Tecnologias da Comunicação</h4>
                 <p>Direito, Ciências Sociais e Serviços</p>

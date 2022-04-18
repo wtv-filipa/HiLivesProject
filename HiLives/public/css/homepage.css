@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-.startBgPerson .container{
+.startBgPerson .container {
   text-shadow: 2px 2px rgb(0 0 0 / 50%);
 }
 
@@ -36,8 +36,22 @@ body {
 }
 
 /*Tutor*/
-.heightEqual {
-  min-height: 96px !important;
+@media only screen and (min-width: 768px) {
+  .heightEqual {
+    min-height: 168px !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .heightEqual {
+    min-height: 97px !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .heightEqual {
+    min-height: 96px !important;
+  }
 }
 
 .imgProfilePerson {
@@ -73,7 +87,7 @@ body {
     margin-right: 28%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MinWidth_1901.png");
   }
 
@@ -94,7 +108,7 @@ body {
     margin-right: 28%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1900.png");
   }
 
@@ -115,7 +129,7 @@ body {
     margin-right: 23%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1580.png");
   }
 
@@ -135,7 +149,7 @@ body {
     margin-right: 10%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1350.png");
   }
 
@@ -155,7 +169,7 @@ body {
     margin-right: 13%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1260.png");
   }
 
@@ -175,7 +189,7 @@ body {
     margin-right: 9%;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1199.png");
   }
 
@@ -195,7 +209,7 @@ body {
     margin-right: 0;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1024.png");
   }
 
@@ -221,7 +235,7 @@ body {
     margin-right: 0;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_800.png");
   }
 
@@ -240,7 +254,7 @@ body {
     min-height: 358px;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/maxWidth_767.png");
   }
 
@@ -258,7 +272,7 @@ body {
     min-height: 396px;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_420.png");
   }
 
@@ -276,7 +290,7 @@ body {
     min-height: 421px;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_380.png");
   }
 
@@ -294,7 +308,7 @@ body {
     min-height: 421px;
   }
 
-  .startBgPerson{
+  .startBgPerson {
     background-image: url("../img/homePerson//banner/MaxWidth_320.png");
   }
 
@@ -329,7 +343,7 @@ body {
     text-align: center;
   }
 
-  ul {
+  ul.ulStories {
     text-align: center;
     list-style-position: inside;
   }
@@ -338,7 +352,7 @@ body {
     margin-top: 10rem;
   }
 
-  .marginBottomSmall{
+  .marginBottomSmall {
     padding-bottom: 1.5rem;
   }
 }

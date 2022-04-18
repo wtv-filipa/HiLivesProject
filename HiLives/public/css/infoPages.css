@@ -6,3 +6,8 @@ ol.infoSize li {
     font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
     font-size: 14px;
 }
+
+a.linkColor{
+    color: #005E89 !important;
+    text-decoration: none !important;
+}

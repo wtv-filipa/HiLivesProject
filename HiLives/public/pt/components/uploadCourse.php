@@ -53,7 +53,7 @@ $idUser = $_SESSION["idUser"];
         <div class="card-body p-0">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="p-5">
+                    <div class="paddingForms">
                         <div class="text-center">
                             <h1 class="mb-4 weightTitle">Adicionar uma Unidade Curricular ou Curso feito</h1>
                         </div>

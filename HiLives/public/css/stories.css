@@ -4,7 +4,6 @@
 }
 
 .navBgColor.sticky-top {
-  top: 6.5% !important;
   z-index: 500 !important;
 }
 
@@ -15,15 +14,79 @@
   width: 100%;
 }
 
-.navbar-text.navstories a{
-    color: #ffffff;
-    text-decoration: none;
+.navbar-text.navstories a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.navbar-text.navstories a:hover{
-    color: #ffffff;
+.navbar-text.navstories a:hover {
+  color: #ffffff;
 }
 
-.arrowRight {
-  padding-left: 85%;
+@media only screen and (max-width: 1400px) {
+  .arrowRight {
+    padding-left: 83%;
+  }
+
+  .navBgColor.sticky-top {
+    top: 6.5% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .arrowRight {
+    padding-left: 72%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .arrowRight {
+    padding-left: 72%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .arrowRight {
+    padding-left: 63%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .arrowRight {
+    padding-left: 47%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .arrowRight {
+    padding-left: 43%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .arrowRight {
+    padding-left: 35%;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .arrowRight {
+    padding-left: 24%;
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .arrowRight {
+    padding-left: 85%;
+  }
+
+  .navBgColor.sticky-top {
+    top: 6.5% !important;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .navBgColor.sticky-top {
+    top: 3.5% !important;
+  }
 }

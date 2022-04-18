@@ -6,18 +6,18 @@ session_start();
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>A minha área</title>
+    <title>Contacto</title>
     <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_profile.php"; ?>
+    <?php include "../../helpers/css_forms.php"; ?>
 </head>
 
-<body>
+<body class="bg_horizontal_28">
     <?php include "../components/navbar.php"; ?>
-    <?php include "../components/profileComp.php"; ?>
+    <?php include "../components/questionForm.php"; ?>
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>
-    <?php include "../../helpers/js_crop.php"; ?>
+    <?php include "../../helpers/js_upload.php"; ?>
 </body>
 
 </html>

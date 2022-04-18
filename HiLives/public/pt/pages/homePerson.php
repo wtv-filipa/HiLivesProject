@@ -30,5 +30,7 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
     header("Location: homeHei.php");
 } else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 16) {
     header("Location: homeTutor.php");
+} else {
+    header("Location: login.php");
 }
 ?>

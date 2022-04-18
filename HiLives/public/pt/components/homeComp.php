@@ -1,20 +1,20 @@
 <!-- Header -->
-<div style="background: url(../../img/homePerson.png)" class="jumbotron bg-cover text-white">
+<div class="jumbotron bg-cover text-white startBgPerson">
     <div class="container py-5 text-center">
         <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
         <div class="arrow">
-            <a class="fa-solid fa-circle-chevron-down" href="#"></a>
+            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionComp"></a>
         </div>
     </div>
 </div>
 
 <!-- Matchs -->
-<section class="conatiner-fluid greyBg">
+<section id="firstSectionComp" class="conatiner-fluid greyBg">
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-4">Porquê a HiLives?</h2>
         <div class="row">
-            <div class="col-12 col-md-6 ps-4 pe-4">
-                <img src="../../img/study.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
+            <div class="col-12 col-md-6 ps-4 pe-4 marginBottomSmall">
+                <img src="../../img/matchs.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
                 <h3 class="mt-4 pb-2">Ajudamo-lo a procurar candidatos</h3>
                 <p>Se está à procura de recursos humanos para a sua empresa, a HiLives vai indicar-lhe quais são os candidatos que melhor se enquadram nas características pretendidas.</p>
                 <br>
@@ -38,11 +38,11 @@
         </div>
     </div>
 </section>
-<!-- HiLives Stories-->
-<section style="background: url(../../img/homeStories.png)" class="jumbotron bgCoverSection">
+<!-- HiLives Stories bigger devices-->
+<section class="jumbotron bgCoverSection homePersonBg bigBg">
     <div class="bg-white ps-3 pe-3">
         <h3 class="pt-5 pb-5 text-center">Quer ver histórias das Pessoas com DID?</h3>
-        <ul>
+        <ul class="ulStories">
             <li class="pb-5">Tem acesso a histórias através de vídeos, textos, áudio e imagens.</li>
             <li class="pb-5">Pode partilhar as histórias das pessoas com DID que trabalham na empresa.</li>
         </ul>
@@ -55,11 +55,31 @@
         </div>
     </div>
 </section>
+
+<!-- HiLives Stories smaller devices-->
+<section class="smallBg whiteBg">
+    <div class="jumbotron bgCoverSection homePersonBg smallBg"></div>
+    <div class="bg-white ps-3 pe-3">
+        <h3 class="pt-5 pb-5 text-center">Quer ver histórias das Pessoas com DID?</h3>
+        <ul class="ulStories">
+            <li class="pb-5">Tem acesso a histórias através de vídeos, textos, áudio e imagens.</li>
+            <li class="pb-3">Pode partilhar as histórias das pessoas com DID que trabalham na empresa.</li>
+        </ul>
+        <div class="text-center">
+            <a href="stories.php">
+                <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
+                    Ver Histórias da HiLives
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- HiLives video tutorial -->
 <section class="container-fluid greyBg">
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-3">Aprenda a utilizar a HiLives</h2>
-        <div class="video" controls>
+        <div class="videoContainer" controls>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>

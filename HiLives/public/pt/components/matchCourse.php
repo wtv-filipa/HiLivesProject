@@ -10,7 +10,7 @@
     <p class="pb-4">Nesta página encontras todas as tuas ligações com Instituições de Ensino Superior e os cursos com os quais tens uma ligação.</p>
 
     <section class="row">
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div id="cardMatch" class="col-md-4 pb-4">
+        <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
             <div class="list listStudy text-center">
                 <p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -101,7 +101,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row pt-3">
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -113,7 +113,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
@@ -125,7 +125,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">

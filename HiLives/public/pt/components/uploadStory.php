@@ -10,7 +10,7 @@
         <div class="card-body p-0">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="p-5">
+                    <div class="paddingForms">
                         <div class="text-center">
                             <h1 class="mb-4 weightTitle">Carregar uma história</h1>
                         </div>

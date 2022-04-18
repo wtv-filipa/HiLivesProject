@@ -6,18 +6,18 @@
             <li class="breadcrumb-item active" aria-current="page">Editar perfil</li>
         </ol>
     </nav>
-    <div class="card o-hidden border-0 shadowCard my-5 p-5">
+    <div class="card o-hidden border-0 shadowCard my-5 paddingForms">
         <div class="card-body p-0">
             <h1 class="text-center">Editar Perfil</h1>
             <hr>
             <div class="row">
                 <!--PROFILE PICTURE-->
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-4 text-center">
                     <div class="pe-3">
                         <div class="avatar-upload">
                             <div class="avatar-edit">
                                 <input style="display: none" type="file" id="fileToUpload" name="fileToUpload image" accept=".png, .jpg, .jpeg" />
-                                <label class="label" for="fileToUpload"><i class="fas fa-edit mx-auto my-auto text-center"></i></label>
+                                <label class="label" for="fileToUpload"><i class="fas fa-edit alignEditBtn"></i></label>
                                 <input id="userIDhidden" value="<?= $idUser ?>" style="display: none;"></input>
                             </div>
                             <img id="img_perf" class="image_profile" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="sem imagem de perfil" />

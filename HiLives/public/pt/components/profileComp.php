@@ -8,7 +8,7 @@
             </ol>
         </nav>
 
-        <a class="mt-4 col-md-6 text-end buttonEdit" href="editProfile.php">
+        <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="editProfile.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square align-middle" viewBox="0 0 16 16">
                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
@@ -30,7 +30,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase align-middle" viewBox="0 0 16 16">
                         <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
                     </svg>
-                    <span class="ps-2 align-middle">Vagas</span>
+                    <span class="ps-2 align-middle textHideSmall">Vagas</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -38,7 +38,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat align-middle" viewBox="0 0 16 16">
                         <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
                     </svg>
-                    <span class="ps-2 align-middle">Contactos</span>
+                    <span class="ps-2 align-middle textHideSmall">Contactos</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -46,7 +46,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video align-middle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
                     </svg>
-                    <span class="ps-2 align-middle">Histórias</span>
+                    <span class="ps-2 align-middle textHideSmall">Histórias</span>
                 </button>
             </li>
         </ul>
@@ -54,7 +54,7 @@
             <!--Vacancies-->
             <div class="tab-pane fade show active" id="vacancies" role="tabpanel" aria-labelledby="vacancies-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsBigger">
                             <h5>Operador/a de Armazém M/F</h5>
                             <p class="cardInfo14 mb-2">Direito, Ciências Sociais e Serviços</p>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsBigger">
                             <h5>Operador/a de Armazém M/F</h5>
                             <p class="cardInfo14 mb-2">Direito, Ciências Sociais e Serviços</p>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsBigger">
                             <h5>Operador/a de Armazém M/F</h5>
                             <p class="cardInfo14 mb-2">Direito, Ciências Sociais e Serviços</p>
@@ -90,7 +90,7 @@
             <!--Contacts-->
             <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">
                                 <i class="fa-solid fa-at align-middle"></i>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone align-middle" viewBox="0 0 16 16">
@@ -112,7 +112,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe align-middle" viewBox="0 0 16 16">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook align-middle" viewBox="0 0 16 16">
@@ -136,7 +136,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram align-middle" viewBox="0 0 16 16">
@@ -164,7 +164,7 @@
                         <p class="cardInfo13">A 15 de Fevereiro</p>
                     </header>
                     <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
-                    <div class="text-center">
+                    <div class="text-center videoStory">
                         <video width="600" controls>
                             <source src="mov_bbb.mp4" type="video/mp4">
                             <source src="mov_bbb.ogg" type="video/ogg">
@@ -221,7 +221,7 @@
                     </header>
                     <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
                     <div class="text-center">
-                        <img class="img-content" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
+                        <img class="img-content img-fluid" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
                     </div>
                 </div>
 

@@ -8,7 +8,7 @@
             </ol>
         </nav>
 
-        <a class="mt-4 col-md-6 text-end buttonEdit" href="editProfile.php">
+        <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="editProfile.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square align-middle" viewBox="0 0 16 16">
                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
@@ -31,7 +31,7 @@
                         <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z" />
                         <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z" />
                     </svg>
-                    <span class="ps-2 align-middle">Estudos</span>
+                    <span class="ps-2 align-middle textHideSmall">Estudos</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -40,7 +40,7 @@
                         <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
                         <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
                     </svg>
-                    <span class="ps-2 align-middle">Áreas</span>
+                    <span class="ps-2 align-middle textHideSmall">Áreas</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -49,7 +49,7 @@
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                         <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
                     </svg>
-                    <span class="ps-2 align-middle">Competências</span>
+                    <span class="ps-2 align-middle textHideSmall">Competências</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -58,7 +58,7 @@
                         <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z" />
                         <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
                     </svg>
-                    <span class="ps-2 align-middle">Ambientes</span>
+                    <span class="ps-2 align-middle textHideSmall">Ambientes</span>
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -66,7 +66,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video align-middle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
                     </svg>
-                    <span class="ps-2 align-middle">Histórias</span>
+                    <span class="ps-2 align-middle textHideSmall">Histórias</span>
                 </button>
             </li>
         </ul>
@@ -74,7 +74,7 @@
             <!--STUDY-->
             <div class="tab-pane fade show active" id="studies" role="tabpanel" aria-labelledby="studies-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsBigger">
                             <h5>Novas Tecnologias da Comunicação</h5>
                             <p class="cardInfo14 mb-2">Universidade de Aveiro</p>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsBigger">
                             <h5>Novas Tecnologias da Comunicação</h5>
                             <p class="cardInfo14 mb-2">Universidade de Aveiro</p>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsBigger">
                             <h5>Novas Tecnologias da Comunicação</h5>
                             <p class="cardInfo14 mb-2">Universidade de Aveiro</p>
@@ -110,19 +110,19 @@
             <!--AREAS-->
             <div class="tab-pane fade" id="areas" role="tabpanel" aria-labelledby="areas-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsSmaller">
                             <p class="mb-0">Informática</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsSmaller">
                             <p class="mb-0">Informática</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsStudy itemsSmaller">
                             <p class="mb-0">Informática</p>
                         </div>
@@ -133,19 +133,19 @@
             <!--SKILLS-->
             <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Eu consigo participar em atividades de grupo.</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Eu consigo participar em atividades de grupo.</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Eu consigo participar em atividades de grupo.</p>
                         </div>
@@ -156,19 +156,19 @@
             <!--ENVIRONMENTS-->
             <div class="tab-pane fade" id="env" role="tabpanel" aria-labelledby="env-tab">
                 <div class="row pt-4">
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Escritório</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Biblioteca</p>
                         </div>
                     </div>
 
-                    <div id="cardInfo" class="col-md-4 pb-3">
+                    <div id="cardInfo" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="items itemsWork itemsSmaller">
                             <p class="mb-0">Piscinas</p>
                         </div>
@@ -190,7 +190,7 @@
                         <p class="cardInfo13">A 15 de Fevereiro</p>
                     </header>
                     <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
-                    <div class="text-center">
+                    <div class="text-center videoStory">
                         <video width="600" controls>
                             <source src="mov_bbb.mp4" type="video/mp4">
                             <source src="mov_bbb.ogg" type="video/ogg">
@@ -247,7 +247,7 @@
                     </header>
                     <p class="status">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nunc a ante pharetra placerat. Curabitur viverra neque sit amet interdum commodo.</p>
                     <div class="text-center">
-                        <img class="img-content" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
+                        <img class="img-content img-fluid" src="https://www.tesla.com/sites/default/files/red-tesla-model-s.jpg" />
                     </div>
                 </div>
 
