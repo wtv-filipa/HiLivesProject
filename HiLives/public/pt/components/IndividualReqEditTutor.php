@@ -3,19 +3,28 @@
         <!--BREADCRUMBS-->
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="pt-4">
             <ol class="breadcrumb reqBreadcrumb">
-                <li class="breadcrumb-item"><a href="homePerson.php">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="#">Eu quero trabalhar</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Informações sobre a vaga</li>
+                <li class="breadcrumb-item"><a href="homeTutor.php">Página Inicial</a></li>
+                <li class="breadcrumb-item"><a href="editRequestsTutor">Pedidos para editar o perfil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Pedido da Mariana Silva</li>
             </ol>
         </nav>
 
         <h1 class="pt-4 pb-2">Pedido para editar o perfil de</h1>
         <h3 class="pb-5 textBlue">Mariana Silva</h3>
-        <!--VANCANCY LEARNING PATH-->
-        <div class="row pb-4">
+        <!--PROFILE STAGES BIG-->
+        <div class="row pb-4 bigBg">
             <div class="col-12 text-center">
                 <div class="imageLearn">
-                    <img class="mb-4 img-fluid" src="../../img/status/pending_edit.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                    <img class="mb-4 img-fluid" src="../../img/status/pending_edit1.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                </div>
+            </div>
+        </div>
+
+        <!--PROFILE STAGES SMALL-->
+        <div class="row pb-4 smallBg">
+            <div class="col-12 text-center">
+                <div class="imageLearn">
+                    <img class="mb-4 img-fluid" src="../../img/status/pending_edit_small1.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 </div>
             </div>
         </div>
@@ -23,14 +32,16 @@
     </div>
 </section>
 
-<section style="background: url(../../img/homeStories.png)" class="jumbotron bgCoverSection">
-    <div class="bg-white ps-5 pe-3">
+<!-- Info bigger devices-->
+<section class="jumbotron bgCoverSection EditBg bigBg">
+    <div class="bg-white bg-whiteSizeAdjust ps-5 pe-3">
         <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
         <h3 class="pb-4 text-center textBlue">Mariana Silva</h3>
         <p><b>Email</b>: marianasilva1@hotmail.com</p>
         <p><b>Mobile phone</b>: 916745788</p>
         <p><b>Region(s) of interest</b>: Aveiro, Braga</p>
         <p><b>Date of birth</b>: 16-06-2003 </p>
+        <p style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante.</p>
         <div class="text-center pt-4">
             <a href="#">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
@@ -39,6 +50,25 @@
             </a>
         </div>
     </div>
+</section>
+
+<!-- Info smaller devices-->
+<section class="smallBg whiteBg">
+    <div class="jumbotron bgCoverSection EditBg smallBg"></div>
+    <div class="bg-white ps-3 pe-3">
+        <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
+        <h3 class="pb-4 text-center textBlue">Mariana Silva</h3>
+        <p><b>Email</b>: marianasilva1@hotmail.com</p>
+        <p><b>Mobile phone</b>: 916745788</p>
+        <p><b>Region(s) of interest</b>: Aveiro, Braga</p>
+        <p><b>Date of birth</b>: 16-06-2003 </p>
+        <div class="text-center pt-4 pb-3">
+            <a href="#">
+                <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
+                    Editar perfil
+                </button>
+            </a>
+        </div>
     </div>
 </section>
 
@@ -49,13 +79,13 @@
             <div class="accordion-item">
                 <h3 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                       Cursos
+                        Cursos
                     </button>
                 </h3>
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row pt-3">
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -67,7 +97,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -79,7 +109,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listStudy text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -106,7 +136,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <div class="row pt-3">
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listWork text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -118,7 +148,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listWork text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -130,7 +160,7 @@
                                     <p>Universidade de Aveiro</p>
                                 </div>
                             </div>
-                            <div id="cardMatch" class="col-md-4 pb-4">
+                            <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                 <div class="list listWork text-center">
                                     <p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">

@@ -12,7 +12,7 @@
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
@@ -26,6 +26,15 @@ span.name {
   font-family: "Quicksand", "Montserrat", sans-serif !important;
   color: #000000 !important;
   font-weight: 400;
+}
+
+.navbar-light .navbar-toggler .fa-solid.fa-ellipsis-vertical{
+  color: #000000 !important;
+}
+
+.navbar-toggler{
+  font-size: 1.40rem !important;
+  border: none !important;
 }
 
 /*Media queries*/
@@ -44,5 +53,23 @@ span.name {
 @media only screen and (min-width: 768px) {
   .logo {
     width: 75px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navBig{
+    display: none;
+  }
+  .navSmall{
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navBig{
+    display: block;
+  }
+  .navSmall{
+    display: none;
   }
 }

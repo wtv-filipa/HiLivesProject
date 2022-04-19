@@ -149,26 +149,6 @@ a .buttonWork:hover {
   width: 14rem;
 }
 
-/* a .buttonHomeSize {
-  text-decoration: none;
-  color: #005e89;
-}
-
-a .buttonHomeSize:hover {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-a .buttonLoginSize {
-  text-decoration: none;
-  color: #005e89;
-}
-
-a .buttonLoginSize:hover {
-  text-decoration: none;
-  color: #ffffff;
-} */
-
 .buttonHome {
   border: 0.1em solid #000000;
   color: #000000;
@@ -195,26 +175,6 @@ a .buttonLoginSize:hover {
 .buttonMessageRegisterSize{
   width: 13rem;
 }
-
-/* .buttonRegisterSize a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.buttonRegisterSize a:hover {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.buttonRegisterSizeHEI a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.buttonRegisterSizeHEI a:hover {
-  text-decoration: none;
-  color: #ffffff;
-} */
 
 /************************************************************************************/
 

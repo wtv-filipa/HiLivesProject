@@ -12,6 +12,11 @@
   font-weight: bold;
 }
 
+ul.ulLearn {
+  text-align: center;
+  list-style-position: inside;
+}
+
 /*Courses*/
 .textPink {
   color: #ae0168 !important;
@@ -112,31 +117,46 @@ a.linkContactsBlue:hover {
   text-align: center;
 }
 
-/*Media queries*/
-@media only screen and (max-width: 320px) {
-}
-
-@media only screen and (max-width: 380px) {
-}
-
+/*Hide text in small screens*/
 @media only screen and (max-width: 767px) {
+  .textHideSmall {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) {
+  .textHideSmall {
+    display: inline;
+  }
 }
 
-@media only screen and (max-width: 1580px) {
-  .bgCoverSectionInfo {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+/*Media queries*/
+/*Course and Vacancy banner*/
+.bg-whiteInfo {
+  background-color: #ffffff;
+}
+
+.bgCoverSectionInfo {
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+@media only screen and (min-width: 1901px) {
+  .CourseBg {
+    background-image: url("../img/course/MinWidth_1901.png");
+    width: 100%;
+    background-position: center;
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MinWidth_1901.png");
+    width: 100%;
+    background-position: center;
   }
 
   .bg-whiteInfo {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
     float: right;
     margin-left: 28%;
     margin-right: 28%;
@@ -144,37 +164,231 @@ a.linkContactsBlue:hover {
 }
 
 @media only screen and (max-width: 1900px) {
-  .bgCoverSectionInfo {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1900.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1900.png");
   }
 
   .bg-whiteInfo {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
     float: right;
     margin-left: 28%;
     margin-right: 28%;
   }
 }
 
-@media only screen and (min-width: 1901px) {
-  .bgCoverSectionInfo {
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 468px;
+@media only screen and (max-width: 1580px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1580.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1580.png");
   }
 
   .bg-whiteInfo {
     max-width: 555px;
-    min-height: 468px;
-    background-color: #ffffff;
+    float: right;
+    margin-left: 42%;
+    margin-right: 23%;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1350.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1350.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    float: right;
+    margin-left: 50%;
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1260.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1260.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
     float: right;
     margin-left: 28%;
-    margin-right: 28%;
+    margin-right: 13%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1199.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1199.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    float: right;
+    margin-left: 28%;
+    margin-right: 9%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_1024.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_1024.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    float: right;
+    margin-left: 50%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bg-whiteInfo {
+    max-width: 555px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_800.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_800.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 555px;
+    float: right;
+    margin-left: 53%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .CourseBg {
+    background-image: url("../img/course/maxWidth_767.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_767.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 767px;
+    min-height: 358px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_420.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_420.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 420px;
+    min-height: 396px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_380.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_380.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 420px;
+    min-height: 421px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .CourseBg {
+    background-image: url("../img/course/MaxWidth_320.png");
+  }
+
+  .VacancyBg {
+    background-image: url("../img/vacancy/MaxWidth_320.png");
+  }
+
+  .bg-whiteInfo {
+    max-width: 767px;
+    min-height: 421px;
+  }
+}
+
+/*Media Queries hide section*/
+@media only screen and (max-width: 767px) {
+  .smallBg {
+    display: block;
+  }
+
+  .bigBg {
+    display: none;
+  }
+
+  .bgCoverSectionInfo {
+    min-height: 250px;
+  }
+
+  .whiteBg {
+    background-color: #ffffff;
+  }
+
+  .bg-whiteInfo {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .smallBg {
+    display: none;
+  }
+
+  .bigBg {
+    display: block;
+  }
+
+  .bgCoverSectionInfo {
+    min-height: 468px;
+  }
+
+  .bg-whiteInfo {
+    min-height: 469px;
   }
 }

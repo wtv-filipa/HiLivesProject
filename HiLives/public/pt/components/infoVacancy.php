@@ -10,12 +10,22 @@
     </div>
 </section>
 
-<!--Info-->
-<section style="background: url(../../img/homeStories.png)" class="jumbotron bgCoverSectionInfo">
+<!-- Info bigger devices-->
+<section class="jumbotron bgCoverSectionInfo VacancyBg bigBg">
     <div class="bg-whiteInfo ps-3 pe-3">
         <h1 class="pt-5 pb-2 text-center">Informação sobre a vaga</h1>
         <h3 class="pb-4 text-center textBlue">Empregado do McDonald's Pingo Doce de Aveiro</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante. Fusce est tortor, placerat eget erat porta, mollis auctor purus. Sed pulvinar est turpis, id blandit ipsum bibendum ut.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante.</p>
+    </div>
+</section>
+
+<!-- Info smaller devices-->
+<section class="smallBg whiteBg">
+    <div class="jumbotron bgCoverSectionInfo VacancyBg smallBg"></div>
+    <div class="bg-whiteInfo ps-3 pe-3">
+        <h1 class="pt-5 pb-2 text-center">Informação sobre a vaga</h1>
+        <h3 class="pb-4 text-center textBlue">Empregado do McDonald's Pingo Doce de Aveiro</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante.</p>
     </div>
 </section>
 
@@ -78,7 +88,7 @@
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
                 </svg>
-                <span class="ps-2 align-middle">Requisitos</span>
+                <span class="ps-2 align-middle textHideSmall">Requisitos</span>
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -86,7 +96,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat align-middle" viewBox="0 0 16 16">
                     <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
                 </svg>
-                <span class="ps-2 align-middle">Contactos</span>
+                <span class="ps-2 align-middle textHideSmall">Contactos</span>
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -94,7 +104,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video align-middle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" />
                 </svg>
-                <span class="ps-2 align-middle">Histórias</span>
+                <span class="ps-2 align-middle textHideSmall">Histórias</span>
             </button>
         </li>
     </ul>
@@ -105,7 +115,7 @@
                 <h4 class="textBlue">Capacidades necessárias</h4>
 
                 <div class="row pt-4">
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosWork infosSmaller">
                             <p class="mb-0">
                                 Necessário saber comunicar.
@@ -113,7 +123,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosWork infosSmaller">
                             <p class="mb-0">
                                 Necessário saber comunicar.
@@ -121,7 +131,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosWork infosSmaller">
                             <p class="mb-0">
                                 Necessário saber comunicar.
@@ -136,7 +146,7 @@
         <!--CONTACTS-->
         <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
             <div class="row pt-4">
-                <div id="cardInfos" class="col-md-4 pb-3">
+                <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                     <div class="infos itemsInfosWork infosSmaller">
                         <p class="mb-0">
                             <i class="fa-solid fa-at align-middle"></i>
@@ -146,7 +156,7 @@
                     </div>
                 </div>
 
-                <div id="cardInfos" class="col-md-4 pb-3">
+                <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                     <div class="infos itemsInfosWork infosSmaller">
                         <p class="mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone align-middle" viewBox="0 0 16 16">
@@ -158,7 +168,7 @@
                     </div>
                 </div>
 
-                <div id="cardInfos" class="col-md-4 pb-3">
+                <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                     <div class="infos itemsInfosWork infosSmaller">
                         <p class="mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe align-middle" viewBox="0 0 16 16">
@@ -170,7 +180,7 @@
                     </div>
                 </div>
 
-                <div id="cardInfos" class="col-md-4 pb-3">
+                <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                     <div class="infos itemsInfosWork infosSmaller">
                         <p class="mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook align-middle" viewBox="0 0 16 16">
@@ -182,7 +192,7 @@
                     </div>
                 </div>
 
-                <div id="cardInfos" class="col-md-4 pb-3">
+                <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                     <div class="infos itemsInfosWork infosSmaller">
                         <p class="mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram align-middle" viewBox="0 0 16 16">

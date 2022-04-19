@@ -10,8 +10,18 @@
     </div>
 </section>
 
-<!--Info-->
-<section style="background: url(../../img/homeStories.png)" class="jumbotron bgCoverSectionInfo">
+<!-- Info bigger devices-->
+<section class="jumbotron bgCoverSectionInfo CourseBg bigBg">
+    <div class="bg-whiteInfo ps-3 pe-3">
+        <h1 class="pt-5 pb-2 text-center">Informação sobre o curso</h1>
+        <h3 class="pb-4 text-center textPink">Novas Tecnologias da Comunicação</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante. </p>
+    </div>
+</section>
+
+<!-- Info smaller devices-->
+<section class="smallBg whiteBg">
+    <div class="jumbotron bgCoverSectionInfo CourseBg smallBg"></div>
     <div class="bg-whiteInfo ps-3 pe-3">
         <h1 class="pt-5 pb-2 text-center">Informação sobre o curso</h1>
         <h3 class="pb-4 text-center textPink">Novas Tecnologias da Comunicação</h3>
@@ -25,42 +35,42 @@
         <div class="row">
             <!--Duration-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/duration.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/duration.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>Duração</h3>
                 <p>1 ano - 2 semestres</p>
             </div>
 
             <!--Regime-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/regime.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/regime.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>Regime</h3>
                 <p>Laboral</p>
             </div>
 
             <!--Language-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/language.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/language.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>Lingua(s) de instrução</h3>
                 <p>Português</p>
             </div>
 
             <!--Area-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/area.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/area.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>Áreas Científicas</h3>
                 <p>Ciências Sociais</p>
             </div>
 
             <!--Subsystem-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/subsystem.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/subsystem.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>Subsistema</h3>
                 <p>Universitário</p>
             </div>
 
             <!--Ects-->
             <div class="col-md-4 text-center pb-5">
-                <img class="mb-4" src="../../img/course/ects.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                <img class="mb-4 img-fluid" src="../../img/course/ects.svg" alt="símbolo de calendário" title="símbolo de calendário" />
                 <h3>ECTS</h3>
                 <p>180</p>
             </div>
@@ -78,7 +88,7 @@
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                 </svg>
-                <span class="ps-2 align-middle">Informação</span>
+                <span class="ps-2 align-middle textHideSmall">Informação</span>
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -87,7 +97,7 @@
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
                 </svg>
-                <span class="ps-2 align-middle">Requisitos</span>
+                <span class="ps-2 align-middle textHideSmall">Requisitos</span>
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -95,7 +105,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul align-middle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                 </svg>
-                <span class="ps-2 align-middle">Plano Curricular</span>
+                <span class="ps-2 align-middle textHideSmall">Plano Curricular</span>
             </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -103,7 +113,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat align-middle" viewBox="0 0 16 16">
                     <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
                 </svg>
-                <span class="ps-2 align-middle">Contactos</span>
+                <span class="ps-2 align-middle textHideSmall">Contactos</span>
             </button>
         </li>
     </ul>
@@ -186,7 +196,7 @@
             <div class="pt-4">
                 <h4 class="textPink">Contactos</h4>
                 <div class="row pt-4">
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosCourses infosSmaller">
                             <p class="mb-0">
                                 <i class="fa-solid fa-at align-middle"></i>
@@ -196,7 +206,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosCourses infosSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone align-middle" viewBox="0 0 16 16">
@@ -208,7 +218,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosCourses infosSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe align-middle" viewBox="0 0 16 16">
@@ -220,7 +230,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosCourses infosSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook align-middle" viewBox="0 0 16 16">
@@ -232,7 +242,7 @@
                         </div>
                     </div>
 
-                    <div id="cardInfos" class="col-md-4 pb-3">
+                    <div id="cardInfos" class="col-12 col-md-6 col-lg-4 pb-3">
                         <div class="infos itemsInfosCourses infosSmaller">
                             <p class="mb-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram align-middle" viewBox="0 0 16 16">

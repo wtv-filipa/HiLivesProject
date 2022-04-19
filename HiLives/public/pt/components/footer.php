@@ -16,7 +16,7 @@
           </a>
         </p>
       </div>
-      <div class="col-lg-3 col-xs-12 links">
+      <div class="col-lg-3 col-xs-12 links mb-3">
         <h4 class="mt-lg-0 mt-sm-3">Parceiros</h4>
         <ul class="m-0 p-0">
           <li><a href="https://www.ua.pt/">Universidade de Aveiro</a></li>
