@@ -11,7 +11,7 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
             <a class="navbar-brand me-5" href="index.php">
                 <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
             </a>
-            <div class=" navbar-nav ms-auto">
+            <div class="d-flex align-middle">
                 <div>
                     <a href="public/pt/pages/login.php">
                         <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
@@ -24,7 +24,7 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
                 </div>
                 <div class="align-middle">
                     <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
-                    <span class="name ms-1 align-middle">
+                    <span class="name ms-1 align-middle hideTextNav">
                         Português
                     </span>
                 </div>

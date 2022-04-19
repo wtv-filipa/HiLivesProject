@@ -28,15 +28,17 @@ span.name {
   font-weight: 400;
 }
 
-.navbar-light .navbar-toggler .fa-solid.fa-ellipsis-vertical{
+.btn.btn-primary.buttonSidebar {
   color: #000000 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  font-size: 1.3rem !important;
 }
 
-.navbar-toggler{
-  font-size: 1.40rem !important;
-  border: none !important;
+.alignMiddle {
+  display: flex;
+  align-items: center;
 }
-
 /*Media queries*/
 @media only screen and (max-width: 600px) {
   .logo {
@@ -57,19 +59,27 @@ span.name {
 }
 
 @media only screen and (max-width: 991px) {
-  .navBig{
+  .hideTextNav {
     display: none;
   }
-  .navSmall{
+
+  .navBig {
+    display: none;
+  }
+  .navSmall {
     display: block;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .navBig{
+  .hideTextNav {
+    display: inline;
+  }
+
+  .navBig {
     display: block;
   }
-  .navSmall{
+  .navSmall {
     display: none;
   }
 }

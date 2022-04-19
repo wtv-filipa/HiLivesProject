@@ -12,6 +12,18 @@ body {
   text-shadow: 2px 2px rgb(0 0 0 / 50%);
 }
 
+.startBgIndex .container {
+  text-shadow: 2px 2px rgb(0 0 0 / 75%);
+}
+
+.smallerSize h4{
+  font-size: 16px !important;
+}
+
+.smallerSize p{
+  font-size: 14px !important;
+}
+
 /*Scroll down button*/
 .arrow a {
   color: white;
@@ -80,6 +92,12 @@ body {
     background-position: center;
   }
 
+  .indexBg {
+    background-image: url("../img/index/MinWidth_1901.png");
+    width: 100%;
+    background-position: center;
+  }
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -91,6 +109,10 @@ body {
     background-image: url("../img/homePerson/banner/MinWidth_1901.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MinWidth_1901.png");
+  }
+
   .bg-cover {
     min-height: 650px;
   }
@@ -99,6 +121,10 @@ body {
 @media only screen and (max-width: 1900px) {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1900.png");
+  }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1900.png");
   }
 
   .bg-white {
@@ -112,6 +138,10 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_1900.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1900.png");
+  }
+
   .bg-cover {
     height: 650px;
   }
@@ -121,6 +151,14 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1580.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1580.png");
+  }
+
+  /* .bgCoverSection.indexBg {
+    min-height: 507px !important;
+  } */
 
   .bg-white {
     max-width: 555px;
@@ -133,6 +171,10 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_1580.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1580.png");
+  }
+
   .bg-cover {
     height: 650px;
   }
@@ -142,6 +184,11 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1350.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1350.png");
+  }
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -153,6 +200,10 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_1350.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1350.png");
+  }
+
   .bg-cover {
     height: 650px;
   }
@@ -162,6 +213,11 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1260.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1260.png");
+  }
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -173,6 +229,10 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_1260.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1260.png");
+  }
+
   .bg-cover {
     height: 650px;
   }
@@ -182,6 +242,11 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1199.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1199.png");
+  }
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -193,6 +258,10 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_1199.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1199.png");
+  }
+
   .bg-cover {
     height: 650px;
   }
@@ -202,6 +271,15 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_1024.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_1024.png");
+  }
+
+  /* .bgCoverSection.indexBg {
+    min-height: 531px !important;
+  } */
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -211,6 +289,10 @@ body {
 
   .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_1024.png");
+  }
+
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_1024.png");
   }
 
   .bg-cover {
@@ -224,10 +306,31 @@ body {
   }
 }
 
+@media only screen and (max-width: 960px){
+  .bgCoverSection.indexBg {
+    min-height: 485px !important;
+  }
+}
+
+@media only screen and (max-width: 911px){
+  .bgCoverSection.indexBg {
+    min-height: 506px !important;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_800.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_800.png");
+  }
+
+  .bgCoverSection.indexBg {
+    min-height: 554px !important;
+  }
+
   .bg-white {
     max-width: 555px;
     float: right;
@@ -239,14 +342,32 @@ body {
     background-image: url("../img/homePerson/banner/MaxWidth_800.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_800.png");
+  }
+
   .bg-cover {
     height: 650px;
+  }
+}
+
+@media only screen and (max-width: 774px){
+  .bgCoverSection.indexBg {
+    min-height: 575px !important;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .homePersonBg {
     background-image: url("../img/homePerson/maxWidth_767.png");
+  }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_767.png");
+  }
+
+  .bgCoverSection.indexBg {
+    min-height: 250px !important;
   }
 
   .bg-white {
@@ -258,6 +379,11 @@ body {
     background-image: url("../img/homePerson/banner/maxWidth_767.png");
   }
 
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_767.png");
+  }
+  
+
   .bg-cover {
     height: 410px;
   }
@@ -267,6 +393,15 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_420.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_420.png");
+  }
+
+  /* .bgCoverSection.indexBg {
+    min-height: 250px !important;
+  } */
+
   .bg-white {
     max-width: 420px;
     min-height: 396px;
@@ -274,6 +409,10 @@ body {
 
   .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_420.png");
+  }
+
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_420.png");
   }
 
   .bg-cover {
@@ -285,6 +424,15 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_380.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_380.png");
+  }
+
+  /* .bgCoverSection.indexBg {
+    min-height: 250px !important;
+  } */
+
   .bg-white {
     max-width: 420px;
     min-height: 421px;
@@ -292,6 +440,10 @@ body {
 
   .startBgPerson {
     background-image: url("../img/homePerson/banner/MaxWidth_380.png");
+  }
+
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_380.png");
   }
 
   .bg-cover {
@@ -303,6 +455,15 @@ body {
   .homePersonBg {
     background-image: url("../img/homePerson/MaxWidth_320.png");
   }
+
+  .indexBg {
+    background-image: url("../img/index/MaxWidth_320.png");
+  }
+
+  /* .bgCoverSection.indexBg {
+    min-height: 250px !important;
+  } */
+
   .bg-white {
     max-width: 767px;
     min-height: 421px;
@@ -310,6 +471,10 @@ body {
 
   .startBgPerson {
     background-image: url("../img/homePerson//banner/MaxWidth_320.png");
+  }
+
+  .startBgIndex {
+    background-image: url("../img/index/startBanner/MaxWidth_320.png");
   }
 
   .bg-cover {
