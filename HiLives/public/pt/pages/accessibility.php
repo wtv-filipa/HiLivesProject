@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>HiLives</title>
+    <title>Acessibilidade</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_infoPages.php"; ?>
 </head>

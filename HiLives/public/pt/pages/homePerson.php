@@ -1,13 +1,13 @@
 <?php
 session_start();
-if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
+if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
 ?>
 <!DOCTYPE html>
 <html lang="pt">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>HiLives</title>
+    <title>Página inicial</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_homePerson.php"; ?>
 </head>
@@ -22,13 +22,13 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
 
 </html>
 <?php
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
     header("Location: admin/index.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 7) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     header("Location: homeComp.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 13) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
     header("Location: homeHei.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 16) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     header("Location: homeTutor.php");
 } else {
     header("Location: login.php");

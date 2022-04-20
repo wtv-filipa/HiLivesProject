@@ -21,15 +21,15 @@ if (!isset($_SESSION["idUser"])) {
 
 </html>
 <?php
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
     header("Location: admin/index.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 7) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     header("Location: homeComp.php");
-} else  if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
+} else  if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
     header("Location: homePerson.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 13) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
     header("Location: homeHei.php");
-} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 16) {
+} else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     header("Location: homeTutor.php");
 }
 ?>
