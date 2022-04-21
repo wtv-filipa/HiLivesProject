@@ -5,6 +5,10 @@
 }
 
 /*Nav properties*/
+.dropdown-toggle::after{
+  vertical-align: -0.0255em !important;
+}
+
 .navColor {
   background-color: #ffffff;
 }

@@ -15,7 +15,7 @@ if (!isset($_SESSION["idUser"])) {
     <body>
         <?php include "public/pt/components/navbarHomeNoLogin.php"; ?>
         <?php include "public/pt/components/homepageNoLogin.php"; ?>
-        <?php include "public/pt/components/footer.php"; ?>
+        <?php include "public/pt/components/footerNoLogin.php"; ?>
 
         <!-- <script>
         $(function() {
