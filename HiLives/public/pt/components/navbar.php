@@ -10,27 +10,27 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     <!--Navbar WITH login Bigger Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navBig">
         <div class="container">
-            <a class="navbar-brand me-5" href="homePerson.php">
+            <a class="navbar-brand me-5" href="homePerson.php" title="Voltar à página inicial">
                 <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
             </a>
             <!--Menu collapse-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="matchCourse.php">Eu quero estudar</a>
+                        <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="matchVacancy.php">Eu quero trabalhar</a>
+                        <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="stories.php">Histórias do HiLives</a>
+                        <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                     </li>
                 </ul>
 
             </div>
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php">
+                <a href="profile.php" title="Ir para a minha área">
                     <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
                     <span class="name ms-1 align-middle">
                         A minha área
@@ -55,13 +55,13 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     <!--Navbar WITH login Smaller Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navSmall">
         <div class="container">
-            <a class="navbar-brand me-5" href="homePerson.php">
+            <a class="navbar-brand me-5" href="homePerson.php" title="Ir para a página inicial">
                 <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
             </a>
 
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php" class="alignMiddle">
+                <a href="profile.php" class="alignMiddle" title="Ir para a minha área">
                     <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
                 </a>
                 <div class="alignMiddle">
@@ -87,13 +87,13 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <div class="offcanvas-body">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="matchCourse.php">Eu quero estudar</a>
+                                <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="matchVacancy.php">Eu quero trabalhar</a>
+                                <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="stories.php">Histórias do HiLives</a>
+                                <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                             </li>
                         </ul>
                     </div>
@@ -108,12 +108,12 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     <!--Navbar WITHOUT login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
         <div class="container">
-            <a class="navbar-brand me-5" href="../../../index.php">
+            <a class="navbar-brand me-5" href="../../../index.php" title="Voltar à página inicial">
                 <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
             </a>
             <div class="d-flex align-middle">
                 <div>
-                    <a href="login.php">
+                    <a href="login.php" title="Iniciar sessão">
                         <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
                             Iniciar Sessão
                         </button>

@@ -3,7 +3,7 @@
     <div class="container py-5 text-center">
         <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
         <div class="arrow">
-            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionIndex"></a>
+            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionIndex" title="Ir para a primeira secção"></a>
         </div>
     </div>
 </div>
@@ -17,28 +17,28 @@
             <div class="col-12 col-md-4">
                 <img src="public/img/Person.svg" alt="Ícone da Pessoa com DID" class="img-fluid" title="Pessoa">
                 <br>
-                <a href="public/pt/pages/registerPerson.php">
+                <a href="public/pt/pages/registerPerson.php" title="Fazer registo como Pessoa">
                     <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Pessoa</button>
                 </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/HEI.svg" alt="Ícone da Instituição de Ensino Superior" class="img-fluid" title="Instituição de Ensino Superior">
                 <br>
-                <a href="public/pt/pages/registerHei.php">
+                <a href="public/pt/pages/registerHei.php" title="Fazer registo com Instituição de Ensino Superior">
                     <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">Instituição de Ensino Superior</button>
                 </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/Comp.svg" alt="Ícone da Empresa" class="img-fluid" title="Empresa">
                 <br>
-                <a href="public/pt/pages/registerComp.php">
+                <a href="public/pt/pages/registerComp.php" title="Fazer registo como Empresa">
                     <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Empresa</button>
                 </a>
             </div>
         </div>
         <h3 class="pt-5 pb-3">Já tens conta?</h3>
-        <a href="public/pt/pages/login.php">
-            <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Inicia sessão</button>
+        <a href="public/pt/pages/login.php" title="Iniciar sessão">
+            <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Iniciar sessão</button>
         </a>
     </div>
 </section>

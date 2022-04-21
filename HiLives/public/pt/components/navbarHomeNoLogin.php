@@ -8,12 +8,12 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
     <!--Navbar WITHOUT login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
         <div class="container">
-            <a class="navbar-brand me-5" href="index.php">
+            <a class="navbar-brand me-5" href="index.php" title="Voltar à página inicial">
                 <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
             </a>
             <div class="d-flex align-middle">
                 <div>
-                    <a href="public/pt/pages/login.php">
+                    <a href="public/pt/pages/login.php" title="Iniciar sessão">
                         <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
                             Iniciar Sessão
                         </button>

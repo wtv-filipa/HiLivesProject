@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="text-center pt-4">
-                    <a href="uploadCourse.php">
+                    <a href="uploadCourse.php" title="Adicionar um curso ou unidade curricular">
                         <button class="btn buttonDesign buttonStudy buttonRegisterSizeHEI m-0">Adicionar novos estudos</button>
                     </a>
                 </div>

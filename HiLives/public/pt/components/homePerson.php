@@ -3,7 +3,7 @@
     <div class="container py-5 text-center">
         <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
         <div class="arrow">
-            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionPerson"></a>
+            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionPerson" title="Ir para a primeira secção"></a>
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Curso</h3>
                 <p>Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
                 <br>
-                <a href="matchCourse.php">
+                <a href="matchCourse.php" title="Ver ligações com cursos">
                     <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
                         Ver Cursos
                     </button>
@@ -29,7 +29,7 @@
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Emprego</h3>
                 <p>Se queres entrar no mundo do trabalho e não sabes quais são as vagas que podes preencher, a HiLives ajuda-te a encontrar vagas com base nas tuas preferências.</p>
                 <br>
-                <a href="matchVacancy.php">
+                <a href="matchVacancy.php" title="Ver ligações com vagas">
                     <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
                         Ver Vagas
                     </button>
@@ -47,7 +47,7 @@
             <li class="pb-5">Podes partilhar as tuas histórias com as outras pessoas.</li>
         </ul>
         <div class="text-center">
-            <a href="stories.php">
+            <a href="stories.php" title="Ver histórias da HiLives">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
                     Ver Histórias da HiLives
                 </button>
@@ -66,7 +66,7 @@
             <li class="pb-5">Podes partilhar as tuas histórias com as outras pessoas.</li>
         </ul>
         <div class="text-center">
-            <a href="stories.php">
+            <a href="stories.php" title="Ver histórias da HiLives">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
                     Ver Histórias da HiLives
                 </button>

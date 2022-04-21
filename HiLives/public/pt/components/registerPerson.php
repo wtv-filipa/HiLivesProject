@@ -52,7 +52,7 @@ $stmt = mysqli_stmt_init($link);
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
+                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
                                     <h1 class="mb-4 weightTitle">Junta-te a nós!</h1>
                                     <p class="mb-4 descricao">Plataforma de apoio à qualificação e emprego de jovens com dificuldades intelectuais e desenvolvimentais.</p>
                                 </div>

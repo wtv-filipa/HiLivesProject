@@ -3,13 +3,13 @@
     <div class="container py-5 text-center">
         <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
         <div class="arrow">
-            <a class="fa-solid fa-circle-chevron-down" href="#"></a>
+            <a class="fa-solid fa-circle-chevron-down" href="#firstSectionTutor" title="Ir para a primeira secção"></a>
         </div>
     </div>
 </div>
 
 <!-- Matchs -->
-<section class="conatiner-fluid greyBg">
+<section id="firstSectionTutor" class="conatiner-fluid greyBg">
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-4">Qual é o papel de um tutor?</h2>
         <div class="row">
@@ -18,7 +18,7 @@
                 <h3 class="mt-4 pb-2">Facilitar o registo das Pessoas com DID</h3>
                 <p>O tutor deverá de realizar uma entrevista com as Pessoas com DID para que estas possam completar o seu registo de uma forma mais simples.Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
                 <br>
-                <a href="#">
+                <a href="registerRequestsTutor.php" title="Ver pedidos de registo">
                     <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
                         Ver pedidos de registo
                     </button>
@@ -29,7 +29,7 @@
                 <h3 class="mt-4 pb-2">Facilitar a atualização do perfil das Pessoas com DID</h3>
                 <p class="heightEqual">Caso exista alguma pessoa com DID que necessite de atualizar campos específicos do seu perfil, esta irá pedir uma entrevista com o tutor e este vai ajudá-la com a atualização.</p>
                 <br>
-                <a href="#">
+                <a href="editRequestsTutor.php" title="Ver pedidos de Edição">
                     <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
                         Ver pedidos de edição
                     </button>
@@ -49,7 +49,7 @@
                     <h4 class="pb-2">Mariana Silva</h4>
                     <p class="pb-0">marianamsilva19@gmail.com</p>
                     <p>Regions of interest: Aveiro, Braga</p>
-                    <a href="#">
+                    <a href="IndividualReqCreateTutor.php" title="Ver o pedido de ">
                         <button class="btn buttonDesign buttonStudy buttonLoginSize m-0 mb-3">
                             Ver pedido
                         </button>
@@ -65,7 +65,7 @@
                     <h4 class="pb-2">Mariana Silva</h4>
                     <p class="pb-0">marianamsilva19@gmail.com</p>
                     <p>Regions of interest: Aveiro, Braga</p>
-                    <a href="#">
+                    <a href="IndividualReqCreateTutor.php" title="Ver o pedido de">
                         <button class="btn buttonDesign buttonStudy buttonLoginSize m-0 mb-3">
                             Ver pedido
                         </button>
@@ -81,7 +81,7 @@
                     <h4 class="pb-2">Mariana Silva</h4>
                     <p class="pb-0">marianamsilva19@gmail.com</p>
                     <p>Regions of interest: Aveiro, Braga</p>
-                    <a href="#">
+                    <a href="IndividualReqCreateTutor.php" title="Ver o pedido de">
                         <button class="btn buttonDesign buttonStudy buttonLoginSize m-0 mb-3">
                             Ver pedido
                         </button>

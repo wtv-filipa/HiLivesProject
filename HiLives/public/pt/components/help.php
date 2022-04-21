@@ -8,7 +8,7 @@
         <h2>O que é a HiLives?</h2>
         <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
         <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
-        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="sitemap.php" target="_blank" class="linkColor">Mapa da Aplicação</a></b>, e descobre como tudo está ordenado.</p>
+        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="sitemap.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></b>, e descobre como tudo está ordenado.</p>
 
         <div class="mt-5 mx-auto">
             <h2 class="mb-3">Como utilizar a HiLives- vídeo explicativo</h2>
@@ -30,7 +30,7 @@
 
             <p>É possível, dentro da mesma página, obter mais informações sobre o conteúdo da plataforma e ainda ver um vídeo promocional.</p>
 
-            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor">iniciar a sua sessão</a>
+            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor" title="Iniciar sessão">iniciar a sua sessão</a>
         </div>
     </div>
 
@@ -136,6 +136,6 @@
     <div class="mt-5 mb-5">
         <h2>Tens dúvidas ou sugestões?</h2>
 
-        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
+        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
     </div>
 </div>

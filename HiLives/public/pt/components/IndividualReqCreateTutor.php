@@ -3,8 +3,8 @@
         <!--BREADCRUMBS-->
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="pt-4">
             <ol class="breadcrumb reqBreadcrumb">
-                <li class="breadcrumb-item"><a href="homeTutor.php">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="registerRequestsTutor.php">Pedidos de registo</a></li>
+                <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
+                <li class="breadcrumb-item"><a href="registerRequestsTutor.php" title="Voltar aos pedidos de registo">Pedidos de registo</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Pedido da Mariana Silva</li>
             </ol>
         </nav>
@@ -43,7 +43,7 @@
         <p><b>Date of birth</b>: 16-06-2003 </p>
         <p style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque lacus ac nisl ultricies finibus. Morbi non sollicitudin massa, eu scelerisque velit. Vestibulum at libero leo. Donec vitae placerat sapien. Aliquam nec bibendum nunc. Vivamus facilisis tincidunt sollicitudin. Nullam efficitur vestibulum sapien sit amet iaculis. Curabitur dapibus faucibus urna nec condimentum. Praesent ac tellus vitae purus feugiat porttitor id ac ante.</p>
         <div class="text-center pt-4">
-            <a href="#">
+            <a href="IndividualReqCreateTutor.php" title="Editar o perfil">
                 <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
                     Editar perfil
                 </button>
@@ -63,7 +63,7 @@
         <p><b>Region(s) of interest</b>: Aveiro, Braga</p>
         <p><b>Date of birth</b>: 16-06-2003 </p>
         <div class="text-center pt-4 pb-3">
-            <a href="#">
+            <a href="IndividualReqCreateTutor.php" title="Editar o perfil">
                 <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
                     Editar perfil
                 </button>
