@@ -1,3 +1,19 @@
+<?php
+require_once("../../connections/connection.php");
+
+$link = new_db_connection();
+$stmt = mysqli_stmt_init($link);
+
+$idUser = $_SESSION["idUser"];
+
+$query = "SELECT idareas, name_interested_area FROM areas";
+$query2 = "SELECT idcourse_regime, name_regime FROM course_regime";
+$query3 = "SELECT idaccommodation, name_accommodation FROM accommodation";
+
+$query5 = "SELECT region_idregion, idregion, name_region FROM users_has_region
+INNER JOIN region ON users_has_region.region_idregion = region.idregion
+WHERE users_idusers = ?";
+?>
 <div class="container">
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
         <ol class="breadcrumb">
@@ -6,6 +22,44 @@
             <li class="breadcrumb-item active" aria-current="page">Carregar um novo curso</li>
         </ol>
     </nav>
+
+    <?php
+    if (isset($_SESSION["course"])) {
+        $msg_show = true;
+        switch ($_SESSION["course"]) {
+            case 1:
+                $message = "É necessário preencher todos os campos obrigatórios.";
+                $class = "alert-warning";
+                $_SESSION["course"] = 0;
+                break;
+            case 2:
+                $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                $class = "alert-warning";
+                $_SESSION["course"] = 0;
+                break;
+            case 0:
+                $msg_show = false;
+                break;
+            default:
+                $msg_show = false;
+                $_SESSION["course"] = 0;
+        }
+
+        if ($msg_show == true) {
+            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+        }
+    }
+    ?>
+
     <div class="card o-hidden border-0 shadowCard my-5">
         <div class="card-body p-0">
             <div class="row">
@@ -14,8 +68,8 @@
                         <div class="text-center">
                             <h1 class="mb-4 weightTitle">Criar novo curso</h1>
                         </div>
-                        <form method="post" role="form" id="register-form" action="scripts/login.php">
-                            <!--VACANCIE NAME-->
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourseHei.php?course=<?= $idUser ?>">
+                            <!--COURSE NAME-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="nome">Nome do Curso <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
@@ -77,6 +131,26 @@
                                 </div>
                             </div>
 
+                            <!--REGION-->
+                            <div class="form-group pb-4 formulario">
+                                <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região do curso <span class="asteriskPink">*</span></label>
+                                <select class="form-select greyBorder" id="regiao" name="regiao" aria-required="true" required="required">
+                                    <option selected disabled>Selecione uma opção</option>
+                                    <?php
+                                    if (mysqli_stmt_prepare($stmt, $query5)) {
+                                        mysqli_stmt_bind_param($stmt, 'i', $idUser);
+                                        if (mysqli_stmt_execute($stmt)) {
+                                            mysqli_stmt_bind_result($stmt, $region_idregion, $idregion, $name_region);
+                                            while (mysqli_stmt_fetch($stmt)) {
+                                                echo "\n\t\t<option value=\"$idregion\">$name_region</option>";
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+
                             <!--secção-->
                             <h3 class="text-center" role="heading">Características gerais do Curso</h3>
                             <!----------->
@@ -84,17 +158,24 @@
                             <!--AREAS-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="area">Selecione as áreas científicas que se adequam ao Curso <span class="asteriskPink">*</span></label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Default checkbox
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Default checkbox
-                                    </label>
+                                <div class="row ps-3">
+                                    <?php
+                                    $stmt = mysqli_stmt_init($link);
+                                    if (mysqli_stmt_prepare($stmt, $query)) {
+                                        if (mysqli_stmt_execute($stmt)) {
+                                            mysqli_stmt_bind_result($stmt, $idareas, $name_interested_area);
+                                            while (mysqli_stmt_fetch($stmt)) {
+                                                echo "<div class='form-check col-12 col-md-6'>
+                                                    <input class='form-check-input' type='checkbox' name='area[]' value='$idareas' id='$idareas'>
+                                                    <label class='form-check-label' for='$idareas'>
+                                                        $name_interested_area
+                                                     </label>
+                                                </div>";
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    }
+                                    ?>
                                 </div>
                             </div>
 
@@ -116,20 +197,22 @@
 
                             <!--COURSE REGIME-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="regime">Regime <span class="asterisk">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="regime">Regime <span class="asteriskPink">*</span></label>
                                 <select class="form-select greyBorder" id="regime" name="regime" aria-required="true" required="required">
                                     <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
-                                    <option value="pt">opção 1</option>
-                                    <option value="es">opção 2</option>
+                                    <?php
+                                    $stmt = mysqli_stmt_init($link);
+                                    if (mysqli_stmt_prepare($stmt, $query2)) {
+                                        if (mysqli_stmt_execute($stmt)) {
+                                            mysqli_stmt_bind_result($stmt, $idcourse_regime, $name_regime);
+                                            while (mysqli_stmt_fetch($stmt)) {
+                                                echo "\n\t\t<option value=\"$idcourse_regime\">$name_regime</option>";
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    }
+                                    ?>
                                 </select>
-                            </div>
-
-                            <!--ECTS-->
-                            <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="creditos">Créditos ECTS <span class="asteriskPink">*</span></label>
-                                <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="creditos" name="creditos" placeholder="Indique o número de ECTS que os estudantes podem adquirir" aria-required="true" required="required">
-                                </div>
                             </div>
 
                             <!--LANGUAGES-->
@@ -187,7 +270,7 @@
                             </div>
 
                             <!--secção-->
-                            <h3 class="text-center"  role="heading">Detalhes do Curso</h3>
+                            <h3 class="text-center" role="heading">Detalhes do Curso</h3>
                             <!----------->
 
                             <!--CURRICULUM PLAN-->
@@ -216,11 +299,21 @@
 
                             <!--ACCOMMODATION-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="area">Alojamento <span class="asteriskPink">*</span></label>
-                                <select class="form-select greyBorder" id="area" name="area" aria-required="true" required="required">
+                                <label class="boldFont mt-3 pb-2" for="alojamento">Alojamento <span class="asteriskPink">*</span></label>
+                                <select class="form-select greyBorder" id="alojamento" name="alojamento" aria-required="true" required="required">
                                     <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
-                                    <option value="pt">opção 1</option>
-                                    <option value="es">opção 2</option>
+                                    <?php
+                                    $stmt = mysqli_stmt_init($link);
+                                    if (mysqli_stmt_prepare($stmt, $query3)) {
+                                        if (mysqli_stmt_execute($stmt)) {
+                                            mysqli_stmt_bind_result($stmt, $idaccommodation, $name_accommodation);
+                                            while (mysqli_stmt_fetch($stmt)) {
+                                                echo "\n\t\t<option value=\"$idaccommodation\">$name_accommodation</option>";
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    }
+                                    ?>
                                 </select>
                             </div>
 

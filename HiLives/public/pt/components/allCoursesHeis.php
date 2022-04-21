@@ -6,6 +6,53 @@
         </ol>
     </nav>
 
+    <?php
+    if (isset($_SESSION["course"])) {
+        $msg_show = true;
+        switch ($_SESSION["course"]) {
+            case 1:
+                $message = "Curso carregado com sucesso!";
+                $class = "alert-success";
+                $_SESSION["course"] = 0;
+                break;
+            case 2:
+                $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                $class = "alert-warning";
+                $_SESSION["course"] = 0;
+                break;
+            case 3:
+                $message = "Curso editado com sucesso!";
+                $class = "alert-success";
+                $_SESSION["course"] = 0;
+                break;
+            case 4:
+                $message = "Curso eliminado com sucesso!";
+                $class = "alert-success";
+                $_SESSION["course"] = 0;
+                break;
+            case 0:
+                $msg_show = false;
+                break;
+            default:
+                $msg_show = false;
+                $_SESSION["course"] = 0;
+        }
+
+        if ($msg_show == true) {
+            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+        }
+    }
+    ?>
+
     <h1 class="pb-2">Os meus Cursos</h1>
     <p class="pb-4">Aqui pode gerir todos os seus cursos publicados até ao momento.</p>
 
