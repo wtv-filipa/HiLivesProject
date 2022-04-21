@@ -7,7 +7,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>HiLives</title>
+        <title>Pedido de edição</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_IndRequests.php"; ?>
     </head>

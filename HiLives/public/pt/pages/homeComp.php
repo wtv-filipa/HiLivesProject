@@ -7,7 +7,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>HiLives</title>
+        <title>Página inicial</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_homePerson.php"; ?>
     </head>

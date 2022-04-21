@@ -7,7 +7,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Adicionar um curso</title>
+        <title>Editar vaga</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>

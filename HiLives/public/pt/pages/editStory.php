@@ -7,7 +7,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>HiLives</title>
+        <title>Editar história</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>
