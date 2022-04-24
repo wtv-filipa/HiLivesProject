@@ -24,7 +24,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["uc"])) {
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
-                        <li class="breadcrumb-item"><a href="profile.php" title="Voltar à minha área">A minha área</a></li>
+                        <li class="breadcrumb-item"><a href="profile.php?user=<?=$idUser?>" title="Voltar à minha área">A minha área</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Editar uma Unidade Curricular ou Curso feito</li>
                     </ol>
                 </nav>
@@ -72,8 +72,8 @@ if (isset($_SESSION["idUser"]) && isset($_GET["uc"])) {
                             <div class="col-lg-12">
                                 <div class="paddingForms">
                                     <div class="text-center">
-                                        <h1 class="mb-4 weightTitle">Editar a Unidade Curricular ou Curso feito</h1>
-                                        <h3 class="textPink"><?= $cu_name ?></h3>
+                                        <h1 class="mb-2 weightTitle">Editar a Unidade Curricular ou Curso feito</h1>
+                                        <h2 class="textPink mb-4"><?= $cu_name ?></h2>
                                     </div>
                                     <form method="post" role="form" id="register-form" action="../../scripts/editCourse.php?uc=<?=$iduc?>">
                                         <!--NAME-->
@@ -102,7 +102,10 @@ if (isset($_SESSION["idUser"]) && isset($_GET["uc"])) {
 
                                         <div class="form-group text-center mt-2">
                                             <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                                <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Guardar</button>
+                                                <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize me-4">Guardar</button>
+                                                <a href="profile.php?user=<?=$idUser?>" title="Sair da edição">
+                                                <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancelar</button>
+                                                </a>
                                             </div>
                                         </div>
                                     </form>

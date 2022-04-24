@@ -96,7 +96,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             </div>
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php" class="alignMiddle" title="Ir para a minha área">
+                <a href="profile.php?user=<?=$idUser?>" class="alignMiddle" title="Ir para a minha área">
                     <img src="../../img/no_profile_img.png" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="Imagem de perfil">
                     <span class="name mb-0 ms-2 align-middle">
                         A minha área
@@ -199,7 +199,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
 
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php" class="alignMiddle" title="Ir para a minha área">
+                <a href="profile.php?user=<?=$idUser?>" class="alignMiddle" title="Ir para a minha área">
                     <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
                 </a>
                 <div class="alignMiddle">
