@@ -46,15 +46,16 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
     WHERE users_idusers = ?";
 
     //Experiences
-    $query6 = "SELECT idexperiences, description, date, xp_type
+    $query6 = "SELECT idexperiences, description, date, xp_type, content_idcontent, idContent, content_name
     FROM experiences
-    WHERE users_idusers = ?
+    LEFT JOIN content ON experiences.content_idcontent = content.idcontent
+    WHERE experiences.users_idusers = ?
     ORDER BY idexperiences DESC";
 
-    $query7 = "SELECT idContent, content_name
-    FROM content 
-    INNER JOIN experiences ON experiences.content_idcontent = content.idcontent 
-    WHERE idexperiences = ?";
+    // $query7 = "SELECT idContent, content_name
+    // FROM content 
+    // INNER JOIN experiences ON experiences.content_idcontent = content.idcontent 
+    // WHERE idexperiences = ?";
 
     //Environments
     $query8 = "SELECT work_environment_idwork_environment, name_environment 
@@ -81,7 +82,44 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                         </ol>
                     </nav>
 
-                    <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="editProfile.php?edit=<?=$idUser?>" title="Ir para a edição do dados do perfil">
+                    <?php
+                    if (isset($_SESSION["profile"])) {
+                        $msg_show = true;
+                        switch ($_SESSION["profile"]) {
+                            case 1:
+                                $message = "Curso/ Unidade Curricular editado com sucesso";
+                                $class = "alert-success";
+                                $_SESSION["profile"] = 0;
+                                break;
+                            case 2:
+                                $message = "Carregamento da história concluído!";
+                                $class = "alert-success";
+                                $_SESSION["profile"] = 0;
+                                break;
+                            case 0:
+                                $msg_show = false;
+                                break;
+                            default:
+                                $msg_show = false;
+                                $_SESSION["profile"] = 0;
+                        }
+
+                        if ($msg_show == true) {
+                            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+                            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                        }
+                    }
+                    ?>
+
+                    <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="editProfile.php?edit=<?= $idUser ?>" title="Ir para a edição do dados do perfil">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square align-middle" viewBox="0 0 16 16">
                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
@@ -306,190 +344,84 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                             if (mysqli_stmt_prepare($stmt2, $query6)) {
                                 mysqli_stmt_bind_param($stmt2, 'i', $idUser);
                                 mysqli_stmt_execute($stmt2);
-                                mysqli_stmt_bind_result($stmt2, $idexperiences, $description, $date, $xp_type);
+                                mysqli_stmt_bind_result($stmt2, $idexperiences, $description, $date, $xp_type, $content_idcontent, $idContent, $content_name);
                                 while (mysqli_stmt_fetch($stmt2)) {
                                     $data = substr($date, 0, 10);
                                     $newDate = date("d-m-Y", strtotime($data));
-                                    if ($xp_type == "video") {
                             ?>
-                                        <!--Video-->
-                                        <div class="wrapperStory">
-                                            <header class="cf">
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
-                                                    <?php
-                                                    if (isset($profile_img)) {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
-                                                    <?php
-                                                    } else {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </a>
-                                                <h5 class="name">
-                                                    <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
-                                                </h5>
-                                                <p class="cardInfo13"><?= $newDate ?></p>
-                                            </header>
 
+                                    <div class="wrapperStory">
+                                        <header class="cf">
+                                            <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
+                                                <?php
+                                                if (isset($profile_img)) {
+                                                ?>
+                                                    <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
+                                                <?php
+                                                }
+                                                ?>
+                                            </a>
+                                            <h5 class="name">
+                                                <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
+                                            </h5>
+                                            <p class="cardInfo13"><?= $newDate ?></p>
+                                        </header>
+                                        <?php
+                                        //VIDEO
+                                        if ($xp_type == "video") {
+                                            if (isset($description)) {
+                                        ?>
+                                                <p class="status"><?= $description ?></p>
                                             <?php
+                                            }
+                                            ?>
+                                            <div class="text-center videoStory">
+                                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half p-0 mt-5">
+                                                    <video class="embed-responsive-item" src="../../../admin/uploads/experiences/<?= $content_name ?>" controls="controls"></video>
+                                                </div>
+                                            </div>
+                                            <?php
+                                            //AUDIO
+                                        } else if ($xp_type == "audio") {
                                             if (isset($description)) {
                                             ?>
                                                 <p class="status"><?= $description ?></p>
-                                                <?php
-                                            }
-
-                                            if (mysqli_stmt_prepare($stmt3, $query7)) {
-                                                mysqli_stmt_bind_param($stmt3, 'i', $idexperiences);
-                                                mysqli_stmt_execute($stmt3);
-                                                mysqli_stmt_bind_result($stmt3, $idContent, $content_name);
-                                                while (mysqli_stmt_fetch($stmt3)) {
-                                                ?>
-                                                    <div class="text-center videoStory">
-                                                        <video width="600" controls>
-                                                            <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="video/mp4">
-                                                            O teu browser não tem suporte para vídeo em HTML.
-                                                        </video>
-                                                    </div>
                                             <?php
-                                                }
-                                                mysqli_stmt_close($stmt3);
                                             }
                                             ?>
-                                        </div>
-                                    <?php
-                                    }
-                                    if ($xp_type == "text") {
-                                    ?>
-                                        <!--Text-->
-                                        <div class="wrapperStory">
-                                            <header class="cf">
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
-                                                    <?php
-                                                    if (isset($profile_img)) {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
-                                                    <?php
-                                                    } else {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </a>
-                                                <h5 class="name">
-                                                    <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
-                                                </h5>
-                                                <p class="cardInfo13"><?= $newDate ?></p>
-                                            </header>
+                                            <div class="text-center">
+                                                <audio controls>
+                                                    <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/ogg">
+                                                    <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/mpeg">
+                                                    Your browser does not support the audio element.
+                                                </audio>
+                                            </div>
+                                            <?php
+                                            //IMAGE
+                                        } else if ($xp_type == "image") {
+                                            if (isset($description)) {
+                                            ?>
+                                                <p class="status"><?= $description ?></p>
+                                            <?php
+                                            }
+                                            ?>
+                                            <div class="text-center">
+                                                <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
+                                            </div>
+                                        <?php
+                                        } else if ($xp_type == "text" && isset($description)) {
+                                        ?>
                                             <p class="status"><?= $description ?></p>
-                                        </div>
-                                    <?php
-                                    }
-                                    if ($xp_type == "audio") {
-                                    ?>
-                                        <!--Audio-->
-                                        <div class="wrapperStory">
-                                            <header class="cf">
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
-                                                    <?php
-                                                    if (isset($profile_img)) {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
-                                                    <?php
-                                                    } else {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </a>
-                                                <h5 class="name">
-                                                    <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
-                                                </h5>
-                                                <p class="cardInfo13"><?= $newDate ?></p>
-                                            </header>
-                                            <?php
-                                            if (isset($description)) {
-                                            ?>
-                                                <p class="status"><?= $description ?></p>
-                                                <?php
-                                            }
-                                            $stmt3 = mysqli_stmt_init($link3);
-                                            if (mysqli_stmt_prepare($stmt3, $query7)) {
-                                                mysqli_stmt_bind_param($stmt3, 'i', $idexperiences);
-                                                mysqli_stmt_execute($stmt3);
-                                                mysqli_stmt_bind_result($stmt3, $idContent, $content_name);
-                                                while (mysqli_stmt_fetch($stmt3)) {
-                                                ?>
-                                                    <div class="text-center">
-                                                        <audio controls>
-                                                            <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/ogg">
-                                                            <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/mpeg">
-                                                            Your browser does not support the audio element.
-                                                        </audio>
-                                                    </div>
-                                            <?php
-                                                }
-                                                mysqli_stmt_close($stmt3);
-                                            }
-                                            ?>
-                                        </div>
-                                    <?php
-                                    }
-                                    if ($xp_type == "image") {
-                                    ?>
-                                        <!--Image-->
-                                        <div class="wrapperStory">
-                                            <header class="cf">
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
-                                                    <?php
-                                                    if (isset($profile_img)) {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
-                                                    <?php
-                                                    } else {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </a>
-                                                <h5 class="name">
-                                                    <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
-                                                </h5>
-                                                <p class="cardInfo13"><?= $newDate ?></p>
-                                            </header>
-                                            <?php
-                                            if (isset($description)) {
-                                            ?>
-                                                <p class="status"><?= $description ?></p>
-                                                <?php
-                                            }
-                                            $stmt3 = mysqli_stmt_init($link3);
-                                            if (mysqli_stmt_prepare($stmt3, $query7)) {
-                                                mysqli_stmt_bind_param($stmt3, 'i', $idexperiences);
-                                                mysqli_stmt_execute($stmt3);
-                                                mysqli_stmt_bind_result($stmt3, $idContent, $content_name);
-                                                while (mysqli_stmt_fetch($stmt3)) {
-                                                ?>
-                                                    <div class="text-center">
-                                                        <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
-                                                    </div>
-                                            <?php
-                                                }
-                                                mysqli_stmt_close($stmt3);
-                                            }
-                                            ?>
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
                             <?php
                                 }
-                                mysqli_stmt_close($stmt2);
                             }
                             ?>
 

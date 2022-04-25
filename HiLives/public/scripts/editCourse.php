@@ -25,7 +25,7 @@ if (!empty($_POST["nomeuc"]) && !empty($_POST["uniuc"]) && !empty($_POST["data"]
             $_SESSION["doneCU"] = 1;
         } else {
             header("Location: ../pt/pages/profile.php");
-            $_SESSION["doneCU"] = 3;
+            $_SESSION["profile"] = 1;
             mysqli_stmt_close($stmt);
         }
     } else {
