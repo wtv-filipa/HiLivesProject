@@ -6,6 +6,10 @@ $stmt = mysqli_stmt_init($link);
 if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $User_type = $_SESSION["type"];
     $idUser = $_SESSION["idUser"];
+
+    $query = "SELECT profile_img
+    FROM users
+    WHERE idusers = ?";
 ?>
     <!--Navbar WITH login Bigger Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navBig">
@@ -96,8 +100,29 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             </div>
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php?user=<?=$idUser?>" class="alignMiddle" title="Ir para a minha área">
-                    <img src="../../img/no_profile_img.png" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="Imagem de perfil">
+                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Ir para a minha área">
+                    <?php
+                    if (mysqli_stmt_prepare($stmt, $query)) {
+                        mysqli_stmt_bind_param($stmt, 'i', $idUser);
+                        mysqli_stmt_execute($stmt);
+                        mysqli_stmt_bind_result($stmt, $profile_img);
+                        while (mysqli_stmt_fetch($stmt)) {
+                            if (isset($profile_img)) {
+
+                    ?>
+                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="<?= $profile_img ?>" title="Imagem de perfil">
+                            <?php
+                            } else {
+                            ?>
+                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="Imagem de perfil">
+                    <?php
+                            }
+                        }
+                        mysqli_stmt_close($stmt);
+                    }
+                    mysqli_close($link);
+                    ?>
+
                     <span class="name mb-0 ms-2 align-middle">
                         A minha área
                     </span>
@@ -149,18 +174,6 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                         </li>
                     </ul>
                 </div>
-
-
-                <!-- <div>
-                    <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de portugal">
-                    <span class="name ms-1 align-middle">
-                        Português
-                    </span>
-                </div> -->
-
-
-
-
             </div>
 
         </div>
@@ -199,8 +212,29 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
 
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php?user=<?=$idUser?>" class="alignMiddle" title="Ir para a minha área">
-                    <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
+                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Ir para a minha área">
+                    <?php
+                    $stmt = mysqli_stmt_init($link);
+                    if (mysqli_stmt_prepare($stmt, $query)) {
+                        mysqli_stmt_bind_param($stmt, 'i', $idUser);
+                        mysqli_stmt_execute($stmt);
+                        mysqli_stmt_bind_result($stmt, $profile_img);
+                        while (mysqli_stmt_fetch($stmt)) {
+                            if (isset($profile_img)) {
+
+                    ?>
+                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid" style="max-width:29px" alt="<?= $profile_img ?>" title="Imagem de perfil">
+                            <?php
+                            } else {
+                            ?>
+                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Imagem de perfil">
+                    <?php
+                            }
+                        }
+                        mysqli_stmt_close($stmt);
+                    }
+                    mysqli_close($link);
+                    ?>
                 </a>
                 <div class="alignMiddle">
                     <span class="name ms-2 me-2 align-middle">
