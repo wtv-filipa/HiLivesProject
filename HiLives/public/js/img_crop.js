@@ -34,7 +34,7 @@ $(document).ready(function () {
             size: 'viewport'
         }).then(function (response) {
             $.ajax({
-                url: "scripts/upload_img.php",
+                url: "../../scripts/uploadImgProfile.php",
                 type: "POST",
                 data: {
                     "image": response,

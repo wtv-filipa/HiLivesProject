@@ -27,6 +27,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
 
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_crop.php"; ?>
+        <?php include "../../helpers/formsValidation.php"; ?>
     </body>
 
     </html>

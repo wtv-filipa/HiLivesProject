@@ -54,7 +54,7 @@ if (isset($_SESSION["idUser"])) {
 
             if ($msg_show == true) {
                 echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
-                     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
                         <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
                          top: 0;
                          right: 0;

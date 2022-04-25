@@ -20,12 +20,12 @@
                     <img id="img_perf" class="imgProfile mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="sem imagem de perfil" />
                 </div>
                 <!----------------------MODAL DE CROP--------------->
-                <div id="uploadimageModal" class="modal" role="dialog">
+                <div id="uploadimageModal" class="modal" tabindex="-1" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title">Importar e cortar a imagem de perfil</h4>
-                                <button type="button" class="close" aria-label="Fechar" aria-hidden=true data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar" aria-hidden=true></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row mx-auto">
@@ -37,11 +37,11 @@
                             </div>
                             <div class="modal-footer">
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <button class="buttonCustomise btn btn-primary crop_image" value="Upload Image" name="Submit"> Guardar </button>
+                                    <div class="col-md-4 me-3">
+                                        <button class="btn buttonDesign buttonWork buttonLoginSize crop_image" value="Upload Image" name="Submit"> Guardar </button>
                                     </div>
-                                    <div class="col-md-4">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                    <div class="col-md-4 ms-3">
+                                        <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Fechar</button>
                                     </div>
                                 </div>
                             </div>
