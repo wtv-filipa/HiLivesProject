@@ -87,12 +87,17 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                         $msg_show = true;
                         switch ($_SESSION["profile"]) {
                             case 1:
-                                $message = "Curso/ Unidade Curricular editado com sucesso";
+                                $message = "Curso/Unidade Curricular editado com sucesso";
                                 $class = "alert-success";
                                 $_SESSION["profile"] = 0;
                                 break;
                             case 2:
                                 $message = "Carregamento da história concluído!";
+                                $class = "alert-success";
+                                $_SESSION["profile"] = 0;
+                                break;
+                            case 3:
+                                $message = "Carregamento do Curso/Unidade Curricula concluído!";
                                 $class = "alert-success";
                                 $_SESSION["profile"] = 0;
                                 break;

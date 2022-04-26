@@ -21,8 +21,8 @@ if (isset($_SESSION["idUser"]) && !empty($_POST["nomeuc"]) && !empty($_POST["uni
             mysqli_stmt_close($stmt);
             mysqli_close($link);
             
-            header("Location: ../pt/pages/profile.php");
-            $_SESSION["doneCU"] = 2;
+            header("Location: ../pt/pages/profile.php?user=$users_idusers");
+            $_SESSION["profile"] = 3;
         } else {
 
             header("Location: ../pt/pages/uploadCourse.php");
