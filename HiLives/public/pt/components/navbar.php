@@ -118,9 +118,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <?php
                             }
                         }
-                        mysqli_stmt_close($stmt);
                     }
-                    mysqli_close($link);
                     ?>
 
                     <span class="name mb-0 ms-2 align-middle">

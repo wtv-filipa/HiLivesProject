@@ -52,11 +52,6 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
     WHERE experiences.users_idusers = ?
     ORDER BY idexperiences DESC";
 
-    // $query7 = "SELECT idContent, content_name
-    // FROM content 
-    // INNER JOIN experiences ON experiences.content_idcontent = content.idcontent 
-    // WHERE idexperiences = ?";
-
     //Environments
     $query8 = "SELECT work_environment_idwork_environment, name_environment 
     FROM users_has_work_environment
@@ -385,7 +380,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                             }
                                             ?>
                                             <div class="text-center videoStory">
-                                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half p-0 mt-5">
+                                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half p-0 mt-5 videoSize">
                                                     <video class="embed-responsive-item" src="../../../admin/uploads/experiences/<?= $content_name ?>" controls="controls"></video>
                                                 </div>
                                             </div>
@@ -414,7 +409,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                             <?php
                                             }
                                             ?>
-                                            <div class="text-center">
+                                            <div class="text-center videoSize">
                                                 <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
                                             </div>
                                         <?php

@@ -307,6 +307,18 @@ audio {
   height: auto;
 }
 
+.videoSize{
+  max-height: 500px;
+}
+
+.videoSize video{
+  max-height: 500px;
+}
+
+.videoSize img{
+  max-height: 500px;
+}
+
 /*BUTTON CLOSE*/
 .close {
   float: right;

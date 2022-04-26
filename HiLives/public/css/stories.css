@@ -23,6 +23,18 @@
   color: #ffffff;
 }
 
+.videoSize{
+  max-height: 500px;
+}
+
+.videoSize video{
+  max-height: 500px;
+}
+
+.videoSize img{
+  max-height: 500px;
+}
+
 @media only screen and (max-width: 1400px) {
   .arrowRight {
     padding-left: 83%;
