@@ -77,48 +77,6 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                         </ol>
                     </nav>
 
-                    <?php
-                    if (isset($_SESSION["profile"])) {
-                        $msg_show = true;
-                        switch ($_SESSION["profile"]) {
-                            case 1:
-                                $message = "Curso/Unidade Curricular editado com sucesso";
-                                $class = "alert-success";
-                                $_SESSION["profile"] = 0;
-                                break;
-                            case 2:
-                                $message = "Carregamento da história concluído!";
-                                $class = "alert-success";
-                                $_SESSION["profile"] = 0;
-                                break;
-                            case 3:
-                                $message = "Carregamento do Curso/Unidade Curricula concluído!";
-                                $class = "alert-success";
-                                $_SESSION["profile"] = 0;
-                                break;
-                            case 0:
-                                $msg_show = false;
-                                break;
-                            default:
-                                $msg_show = false;
-                                $_SESSION["profile"] = 0;
-                        }
-
-                        if ($msg_show == true) {
-                            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
-                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
-                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
-                         top: 0;
-                         right: 0;
-                         padding: 0.75rem 1.25rem;
-                         color: inherit;\">&times;</span>
-                    </button>
-                </div>";
-                            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
-                        }
-                    }
-                    ?>
-
                     <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="editProfile.php?edit=<?= $idUser ?>" title="Ir para a edição do dados do perfil">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square align-middle" viewBox="0 0 16 16">
                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
@@ -127,6 +85,53 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                         <span class="ps-2 align-middle textEdit">Editar Perfil</span>
                     </a>
                 </div>
+
+                <?php
+                if (isset($_SESSION["profile"])) {
+                    $msg_show = true;
+                    switch ($_SESSION["profile"]) {
+                        case 1:
+                            $message = "Curso/Unidade Curricular editado com sucesso";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
+                        case 2:
+                            $message = "Carregamento da história concluído!";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
+                        case 3:
+                            $message = "Carregamento do Curso/Unidade Curricula concluído!";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
+                        case 4:
+                            $message = "História editada com sucesso!";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
+                        case 0:
+                            $msg_show = false;
+                            break;
+                        default:
+                            $msg_show = false;
+                            $_SESSION["profile"] = 0;
+                    }
+
+                    if ($msg_show == true) {
+                        echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+                        echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                    }
+                }
+                ?>
 
                 <section class="text-center pt-5 pb-3">
                     <?php
