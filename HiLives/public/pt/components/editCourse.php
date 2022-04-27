@@ -75,7 +75,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["uc"])) {
                                         <h1 class="mb-2 weightTitle">Editar a Unidade Curricular ou Curso feito</h1>
                                         <h2 class="textPink mb-4"><?= $cu_name ?></h2>
                                     </div>
-                                    <form method="post" role="form" id="register-form" action="../../scripts/editCourse.php?uc=<?=$iduc?>">
+                                    <form method="post" role="form" action="../../scripts/editCourse.php?uc=<?=$iduc?>">
                                         <!--NAME-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="nomeuc">Nome da Unidade Curricular ou Curso <span class="asteriskPink">*</span></label>
