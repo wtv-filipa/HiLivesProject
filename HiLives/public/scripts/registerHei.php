@@ -2,7 +2,7 @@
 session_start();
 require_once "../connections/connection.php";
 
-if (!empty($_POST["nome"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["site"]) && !empty($_POST["endereco"]) && !empty($_POST["ensino"]) && !empty($_POST["instituicao"])) {
+if (!empty($_POST["nome"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["site"]) && !empty($_POST["phone"]) && !empty($_POST["endereco"]) && !empty($_POST["ensino"]) && !empty($_POST["instituicao"])) {
 
     $type = 13;
 
@@ -12,13 +12,14 @@ if (!empty($_POST["nome"]) && !empty($_POST["email"]) && !empty($_POST["password
     $link2 = new_db_connection();
     $stmt2 = mysqli_stmt_init($link2);
 
-    $query = "INSERT INTO users (name_user, email_user, password, address, website, user_type_iduser_type, learning_type_idlearning_type, institution_type_idinstitution_type) VALUES (?,?,?,?,?,?,?,?)";
+    $query = "INSERT INTO users (name_user, email_user, contact_user, password, address, website, user_type_iduser_type, learning_type_idlearning_type, institution_type_idinstitution_type) VALUES (?,?,?,?,?,?,?,?,?)";
 
     if (mysqli_stmt_prepare($stmt, $query)) {
-        mysqli_stmt_bind_param($stmt, 'sssssiii', $name_user, $email_user, $password, $address, $website, $user_type_iduser_type, $learning_type_idlearning_type, $institution_type_idinstitution_type);
+        mysqli_stmt_bind_param($stmt, 'ssssssiii', $name_user, $email_user, $contact_user, $password, $address, $website, $user_type_iduser_type, $learning_type_idlearning_type, $institution_type_idinstitution_type);
 
         $name_user = $_POST['nome'];
         $email_user = $_POST['email'];
+        $contact_user = $_POST['phone'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $address = $_POST["endereco"];
         $website = $_POST["site"];

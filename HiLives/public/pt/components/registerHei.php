@@ -114,6 +114,14 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
                                         </div>
                                     </div>
 
+                                    <!--CONTACT-->
+                                    <div class="form-group pb-4">
+                                        <label class="boldFont mt-3 pb-2" for="phone">Contacto telefónico <span class="asterisk">*</span></label>
+                                        <div class="p-0 m-0">
+                                            <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreva aqui o contacto telefónico da Instituição de Ensino Superior" aria-required="true" required="required">
+                                        </div>
+                                    </div>
+
                                     <!--TIPO DE ENSINO-->
                                     <div class="form-group pb-4">
                                         <label class="boldFont mt-3 pb-2" for="ensino">Selecione o tipo de ensino da Instituição<span class="asterisk">*</span></label>
