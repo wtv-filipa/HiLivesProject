@@ -116,8 +116,7 @@ if ($_SESSION["idUser"]) {
 
 <?php
 } else {
-    /* include("404.php");*/
-    echo "Oh no 404";
+    include("404.php");
 }
 
 mysqli_close($link);

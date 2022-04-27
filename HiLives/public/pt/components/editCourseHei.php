@@ -359,8 +359,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
     mysqli_close($link);
 } else {
-    /* include("404.php");*/
-    echo "Oh no 404";
+    include("404.php");
 }
 
 ?>

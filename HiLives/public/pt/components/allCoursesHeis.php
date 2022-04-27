@@ -84,7 +84,7 @@ if (isset($_SESSION["idUser"])) {
             ?>
                         <div id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                             <div class="list listStudy text-center">
-                                <a href="infoCourse.php?vac=<?= $idcourses ?>" title="Ver informações do curso <?= $name_course ?>">
+                                <a href="infoCourse.php?course=<?= $idcourses ?>" title="Ver informações do curso <?= $name_course ?>">
                                     <h4><?= $name_course ?></h4>
                                 </a>
                                 <p>Diretor(a): <?= $course_director ?></p>
@@ -114,8 +114,7 @@ if (isset($_SESSION["idUser"])) {
     </div>
 <?php
 } else {
-    /* include("404.php");*/
-    echo "Oh no 404";
+    include("404.php");
 }
 
 mysqli_close($link);
