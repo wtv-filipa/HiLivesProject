@@ -68,6 +68,8 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                     } else if ($type_user == "Universidade") {
                         /* include "match_young_login.php";*/
                         header("Location: ../pt/pages/homeHei.php");
+                    } else if ($type_user == "Tutor") {
+                        header("Location: ../pt/pages/homeTutor.php");
                     } else if ($type_user == "Admin") {
                         /*header("Location: ../../admin/index.php");*/
                     }
