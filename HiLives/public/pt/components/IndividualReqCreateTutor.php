@@ -37,7 +37,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             <ol class="breadcrumb reqBreadcrumb">
                                 <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
                                 <li class="breadcrumb-item"><a href="registerRequestsTutor.php" title="Voltar aos pedidos de registo">Pedidos de registo</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Pedido da Mariana Silva</li>
+                                <li class="breadcrumb-item active" aria-current="page">Pedido de <?= $name_user ?></li>
                             </ol>
                         </nav>
 
@@ -99,27 +99,29 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         <h3 class="pb-4 text-center textPink"><?= $name_user ?></h3>
                         <p><b>Email</b>: <?= $email_user ?></p>
                         <p><b>Contacto</b>: <?= $contact_user ?></p>
-                        <p><b>
+                        <p>
+                            <b>
                                 Regiões de interesse:
-                                <?php
-                                $first = true;
-                                if (mysqli_stmt_prepare($stmt2, $query2)) {
-                                    mysqli_stmt_bind_param($stmt2, 'i', $idUser);
-                                    mysqli_stmt_execute($stmt2);
-                                    mysqli_stmt_bind_result($stmt2, $name_region);
-                                    while (mysqli_stmt_fetch($stmt2)) {
-                                        if (!$first) {
-                                            echo ",";
-                                        }
-                                        $first = false;
-                                        echo " $name_region";
+                            </b>
+                            <?php
+                            $first = true;
+                            if (mysqli_stmt_prepare($stmt2, $query2)) {
+                                mysqli_stmt_bind_param($stmt2, 'i', $idUser);
+                                mysqli_stmt_execute($stmt2);
+                                mysqli_stmt_bind_result($stmt2, $name_region);
+                                while (mysqli_stmt_fetch($stmt2)) {
+                                    if (!$first) {
+                                        echo ",";
                                     }
+                                    $first = false;
+                                    echo " $name_region";
                                 }
-                                ?>
+                            }
+                            ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
                         <div class="text-center pt-4">
-                            <a href="createProfileTutor.php?create=<?=$idUser?>" title="Editar o perfil">
+                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
                                 <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
                                     Editar perfil
                                 </button>
@@ -136,27 +138,29 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         <h3 class="pb-4 text-center textPink"><?= $name_user ?></h3>
                         <p><b>Email</b>: <?= $email_user ?></p>
                         <p><b>Contacto</b>: <?= $contact_user ?></p>
-                        <p><b>
+                        <p>
+                            <b>
                                 Regiões de interesse:
-                                <?php
-                                $first = true;
-                                if (mysqli_stmt_prepare($stmt2, $query2)) {
-                                    mysqli_stmt_bind_param($stmt2, 'i', $idUser);
-                                    mysqli_stmt_execute($stmt2);
-                                    mysqli_stmt_bind_result($stmt2, $name_region);
-                                    while (mysqli_stmt_fetch($stmt2)) {
-                                        if (!$first) {
-                                            echo ",";
-                                        }
-                                        $first = false;
-                                        echo " $name_region";
+                            </b>
+                            <?php
+                            $first = true;
+                            if (mysqli_stmt_prepare($stmt2, $query2)) {
+                                mysqli_stmt_bind_param($stmt2, 'i', $idUser);
+                                mysqli_stmt_execute($stmt2);
+                                mysqli_stmt_bind_result($stmt2, $name_region);
+                                while (mysqli_stmt_fetch($stmt2)) {
+                                    if (!$first) {
+                                        echo ",";
                                     }
+                                    $first = false;
+                                    echo " $name_region";
                                 }
-                                ?>
+                            }
+                            ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
                         <div class="text-center pt-4 pb-3">
-                            <a href="createProfileTutor.php?create=<?=$idUser?>" title="Editar o perfil">
+                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
                                 <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
                                     Editar perfil
                                 </button>
