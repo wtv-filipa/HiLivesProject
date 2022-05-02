@@ -31,18 +31,56 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                 <li class="breadcrumb-item active" aria-current="page">Criar perfil</li>
             </ol>
         </nav>
+
+        <?php
+        if (isset($_SESSION["create"])) {
+            $msg_show = true;
+            switch ($_SESSION["create"]) {
+                case 1:
+                    $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                    $class = "alert-success";
+                    $_SESSION["create"] = 0;
+                    break;
+                case 2:
+                    $message = "É necessário preencher todos os campos obrigatórios.";
+                    $class = "alert-warning";
+                    $_SESSION["create"] = 0;
+                    break;
+                case 0:
+                    $msg_show = false;
+                    break;
+                default:
+                    $msg_show = false;
+                    $_SESSION["create"] = 0;
+            }
+
+            if ($msg_show == true) {
+                echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+                echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+            }
+        }
+        ?>
+
         <div class="card o-hidden border-0 shadowCard my-5 paddingForms">
             <div class="card-body p-0">
                 <h1 class="text-center">Criar Perfil</h1>
                 <hr>
-                <form class="ps-3" method="post" role="form" id="register-form" action="../../scripts/createProfileTutor.php?create=<?= $idUser ?>">
+                <form class="ps-3" method="post" role="form" id="tutor-form" action="../../scripts/createProfileTutor.php?create=<?= $idUser ?>">
                     <p style="font-size: 14px; color: #AE0168 !important;">* Preenchimento
                         obrigatório</p>
 
                     <!--Escolaridade-->
                     <div class="form-group pb-4">
                         <label class="boldFont mt-3 pb-2" for="esc">Escolaridade <span class="asteriskPink">*</span></label>
-                        <select class="form-select greyBorder" id="esc" name="esc">
+                        <select class="form-select greyBorder" id="esc" name="esc" aria-required="true" required="required">
                             <option selected disabled>Selecione uma opção</option>
                             <?php
                             $link = new_db_connection();
@@ -88,8 +126,8 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
 
                     <!--WORK EXPERIENCE-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="exp_t">Experiência de trabalho </label>
-                        <textarea class="form-control " id="exp_t" rows="5" name="exp_t" placeholder="Escreva aqui sobre a experiência de trabalho que a Pessoa com DID tem"></textarea>
+                        <label class="boldFont mt-3 pb-2" for="exp_t">Experiência de trabalho <span class="asteriskPink">*</span></label>
+                        <textarea class="form-control " id="exp_t" rows="5" name="exp_t" placeholder="Escreva aqui sobre a experiência de trabalho que a Pessoa com DID tem" aria-required="true" required="required"></textarea>
                     </div>
 
                     <!--CAPACITIES-->
@@ -146,8 +184,8 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
 
                     <!--WORK EXPERIENCE-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="def">O que mais pode dizer a Pessoa com DID sobre si </label>
-                        <textarea class="form-control " id="def" rows="5" name="def" placeholder="Por exemplo: se tiver alguma necessidade pode indicar aqui (como necessidade de elevador e/ou rampas de acesso)."></textarea>
+                        <label class="boldFont mt-3 pb-2" for="def">O que mais pode dizer a Pessoa com DID sobre si <span class="asteriskPink">*</span></label>
+                        <textarea class="form-control " id="def" rows="5" name="def" placeholder="Por exemplo: se tiver alguma necessidade pode indicar aqui (como necessidade de elevador e/ou rampas de acesso)." aria-required="true" required="required"></textarea>
                     </div>
 
                     <div class="form-group text-center mt-2">

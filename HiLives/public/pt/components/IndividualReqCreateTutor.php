@@ -41,6 +41,38 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             </ol>
                         </nav>
 
+                        <?php
+                        if (isset($_SESSION["create"])) {
+                            $msg_show = true;
+                            switch ($_SESSION["create"]) {
+                                case 1:
+                                    $message = "Perfil criado com sucesso!";
+                                    $class = "alert-warning";
+                                    $_SESSION["create"] = 0;
+                                    break;
+                                case 0:
+                                    $msg_show = false;
+                                    break;
+                                default:
+                                    $msg_show = false;
+                                    $_SESSION["create"] = 0;
+                            }
+
+                            if ($msg_show == true) {
+                                echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+                                echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                            }
+                        }
+                        ?>
+
                         <h1 class="pt-4 pb-2">Pedido para registar o perfil de</h1>
                         <h3 class="pb-5 textPink"><?= $name_user ?></h3>
                         <!--PROFILE STAGES BIG-->

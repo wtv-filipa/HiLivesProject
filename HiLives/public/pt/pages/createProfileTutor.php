@@ -17,6 +17,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     <?php include "../components/createProfileTutor.php"; ?>
     <?php include "../components/footer.php"; ?>
 
+    <?php include "../../helpers/js_validateTutor.php"; ?>
     <?php include "../../helpers/js.php"; ?>
     <?php include "../../helpers/js_crop.php"; ?>
 </body>
