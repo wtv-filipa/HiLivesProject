@@ -32,9 +32,9 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                     $link3 = new_db_connection();
 
                     if ($type_user == "Pessoa" and $active_person == 1) {
-                        /*include "match_uni_login.php";*/
+                        include "matchPerson.php";
                         if ($login == 0) {
-                            header("Location: ../pt/pages/homePerson.php");
+                            // header("Location: ../pt/pages/homePerson.php");
                             /*$_SESSION["modal"] = 1;*/
                             /*$query3 = "UPDATE users
                                     SET login = 1
