@@ -34,7 +34,7 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                     if ($type_user == "Pessoa" and $active_person == 1) {
                         include "matchPerson.php";
                         if ($login == 0) {
-                            // header("Location: ../pt/pages/homePerson.php");
+                            header("Location: ../pt/pages/homePerson.php");
                             /*$_SESSION["modal"] = 1;*/
                             /*$query3 = "UPDATE users
                                     SET login = 1
@@ -52,21 +52,10 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                     } else if ($type_user == "Pessoa" and $active_person == 0) {
                         header("Location: ../pt/pages/messageRegister.php");
                     } else if ($type_user == "Empresa") {
-                        $query2 = "SELECT idVacancies FROM vacancies WHERE User_publicou = ?";
-                        if (mysqli_stmt_prepare($stmt2, $query2)) {
-                            mysqli_stmt_bind_param($stmt2, 'i', $idUser);
-                            mysqli_stmt_execute($stmt2);
-                            mysqli_stmt_bind_result($stmt2, $idVacancies);
-                            while (mysqli_stmt_fetch($stmt2)) {
-                                /* include "match_comp.php";*/
-                                header("Location: ../pt/pages/homeComp.php");
-                            }
-                            mysqli_stmt_close($stmt2);
-                            mysqli_close($link2);
-                        }
-                        header("Location: ../pt/pages/homeComp.php");
+                        include "matchComp.php";
+                        // header("Location: ../pt/pages/homeComp.php");
                     } else if ($type_user == "Universidade") {
-                        /* include "match_young_login.php";*/
+                        include "matchHei.php";
                         header("Location: ../pt/pages/homeHei.php");
                     } else if ($type_user == "Tutor") {
                         header("Location: ../pt/pages/homeTutor.php");
