@@ -53,7 +53,7 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                         header("Location: ../pt/pages/messageRegister.php");
                     } else if ($type_user == "Empresa") {
                         include "matchComp.php";
-                        // header("Location: ../pt/pages/homeComp.php");
+                        header("Location: ../pt/pages/homeComp.php");
                     } else if ($type_user == "Universidade") {
                         include "matchHei.php";
                         header("Location: ../pt/pages/homeHei.php");

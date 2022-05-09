@@ -99,7 +99,7 @@ foreach ($capacidades_match as $vaga => $capacidades) {
             mysqli_stmt_bind_result($stmtComp4, $user_young, $fk_idVacancies);
             if (mysqli_stmt_fetch($stmtComp4)) {
             } else {
-                $match_vac = 1;
+                $match_vac = 0;
 
                 //INSERT ON MATCH TABLE
                 if (mysqli_stmt_prepare($stmtComp5, $queryMatchComp3)) {
@@ -119,7 +119,7 @@ foreach ($capacidades_match as $vaga => $capacidades) {
             mysqli_stmt_bind_result($stmtComp4, $user_young, $fk_idVacancies);
             if (mysqli_stmt_fetch($stmtComp4)) {
             } else {
-                $percurso = 0;
+                $percurso = 1;
 
                 //INSERT ON MATCH TABLE
                 if (mysqli_stmt_prepare($stmtComp5, $queryMatchComp3)) {
