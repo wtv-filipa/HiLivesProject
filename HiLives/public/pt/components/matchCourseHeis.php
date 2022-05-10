@@ -49,7 +49,7 @@ if ($_SESSION["idUser"]) {
                                 <a href="profile.php?user=<?= $users_idusers ?>" title="Ver área de <?= $name_user ?>">
                                     <h4><?= $name_user ?></h4>
                                 </a>
-                                <a href="infoCourse.php?course=<?= $courses_idcourses ?>" title="Ver informação da vaga <?= $vacancy_name ?>">
+                                <a href="infoCourse.php?course=<?= $courses_idcourses ?>" title="Ver informação do curso <?= $name_course ?>">
                                     <p><?= $name_course ?></p>
                                 </a>
                             </div>
