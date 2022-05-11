@@ -70,7 +70,7 @@ if (isset($_SESSION["idUser"])) {
         <h1 class="pb-2">Os meus Cursos</h1>
         <p class="pb-4">Aqui pode gerir todos os seus cursos publicados até ao momento.</p>
 
-        <section class="row pb-5">
+        <section class="row">
             <?php
 
             if (mysqli_stmt_prepare($stmt, $query1)) {
@@ -110,6 +110,12 @@ if (isset($_SESSION["idUser"])) {
             }
             ?>
         </section>
+
+        <div class="text-center pt-4 pb-5">
+            <a href="uploadCourseHei.php" title="Adicionar um novo curso">
+                <button class="btn buttonDesign buttonStudy buttonRegisterSizeHEI m-0">Adicionar novos cursos</button>
+            </a>
+        </div>
 
     </div>
 <?php
