@@ -56,7 +56,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
             <section class="jumbotron bgCoverSectionInfo VacancyBg bigBg">
                 <div class="bg-whiteInfo ps-3 pe-3">
                     <h1 class="pt-5 pb-2 text-center">Informação sobre a vaga</h1>
-                    <h3 class="pb-4 text-center textBlue">Empregado do McDonald's Pingo Doce de Aveiro</h3>
+                    <h3 class="pb-4 text-center textBlue"><?= $vacancy_name ?></h3>
                     <p><?= $description_vac ?></p>
                 </div>
             </section>
@@ -66,7 +66,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                 <div class="jumbotron bgCoverSectionInfo VacancyBg smallBg"></div>
                 <div class="bg-whiteInfo ps-3 pe-3">
                     <h1 class="pt-5 pb-2 text-center">Informação sobre a vaga</h1>
-                    <h3 class="pb-4 text-center textBlue">Empregado do McDonald's Pingo Doce de Aveiro</h3>
+                    <h3 class="pb-4 text-center textBlue"><?= $vacancy_name ?></h3>
                     <p><?= $description_vac ?></p>
                 </div>
             </section>
@@ -266,11 +266,21 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                         ?>
                                     <div class="wrapperStory">
                                         <header class="cf">
-                                            <a href="profile.php" title="Ir para a área de">
-                                                <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />
+                                            <a href="profile.php?user=<?= $company_id ?>" title="Ir para a área de <?= $name_user ?>">
+                                                <?php
+                                                if (isset($profile_img)) {
+                                                ?>
+                                                    <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
+                                                <?php
+                                                }
+                                                ?>
                                             </a>
                                             <h5 class="name">
-                                                <a href="profile.php" title="Ir para a área de" class="linkStory"><?= $name_user ?></a>
+                                                <a href="profile.php?user=<?= $company_id ?>" title="Ir para a área de <?= $name_user ?>" class="linkStory"><?= $name_user ?></a>
                                             </h5>
                                             <p class="cardInfo13"><?= $newDate ?></p>
                                         </header>
