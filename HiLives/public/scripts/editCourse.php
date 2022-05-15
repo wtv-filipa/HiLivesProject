@@ -6,6 +6,7 @@ $link = new_db_connection();
 $stmt = mysqli_stmt_init($link);
 
 $idDone_CU = $_GET["uc"];
+$id_navegar = $_SESSION["idUser"];
 
 $query = "UPDATE done_cu
 SET cu_name = ?, university_name = ?, date_cu = ?
@@ -24,7 +25,7 @@ if (!empty($_POST["nomeuc"]) && !empty($_POST["uniuc"]) && !empty($_POST["data"]
            header("Location: ../pt/pages/editCourse.php?uc=$idDone_CU");
             $_SESSION["doneCU"] = 1;
         } else {
-            header("Location: ../pt/pages/profile.php");
+            header("Location: ../pt/pages/profile.php?user=$id_navegar");
             $_SESSION["profile"] = 1;
             mysqli_stmt_close($stmt);
         }
