@@ -41,6 +41,48 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             </ol>
                         </nav>
 
+                        <?php
+                        if (isset($_SESSION["edit"])) {
+                            $msg_show = true;
+                            switch ($_SESSION["edit"]) {
+                                case 1:
+                                    $message = "Perfil editado com sucesso!";
+                                    $class = "alert-success";
+                                    $_SESSION["edit"] = 0;
+                                    break;
+                                case 2:
+                                    $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                                    $class = "alert-warning";
+                                    $_SESSION["edit"] = 0;
+                                    break;
+                                case 3:
+                                    $message = "Estado do pedido atualizado com sucesso!";
+                                    $class = "alert-success";
+                                    $_SESSION["edit"] = 0;
+                                    break;
+                                case 0:
+                                    $msg_show = false;
+                                    break;
+                                default:
+                                    $msg_show = false;
+                                    $_SESSION["edit"] = 0;
+                            }
+
+                            if ($msg_show == true) {
+                                echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                     <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                         top: 0;
+                         right: 0;
+                         padding: 0.75rem 1.25rem;
+                         color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+                                echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+                            }
+                        }
+                        ?>
+
                         <h1 class="pt-4 pb-2">Pedido para editar o perfil de</h1>
                         <h3 class="pb-5 textBlue"><?= $name_user ?></h3>
                         <!--PROFILE STAGES BIG-->
@@ -120,13 +162,25 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?> </p>
-                        <div class="text-center pt-4">
+                        <div class="text-center pt-2">
                             <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
-                                <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
+                                <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">
                                     Editar perfil
                                 </button>
                             </a>
                         </div>
+
+                        <?php
+                        if ($status_edit == 1) {
+                        ?>
+                            <hr>
+                            <div class="text-center textForm">
+                                <a class="small linkRequest edit" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
                 </section>
 
@@ -159,13 +213,25 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?> </p>
-                        <div class="text-center pt-4 pb-3">
+                        <div class="text-center pt-2 pb-3">
                             <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
-                                <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
+                                <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">
                                     Editar perfil
                                 </button>
                             </a>
                         </div>
+
+                        <?php
+                        if ($status_edit == 1) {
+                        ?>
+                            <hr>
+                            <div class="text-center textForm pb-4">
+                                <a class="small linkRequest edit" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
                 </section>
 

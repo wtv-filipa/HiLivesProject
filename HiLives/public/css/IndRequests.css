@@ -1,4 +1,19 @@
 /*Geral*/
+a.linkRequest {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+a.linkRequest.create:hover {
+  color: #ae0168 !important;
+  text-decoration: none;
+}
+
+a.linkRequest.edit:hover {
+  color: #005e89 !important;
+  text-decoration: none;
+}
+
 .accordion-button {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   font-size: 20px !important;

@@ -47,7 +47,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             switch ($_SESSION["create"]) {
                                 case 1:
                                     $message = "Perfil criado com sucesso!";
+                                    $class = "alert-success";
+                                    $_SESSION["create"] = 0;
+                                    break;
+                                case 2:
+                                    $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
                                     $class = "alert-warning";
+                                    $_SESSION["create"] = 0;
+                                    break;
+                                case 3:
+                                    $message = "Estado do pedido atualizado com sucesso!";
+                                    $class = "alert-success";
                                     $_SESSION["create"] = 0;
                                     break;
                                 case 0:
@@ -152,13 +162,25 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
-                        <div class="text-center pt-4">
+
+                        <div class="text-center pt-2">
                             <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
-                                <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
+                                <button class="btn buttonDesign buttonStudy buttonRegisterSize m-0">
                                     Editar perfil
                                 </button>
                             </a>
                         </div>
+                        <?php
+                        if ($status_create == 1) {
+                        ?>
+                            <hr>
+                            <div class="text-center textForm">
+                                <a class="small linkRequest create" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
                 </section>
 
@@ -191,13 +213,26 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             ?>
                         </p>
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
-                        <div class="text-center pt-4 pb-3">
+
+                        <div class="text-center pt-2 pb-3">
                             <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
-                                <button class="btn buttonDesign buttonStudy buttonHomeSize m-0">
+                                <button class="btn buttonDesign buttonStudy buttonRegisterSize m-0">
                                     Editar perfil
                                 </button>
                             </a>
                         </div>
+
+                        <?php
+                        if ($status_create == 1) {
+                        ?>
+                            <div class="text-center textForm pb-4">
+                                <a class="small linkRequest create" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                        <hr>
+
                     </div>
                 </section>
 
