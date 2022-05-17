@@ -45,18 +45,21 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             <?php
             if ($User_type == 7) {
             ?>
+            <!--Link with match-->
               <li><a href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
               <li><a href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a></li>
               <li><a href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a></li>
             <?php
             } else if ($User_type == 10) {
             ?>
+            <!--Link with match-->
               <li><a href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
               <li><a href="matchCourse.php" title="Ir para a página das ligações com cursos">Eu quero estudar</a></li>
               <li><a href="matchVacancy.php" title="Ir para a página das ligações com vagas">Eu quero trabalhar</a></li>
             <?php
             } else if ($User_type == 13) {
             ?>
+            <!--Link with match-->
               <li><a href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
               <li><a href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a></li>
               <li><a href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a></li>
