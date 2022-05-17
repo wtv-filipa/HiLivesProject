@@ -8,7 +8,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $id_navegar = $_SESSION["idUser"];
     $User_type = $_SESSION["type"];
 
-    $query = "SELECT experiences.idexperiences, experiences.description, experiences.date, experiences.xp_type, experiences.content_idcontent, content.idContent, content.content_name, users.idusers, users.name_user, users.profile_img
+    $query = "SELECT experiences.idexperiences, experiences.description, experiences.date, experiences.xp_type, experiences.content_idcontent, content.idContent, content.content_name, users.idusers, users.name_user, users.profile_img, users.user_type_iduser_type
     FROM experiences
     LEFT JOIN content ON experiences.content_idcontent = content.idcontent
     INNER JOIN users ON experiences.users_idusers = users.idusers
@@ -64,7 +64,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
         <?php
         if (mysqli_stmt_prepare($stmt, $query)) {
             mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt, $idexperiences, $description, $date, $xp_type, $content_idcontent, $idContent, $content_name, $idusers, $name_user, $profile_img);
+            mysqli_stmt_bind_result($stmt, $idexperiences, $description, $date, $xp_type, $content_idcontent, $idContent, $content_name, $idusers, $name_user, $profile_img, $iduser_type);
             mysqli_stmt_store_result($stmt);
             if (mysqli_stmt_num_rows($stmt) > 0) {
                 while (mysqli_stmt_fetch($stmt)) {
@@ -74,7 +74,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
 
                     <div class="wrapperStory">
                         <header class="cf">
-                            <a href="profile.php?user=<?= $idusers ?>" title="Perfil de <?= $name_user ?>">
+                            <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" title="Perfil de <?= $name_user ?>">
                                 <?php
                                 if (isset($profile_img)) {
                                 ?>
@@ -88,7 +88,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                                 ?>
                             </a>
                             <h5 class="name">
-                                <a href="profile.php?user=<?= $idusers ?>" class="linkStory"><?= $name_user ?> </a>
+                                <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" class="linkStory"><?= $name_user ?> </a>
                             </h5>
                             <p class="cardInfo13"><?= $newDate ?></p>
                         </header>

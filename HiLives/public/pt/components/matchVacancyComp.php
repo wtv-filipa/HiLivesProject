@@ -8,7 +8,7 @@ if ($_SESSION["idUser"]) {
 
     $idUser = $_SESSION["idUser"];
 
-    $query1 = "SELECT id_match_vac, user_young, vacancies_idvacancies, match_perc, vacancy_name, company_id, name_user
+    $query1 = "SELECT id_match_vac, user_young, vacancies_idvacancies, match_perc, vacancy_name, company_id, name_user, users.user_type_iduser_type
     FROM users_has_vacancies
     INNER JOIN vacancies ON users_has_vacancies.vacancies_idvacancies = vacancies.idvacancies
     INNER JOIN users ON users.idusers = users_has_vacancies.user_young
@@ -33,7 +33,7 @@ if ($_SESSION["idUser"]) {
 
                 mysqli_stmt_bind_param($stmt, 'i', $idUser);
                 mysqli_stmt_execute($stmt);
-                mysqli_stmt_bind_result($stmt, $id_match_vac, $user_young, $vacancies_idvacancies, $match_perc, $vacancy_name, $company_id, $name_user);
+                mysqli_stmt_bind_result($stmt, $id_match_vac, $user_young, $vacancies_idvacancies, $match_perc, $vacancy_name, $company_id, $name_user, $iduser_type);
                 mysqli_stmt_store_result($stmt);
                 if (mysqli_stmt_num_rows($stmt) > 0) {
                     while (mysqli_stmt_fetch($stmt)) {
@@ -46,7 +46,7 @@ if ($_SESSION["idUser"]) {
                                     </svg>
                                     <span class="ps-2 align-middle">Trabalhar</span>
                                 </p>
-                                <a href="profile.php?user=<?= $user_young ?>" title="Ver área de <?= $name_user ?>">
+                                <a href="ViewProfile.php?user=<?= $user_young ?>&userType=<?= $iduser_type ?>" title="Ver área de <?= $name_user ?>">
                                     <h4><?= $name_user ?></h4>
                                 </a>
                                 <a href="infoVacancy.php?vac=<?= $vacancies_idvacancies ?>" title="Ver informação da vaga <?= $vacancy_name ?>">

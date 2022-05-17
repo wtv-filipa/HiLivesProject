@@ -12,7 +12,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
     $idvacancy = $_GET["vac"];
     $User_type = $_SESSION["type"];
 
-    $query = "SELECT vacancies.vacancy_name, vacancies.description_vac, vacancies.free_vac, vacancies.requirements, vacancies.date_vac, vacancies.company_id, region.name_region, workday.workday_name, educ_lvl.name_education, areas.name_interested_area, users.name_user, users.email_user, users.contact_user, users.website, users.facebook, users.instagram, users.profile_img
+    $query = "SELECT vacancies.vacancy_name, vacancies.description_vac, vacancies.free_vac, vacancies.requirements, vacancies.date_vac, vacancies.company_id, region.name_region, workday.workday_name, educ_lvl.name_education, areas.name_interested_area, users.name_user, users.email_user, users.contact_user, users.website, users.facebook, users.instagram, users.profile_img, users.user_type_iduser_type
     FROM vacancies
     INNER JOIN users ON vacancies.company_id = users.idusers
     INNER JOIN region ON vacancies.region_idregion = region.idregion
@@ -42,7 +42,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
 
         mysqli_stmt_bind_param($stmt, 'i', $idvacancy);
         mysqli_stmt_execute($stmt);
-        mysqli_stmt_bind_result($stmt, $vacancy_name, $description_vac, $free_vac, $requirements, $date_vac, $company_id, $name_region, $workday_name, $name_education, $name_interested_area, $name_user, $email_user, $contact_user, $website, $facebook, $instagram, $profile_img);
+        mysqli_stmt_bind_result($stmt, $vacancy_name, $description_vac, $free_vac, $requirements, $date_vac, $company_id, $name_region, $workday_name, $name_education, $name_interested_area, $name_user, $email_user, $contact_user, $website, $facebook, $instagram, $profile_img, $iduser_type);
 
         if (mysqli_stmt_fetch($stmt)) {
 ?>
@@ -317,7 +317,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                         ?>
                                     <div class="wrapperStory">
                                         <header class="cf">
-                                            <a href="profile.php?user=<?= $company_id ?>" title="Ir para a área de <?= $name_user ?>">
+                                            <a href="viewProfile.php?user=<?= $company_id ?>&userType=<?= $iduser_type ?>" title="Ir para a área de <?= $name_user ?>">
                                                 <?php
                                                 if (isset($profile_img)) {
                                                 ?>
@@ -331,7 +331,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                                                 ?>
                                             </a>
                                             <h5 class="name">
-                                                <a href="profile.php?user=<?= $company_id ?>" title="Ir para a área de <?= $name_user ?>" class="linkStory"><?= $name_user ?></a>
+                                                <a href="viewProfile.php?user=<?= $company_id ?>&userType=<?= $iduser_type ?>" title="Ir para a área de <?= $name_user ?>" class="linkStory"><?= $name_user ?></a>
                                             </h5>
                                             <p class="cardInfo13"><?= $newDate ?></p>
                                         </header>

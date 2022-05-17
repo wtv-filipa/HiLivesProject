@@ -8,7 +8,7 @@ if ($_SESSION["idUser"]) {
 
     $idUser = $_SESSION["idUser"];
 
-    $query1 = "SELECT users_has_courses.users_idusers, users_has_courses.courses_idcourses, courses.idcourses, courses.name_course, courses.users_idusers, users.name_user
+    $query1 = "SELECT users_has_courses.users_idusers, users_has_courses.courses_idcourses, courses.idcourses, courses.name_course, courses.users_idusers, users.name_user, users.user_type_iduser_type
     FROM users_has_courses
     INNER JOIN courses ON users_has_courses.courses_idcourses = courses.idcourses
     INNER JOIN users ON users.idusers = users_has_courses.users_idusers
@@ -33,7 +33,7 @@ if ($_SESSION["idUser"]) {
 
                 mysqli_stmt_bind_param($stmt, 'i', $idUser);
                 mysqli_stmt_execute($stmt);
-                mysqli_stmt_bind_result($stmt, $users_idusers, $courses_idcourses, $idcourses, $name_course, $users_idusers, $name_user);
+                mysqli_stmt_bind_result($stmt, $userPerson, $courses_idcourses, $idcourses, $name_course, $users_idusers, $name_user, $iduser_type);
                 mysqli_stmt_store_result($stmt);
                 if (mysqli_stmt_num_rows($stmt) > 0) {
                     while (mysqli_stmt_fetch($stmt)) {
@@ -46,7 +46,7 @@ if ($_SESSION["idUser"]) {
                                     </svg>
                                     <span class="ps-2 align-middle">Estudar</span>
                                 </p>
-                                <a href="profile.php?user=<?= $users_idusers ?>" title="Ver área de <?= $name_user ?>">
+                                <a href="viewProfile.php?user=<?= $userPerson ?>&userType=<?= $iduser_type ?>" title="Ver área de <?= $name_user ?>">
                                     <h4><?= $name_user ?></h4>
                                 </a>
                                 <a href="infoCourse.php?course=<?= $courses_idcourses ?>" title="Ver informação do curso <?= $name_course ?>">
