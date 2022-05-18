@@ -35,21 +35,11 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                         include "matchPerson.php";
                         if ($login == 0) {
                             header("Location: ../pt/pages/homePerson.php");
-                            /*$_SESSION["modal"] = 1;*/
-                            /*$query3 = "UPDATE users
-                                    SET login = 1
-                                    WHERE idUser = ?";
-                            $stmt2 = mysqli_stmt_init($link2);
-                            if (mysqli_stmt_prepare($stmt2, $query3)) {
-                                mysqli_stmt_bind_param($stmt2, 'i', $idUser);
-                                if (mysqli_stmt_execute($stmt2)) {
-                                }
-                                mysqli_stmt_close($stmt2);
-                            }*/
                         } else {
                             header("Location: ../pt/pages/homePerson.php");
                         }
                     } else if ($type_user == "Pessoa" and $active_person == 0) {
+                        include "logout.php";
                         header("Location: ../pt/pages/messageRegister.php");
                     } else if ($type_user == "Empresa") {
                         include "matchComp.php";
