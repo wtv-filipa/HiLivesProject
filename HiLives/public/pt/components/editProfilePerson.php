@@ -81,6 +81,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                 $class = "alert-warning";
                                 $_SESSION["edit_jovem"] = 0;
                                 break;
+                            case 4:
+                                $message = "O teu pedido de edição foi submetido com sucesso. Aguarda pelo contacto de um Tutor!";
+                                $class = "alert-success";
+                                $_SESSION["edit_jovem"] = 0;
+                                break;
                             case 0:
                                 $msg_show = false;
                                 break;
@@ -353,7 +358,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                     </form>
                                     <hr>
                                     <div class="text-center textForm">
-                                        <a class="small" title="Clica para recuperares a tua palavra-passe" href="#" title="Pedir entrevista com um Tutor">Precisas de alterar outros dados? Pede uma entrevista com um tutor.</a>
+                                        <a class="small" title="Clica para recuperares a tua palavra-passe" href="../../scripts/editPersonRequest.php?req=<?= $idUser ?>" title="Pedir entrevista com um Tutor">Precisas de alterar outros dados? Pede uma entrevista com um tutor.</a>
                                     </div>
 
                                 </div>
