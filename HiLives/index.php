@@ -27,6 +27,7 @@ if (!isset($_SESSION["idUser"])) {
             });
         });
     </script> -->
+    <?php include "public/helpers/js.php"; ?>
     </body>
 
     </html>
