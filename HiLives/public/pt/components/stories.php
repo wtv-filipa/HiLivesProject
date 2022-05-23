@@ -31,19 +31,19 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                 <?php
                 if ($User_type == 7) {
                 ?>
-                <li class="breadcrumb-item"><a href="homeComp.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeComp.php" title="Voltar à página inicial">Página Inicial</a></li>
                 <?php
                 } else if ($User_type == 10) {
                 ?>
-                <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
                 <?php
                 } else if ($User_type == 13) {
                 ?>
-                <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
                 <?php
                 } else if ($User_type == 16) {
                 ?>
-                <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
                 <?php
                 }
                 ?>
@@ -146,12 +146,21 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                 }
             } else {
                 ?>
-                <p class="mx-auto mt-5 mb-5" style="font-size: 1rem; padding-bottom: 30%;">
-                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-circle-fill mr-2 mb-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: #2f2f2f;">
-                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708L8 7.293 4.854 4.146a.5.5 0 1 0-.708.708L7.293 8l-3.147 3.146a.5.5 0 0 0 .708.708L8 8.707l3.146 3.147a.5.5 0 0 0 .708-.708L8.707 8l3.147-3.146z" />
-                    </svg>
-                    Ainda não existe nenhuma experiência publicada.
-                </p>
+                <section class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-center shadowCard o-hidden border-0">
+                            <div class="card-body  pt-5 pb-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-x-circle mb-3" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                                <p class="mx-auto" style="font-size: 1rem;">
+                                    Neste momento não existe nenhum história publicada. Por favor volta mais tarde.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         <?php
             }
         }

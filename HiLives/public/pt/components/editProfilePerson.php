@@ -140,30 +140,25 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                             <span>Carrega no botão que está em cima da imagem para alterar a tua fotografia.</span>
                                         </div>
                                         <!----------------------MODAL DE CROP--------------->
-                                        <div id="uploadimageModal" class="modal" tabindex="-1" role="dialog">
-                                            <div class="modal-dialog">
+                                        <div id="uploadimageModal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="Modal para cortar a imagem de perfil" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Importar e cortar a imagem de perfil</h4>
-                                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar" aria-hidden=true></button>
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">Importar e cortar a imagem de perfil</h5>
+                                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="row mx-auto">
                                                             <div class="col-12 text-center">
-                                                                <div id="image_demo" style="display:block; margin:auto;"></div>
+                                                                <div id="image_demo" style="display:block; margin:auto"></div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <div class="row">
-                                                            <div class="col-md-4 me-3">
-                                                                <button class="btn buttonDesign buttonWork buttonLoginSize crop_image" value="Upload Image" name="Submit"> Guardar </button>
-                                                            </div>
-                                                            <div class="col-md-4 ms-3">
-                                                                <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Fechar</button>
-                                                            </div>
-                                                        </div>
+                                                        <button type="button" class="btn buttonDesign buttonCancel" data-bs-dismiss="modal">Fechar</button>
+                                                        <button type="button" class="btn buttonDesign buttonWork crop_image">Guardar</button>
                                                     </div>
                                                 </div>
                                             </div>
