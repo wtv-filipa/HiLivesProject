@@ -86,7 +86,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                             <div class="col-lg-12">
                                 <div class="paddingForms">
                                     <div class="text-center">
-                                        <h1 class="mb-4 weightTitle">Editar o curso</h1>
+                                        <h1 class="mb-4 weightTitle">
+                                            Editar o curso
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="Utilize uma linguagem simples e frases curtas. Sempre que encontrar um símbolo semelhante junto dos campos a preencher, poderá encontrar dicas de como preencher os mesmos. Caso pretenda que o texto apareça com parágrafos, coloque cada parágrafo entre '<p></p>'. Se pretender destacar alguma palavra coloque-a entre '<b></b>'">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                            </svg>
+                                        </h1>
                                     </div>
                                     <form method="post" id="register-form" role="form" action="../../scripts/editCourseHei.php?course=<?= $idcourse ?>">
                                         <!--VACANCIE NAME-->
@@ -109,7 +115,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--WEBSITE-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="website">Website <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="website">
+                                                Website <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira o link do website sem o https//">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="website" name="website" placeholder="Insira o link do website com informação do curso" aria-required="true" required="required" value="<?= $website_course ?>">
                                             </div>
@@ -117,7 +129,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--FACEBOOK-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="facebook">Facebook </label>
+                                            <label class="boldFont mt-3 pb-2" for="facebook">
+                                                Facebook
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploFacebook">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="facebook" name="facebook" placeholder="Insira aqui o facebook do curso" value="<?= $facebook_course ?>">
                                             </div>
@@ -125,7 +143,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--INSTAGRAM-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="instagram">Instagram </label>
+                                            <label class="boldFont mt-3 pb-2" for="instagram">
+                                                Instagram
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploInstagram">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="instagram" name="instagram" placeholder="Insira aqui o instagram do curso" value="<?= $instagram_course ?>">
                                             </div>
@@ -191,7 +215,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--DURATION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="duracao">Duração do Curso <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="duracao">
+                                                Duração do Curso <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique a duração do curso através de anos - semestres. Por exemplo: 1 ano - 2 semestres">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="duracao" name="duracao" placeholder="Indique a duração prevista do curso (em semestres)" aria-required="true" required="required" value="<?= $duration_course ?>">
                                             </div>
@@ -199,7 +229,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--ECTCS-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="ects">Créditos ECTS <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="ects">
+                                                Créditos ECTS <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique o apenas o número de ECTS. Por exemplo: 180">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="ects" name="ects" placeholder="Indique o número de ECTS que os estudantes podem adquirir" aria-required="true" required="required" value="<?= $credits_ects ?>">
                                             </div>
@@ -241,7 +277,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--FEE-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="propina">Valor da propina <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="propina">
+                                                Valor da propina <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique se o valor é anual ou semestral. Por exemplo: 1000€/ano ou 1000€/semestre">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="propina" name="propina" placeholder="Indique o valor da propina do curso" aria-required="true" required="required" value="<?= $course_fee ?>">
                                             </div>
@@ -265,7 +307,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--VACANCIES AVAILABLE-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="vagas">Vagas disponíveis <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="vagas">
+                                                Vagas disponíveis <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas números.">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                                </svg>
+                                            </label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="vagas" name="vagas" placeholder="Indique o número de vagas anuais disponíveis para o Curso" aria-required="true" required="required" value="<?= $number_vac ?>">
                                             </div>
