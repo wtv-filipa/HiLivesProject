@@ -18,6 +18,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
         <?php include "../components/footer.php"; ?>
 
         <?php include "../../helpers/js.php"; ?>
+        <?php include "../../helpers/js_characterCounter.php"; ?>
         <?php include "../../helpers/js_upload.php"; ?>
         <?php include "../../helpers/formsValidation.php"; ?>
     </body>
