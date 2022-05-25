@@ -80,7 +80,11 @@ WHERE users_idusers = ?";
                             <!--DESCRIPTION-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="descricao">Breve descrição do curso <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" aria-required="true" required="required"></textarea>
+                                <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" maxlength="445" aria-required="true" required="required"></textarea>
+                                <div id="the-count">
+                                    <span id="current">0</span>
+                                    <span id="maximum">/ 445</span>
+                                </div>
                             </div>
 
                             <!--WEBSITE-->

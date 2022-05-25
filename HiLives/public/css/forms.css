@@ -269,3 +269,10 @@ label.label {
 .modal-content {
   width: 120% !important;
 }
+
+/*Counter textarea*/
+#the-count {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}

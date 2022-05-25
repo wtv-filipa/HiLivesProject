@@ -88,7 +88,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                     <div class="text-center">
                                         <h1 class="mb-4 weightTitle">Editar o curso</h1>
                                     </div>
-                                    <form method="post" role="form" action="../../scripts/editCourseHei.php?course=<?= $idcourse ?>">
+                                    <form method="post" id="register-form" role="form" action="../../scripts/editCourseHei.php?course=<?= $idcourse ?>">
                                         <!--VACANCIE NAME-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="nome">Nome do Curso <span class="asteriskPink">*</span></label>
@@ -100,7 +100,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <!--DESCRIPTION-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="descricao">Breve descrição do curso <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" aria-required="true" required="required"><?= $description_course ?></textarea>
+                                            <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" maxlength="445" aria-required="true" required="required"><?= $description_course ?></textarea>
+                                            <div id="the-count">
+                                                <span id="current">0</span>
+                                                <span id="maximum">/ 445</span>
+                                            </div>
                                         </div>
 
                                         <!--WEBSITE-->
@@ -339,8 +343,8 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                             <div class="mx-auto col-sm-10 pb-3 pt-2">
                                                 <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize me-4">Guardar</button>
 
-                                                <a href="profile.php?user=<?=$idUser?>" title="Sair da edição">
-                                                <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancelar</button>
+                                                <a href="profile.php?user=<?= $idUser ?>" title="Sair da edição">
+                                                    <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancelar</button>
                                                 </a>
                                             </div>
                                         </div>
