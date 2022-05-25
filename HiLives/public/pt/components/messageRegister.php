@@ -45,7 +45,7 @@
                                     <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
 
                                     <h1 class="mb-4 weightTitle">Espera que alguém entre em contacto contigo!</h1>
-                                    <p class="mb-4 descricao">Para teres acesso à Plataforma HiLives, precisas de esperar que alguém te contacte para uma entrevista. Entraremos em contacto contigo, no máximo, em duas semanas.</p>
+                                    <p class="mb-4 descricao">Para teres acesso à Plataforma HiLives, precisas de esperar que alguém te contacte. Vamos falar contigo, no máximo, em duas semanas.</p>
 
                                     <hr class="mt-4 mb-4">
                                     <a href="../../../index.php" title="Voltar à página inicial">
