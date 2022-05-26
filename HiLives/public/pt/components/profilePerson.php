@@ -129,6 +129,11 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                             $class = "alert-success";
                             $_SESSION["profile"] = 0;
                             break;
+                        case 7:
+                            $message = "História eliminada com sucesso!";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
                         case 0:
                             $msg_show = false;
                             break;

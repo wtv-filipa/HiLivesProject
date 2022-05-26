@@ -94,6 +94,16 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                             $class = "alert-success";
                             $_SESSION["profile"] = 0;
                             break;
+                        case 5:
+                            $message = "História eliminada com sucesso!";
+                            $class = "alert-success";
+                            $_SESSION["profile"] = 0;
+                            break;
+                        case 6:
+                            $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                            $class = "alert-warning";
+                            $_SESSION["profile"] = 0;
+                            break;
                         case 0:
                             $msg_show = false;
                             break;
@@ -299,100 +309,121 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                 mysqli_stmt_bind_param($stmt2, 'i', $idUser);
                                 mysqli_stmt_execute($stmt2);
                                 mysqli_stmt_bind_result($stmt2, $idexperiences, $description, $date, $xp_type, $content_idcontent, $idContent, $content_name);
-                                while (mysqli_stmt_fetch($stmt2)) {
-                                    $data = substr($date, 0, 10);
-                                    $newDate = date("d-m-Y", strtotime($data));
+                                mysqli_stmt_store_result($stmt2);
+                                if (mysqli_stmt_num_rows($stmt2) > 0) {
+                                    while (mysqli_stmt_fetch($stmt2)) {
+                                        $data = substr($date, 0, 10);
+                                        $newDate = date("d-m-Y", strtotime($data));
                             ?>
 
-                                    <div class="wrapperStory">
-                                        <div>
-                                            <header class="cf col-10">
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
-                                                    <?php
-                                                    if (isset($profile_img)) {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
-                                                    <?php
-                                                    } else {
-                                                    ?>
-                                                        <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </a>
-                                                <h5 class="name">
-                                                    <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
-                                                </h5>
-                                                <p class="cardInfo13"><?= $newDate ?></p>
-                                            </header>
+                                        <div class="wrapperStory">
+                                            <div class="row">
+                                                <header class="cf col-10">
+                                                    <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
+                                                        <?php
+                                                        if (isset($profile_img)) {
+                                                        ?>
+                                                            <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </a>
+                                                    <h5 class="name">
+                                                        <a href="profile.php?user=<?= $idUser ?>" class="linkStory"><?= $name_user ?> </a>
+                                                    </h5>
+                                                    <p class="cardInfo13"><?= $newDate ?></p>
+                                                </header>
 
-                                            <div class="col-2 text-end">
-                                                <a href="editStory.php?edit=<?= $idexperiences ?>" class="linkIcons" title="Editar história">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square me-3" viewBox="0 0 16 16">
-                                                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                                                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                                                    </svg>
-                                                </a>
+                                                <div class="col-2 text-end">
+                                                    <a href="editStory.php?edit=<?= $idexperiences ?>" class="linkIcons" title="Editar história">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square me-3" viewBox="0 0 16 16">
+                                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                        </svg>
+                                                    </a>
 
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#deleteStory<?= $idexperiences ?>" class="linkIcons" title="Eliminar a história">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <?php
-                                        //VIDEO
-                                        if ($xp_type == "video") {
-                                            if (isset($description)) {
-                                        ?>
-                                                <p class="status"><?= $description ?></p>
-                                            <?php
-                                            }
-                                            ?>
-                                            <div class="text-center videoStory">
-                                                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half p-0 mt-5 videoSize">
-                                                    <video class="embed-responsive-item" src="../../../admin/uploads/experiences/<?= $content_name ?>" controls="controls"></video>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deleteStory<?= $idexperiences ?>" class="linkIcons" title="Eliminar a história">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <?php
-                                            //AUDIO
-                                        } else if ($xp_type == "audio") {
-                                            if (isset($description)) {
+                                            //VIDEO
+                                            if ($xp_type == "video") {
+                                                if (isset($description)) {
+                                            ?>
+                                                    <p class="status"><?= $description ?></p>
+                                                <?php
+                                                }
+                                                ?>
+                                                <div class="text-center videoStory">
+                                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half p-0 mt-5 videoSize">
+                                                        <video class="embed-responsive-item" src="../../../admin/uploads/experiences/<?= $content_name ?>" controls="controls"></video>
+                                                    </div>
+                                                </div>
+                                                <?php
+                                                //AUDIO
+                                            } else if ($xp_type == "audio") {
+                                                if (isset($description)) {
+                                                ?>
+                                                    <p class="status"><?= $description ?></p>
+                                                <?php
+                                                }
+                                                ?>
+                                                <div class="text-center">
+                                                    <audio controls>
+                                                        <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/ogg">
+                                                        <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/mpeg">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </div>
+                                                <?php
+                                                //IMAGE
+                                            } else if ($xp_type == "image") {
+                                                if (isset($description)) {
+                                                ?>
+                                                    <p class="status"><?= $description ?></p>
+                                                <?php
+                                                }
+                                                ?>
+                                                <div class="text-center videoSize">
+                                                    <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
+                                                </div>
+                                            <?php
+                                            } else if ($xp_type == "text" && isset($description)) {
                                             ?>
                                                 <p class="status"><?= $description ?></p>
                                             <?php
                                             }
                                             ?>
-                                            <div class="text-center">
-                                                <audio controls>
-                                                    <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/ogg">
-                                                    <source src="../../../admin/uploads/experiences/<?= $content_name ?>" type="audio/mpeg">
-                                                    Your browser does not support the audio element.
-                                                </audio>
+                                        </div>
+                                    <?php
+                                        include('../components/deleteModal.php');
+                                    }
+                                } else {
+                                    ?>
+                                    <section class="row justify-content-center mt-4">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                                            <div class="card text-center shadowCard o-hidden border-0">
+                                                <div class="card-body  pt-5 pb-5">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-x-circle mb-3" viewBox="0 0 16 16">
+                                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                    <p class="mx-auto" style="font-size: 1rem;">
+                                                        Neste momento não tem nenhuma história adicionada.
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <?php
-                                            //IMAGE
-                                        } else if ($xp_type == "image") {
-                                            if (isset($description)) {
-                                            ?>
-                                                <p class="status"><?= $description ?></p>
-                                            <?php
-                                            }
-                                            ?>
-                                            <div class="text-center videoSize">
-                                                <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
-                                            </div>
-                                        <?php
-                                        } else if ($xp_type == "text" && isset($description)) {
-                                        ?>
-                                            <p class="status"><?= $description ?></p>
-                                        <?php
-                                        }
-                                        ?>
-                                    </div>
+                                        </div>
+                                    </section>
                             <?php
-                                    include('../components/deleteModal.php');
                                 }
                             }
                             ?>

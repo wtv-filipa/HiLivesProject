@@ -82,7 +82,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn buttonDesign buttonCancel" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn btn-danger buttonDesign" href="../../scripts/deleteStory.php?apaga=<?= $idexperiences ?>" title="Apagar a história">Apagar</a>
+                <a type="button" class="btn btn-danger buttonDesign" href="../../scripts/deleteStory.php?apaga=<?= $idexperiences ?>&user=<?= $idUser ?>&type=<?= $xp_type ?>&content=<?= $content_idcontent ?>" title="Apagar a história">Apagar</a>
             </div>
         </div>
     </div>
