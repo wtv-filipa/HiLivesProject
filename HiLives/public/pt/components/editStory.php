@@ -8,7 +8,7 @@ $link2 = new_db_connection();
 $stmt2 = mysqli_stmt_init($link2);
 
 if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"])) {
-    $idUser = $_GET["edit"];
+    $idUser =$_SESSION["idUser"];
     $idStory = $_GET["edit"];
     $User_type = $_SESSION["type"];
 
@@ -18,7 +18,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
 
     if (mysqli_stmt_prepare($stmt, $query)) {
 
-        mysqli_stmt_bind_param($stmt, 'i', $idUser);
+        mysqli_stmt_bind_param($stmt, 'i', $idStory);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_bind_result($stmt, $description);
 

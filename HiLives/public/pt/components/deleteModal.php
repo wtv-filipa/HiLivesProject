@@ -65,3 +65,25 @@
         </div>
     </div>
 </div>
+
+<!--DELETE STORIES MODAL-->
+<div id="deleteStory<?= $idexperiences ?>" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="Modal para apagar uma história" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"><b>Tem a certeza que quer apagar a história?</b></h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Quando apagar, não poderá voltar atrás. Carregue em "Apagar" para confirmar.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn buttonDesign buttonCancel" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn btn-danger buttonDesign" href="../../scripts/deleteStory.php?apaga=<?= $idexperiences ?>" title="Apagar a história">Apagar</a>
+            </div>
+        </div>
+    </div>
+</div>
