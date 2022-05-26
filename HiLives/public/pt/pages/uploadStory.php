@@ -19,6 +19,8 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
 
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_upload.php"; ?>
+        <?php include "../../helpers/js_enablePopover.php"; ?>
+        <?php include "../../helpers/js_enableToltip.php"; ?>
     </body>
 
     </html>
