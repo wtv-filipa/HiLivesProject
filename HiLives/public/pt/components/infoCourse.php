@@ -90,28 +90,28 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"]) && isset($_SESSION["typ
                     <div class="row">
                         <!--Duration-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/duration.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/duration.svg" alt="Ícone de um calendário" title="Ícone de um calendário" />
                             <h3>Duração</h3>
                             <p><?= $duration_course ?></p>
                         </div>
 
                         <!--Regime-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/regime.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/regime.svg" alt="Ícone de um relógio" title="Ícone de um relógio" />
                             <h3>Regime</h3>
                             <p><?= $name_regime ?></p>
                         </div>
 
                         <!--Language-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/language.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/language.svg" alt="Ícone de um globo" title="Ícone de um globo" />
                             <h3>Lingua(s) de instrução</h3>
                             <p><?= $languages ?></p>
                         </div>
 
                         <!--Area-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/area.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/area.svg" alt="Ícone de um livro" title="Ícone de um livro" />
                             <h3>Áreas Científicas</h3>
                             <p>
                                 <?php
@@ -135,7 +135,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"]) && isset($_SESSION["typ
 
                         <!--Subsystem-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/subsystem.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/subsystem.svg" alt="Ícone de um chapéu" title="Ícone de um chapéu" />
                             <h3>Subsistema</h3>
                             <p>
                                 <?php
@@ -155,7 +155,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"]) && isset($_SESSION["typ
 
                         <!--Ects-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/course/ects.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/course/ects.svg" alt="Ícone de um certificado" title="Ícone de um certificado" />
                             <h3>ECTS</h3>
                             <p><?= $credits_ects ?></p>
                         </div>

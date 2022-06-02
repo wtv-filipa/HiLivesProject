@@ -77,42 +77,42 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                     <div class="row">
                         <!--Duration-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/company.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/company.svg" alt="Ícone de uma pasta" title="Ícone de uma pasta" />
                             <h3>Empresa</h3>
                             <p><?= $name_user ?></p>
                         </div>
 
                         <!--Regime-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/region.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/region.svg" alt="Ícone de local" title="Ícone de local" />
                             <h3>Região</h3>
                             <p><?= $name_region ?></p>
                         </div>
 
                         <!--Language-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/positions.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/positions.svg" alt="Ícone de uma pessoa" title="Ícone de uma pessoa" />
                             <h3>Posições disponíveis</h3>
                             <p><?= $free_vac ?></p>
                         </div>
 
                         <!--Area-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/hours.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/hours.svg" alt="Ícone de um relógio" title="Ícone de um relógio" />
                             <h3>Horário de trabalho</h3>
                             <p><?= $workday_name ?></p>
                         </div>
 
                         <!--Subsystem-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/qualifications.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/qualifications.svg" alt="Ícone de um chapéu" title="Ícone de um chapéu" />
                             <h3>Habilitações Académicas</h3>
                             <p><?= $name_education ?></p>
                         </div>
 
                         <!--Ects-->
                         <div class="col-md-4 text-center pb-5">
-                            <img class="mb-4 img-fluid" src="../../img/vacancy/areas.svg" alt="símbolo de calendário" title="símbolo de calendário" />
+                            <img class="mb-4 img-fluid" src="../../img/vacancy/areas.svg" alt="Ícone de um livro" title="Ícone de um livro" />
                             <h3>Área</h3>
                             <p><?= $name_interested_area ?></p>
                         </div>
