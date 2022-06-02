@@ -32,7 +32,7 @@ if ($_SESSION["idUser"]) {
             <h2 class="pb-4">Porquê a HiLives?</h2>
             <div class="row">
                 <div class="col-12 col-md-6 ps-4 pe-4 marginBottomSmall">
-                    <img src="../../img/matchs.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
+                    <img src="../../img/matchs.svg" alt="Ícone de uma pessoa" class="img-fluid" title="Contacto com Pessoas com DID">
                     <h3 class="mt-4 pb-2">Contacto com Pessoas com DID</h3>
                     <p>Se tem um curso adequado a pessoas com DID, a HiLives vai indicar-lhe quais são os candidatos que melhor se enquadram nas características do curso.</p>
                     <br>
@@ -43,7 +43,7 @@ if ($_SESSION["idUser"]) {
                     </a>
                 </div>
                 <div class="col-12 col-md-6 ps-4 pe-4">
-                    <img src="../../img/courses.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
+                    <img src="../../img/courses.svg" alt="Ícone de um livro" class="img-fluid" title="Promoção de cursos">
                     <h3 class="mt-4 pb-2">Ajudamo-lo a divulgar cursos</h3>
                     <p>Se tem cursos disponíveis na sua instituição basta publicá-los nesta plataforma e a HiLives ajuda-o na sua divulgação junta das Pessoas com DID.</p>
                     <br>

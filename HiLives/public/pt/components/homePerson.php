@@ -14,7 +14,7 @@
         <h2 class="pb-4">Porquê a HiLives?</h2>
         <div class="row">
             <div class="col-12 col-md-6 ps-4 pe-4 marginBottomSmall">
-                <img src="../../img/study.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
+                <img src="../../img/study.svg" alt="Ícone de um livro" class="img-fluid" title="Procurar cursos">
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Curso</h3>
                 <p>Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
                 <br>
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="col-12 col-md-6 ps-4 pe-4">
-                <img src="../../img/work.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
+                <img src="../../img/work.svg" alt="Ícone de uma pasta de trabalho" class="img-fluid" title="Procurar emprego">
                 <h3 class="mt-4 pb-2">Ajudamos-te a procurares um Emprego</h3>
                 <p>Se queres entrar no mundo do trabalho e não sabes quais são as vagas que podes preencher, a HiLives ajuda-te a encontrar vagas com base nas tuas preferências.</p>
                 <br>

@@ -39,9 +39,9 @@ if ($_SESSION["idUser"]) {
             <h2 class="pb-4">Qual é o papel de um tutor?</h2>
             <div class="row">
                 <div class="col-12 col-md-6 ps-4 pe-4 marginBottomSmall">
-                    <img src="../../img/add.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
+                    <img src="../../img/add.svg" alt="Ícone de uma pessoa com um símbolo de +" class="img-fluid" title="Registo de pessoas">
                     <h3 class="mt-4 pb-2">Facilitar o registo das Pessoas com DID</h3>
-                    <p>O tutor deverá de realizar uma entrevista com as Pessoas com DID para que estas possam completar o seu registo de uma forma mais simples.Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
+                    <p>O tutor deverá de realizar uma entrevista com as Pessoas com DID para que estas possam completar o seu registo de uma forma mais simples.</p>
                     <br>
                     <a href="registerRequestsTutor.php" title="Ver pedidos de registo">
                         <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
@@ -50,7 +50,7 @@ if ($_SESSION["idUser"]) {
                     </a>
                 </div>
                 <div class="col-12 col-md-6 ps-4 pe-4">
-                    <img src="../../img/edit.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
+                    <img src="../../img/edit.svg" alt="Ícone de um lápis" class="img-fluid" title="Atualização dos perfis">
                     <h3 class="mt-4 pb-2">Facilitar a atualização do perfil das Pessoas com DID</h3>
                     <p class="heightEqual">Caso exista alguma pessoa com DID que necessite de atualizar campos específicos do seu perfil, esta irá pedir uma entrevista com o tutor e este vai ajudá-la com a atualização.</p>
                     <br>
