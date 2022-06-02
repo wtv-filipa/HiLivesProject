@@ -14,7 +14,7 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
             <div class="d-flex align-middle">
                 <div>
                     <a href="public/pt/pages/login.php" title="Iniciar sessão">
-                        <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
+                        <button class="btn buttonDesign buttonWork buttonLoginSizeSmallerPT m-0">
                             Iniciar Sessão
                         </button>
                     </a>
@@ -23,32 +23,32 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle p-0" href="index.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Mudar o idioma para português">
+                    <a class="nav-link dropdown-toggle p-0" href="index.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Traduzir para português">
                         <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Portugal">
                         <span class="name ms-1 align-middle hideTextNav">
                             Português
                         </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="indexEN.php" title="Mudar o idioma para inglês">
+                        <li><a class="dropdown-item" href="indexEN.php" title="Traduzir para inglês">
                                 <img src="public/img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Bandeira do Reino Unido">
                                 <span class="name ms-1 align-middle">
                                     Inglês
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexES.php" title="Mudar o idioma para espanhol">
+                        <li><a class="dropdown-item" href="indexES.php" title="Traduzir para espanhol">
                                 <img src="public/img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Espanha">
                                 <span class="name ms-1 align-middle">
                                     Espanhol
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexBE.php" title="Mudar o idioma para flamengo">
+                        <li><a class="dropdown-item" href="indexBE.php" title="Traduzir para flamengo">
                                 <img src="public/img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Bélgica">
                                 <span class="name ms-1 align-middle">
                                     Flamengo
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexIS.php" title="Mudar o idioma para islandês">
+                        <li><a class="dropdown-item" href="indexIS.php" title="Traduzir para islandês">
                                 <img src="public/img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Islândia">
                                 <span class="name ms-1 align-middle">
                                     Islandês

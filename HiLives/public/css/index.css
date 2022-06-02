@@ -157,6 +157,10 @@ a .buttonWork:hover {
   width: 6rem;
 }
 
+.buttonLoginSizeSmallerPT {
+  width: 7rem;
+}
+
 .buttonHomeSize {
   width: 14rem;
 }
