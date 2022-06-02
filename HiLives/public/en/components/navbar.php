@@ -17,19 +17,19 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             <?php
             if ($User_type == 7) {
             ?>
-                <a class="navbar-brand me-5" href="homeComp.php" title="Back to homepage">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">
                     <img src="../../img/logo.svg" alt="HiLives logo" class="img-fluid logo" title="HiLives logo">
                 </a>
             <?php
             } else if ($User_type == 10) {
             ?>
-                <a class="navbar-brand me-5" href="homePerson.php" title="Back to homepage">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">
                     <img src="../../img/logo.svg" alt="HiLives logo" class="img-fluid logo" title="HiLives logo">
                 </a>
             <?php
             } else if ($User_type == 13) {
             ?>
-                <a class="navbar-brand me-5" href="homeHei.php" title="Back to homepage">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">
                     <img src="../../img/logo.svg" alt="HiLives logo" class="img-fluid logo" title="HiLives logo">
                 </a>
             <?php
@@ -367,7 +367,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle p-0" href="../../../indexEN.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Change language to english">
+                    <a class="nav-link dropdown-toggle p-0" href="indexEN.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Change language to english">
                         <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Flag of Portugal">
                         <span class="name ms-1 align-middle hideTextNav">
                             English
