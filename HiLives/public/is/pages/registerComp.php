@@ -2,24 +2,25 @@
 session_start();
 if (!isset($_SESSION["idUser"])) {
 ?>
-<!DOCTYPE html>
-<html lang="pt">
+    <!DOCTYPE html>
+    <html lang="pt">
 
-<head>
-    <?php include "../../helpers/meta.php"; ?>
-    <title>Registo</title>
-    <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_forms.php"; ?>
-</head>
+    <head>
+        <?php include "../../helpers/meta.php"; ?>
+        <title>Registo</title>
+        <?php include "../../helpers/fonts.php"; ?>
+        <?php include "../../helpers/css_forms.php"; ?>
+    </head>
 
-<body class="bg_login_reg">
-    <?php include "../components/registerComp.php"; ?>
+    <body class="bg_login_reg">
+        <?php include "../components/registerComp.php"; ?>
 
-    <?php include "../../helpers/formsValidation.php"; ?>
-    <?php include "../../helpers/js.php"; ?>
-</body>
+        <?php include "../../helpers/formsValidation.php"; ?>
+        <?php include "../../helpers/js.php"; ?>
+        <?php include "../../helpers/js_enableToltip.php"; ?>
+    </body>
 
-</html>
+    </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
     header("Location: admin/index.php");

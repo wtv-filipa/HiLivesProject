@@ -17,6 +17,7 @@ if (!isset($_SESSION["idUser"])) {
 
     <?php include "../../helpers/formsValidation.php"; ?>
     <?php include "../../helpers/js.php"; ?>
+    <?php include "../../helpers/js_enableToltip.php"; ?>
 </body>
 
 </html>
