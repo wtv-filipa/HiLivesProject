@@ -1,9 +1,9 @@
 <div class="col-12 text-center mt-5">
-    <h1>Página em construção!</h1>
-    <p>Lamentamos, mas esta página ainda não se encontra finalizada...</p>
-    <a href="homePerson.php" title="Voltar à página inicial">
+    <h1>Page under construction!</h1>
+    <p>Sorry, but this page is not yet finished...</p>
+    <a href="homePerson.php" title="Back to Homepage">
         <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">
-            Voltar à página inicial
+            Back to Homepage
         </button>
     </a>
 </div>
@@ -124,7 +124,7 @@
                 </g>
             </g>
             <g id="XMLID_8719_">
-                <a href="homePerson.php" title="Voltar à página inicial">
+                <a href="homePerson.php" title="Back to Homepage">
                     <circle id="XMLID_8726_" class="st3" cx="256.5" cy="20.1" r="7.4"></circle>
                     <path id="XMLID_8720_" class="st1" d="M256.5,28.1c-4.4,0-8-3.6-8-8c0-4.4,3.6-8,8-8c4.4,0,8,3.6,8,8    C264.5,24.5,260.9,28.1,256.5,28.1z M256.5,13.3c-3.7,0-6.7,3-6.7,6.7c0,3.7,3,6.7,6.7,6.7c3.7,0,6.7-3,6.7-6.7    C263.2,16.4,260.2,13.3,256.5,13.3z"></path>
                 </a>

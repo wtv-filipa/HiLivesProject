@@ -25,7 +25,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
     $query4 = "SELECT idareas, name_interested_area
     FROM areas";
 
-    $query5 = "SELECT idcapacities, capacity, capacities_idcapacities
+    $query5 = "SELECT idcapacities, capacity_comp, capacities_idcapacities
     FROM capacities
     LEFT JOIN vacancies_has_capacities
     ON  capacities.idcapacities = vacancies_has_capacities.capacities_idcapacities AND vacancies_has_capacities.vacancies_idvacancies = ?";
@@ -226,16 +226,18 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                                                         mysqli_stmt_bind_result($stmt2, $idcapacities, $capacity, $capacities_idcapacities);
 
                                                         while (mysqli_stmt_fetch($stmt2)) {
-                                                            $checked = "";
-                                                            if ($capacities_idcapacities != null) {
-                                                                $checked = "checked";
-                                                            }
-                                                            echo "<div class='form-check col-xs-12 col-md-6 paddingCheck'>
+                                                            if (isset($capacity)) {
+                                                                $checked = "";
+                                                                if ($capacities_idcapacities != null) {
+                                                                    $checked = "checked";
+                                                                }
+                                                                echo "<div class='form-check col-xs-12 col-md-6 paddingCheck'>
                                                         <input class='form-check-input' type='checkbox' value='$idcapacities' $checked id='flexCheckDefault' name='capacity[]'>
                                                         <label class='form-check-label' for='flexCheckDefault'>
                                                         $capacity
                                                         </label>
                                                     </div>";
+                                                            }
                                                         }
 
                                                         mysqli_stmt_close($stmt2);

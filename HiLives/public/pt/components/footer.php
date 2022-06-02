@@ -13,7 +13,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
       <div class="row">
         <div class="col-lg-5 col-xs-12 aboutCompany">
           <h3>HiLives</h3>
-          <p class="pr-5">A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
+          <p class="pr-5">A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia e entrarem no mercado de trabalho.</p>
           <p class="socialLinks">
             <a href="http://hilives.web.ua.pt/" class="me-3" title="Website da HiLives">
               <i class="fa-solid fa-globe"></i>

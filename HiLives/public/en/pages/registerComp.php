@@ -3,11 +3,11 @@ session_start();
 if (!isset($_SESSION["idUser"])) {
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Registo</title>
+    <title>Register</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_forms.php"; ?>
 </head>
@@ -15,7 +15,7 @@ if (!isset($_SESSION["idUser"])) {
 <body class="bg_login_reg">
     <?php include "../components/registerComp.php"; ?>
 
-    <?php include "../../helpers/formsValidation.php"; ?>
+    <?php include "../../helpers/formsValidation_en.php"; ?>
     <?php include "../../helpers/js.php"; ?>
 </body>
 

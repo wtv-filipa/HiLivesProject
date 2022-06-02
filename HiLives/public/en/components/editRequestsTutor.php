@@ -16,7 +16,7 @@ if ($_SESSION["idUser"]) {
     WHERE user_type_iduser_type = 10 AND edit_request = 1
     ORDER BY idusers DESC";
 
-    $query2 = "SELECT name_region
+    $query2 = "SELECT name_region_en
     FROM region
     INNER JOIN users_has_region ON region.idregion = users_has_region.region_idregion
     INNER JOIN users ON users_has_region.users_idusers = users.idusers
@@ -25,13 +25,13 @@ if ($_SESSION["idUser"]) {
     <div class="container">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Pedidos de edição</li>
+                <li class="breadcrumb-item"><a href="homeTutor.php" title="Back to homepage">Homepage</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editing requests</li>
             </ol>
         </nav>
 
-        <h1 class="pb-2">Pedidos para editar o perfil</h1>
-        <p class="pb-4">Nesta página é possível ver quais são os pedidos para editar o perfil que ainda estão pendentes.</p>
+        <h1 class="pb-2">Requests to edit profile</h1>
+        <p class="pb-4">On this page you can see which requests to edit your profile are still pending.</p>
 
         <section class="pb-5">
             <div class="row">
@@ -50,18 +50,18 @@ if ($_SESSION["idUser"]) {
                                         <?php
                                         if (isset($profile_img)) {
                                         ?>
-                                            <img class="imgProfilePerson borderBlue mb-4" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
+                                            <img class="imgProfilePerson borderBlue mb-4" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Profile picture of <?= $name_user ?>" />
                                         <?php
                                         } else {
                                         ?>
-                                            <img class="imgProfilePerson borderBlue mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />
+                                            <img class="imgProfilePerson borderBlue mb-4" src="../../img/no_profile_img.png" alt="no profile picture" title="Default image" />
                                         <?php
                                         }
                                         ?>
                                         <h4 class="pb-2"><?= $name_user ?></h4>
                                         <p class="pb-0"><?= $email_user ?></p>
                                         <p>
-                                            Regiões de interesse:
+                                            Regions of interest:
                                             <?php
                                             $first = true;
                                             if (mysqli_stmt_prepare($stmt2, $query2)) {
@@ -78,9 +78,9 @@ if ($_SESSION["idUser"]) {
                                             }
                                             ?>
                                         </p>
-                                        <a href="IndividualReqEditTutor.php?edit=<?= $idusers ?>" title="Ver pedido de edição da">
+                                        <a href="IndividualReqEditTutor.php?edit=<?= $idusers ?>" title="See request for editing of">
                                             <button class="btn buttonDesign buttonWork buttonLoginSize m-0 mb-3">
-                                                Ver pedido
+                                                See request
                                             </button>
                                         </a>
                                     </div>
@@ -99,7 +99,7 @@ if ($_SESSION["idUser"]) {
                                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                         </svg>
                                         <p class="mx-auto" style="font-size: 1rem;">
-                                            Neste momento não existe nenhum pedido de edição pendente. Por favor volte mais tarde.
+                                            At this moment there is no pending edit request. Please check back later.
                                         </p>
                                     </div>
                                 </div>

@@ -188,7 +188,6 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                                 </div>
                                             </div>
                                         <?php
-                                            include('../components/deleteModal.php');
                                         }
                                     } else {
                                         ?>

@@ -10,7 +10,7 @@
                 $msg_show = true;
                 switch ($_SESSION["login"]) {
                     case 1:
-                        $message = "Registo efetuado com sucesso!";
+                        $message = "Successfully registered!";
                         $class = "alert-success";
                         $_SESSION["login"] = 0;
                         break;
@@ -42,15 +42,15 @@
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
+                                    <a href="../../../indexEN.php" title="Back to homepage"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Welcome to HiLives!"></a>
 
-                                    <h1 class="mb-4 weightTitle">Espera que alguém entre em contacto contigo!</h1>
-                                    <p class="mb-4 descricao">Para teres acesso à Plataforma HiLives, precisas de esperar que alguém te contacte. Vamos falar contigo, no máximo, em duas semanas.</p>
+                                    <h1 class="mb-4 weightTitle">Wait for someone to get in touch with you!</h1>
+                                    <p class="mb-4 descricao">To get access to the HiLives Platform you need to wait for someone to contact you. We will get back to you in, at maximum, within two weeks.</p>
 
                                     <hr class="mt-4 mb-4">
-                                    <a href="../../../index.php" title="Voltar à página inicial">
+                                    <a href="../../../indexEN.php" title="Back to homepage">
                                         <button class="btn buttonDesign buttonWork buttonMessageRegisterSize m-0">
-                                            Voltar à página inicial
+                                            Back to homepage
                                         </button>
                                     </a>
                                 </div>

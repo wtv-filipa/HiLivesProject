@@ -6,20 +6,20 @@ $stmt = mysqli_stmt_init($link);
 
 $idUser = $_SESSION["idUser"];
 
-$query = "SELECT idareas, name_interested_area FROM areas";
-$query2 = "SELECT idcourse_regime, name_regime FROM course_regime";
-$query3 = "SELECT idaccommodation, name_accommodation FROM accommodation";
+$query = "SELECT idareas, name_interested_area_en FROM areas";
+$query2 = "SELECT idcourse_regime, name_regime_en FROM course_regime";
+$query3 = "SELECT idaccommodation, name_accommodation_en FROM accommodation";
 
-$query5 = "SELECT region_idregion, idregion, name_region FROM users_has_region
+$query5 = "SELECT region_idregion, idregion, name_region_en FROM users_has_region
 INNER JOIN region ON users_has_region.region_idregion = region.idregion
 WHERE users_idusers = ?";
 ?>
 <div class="container">
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
-            <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Voltar aos meus cursos">Cursos</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Carregar um novo curso</li>
+            <li class="breadcrumb-item"><a href="homeHei.php" title="Back to homepage">Homepage</a></li>
+            <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Back to my courses">Courses</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Upload a new course</li>
         </ol>
     </nav>
 
@@ -28,12 +28,12 @@ WHERE users_idusers = ?";
         $msg_show = true;
         switch ($_SESSION["course"]) {
             case 1:
-                $message = "É necessário preencher todos os campos obrigatórios.";
+                $message = "All mandatory fields must be filled in.";
                 $class = "alert-warning";
                 $_SESSION["course"] = 0;
                 break;
             case 2:
-                $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                $message = "An error has occurred processing your request, please try again later.";
                 $class = "alert-warning";
                 $_SESSION["course"] = 0;
                 break;
@@ -67,27 +67,27 @@ WHERE users_idusers = ?";
                     <div class="paddingForms">
                         <div class="text-center">
                             <h1 class="mb-4 weightTitle">
-                                Criar novo curso
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="Utilize uma linguagem simples e frases curtas. Sempre que encontrar um símbolo semelhante junto dos campos a preencher, poderá encontrar dicas de como preencher os mesmos. Caso pretenda que o texto apareça com parágrafos, coloque cada parágrafo entre '<p></p>'. Se pretender destacar alguma palavra coloque-a entre '<b></b>'">
+                                Create new course
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="Use simple language and short sentences. Whenever you find a similar symbol next to the fields to be filled in, you can find tips on how to fill in the fields. If you want the text to appear with paragraphs, enclose each paragraph within '<p></p>'. If you want to highlight a word, put it between '<b></b>'.">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                 </svg>
                             </h1>
                         </div>
 
-                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourseHei.php?course=<?= $idUser ?>">
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourseHei_en.php?course=<?= $idUser ?>">
                             <!--COURSE NAME-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="nome">Nome do Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="nome">Course Name <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="nome" name="nome" placeholder="Insira aqui o nome do curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="nome" name="nome" placeholder="Type your course name here" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--DESCRIPTION-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="descricao">Breve descrição do curso <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" maxlength="445" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="descricao">Short description of course <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Please enter a short description of the course" maxlength="445" aria-required="true" required="required"></textarea>
                                 <div id="the-count">
                                     <span id="current">0</span>
                                     <span id="maximum">/ 445</span>
@@ -98,13 +98,13 @@ WHERE users_idusers = ?";
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="website">
                                     Website <span class="asteriskPink">*</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira o link do website sem o https//">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Type the website link without the https//">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="website" name="website" placeholder="Insira o link do website com informação do curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="website" name="website" placeholder="Type the website link with course information" aria-required="true" required="required">
                                 </div>
                             </div>
 
@@ -112,13 +112,13 @@ WHERE users_idusers = ?";
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="facebook">
                                     Facebook
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploFacebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Just enter your username. Eg: @exampleFacebook">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="facebook" name="facebook" placeholder="Insira aqui o facebook do curso">
+                                    <input type="text" class="form-control greyBorder" id="facebook" name="facebook" placeholder="Type here the course facebook page">
                                 </div>
                             </div>
 
@@ -126,45 +126,45 @@ WHERE users_idusers = ?";
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="instagram">
                                     Instagram
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploInstagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Just enter your username. Eg: @exampleInstagram">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="instagram" name="instagram" placeholder="Insira aqui o instagram do curso">
+                                    <input type="text" class="form-control greyBorder" id="instagram" name="instagram" placeholder="Type here the instagram of the course">
                                 </div>
                             </div>
 
                             <!--COURSE DIRECTOR-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="diretor">Diretor(a) do Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="diretor">Course Director <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="diretor" name="diretor" placeholder="Insira aqui o nome do diretor do curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="diretor" name="diretor" placeholder="Type the name of the Course Director here" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--EMAIL-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="email">Email do Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="email">Course Email <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Insira aqui o email que as pessoas podem contactar para esclarecer dúvidas do curso" aria-required="true" required="required">
+                                    <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Type here the email people can contact to clarify doubts about the course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--PHONE NUMBER-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="telefone">Telefone do curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="telefone">Course phone number <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="tel" class="form-control greyBorder" id="telefone" name="telefone" placeholder="Insira aqui o telefone que as pessoas podem contactar para esclarecer dúvidas do curso" aria-required="true" required="required">
+                                    <input type="tel" class="form-control greyBorder" id="telefone" name="telefone" placeholder="Type here the telephone number that people can contact to clarify doubts about the course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--REGION-->
                             <div class="form-group pb-4 formulario">
-                                <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região do curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="regiao">Select course region <span class="asteriskPink">*</span></label>
                                 <select class="form-select greyBorder" id="regiao" name="regiao" aria-required="true" required="required">
-                                    <option selected disabled>Selecione uma opção</option>
+                                    <option selected disabled>Select an option</option>
                                     <?php
                                     if (mysqli_stmt_prepare($stmt, $query5)) {
                                         mysqli_stmt_bind_param($stmt, 'i', $idUser);
@@ -181,12 +181,12 @@ WHERE users_idusers = ?";
                             </div>
 
                             <!--secção-->
-                            <h3 class="text-center" role="heading">Características gerais do Curso</h3>
+                            <h3 class="text-center" role="heading">General characteristics of the Course</h3>
                             <!----------->
 
                             <!--AREAS-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="area">Selecione as áreas científicas que se adequam ao Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="area">Select the scientific areas that suit the Course <span class="asteriskPink">*</span></label>
                                 <div class="row ps-3">
                                     <?php
                                     $stmt = mysqli_stmt_init($link);
@@ -211,28 +211,28 @@ WHERE users_idusers = ?";
                             <!--DURATION-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="duracao">
-                                    Duração do Curso <span class="asteriskPink">*</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique a duração do curso através de anos - semestres. Por exemplo: 1 ano - 2 semestres">
+                                    Duration of the course <span class="asteriskPink">*</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Please indicate the duration of the course by years - semesters. Eg: 1 year - 2 semesters">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="duracao" name="duracao" placeholder="Indique a duração prevista do curso (em semestres)" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="duracao" name="duracao" placeholder="Indicate the estimated duration of the course (in semesters)" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--ECTCS-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="ects">
-                                    Créditos ECTS <span class="asteriskPink">*</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique o apenas o número de ECTS. Por exemplo: 180">
+                                    ECTS Credits <span class="asteriskPink">*</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Please state the number of ECTS only. Eg: 180">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="ects" name="ects" placeholder="Indique o número de ECTS que os estudantes podem adquirir" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="ects" name="ects" placeholder="Indicate the number of ECTS that students can acquire" aria-required="true" required="required">
                                 </div>
                             </div>
 
@@ -240,7 +240,7 @@ WHERE users_idusers = ?";
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="regime">Regime <span class="asteriskPink">*</span></label>
                                 <select class="form-select greyBorder" id="regime" name="regime" aria-required="true" required="required">
-                                    <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
+                                    <option value="" selected disabled aria-disabled="true">Select an option</option>
                                     <?php
                                     $stmt = mysqli_stmt_init($link);
                                     if (mysqli_stmt_prepare($stmt, $query2)) {
@@ -258,103 +258,103 @@ WHERE users_idusers = ?";
 
                             <!--LANGUAGES-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="idioma">Idioma(s) de lecionação <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="idioma">Language(s) of instruction <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="idioma" name="idioma" placeholder="Insira o(s) idioma(s) em que o curso será lecionado" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="idioma" name="idioma" placeholder="Type the language(s) in which the course will be taught" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--FEE-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="propina">
-                                    Valor da propina <span class="asteriskPink">*</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique se o valor é anual ou semestral. Por exemplo: 1000€/ano ou 1000€/semestre">
+                                Course fee <span class="asteriskPink">*</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indicate whether the amount is annual or half-yearly. Eg: 1000€/year or 1000€/semester">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="propina" name="propina" placeholder="Indique o valor da propina do curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="propina" name="propina" placeholder="Please indicate the tuition fee for the course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--CERTIFICATION-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="certificacao">Certificação de curso <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="certificacao" rows="5" name="certificacao" placeholder="Indique o tipo de certificação que os estudantes irão obter ( se dão certificado, diploma ...)" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="certificacao">Course Certification <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="certificacao" rows="5" name="certificacao" placeholder="Indicate the type of certification that students will obtain (if they give certificate, diploma ...)" aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--secção-->
-                            <h3 class="text-center" role="heading">Destinatários e condições de admissão</h3>
+                            <h3 class="text-center" role="heading">Target-students and admission conditions</h3>
                             <!----------->
 
                             <!--TARGET-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="destinatarios">Destinatários <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="destinatarios" rows="5" name="destinatarios" placeholder="Indique a quem se destina o curso (todas as Pessoas com DID, a Pessoas com e sem DID, apenas a um grupo mais específico de DID...)" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="destinatarios">Target-students <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="destinatarios" rows="5" name="destinatarios" placeholder="Please indicate who the course is aimed at (all people with IDD, people with and without IDD, only a more specific group od IDD...)" aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--VACANCIES AVAILABLE-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="vagas">
-                                    Vagas disponíveis <span class="asteriskPink">*</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas números.">
+                                Vacancies available <span class="asteriskPink">*</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Enter numbers only.">
                                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                     </svg>
                                 </label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="vagas" name="vagas" placeholder="Indique o número de vagas anuais disponíveis para o Curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="vagas" name="vagas" placeholder="Please indicate the number of vacancies available per year for the Course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--STAGES-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="periodo">Fase(s) de candidatura <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="periodo">Application stage(s) <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="periodo" name="periodo" placeholder="Indique em que datas podem ser realizadas as candidaturas aos cursos" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="periodo" name="periodo" placeholder="Please indicate on which dates you can apply for the courses" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--REQUIREMENTS-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="requisitos">Requisitos <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Indique os requisitos que a pessoa deve cumprir para entrar no curso" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="requisitos">Requirements <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Indicate the requirements that the person must meet to enter the course" aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--secção-->
-                            <h3 class="text-center" role="heading">Detalhes do Curso</h3>
+                            <h3 class="text-center" role="heading">Course details</h3>
                             <!----------->
 
                             <!--CURRICULUM PLAN-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="curricular">Tipo de plano curricular <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="curricular" rows="5" name="curricular" placeholder="Indique se é um Plano curricular com UCs para estudantes com DID e sem DID e/ou Plano curricular com UCs só para estudantes com DID (domínio académico e/ou domínio profissional)" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="curricular">Type of curricular plan <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="curricular" rows="5" name="curricular" placeholder="Please indicate if it is a Curriculum Plan with CUs for students with and without DID and/or a Curriculum Plan with CUs only for students with DID (academic and/or professional domain)." aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--VOCATIONAL DIMENSION-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="vocacional">Dimensão profissional <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="vocacional" rows="5" name="vocacional" placeholder="Se o curso tem uma dimensão profissional ou se proporciona atividades do âmbito profissional. Se não existir, escreva: “Não existe esta dimensão no curso”" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="vocacional">Vocational dimension <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="vocacional" rows="5" name="vocacional" placeholder="If the course has a professional dimension or if it provides activities in the professional field. If it does not exist, write: 'This dimension does not exist in the course'" aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--ACTIVITIES-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="atividades">Atividades extracurriculares <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="atividades" rows="5" name="atividades" placeholder="Se há atividades extracurriculares promovidas pela HE e/ou específicas para as pessoas com DID, bem como se estas atividades são obrigatórias ou não" aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="atividades">Extracurricular activities <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="atividades" rows="5" name="atividades" placeholder="Whether there are extracurricular activities promoted by HE and/or specific for people with IDD, as well as whether these activities are compulsory or not" aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--SUPPORT-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="apoios">Apoios <span class="asteriskPink">*</span></label>
-                                <textarea class="form-control " id="apoios" rows="5" name="apoios" placeholder="Apoio ao nível académico, social, para uma vida independente (por exemplo: saber orientar-se) ou outro." aria-required="true" required="required"></textarea>
+                                <label class="boldFont mt-3 pb-2" for="apoios">Support <span class="asteriskPink">*</span></label>
+                                <textarea class="form-control " id="apoios" rows="5" name="apoios" placeholder="Academic, social, independent living (e.g. getting around) or other support." aria-required="true" required="required"></textarea>
                             </div>
 
                             <!--ACCOMMODATION-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="alojamento">Alojamento <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="alojamento">Accommodation <span class="asteriskPink">*</span></label>
                                 <select class="form-select greyBorder" id="alojamento" name="alojamento" aria-required="true" required="required">
-                                    <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
+                                    <option value="" selected disabled aria-disabled="true">Select an option</option>
                                     <?php
                                     $stmt = mysqli_stmt_init($link);
                                     if (mysqli_stmt_prepare($stmt, $query3)) {
@@ -372,7 +372,7 @@ WHERE users_idusers = ?";
 
                             <div class="form-group text-center mt-4">
                                 <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Adicionar</button>
+                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Add course</button>
                                 </div>
                             </div>
                         </form>

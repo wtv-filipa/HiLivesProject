@@ -8,22 +8,28 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $id_navegar = $_SESSION["idUser"];
     $User_type = $_SESSION["type"];
 
-    $query = "SELECT experiences.idexperiences, experiences.description, experiences.date, experiences.xp_type, experiences.content_idcontent, content.idContent, content.content_name, users.idusers, users.name_user, users.profile_img, users.user_type_iduser_type
+    $query = "SELECT experiences.idexperiences, experiences.description_en, experiences.date, experiences.xp_type, experiences.content_idcontent, content.idContent, content.content_name, users.idusers, users.name_user, users.profile_img, users.user_type_iduser_type
     FROM experiences
     LEFT JOIN content ON experiences.content_idcontent = content.idcontent
     INNER JOIN users ON experiences.users_idusers = users.idusers
     ORDER BY idexperiences DESC";
 ?>
-    <nav class="navbar navbar-light navBgColor sticky-top">
-        <div class="container">
-            <span class="navbar-text navstories">
-                <a href="uploadStory.php" title="Adicionar uma nova história">
-                    Criar uma história
-                    <i class="fa-solid fa-angle-right arrowRight"></i>
-                </a>
-            </span>
-        </div>
-    </nav>
+    <?php
+    if ($User_type != 16) {
+    ?>
+        <nav class="navbar navbar-light navBgColor sticky-top">
+            <div class="container">
+                <span class="navbar-text navstories">
+                    <a href="uploadStory.php" title="Add a new story">
+                        Create a story
+                        <i class="fa-solid fa-angle-right arrowRight"></i>
+                    </a>
+                </span>
+            </div>
+        </nav>
+    <?php
+    }
+    ?>
 
     <div class="container pb-5">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4 col-md-6">
@@ -31,32 +37,32 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                 <?php
                 if ($User_type == 7) {
                 ?>
-                    <li class="breadcrumb-item"><a href="homeComp.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeComp.php" title="Back to homepage">Homepage</a></li>
                 <?php
                 } else if ($User_type == 10) {
                 ?>
-                    <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homePerson.php" title="Back to homepage">Homepage</a></li>
                 <?php
                 } else if ($User_type == 13) {
                 ?>
-                    <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeHei.php" title="Back to homepage">Homepage</a></li>
                 <?php
                 } else if ($User_type == 16) {
                 ?>
-                    <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
+                    <li class="breadcrumb-item"><a href="homeTutor.php" title="Back to homepage">Homepage</a></li>
                 <?php
                 }
                 ?>
-                <li class="breadcrumb-item active" aria-current="page">Histórias do HiLives</li>
+                <li class="breadcrumb-item active" aria-current="page">HiLives Stories</li>
             </ol>
         </nav>
 
-        <h1 class="pb-2">Histórias do HiLives</h1>
+        <h1 class="pb-2">HiLives Stories</h1>
         <?php
         if ($User_type == 10) {
-            echo "<p>Aqui, vais encontrar vídeos, fotografias, áudios e textos que demonstram como foram as experiências académicas e profissionais de outros utilizadores da HiLives. Podes também encontrar vídeos que mostram os ambientes das empresas ou universidades. Qualquer pessoa pode publicar a sua história! <a class='linkIcons' href='uploadStory.php' title='Adicionar uma nova história'> Adiciona a tua aqui! </a></p>";
+            echo "<p>Here you will find videos, photos, audios and texts that show the academic and professional experiences of other HiLives users. You can also find videos that show the environments of companies or universities. Anyone can post his/her story! <a class='linkIcons' href='uploadStory.php' title='Add a new story'> Add yours here! </a></p>";
         } else {
-            echo "<p>Aqui, vai encontrar vídeos, fotografias, áudios e textos que demonstram como foram as experiências académicas e profissionais de outros utilizadores da HiLives. Pode também encontrar vídeos que mostram os ambientes das empresas ou universidades. Qualquer pessoa pode publicar a sua história! <a class='linkIcons' href='uploadStory.php' title='Adicionar uma nova história'> Adicione a sua aqui!</a></p>";
+            echo "<p>Here, you will find videos, photos, audios and texts that show how other HiLives users' academic and professional experiences have been. You can also find videos that show the environments of companies or universities. Anyone can post his/her story! <a class='linkIcons' href='uploadStory.php' title='Add a new story'> Add yours here!</a></p>";
         }
         ?>
 
@@ -74,21 +80,21 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
 
                     <div class="wrapperStory">
                         <header class="cf">
-                            <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" title="Perfil de <?= $name_user ?>">
+                            <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" title="Profile of <?= $name_user ?>">
                                 <?php
                                 if (isset($profile_img)) {
                                 ?>
-                                    <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Imagem de perfil de <?= $name_user ?>" />
+                                    <img class="profile-pic" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="<?= $profile_img ?>" title="Profile image of <?= $name_user ?>" />
                                 <?php
                                 } else {
                                 ?>
-                                    <img class="profile-pic" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem de perfil padrão" />
+                                    <img class="profile-pic" src="../../img/no_profile_img.png" alt="without profile image" title="without profile image" />
                                 <?php
                                 }
                                 ?>
                             </a>
                             <h5 class="name">
-                                <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" class="linkStory"><?= $name_user ?> </a>
+                                <a href="ViewProfile.php?user=<?= $idusers ?>&userType=<?= $iduser_type ?>" title="Profile of <?= $name_user ?>" class="linkStory"><?= $name_user ?> </a>
                             </h5>
                             <p class="cardInfo13"><?= $newDate ?></p>
                         </header>
@@ -132,7 +138,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             }
                             ?>
                             <div class="text-center videoSize">
-                                <img class="img-content img-fluid" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
+                                <img class="img-content img-fluid" alt="<?= $content_name ?>" title="<?= $content_name ?>" src="../../../admin/uploads/experiences/<?= $content_name ?>" />
                             </div>
                         <?php
                         } else if ($xp_type == "text" && isset($description)) {
@@ -155,7 +161,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                 </svg>
                                 <p class="mx-auto" style="font-size: 1rem;">
-                                    Neste momento não existe nenhum história publicada. Por favor volta mais tarde.
+                                    At the moment there is no story published. Please come back later.
                                 </p>
                             </div>
                         </div>

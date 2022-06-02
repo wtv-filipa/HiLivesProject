@@ -8,11 +8,11 @@ $link2 = new_db_connection();
 $stmt2 = mysqli_stmt_init($link2);
 
 if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"])) {
-    $idUser =$_SESSION["idUser"];
+    $idUser = $_SESSION["idUser"];
     $idStory = $_GET["edit"];
     $User_type = $_SESSION["type"];
 
-    $query = "SELECT description
+    $query = "SELECT description_en
     FROM experiences 
     WHERE idexperiences =?";
 
@@ -30,24 +30,24 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                         <?php
                         if ($User_type == 7) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeComp.php" title="Voltar à página inicial">Página Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="homeComp.php" title="Back to homepage">Homepage</a></li>
                         <?php
                         } else if ($User_type == 10) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="homePerson.php" title="Back to homepage">Homepage</a></li>
                         <?php
                         } else if ($User_type == 13) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="homeHei.php" title="Back to homepage">Homepage</a></li>
                         <?php
                         } else if ($User_type == 16) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Back to homepage">Homepage</a></li>
                         <?php
                         }
                         ?>
-                        <li class="breadcrumb-item"><a href="stories" title="Voltar às histórias">Histórias da HiLives</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Editar uma história da HiLives</li>
+                        <li class="breadcrumb-item"><a href="stories" title="Voltar às histórias">HiLives Stories</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit a HiLives story</li>
                     </ol>
                 </nav>
 
@@ -56,12 +56,12 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                     $msg_show = true;
                     switch ($_SESSION["story"]) {
                         case 1:
-                            $message = "Ocorreu um erro a processar o teu pedido, por favor tenta novamente mais tarde.";
+                            $message = "An error has occurred while processing your request, please try again later.";
                             $class = "alert-warning";
                             $_SESSION["story"] = 0;
                             break;
                         case 2:
-                            $message = "É necessário preencher todos os campos obrigatórios.";
+                            $message = "All mandatory fields must be filled in.";
                             $class = "alert-warning";
                             $_SESSION["story"] = 0;
                             break;
@@ -95,23 +95,23 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                                 <div class="paddingForms">
                                     <div class="text-center">
                                         <h1 class="mb-4 weightTitle">
-                                            Editar a história
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="O texto deve ter uma linguagem simples. Sempre que encontrares um símbolo semelhante junto dos campos a preencher, podes ver dicas de como os preencher. Grava os teus vídeos ou imagens na horizontal, para que as outras pessoas os possam ver com mais facilidade.">
+                                            Edit the story
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Tips" data-bs-content="The text should have a simple language. Whenever you find a similar symbol next to the fields to be filled in, you can see tips on how to fill them in. Record your videos or images horizontally so that other people can see them more easily.">
                                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                 <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                             </svg>
                                         </h1>
                                     </div>
-                                    <form method="post" role="form" id="register-form" action="../../scripts/editStory.php?xp=<?= $idStory ?>">
+                                    <form method="post" role="form" id="register-form" action="../../scripts/editStory_en.php?xp=<?= $idStory ?>">
                                         <!--DESCRIPTION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="descricao">Descrição <span class="asterisk">*</span></label>
-                                            <textarea class="form-control " id="descricao" rows="5" name="descricao" placeholder="Descreve a tua história" aria-required="true" required="required"><?= $description ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="descricao">Description <span class="asterisk">*</span></label>
+                                            <textarea class="form-control " id="descricao" rows="5" name="descricao" placeholder="Tell us your story" aria-required="true" required="required"><?= $description ?></textarea>
                                         </div>
 
                                         <div class="form-group text-center mt-2">
                                             <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                                <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Guardar</button>
+                                                <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Save</button>
                                             </div>
                                         </div>
                                     </form>

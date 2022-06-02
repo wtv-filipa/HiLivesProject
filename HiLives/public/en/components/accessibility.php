@@ -1,52 +1,51 @@
 <div class="container pb-5">
 
     <div class="mt-5">
-        <h1>Acessibilidade</h1>
-        <p>Esta página apresenta um conjunto de indicações sobre a melhor forma de navegar na plataforma HiLives. Esta foi desenvolvida para oferecer o máximo de acessibilidade aos utilizadores, seguindo as Diretrizes para Acessibilidade de Conteúdos Web – WCAG 2.1, desenvolvidas pelo W3C – World Wide Web Consortium.</p>
-        <p>As várias etapas de validação, que decorreram ao longo do processo de desenvolvimento, permitiram oferecer uma plataforma cujo acesso pode ser feito pelo teclado e leitor de ecrã com sintetizador de voz. Todas a acessibilidade da plataforma pode ser ativa através do icon de acessibilidade localizado no canto inferior direito.</p>
+        <h1>Accessibility</h1>
+        <p>This page presents a set of indications about the best way to navigate in the HiLives platform. It was developed to offer maximum accessibility to users, following the Web Content Accessibility Guidelines - WCAG 2.1, developed by W3C - World Wide Web Consortium.</p>
+        <p>The various validation stages, which took place throughout the development process, made it possible to offer a platform which can be accessed by keyboard and screen reader with voice synthesiser. All the accessibility of the platform can be activated through the accessibility icon located in the bottom right corner.</p>
     </div>
 
     <div class="mt-5">
-        <h2>Descrição da plataforma</h2>
-        <p>A plataforma está organizada conforme descrito abaixo.</p>
+        <h2>Description of the platform</h2>
+        <p>The platform is organized as described below.</p>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Barra de Menu Geral</h3>
+            <h3 class="subtitulo">General Menu bar</h3>
             <ol class="infoSize">
-                <li>Logo da HiLives, com link para a Página Inicial</li>
-                <li>Links para aceder às principais páginas da Plataforma</li>
-                <li>Ícone da foto de perfil</li>
-                <li>Link para acesso à área pessoa</li>
-                <li>Submenu para escolher o idioma</li>
+                <li>HiLives logo, with a link to the Home Page</li>
+                <li>Links to access the main pages of the Platform</li>
+                <li>Profile picture icon</li>
+                <li>Link to access the personal area</li>
+                <li>Submenu to choose the language</li>
             </ol>
         </div>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Área de conteúdos</h3>
-            <p>Na homepage das pessoas é possível encontrar:</p>
+            <h3 class="subtitulo">Content area</h3>
+            <p>On the person homepage you can find:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Vídeo de como interagir com a plataforma</li>
+                <li>Main functionalities</li>
+                <li>Video on how to interact with the platform</li>
             </ol>
-            <p>Na homepage das Instituições de Ensino Superior é possível encontrar:</p>
+            <p>On the Higher Education Institutions homepage it is possible to find:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Últimas entradas de pessoas</li>
-                <li>Últimas vagas publicadas por empresas</li>
+                <li>Main functionalities</li>
+                <li>Last connections with people with IDD</li>
             </ol>
-            <p>Na homepage das empresas é possível encontrar:</p>
+            <p>On the companies' homepage you can find:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Ligações recentes</li>
+                <li>Main functionalities</li>
+                <li>Last connections with people with IDD</li>
             </ol>
         </div>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Rodapé</h3>
+            <h3 class="subtitulo">Footer</h3>
             <ol class="infoSize">
-                <li>Lista de parceiros, com respetivo link individual</li>
-                <li>Atalhos para conteúdos importantes da aplicação</li>
-                <li>Outros links importantes</li>
+                <li>List of partners, with their individual link</li>
+                <li>Shortcuts to important contents of the platform</li>
+                <li>Other important links</li>
             </ol>
         </div>
     </div>

@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="en">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Adicionar um curso</title>
+        <title>Add a course</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>
@@ -17,7 +17,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
         <?php include "../components/uploadCourseHei.php"; ?>
         <?php include "../components/footer.php"; ?>
 
-        <?php include "../../helpers/js_validateCheckbox.php"; ?>
+        <?php include "../../helpers/js_validateCheckbox_en.php"; ?>
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_characterCounter.php"; ?>
         <?php include "../../helpers/js_upload.php"; ?>

@@ -153,6 +153,10 @@ a .buttonWork:hover {
   width: 8rem;
 }
 
+.buttonLoginSizeSmaller {
+  width: 6rem;
+}
+
 .buttonHomeSize {
   width: 14rem;
 }
@@ -180,7 +184,7 @@ a .buttonWork:hover {
   width: 10rem;
 }
 
-.buttonMessageRegisterSize{
+.buttonMessageRegisterSize {
   width: 13rem;
 }
 
@@ -307,15 +311,15 @@ audio {
   height: auto;
 }
 
-.videoSize{
+.videoSize {
   max-height: 500px;
 }
 
-.videoSize video{
+.videoSize video {
   max-height: 500px;
 }
 
-.videoSize img{
+.videoSize img {
   max-height: 500px;
 }
 
@@ -375,42 +379,42 @@ a.close.disabled {
 /*ERROR 404*/
 .error-container {
   text-align: center;
-  font-family: "Quicksand", 'Montserrat', sans-serif !important;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
   font-weight: 800;
   margin: 56px 15px;
 }
 
-.error-container>span {
+.error-container > span {
   display: inline-block;
   line-height: 0.7;
   position: relative;
-  color: #AE0168;
+  color: #ae0168;
 }
 
-.error-container>span>span {
+.error-container > span > span {
   display: inline-block;
   position: relative;
 }
 
-.error-container>span:nth-of-type(1) {
+.error-container > span:nth-of-type(1) {
   perspective: 1000px;
   perspective-origin: 500% 50%;
-  color: #005E89;
+  color: #005e89;
 }
 
-.error-container>span:nth-of-type(1)>span {
+.error-container > span:nth-of-type(1) > span {
   transform-origin: 50% 100% 0px;
   transform: rotateX(0);
   animation: easyoutelastic 8s infinite;
 }
 
-.error-container>span:nth-of-type(3) {
+.error-container > span:nth-of-type(3) {
   perspective: none;
   perspective-origin: 50% 50%;
-  color: #005E89;
+  color: #005e89;
 }
 
-.error-container>span:nth-of-type(3)>span {
+.error-container > span:nth-of-type(3) > span {
   transform-origin: 100% 100% 0px;
   transform: rotate(0deg);
   animation: rotatedrop 8s infinite;
@@ -418,52 +422,52 @@ a.close.disabled {
 
 @keyframes easyoutelastic {
   0% {
-      transform: rotateX(0);
+    transform: rotateX(0);
   }
   9% {
-      transform: rotateX(210deg);
+    transform: rotateX(210deg);
   }
   13% {
-      transform: rotateX(150deg);
+    transform: rotateX(150deg);
   }
   16% {
-      transform: rotateX(200deg);
+    transform: rotateX(200deg);
   }
   18% {
-      transform: rotateX(170deg);
+    transform: rotateX(170deg);
   }
   20% {
-      transform: rotateX(180deg);
+    transform: rotateX(180deg);
   }
   60% {
-      transform: rotateX(180deg);
+    transform: rotateX(180deg);
   }
   80% {
-      transform: rotateX(0);
+    transform: rotateX(0);
   }
   100% {
-      transform: rotateX(0);
+    transform: rotateX(0);
   }
 }
 
 @keyframes rotatedrop {
   0% {
-      transform: rotate(0);
+    transform: rotate(0);
   }
   10% {
-      transform: rotate(30deg);
+    transform: rotate(30deg);
   }
   15% {
-      transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   70% {
-      transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   80% {
-      transform: rotate(0);
+    transform: rotate(0);
   }
   100% {
-      transform: rotateX(0);
+    transform: rotateX(0);
   }
 }
 

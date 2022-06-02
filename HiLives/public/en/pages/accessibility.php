@@ -2,11 +2,11 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Acessibilidade</title>
+    <title>Accessibility</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_infoPages.php"; ?>
 </head>

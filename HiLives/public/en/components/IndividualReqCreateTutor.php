@@ -15,7 +15,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
     FROM users
     WHERE idusers = ?";
 
-    $query2 = "SELECT name_region
+    $query2 = "SELECT name_region_en
     FROM region
     INNER JOIN users_has_region ON region.idregion = users_has_region.region_idregion
     INNER JOIN users ON users_has_region.users_idusers = users.idusers
@@ -35,9 +35,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         <!--BREADCRUMBS-->
                         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="pt-4">
                             <ol class="breadcrumb reqBreadcrumb">
-                                <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
-                                <li class="breadcrumb-item"><a href="registerRequestsTutor.php" title="Voltar aos pedidos de registo">Pedidos de registo</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Pedido de <?= $name_user ?></li>
+                                <li class="breadcrumb-item"><a href="homeTutor.php" title="Back to homepage">Homepage</a></li>
+                                <li class="breadcrumb-item"><a href="registerRequestsTutor.php" title="Back to registration requests">Registration requests</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Request of <?= $name_user ?></li>
                             </ol>
                         </nav>
 
@@ -46,17 +46,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                             $msg_show = true;
                             switch ($_SESSION["create"]) {
                                 case 1:
-                                    $message = "Perfil criado com sucesso!";
+                                    $message = "Profile created successfully!";
                                     $class = "alert-success";
                                     $_SESSION["create"] = 0;
                                     break;
                                 case 2:
-                                    $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                                    $message = "An error has occurred while processing your request, please try again later.";
                                     $class = "alert-warning";
                                     $_SESSION["create"] = 0;
                                     break;
                                 case 3:
-                                    $message = "Estado do pedido atualizado com sucesso!";
+                                    $message = "Request status successfully updated!";
                                     $class = "alert-success";
                                     $_SESSION["create"] = 0;
                                     break;
@@ -83,7 +83,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         }
                         ?>
 
-                        <h1 class="pt-4 pb-2">Pedido para registar o perfil de</h1>
+                        <h1 class="pt-4 pb-2">Request to register the profile of</h1>
                         <h3 class="pb-5 textPink"><?= $name_user ?></h3>
                         <!--PROFILE STAGES BIG-->
                         <div class="row pb-4 bigBg">
@@ -92,15 +92,15 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                                     <?php
                                     if ($status_create == 1) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create1.svg" alt="Pedido em estado pendente" title="Pedido em estado pendente" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create1.svg" alt="Request in pending state" title="Request in pending state" />
                                     <?php
                                     } else if ($status_create == 2) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create2.svg" alt="Entrevista marcada" title="Entrevista marcada" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create2.svg" alt="Interview scheduled" title="Interview scheduled" />
                                     <?php
                                     } else if ($status_create == 3) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create3.svg" alt="Perfil completo" title="Perfil completo" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create3.svg" alt="Profile completed" title="Profile completed" />
                                     <?php
                                     }
                                     ?>
@@ -115,15 +115,15 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                                     <?php
                                     if ($status_create == 1) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create_small1.svg" alt="Pedido em estado pendente" title="Pedido em estado pendente" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create_small1.svg" alt="Request in pending state" title="Request in pending state" />
                                     <?php
                                     } else if ($status_create == 2) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create_small2.svg" alt="Entrevista marcada" title="Entrevista marcada" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create_small2.svg" alt="Interview scheduled" title="Interview scheduled" />
                                     <?php
                                     } else if ($status_create == 3) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_create_small3.svg" alt="Perfil completo" title="Perfil completo" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/en/pending_create_small3.svg" alt="Profile completed" title="Profile completed" />
                                     <?php
                                     }
                                     ?>
@@ -137,13 +137,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                 <!-- Info bigger devices-->
                 <section class="jumbotron bgCoverSection CreateBg bigBg">
                     <div class="bg-white bg-whiteSizeAdjust ps-5 pe-3">
-                        <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
+                        <h1 class="pt-5 pb-2 text-center">Information about</h1>
                         <h3 class="pb-4 text-center textPink"><?= $name_user ?></h3>
                         <p><b>Email</b>: <?= $email_user ?></p>
-                        <p><b>Contacto</b>: <?= $contact_user ?></p>
+                        <p><b>Contact</b>: <?= $contact_user ?></p>
                         <p>
                             <b>
-                                Regiões de interesse:
+                                Regions of interest:
                             </b>
                             <?php
                             $first = true;
@@ -164,9 +164,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
 
                         <div class="text-center pt-2">
-                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
+                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Edit profile">
                                 <button class="btn buttonDesign buttonStudy buttonRegisterSize m-0">
-                                    Editar perfil
+                                    Edit profile
                                 </button>
                             </a>
                         </div>
@@ -175,7 +175,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm">
-                                <a class="small linkRequest create" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                                <a class="small linkRequest create" title="Click to update the application status to 'Interview scheduled'" href="../../scripts/updateIndividualRequest_en.php?create=<?= $idUser ?>" title="Updating the request status">Have you booked the interview yet? Click here to update the status of the request.</a>
                             </div>
                         <?php
                         }
@@ -188,13 +188,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                 <section class="smallBg whiteBg">
                     <div class="jumbotron bgCoverSection CreateBg smallBg"></div>
                     <div class="bg-white ps-3 pe-3">
-                        <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
+                        <h1 class="pt-5 pb-2 text-center">Information about</h1>
                         <h3 class="pb-4 text-center textPink"><?= $name_user ?></h3>
                         <p><b>Email</b>: <?= $email_user ?></p>
-                        <p><b>Contacto</b>: <?= $contact_user ?></p>
+                        <p><b>Contact</b>: <?= $contact_user ?></p>
                         <p>
                             <b>
-                                Regiões de interesse:
+                                Regions of interest:
                             </b>
                             <?php
                             $first = true;
@@ -215,9 +215,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         <p><b>Date of birth</b>: <?= $newDate ?></p>
 
                         <div class="text-center pt-2 pb-3">
-                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Editar o perfil">
+                            <a href="createProfileTutor.php?create=<?= $idUser ?>" title="Edit profile">
                                 <button class="btn buttonDesign buttonStudy buttonRegisterSize m-0">
-                                    Editar perfil
+                                    Edit profile
                                 </button>
                             </a>
                         </div>
@@ -226,7 +226,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         if ($status_create == 1) {
                         ?>
                             <div class="text-center textForm pb-4">
-                                <a class="small linkRequest create" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                                <a class="small linkRequest create" title="Click to update the application status to 'Interview scheduled'" href="../../scripts/updateIndividualRequest_en.php?create=<?= $idUser ?>" title="Updating the request status">Have you booked the interview yet? Click here to update the status of the request.</a>
                             </div>
                         <?php
                         }

@@ -175,7 +175,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             }
                             ?>
                         </p>
-                        <p><b>Date of birth</b>: <?= $newDate ?> </p>
+                        <p><b>Data de nascimento</b>: <?= $newDate ?> </p>
                         <div class="text-center pt-2">
                             <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
                                 <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">
@@ -226,7 +226,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             }
                             ?>
                         </p>
-                        <p><b>Date of birth</b>: <?= $newDate ?> </p>
+                        <p><b>Data de nascimento</b>: <?= $newDate ?> </p>
                         <div class="text-center pt-2 pb-3">
                             <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
                                 <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">

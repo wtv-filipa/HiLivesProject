@@ -17,7 +17,7 @@ if ($_SESSION["idUser"]) {
     ORDER BY idusers DESC
     LIMIT 6";
 
-    $query2 = "SELECT name_region
+    $query2 = "SELECT name_region_en
     FROM region
     INNER JOIN users_has_region ON region.idregion = users_has_region.region_idregion
     INNER JOIN users ON users_has_region.users_idusers = users.idusers
@@ -26,9 +26,9 @@ if ($_SESSION["idUser"]) {
     <!-- Header -->
     <div class="jumbotron bg-cover text-white startBgPerson">
         <div class="container py-5 text-center">
-            <h1 class="fontWhite textBanner">Bem-vindo(a) ao HiLives!</h1>
+            <h1 class="fontWhite textBanner">Welcome to HiLives!</h1>
             <div class="arrow">
-                <a class="fa-solid fa-circle-chevron-down" href="#firstSectionTutor" title="Ir para a primeira secção"></a>
+                <a class="fa-solid fa-circle-chevron-down" href="#firstSectionTutor" title="Go to the first section"></a>
             </div>
         </div>
     </div>
@@ -36,27 +36,27 @@ if ($_SESSION["idUser"]) {
     <!-- Matchs -->
     <section id="firstSectionTutor" class="conatiner-fluid greyBg">
         <div class="container text-center pt-5 pb-5">
-            <h2 class="pb-4">Qual é o papel de um tutor?</h2>
+            <h2 class="pb-4">What is the role of a tutor?</h2>
             <div class="row">
                 <div class="col-12 col-md-6 ps-4 pe-4 marginBottomSmall">
-                    <img src="../../img/add.svg" alt="Ícone de um livro" class="img-fluid" title="Pessoa">
-                    <h3 class="mt-4 pb-2">Facilitar o registo das Pessoas com DID</h3>
-                    <p>O tutor deverá de realizar uma entrevista com as Pessoas com DID para que estas possam completar o seu registo de uma forma mais simples.Se queres ir estudar numa Instituição de Ensino Superior, a HiLives vai indicar-te quais são os melhores Cursos, com base nas tuas preferências.</p>
+                    <img src="../../img/add.svg" alt="Icon of a person" class="img-fluid" title="Icon of a person">
+                    <h3 class="mt-4 pb-2">Facilitating the registration of People with IDD</h3>
+                    <p>The tutor will have to conduct an interview with the People with IDD so that they can complete their registration in an easier way.</p>
                     <br>
-                    <a href="registerRequestsTutor.php" title="Ver pedidos de registo">
+                    <a href="registerRequestsTutor.php" title="View registration requests">
                         <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
-                            Ver pedidos de registo
+                            View registration requests
                         </button>
                     </a>
                 </div>
                 <div class="col-12 col-md-6 ps-4 pe-4">
-                    <img src="../../img/edit.svg" alt="Ícone de uma paste de trabalho" class="img-fluid" title="Instituição de Ensino Superior">
-                    <h3 class="mt-4 pb-2">Facilitar a atualização do perfil das Pessoas com DID</h3>
-                    <p class="heightEqual">Caso exista alguma pessoa com DID que necessite de atualizar campos específicos do seu perfil, esta irá pedir uma entrevista com o tutor e este vai ajudá-la com a atualização.</p>
+                    <img src="../../img/edit.svg" alt="Pencil icon" class="img-fluid" title="Pencil icon">
+                    <h3 class="mt-4 pb-2">Facilitating the updating of the profile of PwD</h3>
+                    <p class="heightEqual">If there is a person with DID who needs to update specific fields in their profile, they will request an interview with the tutor and the tutor will help them with the update.</p>
                     <br>
-                    <a href="editRequestsTutor.php" title="Ver pedidos de Edição">
+                    <a href="editRequestsTutor.php" title="View Editing requests">
                         <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
-                            Ver pedidos de edição
+                            View editing requests
                         </button>
                     </a>
                 </div>
@@ -65,7 +65,7 @@ if ($_SESSION["idUser"]) {
     </section>
     <!-- HiLives Stories-->
     <section class="container pt-5 pb-5">
-        <h2 class="pb-4 text-center">Candidaturas recentes</h2>
+        <h2 class="pb-4 text-center">Latest applications</h2>
         <div class="row">
             <?php
 
@@ -79,10 +79,10 @@ if ($_SESSION["idUser"]) {
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="card text-center shadowCard o-hidden border-0">
                                 <div class="card-body">
-                                    <img class="imgProfilePerson mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="Imagem padrão" />
+                                    <img class="imgProfilePerson mb-4" src="../../img/no_profile_img.png" alt="no profile picture" title="no profile picture" />
                                     <h4 class="pb-2"><?= $name_user ?></h4>
                                     <p class="pb-0"><?= $email_user ?></p>
-                                    <p>Regiões de interesse:
+                                    <p>Regions of interest:
                                         <?php
                                         $first = true;
                                         if (mysqli_stmt_prepare($stmt2, $query2)) {
@@ -99,9 +99,9 @@ if ($_SESSION["idUser"]) {
                                         }
                                         ?>
                                     </p>
-                                    <a href="IndividualReqCreateTutor.php?create=<?= $idusers ?>" title="Ver pedido de <?= $name_user ?>">
+                                    <a href="IndividualReqCreateTutor.php?create=<?= $idusers ?>" title="See request of <?= $name_user ?>">
                                         <button class="btn buttonDesign buttonStudy buttonLoginSize m-0 mb-3">
-                                            Ver pedido
+                                            View request
                                         </button>
                                     </a>
                                 </div>
@@ -120,7 +120,7 @@ if ($_SESSION["idUser"]) {
                                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                     </svg>
                                     <p class="mx-auto" style="font-size: 1rem;">
-                                        Neste momento não existe nenhum pedido de registo pendente. Por favor volte mais tarde.
+                                        At this moment there is no pending registration request. Please come back later.
                                     </p>
                                 </div>
                             </div>

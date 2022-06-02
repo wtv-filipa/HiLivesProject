@@ -109,7 +109,7 @@ $stmt = mysqli_stmt_init($link);
 
                                     <!--COUNTRY-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="pais">País onde quero estudar <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="pais">País onde quero estudar ou trabalhar <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="pais">
                                             <option value="pt">Portugal</option>
                                             <option value="es">Espanha</option>

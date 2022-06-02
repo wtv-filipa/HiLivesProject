@@ -8,9 +8,9 @@ $idUser = $_SESSION["idUser"];
 <div class="container">
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
-            <li class="breadcrumb-item"><a href="profile.php" title="Voltar à minha área">A minha área</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Fazer o upload de uma nova Unidade Curricular ou Curso feito</li>
+            <li class="breadcrumb-item"><a href="homePerson.php" title="Back to homepage">Homepage</a></li>
+            <li class="breadcrumb-item"><a href="profile.php" title="Back to my area">My area</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Upload a new Course or Curricular Unit done</li>
         </ol>
     </nav>
     <?php
@@ -18,12 +18,12 @@ $idUser = $_SESSION["idUser"];
         $msg_show = true;
         switch ($_SESSION["doneCU"]) {
             case 1:
-                $message = "Ocorreu um erro a processar o teu pedido, por favor tenta novamente mais tarde.";
+                $message = "An error has occurred while processing your request, please try again later.";
                 $class = "alert-warning";
                 $_SESSION["doneCU"] = 0;
                 break;
             case 2:
-                $message = "É necessário preencher todos os campos obrigatórios.";
+                $message = "All mandatory fields must be filled in.";
                 $class = "alert-warning";
                 $_SESSION["doneCU"] = 0;
                 break;
@@ -55,36 +55,36 @@ $idUser = $_SESSION["idUser"];
                 <div class="col-lg-12">
                     <div class="paddingForms">
                         <div class="text-center">
-                            <h1 class="mb-4 weightTitle">Adicionar uma Unidade Curricular ou Curso feito</h1>
+                            <h1 class="mb-4 weightTitle">Add a new Course or Curricular Unit done</h1>
                         </div>
-                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourse.php">
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourse_en.php">
                             <!--NAME-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="nomeuc">Nome da Unidade Curricular ou Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="nomeuc">Name of the Curricular Unit or Course <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Escreve aqui o nome da Unidade Curricular/ Curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Type here the name of the Course/Curriculum Unit" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--HEIS MADE-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="uniuc">Instituição de Ensino Superior onde foi feita <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="uniuc">Higher Education Institution where it was made <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Escreve aqui o nome da Instituição de Ensino Superior onde concluíste a Unidade Curricular ou o Curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Type here the name of the Higher Education Institution where you completed the course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--CONCLUSION DATE-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="data">Data de conclusão <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="data">Date of conclusion <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="date" class="form-control greyBorder" id="data" name="data" placeholder="Escreve aqui o nome da Unidade Curricular/ Curso" aria-required="true" required="required">
+                                    <input type="date" class="form-control greyBorder" id="data" name="data" placeholder="Write here the date of conclusion of the Curricular Unit/Course" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <div class="form-group text-center mt-2">
                                 <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Adicionar</button>
+                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Upload</button>
                                 </div>
                             </div>
                         </form>

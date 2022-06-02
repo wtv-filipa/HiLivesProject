@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] != 16 ) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="en">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Editar perfil</title>
+        <title>Edit Profile</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_editProfile.php"; ?>
     </head>
@@ -27,7 +27,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
 
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_crop.php"; ?>
-        <?php include "../../helpers/formsValidation.php"; ?>
+        <?php include "../../helpers/formsValidation_en.php"; ?>
     </body>
 
     </html>

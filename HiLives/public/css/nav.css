@@ -5,7 +5,7 @@
 }
 
 /*Nav properties*/
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   vertical-align: -0.0255em !important;
 }
 
@@ -48,11 +48,21 @@ span.name {
   .logo {
     width: 69px;
   }
+
+  .dropdown-menu[data-bs-popper] {
+    left: -116px !important;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .logo {
     width: 69px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .dropdown-menu[data-bs-popper] {
+    left: -107px !important;
   }
 }
 
@@ -85,5 +95,9 @@ span.name {
   }
   .navSmall {
     display: none;
+  }
+
+  .dropdown-menu[data-bs-popper] {
+    left: -47px !important;
   }
 }

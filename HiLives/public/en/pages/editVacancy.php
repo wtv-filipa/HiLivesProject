@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="en">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Editar vaga</title>
+        <title>Edit vacancy</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>
@@ -20,7 +20,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_characterCounter.php"; ?>
         <?php include "../../helpers/js_upload.php"; ?>
-        <?php include "../../helpers/formsValidation.php"; ?>
+        <?php include "../../helpers/uploadValidationVacancy_en.php"; ?>
         <?php include "../../helpers/js_enablePopover.php"; ?>
         <?php include "../../helpers/js_enableToltip.php"; ?>
     </body>

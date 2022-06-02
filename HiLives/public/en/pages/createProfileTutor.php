@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Registar utilizador</title>
+    <title>Register user</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_editProfile.php"; ?>
 </head>
@@ -18,7 +18,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     <?php include "../components/footer.php"; ?>
 
     <?php include "../../helpers/js.php"; ?>
-    <?php include "../../helpers/js_validateTutor.php"; ?>
+    <?php include "../../helpers/js_validateTutor_en.php"; ?>
 </body>
 
 </html>

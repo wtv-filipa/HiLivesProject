@@ -30,7 +30,7 @@
 
             <p>É possível, dentro da mesma página, obter mais informações sobre o conteúdo da plataforma e ainda ver um vídeo promocional.</p>
 
-            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor" title="Iniciar sessão">iniciar a sua sessão</a>
+            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor" title="Iniciar sessão">iniciar a sua sessão</a></p>
         </div>
     </div>
 

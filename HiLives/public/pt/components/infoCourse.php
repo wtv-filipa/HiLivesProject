@@ -55,7 +55,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"]) && isset($_SESSION["typ
                             } else if ($User_type == 16) {
                             ?>
                             <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
-                            <li class="breadcrumb-item"><a href="IndividualReqEditTutor.php" title="Voltar ao pedido de edição">Eu quero estudar</a></li>
+                            <li class="breadcrumb-item"><a href="IndividualReqEditTutor.php" title="Voltar ao pedido de edição">Pedido de edição</a></li>
                             <?php
                             }
                             ?>
