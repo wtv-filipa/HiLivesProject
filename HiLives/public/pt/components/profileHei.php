@@ -303,6 +303,11 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
 
                         <!--STORIES-->
                         <div class="tab-pane fade" id="stories" role="tabpanel" aria-labelledby="stories-tab">
+                            <div class="text-center pt-4">
+                                <a href="uploadStory.php" title="Adicionar uma nova história à HiLives">
+                                    <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">Adicionar uma história</button>
+                                </a>
+                            </div>
                             <?php
                             $stmt2 = mysqli_stmt_init($link2);
                             if (mysqli_stmt_prepare($stmt2, $query3)) {
