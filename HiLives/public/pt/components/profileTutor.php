@@ -212,28 +212,27 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                 <div class="form-group pb-4">
                                     <label class="boldFont mt-3 pb-2" for="username">Nome <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreva aqui o nome da empresa" aria-required="true" required="required" value="<?= $name_user ?>">
+                                        <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreva aqui o seu nome" aria-required="true" required="required" value="<?= $name_user ?>">
                                     </div>
                                 </div>
                                 <!--EMAIL-->
                                 <div class="form-group pb-4">
                                     <label class="boldFont mt-3 pb-2" for="email">Email <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreva aqui o email da empresa" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
+                                        <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreva aqui o seu email" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
                                     </div>
                                 </div>
                                 <!--MOBILE PHONE-->
                                 <div class="form-group pb-4">
                                     <label class="boldFont mt-3 pb-2" for="phone">Contacto telefónico <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreve aqui o teu número de telemóvel" aria-required="true" required="required" value="<?= $contact_user ?>">
+                                        <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreve aqui o seu número de telemóvel" aria-required="true" required="required" value="<?= $contact_user ?>">
                                     </div>
                                 </div>
 
                                 <div class="form-group text-center mt-2">
                                     <div class="mx-auto col-sm-10 pb-3 pt-2">
                                         <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize me-4">Guardar</button>
-                                        <button type="cancel" class="btn buttonDesign buttonCancel buttonLoginSize">Cancelar</button>
                                     </div>
                                 </div>
 
