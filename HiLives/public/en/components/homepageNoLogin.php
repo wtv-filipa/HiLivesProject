@@ -17,21 +17,21 @@
             <div class="col-12 col-md-4">
                 <img src="public/img/Person.svg" alt="Person with IDD Icon" class="img-fluid" title="Person">
                 <br>
-                <a href="public/pt/pages/registerPerson.php" title="Register as a Person">
+                <a href="public/en/pages/registerPerson.php" title="Register as a Person">
                     <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Person</button>
                 </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/HEI.svg" alt="Higher Education Institution Icon" class="img-fluid" title="Higher Education Institution">
                 <br>
-                <a href="public/pt/pages/registerHei.php" title="Register as Higher Education Institution">
+                <a href="public/en/pages/registerHei.php" title="Register as Higher Education Institution">
                     <button class="btn buttonDesign buttonHome buttonRegisterSizeHEI m-0">Higher Education Institution</button>
                 </a>
             </div>
             <div class="col-12 col-md-4">
                 <img src="public/img/Comp.svg" alt="Company Icon" class="img-fluid" title="Company">
                 <br>
-                <a href="public/pt/pages/registerComp.php" title="Register as Company">
+                <a href="public/en/pages/registerComp.php" title="Register as Company">
                     <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Company</button>
                 </a>
             </div>
