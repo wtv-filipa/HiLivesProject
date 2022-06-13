@@ -8,7 +8,7 @@
         <h2>O que é a HiLives?</h2>
         <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
         <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
-        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="sitemap.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></b>, e descobre como tudo está ordenado.</p>
+        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="construction.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></b>, e descobre como tudo está ordenado.</p>
 
         <div class="mt-5 mx-auto">
             <h2 class="mb-3">Como utilizar a HiLives- vídeo explicativo</h2>

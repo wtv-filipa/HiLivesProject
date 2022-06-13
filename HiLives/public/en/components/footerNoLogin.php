@@ -34,7 +34,7 @@
         <ul class="m-0 p-0">
           <li><a href="public/en/pages/accessibility.php" title="Go to the accessibility page">Accessibility</a></li>
           <li><a href="public/en/pages/help.php" title="Go to the help page">Help</a></li>
-          <li><a href="public/en/pages/appMap.php" title="Go to the platform map">Platform map</a></li>
+          <li><a href="public/en/pages/construction.php" title="Go to the platform map">Platform map</a></li>
         </ul>
       </div>
     </div>

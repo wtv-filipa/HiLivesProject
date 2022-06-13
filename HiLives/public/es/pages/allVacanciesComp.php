@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="es">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>As minhas vagas</title>
+        <title>Mis vacantes</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_match.php"; ?>
     </head>

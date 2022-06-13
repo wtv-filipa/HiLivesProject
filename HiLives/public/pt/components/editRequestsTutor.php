@@ -78,7 +78,7 @@ if ($_SESSION["idUser"]) {
                                             }
                                             ?>
                                         </p>
-                                        <a href="IndividualReqEditTutor.php?edit=<?= $idusers ?>" title="Ver pedido de edição da">
+                                        <a href="IndividualReqEditTutor.php?edit=<?= $idusers ?>" title="Ver pedido de edição de <?= $name_user ?>">
                                             <button class="btn buttonDesign buttonWork buttonLoginSize m-0 mb-3">
                                                 Ver pedido
                                             </button>

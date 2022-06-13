@@ -2,25 +2,25 @@
 require_once("../../connections/connection.php");
 
 //querys
-$query2 = "SELECT idRegion, name_region FROM region 
+$query2 = "SELECT idRegion, name_region_es FROM region 
 INNER JOIN country ON region.country_idcountry = country.idcountry
 WHERE name_country = 'Portugal'";
 
-$query3 = "SELECT idRegion, name_region FROM region 
+$query3 = "SELECT idRegion, name_region_es FROM region 
 INNER JOIN country ON region.country_idcountry = country.idcountry
 WHERE name_country = 'Espanha'";
 
-$query4 = "SELECT idRegion, name_region FROM region 
+$query4 = "SELECT idRegion, name_region_es FROM region 
 INNER JOIN country ON region.country_idcountry = country.idcountry
 WHERE name_country = 'Bélgica'";
 
-$query5 = "SELECT idRegion, name_region FROM region 
+$query5 = "SELECT idRegion, name_region_es FROM region 
 INNER JOIN country ON region.country_idcountry = country.idcountry
 WHERE name_country = 'Islândia'";
 
-$query6 = "SELECT idlearning_type, name_learning FROM learning_type";
+$query6 = "SELECT idlearning_type, name_learning_es FROM learning_type";
 
-$query7 = "SELECT idinstitution_type, name_institution_type FROM institution_type";
+$query7 = "SELECT idinstitution_type, name_institution_type_es FROM institution_type";
 ?>
 <div class="container">
 
@@ -32,12 +32,12 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
                 $msg_show = true;
                 switch ($_SESSION["register"]) {
                     case 1:
-                        $message = "Ocorreu um erro no registo, por favor tente novamente.";
+                        $message = "Se ha producido un error durante el registro, por favor, inténtelo de nuevo.";
                         $class = "alert-warning";
                         $_SESSION["register"] = 0;
                         break;
                     case 2:
-                        $message = "É necessário preencher todos os campos obrigatórios.";
+                        $message = "Deben rellenarse todos los campos obligatorios.";
                         $class = "alert-warning";
                         $_SESSION["register"] = 0;
                         break;
@@ -69,48 +69,47 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
-                                    <h1 class="mb-4 weightTitle">Junte-se a nós!</h1>
+                                    <a href="../../../indexES.php" title="Volver a la página de inicio"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logotipo de HiLives" title="¡Bienvenido a HiLives!"></a>
+                                    <h1 class="mb-4 weightTitle">¡Únase a nosotros!</h1>
                                 </div>
-                                <form method="post" role="form" id="register-form" action="../../scripts/registerHei.php">
-                                    <p style="font-size: 14px; color: #005E89 !important;">* Preenchimento
-                                        obrigatório</p>
+                                <form method="post" role="form" id="register-form" action="../../scripts/registerHei_es.php">
+                                    <p style="font-size: 14px; color: #005E89 !important;">* Obligatorio</p>
                                     <!--NAME-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="username">Nome <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="username">Nombre <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreva aqui o nome da Instituição de Ensino Superior" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escriba aquí el nombre de la institución de enseñanza superior" aria-required="true" required="required">
                                         </div>
                                     </div>
                                     <!--EMAIL-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="email">Email <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="email">Correo electrónico <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreva aqui o email da Instituição de Ensino Superior" aria-required="true" required="required" onchange="email_validate(this.value);">
+                                            <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escriba aquí el correo electrónico de la Institución de Educación Superior" aria-required="true" required="required" onchange="email_validate(this.value);">
                                         </div>
                                     </div>
                                     <!--PASSWORD-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="password">Palavra-passe <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="password">Contraseña <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Crie a sua palavra-passe para o HiLives" aria-required="true" required="required" onkeyup="checkPass(); return false;">
+                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Crea tu contraseña HiLives" aria-required="true" required="required" onkeyup="checkPass(); return false;">
                                         </div>
                                     </div>
 
                                     <!--CONFIRM PASSWORD-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="password_confirm">Verificar palavra-passe <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="password_confirm">Verificar contraseña <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyBorder" id="password_confirm" placeholder="Repita a sua palavra-passe" aria-required="true" required="required" onkeyup="checkPass(); return false;">
+                                            <input type="password" class="form-control greyBorder" id="password_confirm" placeholder="Repite tu contraseña" aria-required="true" required="required" onkeyup="checkPass(); return false;">
                                             <span id="confirmMessage" class="confirmMessage"></span>
                                         </div>
                                     </div>
 
                                     <!--WEBSITE-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="site">Website <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="site">Página web <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="site" name="site" placeholder="Insira aqui o website da Instituição de Ensino Superior" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="site" name="site" placeholder="Inserte aquí el sitio web de la institución de enseñanza superior" aria-required="true" required="required">
                                         </div>
                                     </div>
 
@@ -118,15 +117,15 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
                                     <div class="form-group pb-4">
                                         <label class="boldFont mt-3 pb-2" for="phone">Contacto telefónico <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreva aqui o contacto telefónico da Instituição de Ensino Superior" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escriba aquí los datos de contacto telefónico de la Institución de Educación Superior" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <!--TIPO DE ENSINO-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="ensino">Selecione o tipo de ensino da Instituição<span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="ensino">Seleccione el tipo de educación de la Institución<span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="ensino" name="ensino">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -145,9 +144,9 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <!--TIPO DE INSTITUIÇÃO-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="instituicao">Selecione o tipo de Instituição<span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="instituicao">Seleccione el tipo de institución<span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="instituicao" name="instituicao">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -166,28 +165,28 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <!--WEBSITE-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="endereco">Morada da Instituição <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="endereco">Dirección de la Institución <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="endereco" name="endereco" placeholder="Insira aqui a morada completa da Instituição de Ensino Superior" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="endereco" name="endereco" placeholder="Inserte aquí la dirección completa de la institución de enseñanza superior" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <!--COUNTRY-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="pais">País da Instituição <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="pais">País de la institución <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="pais">
                                             <option value="pt">Portugal</option>
-                                            <option value="es">Espanha</option>
+                                            <option value="es">España</option>
                                             <option value="be">Bélgica</option>
-                                            <option value="ic">Islândia</option>
+                                            <option value="ic">Islandia</option>
                                         </select>
                                     </div>
 
                                     <!--REGION PORTUGAL-->
                                     <div class="form-group pb-4 formulario" id="pt">
-                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Instituição de Ensino Superior <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Seleccione la región de la institución de enseñanza superior <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="regiao" name="regiao">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -206,9 +205,9 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <!--REGION SPAIN-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="es">
-                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Instituição de Ensino Superior <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Seleccione la región de la institución de enseñanza superior <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="regiao" name="regiao">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -227,9 +226,9 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <!--REGION BELGIUM-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="be">
-                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Instituição de Ensino Superior <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Seleccione la región de la institución de enseñanza superior <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="regiao" name="regiao">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -248,9 +247,9 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <!--REGION ICELAND-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="ic">
-                                        <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Instituição de Ensino Superior <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="regiao">Seleccione la región de la institución de enseñanza superior <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="regiao" name="regiao">
-                                            <option selected disabled>Selecione uma opção</option>
+                                            <option selected disabled>Seleccione una opción</option>
                                             <?php
                                             $link = new_db_connection();
                                             $stmt = mysqli_stmt_init($link);
@@ -269,16 +268,16 @@ $query7 = "SELECT idinstitution_type, name_institution_type FROM institution_typ
 
                                     <div class="form-group text-center mt-2">
                                         <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Registar</button>
+                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Registro</button>
                                         </div>
                                     </div>
                                 </form>
                                 <hr>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="construction.php">Esqueceu-se da sua palavra-passe?</a>
+                                    <a class="small" title="Haga clic para recuperar su contraseña" href="construction.php">¿Ha olvidado su contraseña?</a>
                                 </div>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para te registares" href="login.php">Já está inscrito? Inicie sessão!</a>
+                                    <a class="small" title="Haga clic para iniciar sesión" href="login.php">¿Ya está registrado? Accede a tu cuenta.</a>
                                 </div>
                             </div>
                         </div>

@@ -31,8 +31,7 @@
             <p>Na homepage das Instituições de Ensino Superior é possível encontrar:</p>
             <ol class="infoSize">
                 <li>Principais funcionalidades da mesma</li>
-                <li>Últimas entradas de pessoas</li>
-                <li>Últimas vagas publicadas por empresas</li>
+                <li>Ligações recentes</li>
             </ol>
             <p>Na homepage das empresas é possível encontrar:</p>
             <ol class="infoSize">

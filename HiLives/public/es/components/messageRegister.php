@@ -10,7 +10,7 @@
                 $msg_show = true;
                 switch ($_SESSION["login"]) {
                     case 1:
-                        $message = "Registo efetuado com sucesso!";
+                        $message = "¡Registro exitoso!";
                         $class = "alert-success";
                         $_SESSION["login"] = 0;
                         break;
@@ -42,15 +42,15 @@
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
+                                    <a href="../../../indexES.php" title="Volver a la página de inicio"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logotipo de HiLives" title="¡Bienvenido a HiLives!"></a>
 
-                                    <h1 class="mb-4 weightTitle">Espera que alguém entre em contacto contigo!</h1>
-                                    <p class="mb-4 descricao">Para teres acesso à Plataforma HiLives, precisas de esperar que alguém te contacte. Vamos falar contigo, no máximo, em duas semanas.</p>
+                                    <h1 class="mb-4 weightTitle">Espere a que alguien se ponga en contacto con usted.</h1>
+                                    <p class="mb-4 descricao">Para acceder a la Plataforma HiLives, tienes que esperar a que alguien se ponga en contacto contigo. Nos pondremos en contacto con usted en un plazo máximo de dos semanas.</p>
 
                                     <hr class="mt-4 mb-4">
-                                    <a href="../../../index.php" title="Voltar à página inicial">
+                                    <a href="../../../indexES.php" title="Volver a la página de inicio">
                                         <button class="btn buttonDesign buttonWork buttonMessageRegisterSize m-0">
-                                            Voltar à página inicial
+                                            Volver a la página de inicio
                                         </button>
                                     </a>
                                 </div>

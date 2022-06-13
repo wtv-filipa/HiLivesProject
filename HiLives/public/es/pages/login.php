@@ -3,11 +3,11 @@ session_start();
 if (!isset($_SESSION["idUser"])) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="es">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Iniciar sessão</title>
+        <title>Acceder</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>

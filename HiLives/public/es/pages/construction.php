@@ -2,11 +2,11 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Em construção</title>
+    <title>En construcción</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_construction.php"; ?>
 </head>

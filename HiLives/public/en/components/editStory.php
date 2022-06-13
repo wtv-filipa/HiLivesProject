@@ -46,7 +46,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                         <?php
                         }
                         ?>
-                        <li class="breadcrumb-item"><a href="stories" title="Voltar às histórias">HiLives Stories</a></li>
+                        <li class="breadcrumb-item"><a href="profile.php" title="Back to my area">My area</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Edit a HiLives story</li>
                     </ol>
                 </nav>

@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="es">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Ligações com cursos</title>
+        <title>Enlaces con cursos</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_match.php"; ?>
     </head>

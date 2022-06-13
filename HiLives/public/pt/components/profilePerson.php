@@ -409,8 +409,8 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                             ?>
 
                                         <div class="wrapperStory">
-                                            <div>
-                                                <header class="cf">
+                                            <div class="row">
+                                                <header class="cf col-10">
                                                     <a href="profile.php?user=<?= $idUser ?>" title="Perfil de <?= $name_user ?>">
                                                         <?php
                                                         if (isset($profile_img)) {

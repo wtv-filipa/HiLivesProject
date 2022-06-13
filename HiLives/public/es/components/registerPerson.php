@@ -14,12 +14,12 @@ $stmt = mysqli_stmt_init($link);
                 $msg_show = true;
                 switch ($_SESSION["register"]) {
                     case 1:
-                        $message = "Ocorreu um erro no registo, por favor tenta novamente.";
+                        $message = "Se ha producido un error durante el registro, por favor, inténtelo de nuevo.";
                         $class = "alert-warning";
                         $_SESSION["register"] = 0;
                         break;
                     case 2:
-                        $message = "É necessário preencher todos os campos obrigatórios.";
+                        $message = "Deben rellenarse todos los campos obligatorios.";
                         $class = "alert-warning";
                         $_SESSION["register"] = 0;
                         break;
@@ -52,77 +52,76 @@ $stmt = mysqli_stmt_init($link);
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
-                                    <h1 class="mb-4 weightTitle">Junta-te a nós!</h1>
-                                    <p class="mb-4 descricao">Plataforma de apoio à qualificação e emprego de jovens com dificuldades intelectuais e desenvolvimentais.</p>
+                                    <a href="../../../indexES.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logotipo de HiLives" title="¡Bienvenido a HiLives!"></a>
+                                    <h1 class="mb-4 weightTitle">¡Únase a nosotros!</h1>
+                                    <p class="mb-4 descricao">Plataforma de apoyo a la cualificación y el empleo de jóvenes con dificultades intelectuales y de desarrollo.</p>
                                 </div>
 
                                 <form method="post" role="form" id="register-form" action="../../scripts/registerPerson.php">
-                                    <p style="font-size: 14px; color: #005E89 !important;">* Preenchimento
-                                        obrigatório</p>
+                                    <p style="font-size: 14px; color: #005E89 !important;">* Obligatorio</p>
                                     <!--NAME-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="username">Nome <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="username">Nombre <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreve aqui o teu nome" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escriba su nombre aquí" aria-required="true" required="required">
                                         </div>
                                     </div>
                                     <!--EMAIL-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="email">Email <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="email">Correo electrónico <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreve aqui o teu email" aria-required="true" required="required" onchange="email_validate(this.value);">
+                                            <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escriba su correo electrónico aquí" aria-required="true" required="required" onchange="email_validate(this.value);">
                                         </div>
                                     </div>
                                     <!--PASSWORD-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="password">Palavra-passe <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="password">Contraseña <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Cria a tua palavra-passe para o HiLives" aria-required="true" required="required" onkeyup="checkPass(); return false;">
+                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Crea tu contraseña HiLives" aria-required="true" required="required" onkeyup="checkPass(); return false;">
                                         </div>
                                     </div>
 
                                     <!--CONFIRM PASSWORD-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="password_confirm">Verificar palavra-passe <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="password_confirm">Verificar contraseña <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyBorder" id="password_confirm" placeholder="Repete a tua palavra-passe" aria-required="true" required="required" onkeyup="checkPass(); return false;">
+                                            <input type="password" class="form-control greyBorder" id="password_confirm" placeholder="Repita su contraseña" aria-required="true" required="required" onkeyup="checkPass(); return false;">
                                             <span id="confirmMessage" class="confirmMessage"></span>
                                         </div>
                                     </div>
 
                                     <!--DATE OF BIRTH-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="data_nasc">Data de nascimento <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="data_nasc">Fecha de nacimiento <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="date" class="form-control greyBorder" id="data_nasc" name="data_nasc" placeholder="data de nascimento" aria-required="true" required="required">
+                                            <input type="date" class="form-control greyBorder" id="data_nasc" name="data_nasc" placeholder="Fecha de nacimiento" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <!--MOBILE PHONE-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="phone">Número de telemóvel <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="phone">Número de teléfono móvil <span class="asterisk">*</span></label>
                                         <div class="p-0 m-0">
-                                            <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreve aqui o teu número de telemóvel" aria-required="true" required="required">
+                                            <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escriba aquí su número de teléfono móvil" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <!--COUNTRY-->
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="pais">País onde quero estudar ou trabalhar <span class="asterisk">*</span></label>
+                                        <label class="boldFont mt-3 pb-2" for="pais">País donde quiero estudiar o trabajar <span class="asterisk">*</span></label>
                                         <select class="form-select greyBorder" id="pais">
                                             <option value="pt">Portugal</option>
-                                            <option value="es">Espanha</option>
+                                            <option value="es">España</option>
                                             <option value="be">Bélgica</option>
-                                            <option value="ic">Islândia</option>
+                                            <option value="ic">Islandia</option>
                                         </select>
                                     </div>
 
                                     <!--REGION PORTUGAL-->
                                     <div class="form-group pb-4 formulario" id="pt">
                                         <div class="row">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Região onde quero estudar ou
-                                                trabalhar <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Región donde quiero estudiar o
+                                                trabajo <span class="asterisk">*</span></label>
                                             <?php
                                             $query = "SELECT idRegion, name_region FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
@@ -151,8 +150,8 @@ $stmt = mysqli_stmt_init($link);
                                     <!--REGION SPAIN-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="es">
                                         <div class="row">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Região onde quero estudar ou
-                                                trabalhar <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Región donde quiero estudiar o
+                                                trabajo <span class="asterisk">*</span></label>
                                             <?php
                                             $query = "SELECT idRegion, name_region FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
@@ -181,8 +180,8 @@ $stmt = mysqli_stmt_init($link);
                                     <!--REGION BELGIUM-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="be">
                                         <div class="row">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Região onde quero estudar ou
-                                                trabalhar <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Región donde quiero estudiar o
+                                                trabajo <span class="asterisk">*</span></label>
                                             <?php
                                             $query = "SELECT idRegion, name_region FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
@@ -211,8 +210,8 @@ $stmt = mysqli_stmt_init($link);
                                     <!--REGION ICELAND-->
                                     <div class="form-group pb-4 formulario" style="display:none;" id="ic">
                                         <div class="row">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Região onde quero estudar ou
-                                                trabalhar <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Región donde quiero estudiar o
+                                                trabajo <span class="asterisk">*</span></label>
                                             <?php
                                             $query = "SELECT idRegion, name_region FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
@@ -242,16 +241,16 @@ $stmt = mysqli_stmt_init($link);
 
                                     <div class="form-group text-center mt-2">
                                         <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Registar</button>
+                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Registro</button>
                                         </div>
                                     </div>
                                 </form>
                                 <hr>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="construction.php">Esqueceste-te da tua palavra-passe?</a>
+                                    <a class="small" title="Haga clic para recuperar su contraseña" href="construction.php">¿Ha olvidado su contraseña?</a>
                                 </div>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para te registares" href="login.php">Já estás inscrito? Inicia sessão!</a>
+                                    <a class="small" title="Haga clic para iniciar sesión" href="login.php">¿Ya está registrado? Accede a tu cuenta.</a>
                                 </div>
                             </div>
                         </div>

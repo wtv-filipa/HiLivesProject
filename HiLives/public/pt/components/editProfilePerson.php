@@ -353,7 +353,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                     </form>
                                     <hr>
                                     <div class="text-center textForm">
-                                        <a class="small" title="Clica para recuperares a tua palavra-passe" href="../../scripts/editPersonRequest.php?req=<?= $idUser ?>" title="Pedir entrevista com um Tutor">Precisas de alterar outros dados? Pede uma entrevista com um tutor.</a>
+                                        <a class="small" title="Pedir entrevista com um Tutor" href="../../scripts/editPersonRequest.php?req=<?= $idUser ?>" title="Pedir entrevista com um Tutor">Precisas de alterar outros dados? Pede uma entrevista com um tutor.</a>
                                     </div>
 
                                 </div>

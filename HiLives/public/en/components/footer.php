@@ -75,7 +75,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             <li><a href="stories.php" title="Ir para a página das histórias da HiLives">Histórias da HiLives</a></li>
             <li><a href="accessibility.php" title="Ir para a página da acessibilidade">Acessibilidade</a></li>
             <li><a href="help.php" title="Ir para a página da ajuda">Ajuda</a></li>
-            <li><a href="appMap.php" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></li>
+            <li><a href="construction.php" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></li>
           </ul>
         </div>
       </div>
@@ -127,7 +127,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
           <ul class="m-0 p-0">
             <li><a href="accessibility.php" title="Go to the accessibility page">Accessibility</a></li>
             <li><a href="help.php" title="Go to the help page">Help</a></li>
-            <li><a href="appMap.php" title="Go to the platform map">Platform map</a></li>
+            <li><a href="construction.php" title="Go to the platform map">Platform map</a></li>
           </ul>
         </div>
       </div>

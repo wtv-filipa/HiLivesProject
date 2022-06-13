@@ -1,17 +1,17 @@
 <div class="container pb-5">
 
     <div class="mt-5">
-        <h1>Ajuda - HiLives</h1>
+        <h1>Ayuda - HiLives</h1>
     </div>
 
     <div class="mt-5">
-        <h2>O que é a HiLives?</h2>
-        <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
-        <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
-        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="sitemap.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></b>, e descobre como tudo está ordenado.</p>
+        <h2>¿Qué es HiLives?</h2>
+        <p>HiLives es una plataforma que permite a las personas con discapacidad intelectual y del desarrollo encontrar oportunidades de estudio en varias universidades de la Unión Europea.</p>
+        <p>Además, HiLives permite a estas personas encontrar oportunidades de empleo que se ajusten a sus necesidades.</p>
+        <p> Si tienes dudas sobre la plataforma visita el <b><a href="construction.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma"> Mapa de la Plataforma</a></b> y descubre cómo está todo organizado.</p>
 
         <div class="mt-5 mx-auto">
-            <h2 class="mb-3">Como utilizar a HiLives- vídeo explicativo</h2>
+            <h2 class="mb-3">Cómo usar HiLives - video tutorial</h2>
             <div class="videoContainer" controls>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -19,123 +19,115 @@
 
 
         <div class="mt-5">
-            <h3 class="subtitulo">Página Inicial - Sem início de sessão</h3>
+            <h3 class="subtitulo">Inicio - Sin inicio de sesión</h3>
 
-            <p>Existem <b>três opções</b> de registo:</p>
+            <p>Hay <b>tres opciones</b> de registro:</p>
             <ol class="infoSize">
-                <li>Pessoas</li>
-                <li>Instituições de Ensino Superior</li>
+                <li>Personas</li>
+                <li>Instituciones de Educación Superior</li>
                 <li>Empresas</li>
             </ol>
 
-            <p>É possível, dentro da mesma página, obter mais informações sobre o conteúdo da plataforma e ainda ver um vídeo promocional.</p>
+            <p>Dentro de la misma página, es posible obtener más información sobre el contenido de la plataforma y también ver un vídeo promocional.</p>
 
-            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor" title="Iniciar sessão">iniciar a sua sessão</a></p>
+            <p>Si la persona, universidad o empresa ya se ha registrado, podrá <a href="login.php" title="Haga clic para iniciar sesión" target="_blank" class="linkColor" title="Iniciar sessão">iniciar sesión</a>.</p>
         </div>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Pessoa com DID - Com sessão iniciada</h3>
+        <h3 class="subtitulo">Persona con DID Home - Logged in</h3>
 
-        <p>O utilizador terá acesso a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>El usuario tendrá acceso a <b>una</b> barra de navegación, que contiene los enlaces:</p>
 
         <ol class="infoSize">
-            <li>Eu quero estudar</li>
-            <li>Eu quero trabalhar</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Quiero estudiar</li>
+            <li>Quiero trabajar</li>
+            <li>Historias de HiLives</li>
+            <li>Mi área</li>
+            <li>Otros idiomas</li>
         </ol>
 
-        <p>Ainda na página inicial, o utilizador poderá ver:</p>
+        <p>Todavía en la página de inicio, el usuario podrá ver:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Um vídeo de como interagir com a plataforma</li>
+            <li>Textos explicativos de las principales funcionalidades</li>
+            <li>Un vídeo sobre cómo interactuar con la plataforma</li>
         </ol>
 
-        <h3 class="mt-4">O que são as <b>Ligações</b>?</h3>
-        <p>As "Ligações" simbolizam o encontro de interesses entre as pessoas e as universidades, ou entre as pessoas e as vagas pulicadas por empresas. Se a pessoa tiver características que se adequam a uma determinada vaga, e o que esta procura numa pessoa, por exemplo, irá estabelecer-se uma "Ligação". Funciona de igual modo para as Instituições de Ensino Superior.</p>
+        <h3 class="mt-4">¿Qué son los <b>"Enlaces"</b>?</h3>
+        <p>Los "Enlaces" simbolizan el encuentro de intereses entre una persona y las universidades, o entre una persona y las vacantes publicadas por las empresas. Si la persona tiene características que se adaptan a una vacante específica, y lo que la vacante busca en una persona, por ejemplo, se establecerá un "Enlace". Lo mismo ocurre con las universidades.</p>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>CONSEJO:</b> En cualquier página, al hacer clic en el logotipo de HiLives, el usuario será redirigido automáticamente a la página principal.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Instituição de Ensino Superior - Com sessão iniciada</h3>
+        <h3 class="subtitulo">"Página principal de la Institución de Educación Superior - Registrada</h3>
 
-        <p>As Instituições de Ensino Superior registadas terão acesso, também, a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>Las Instituciones de Educación Superior registradas también tendrán acceso a <b>una</b> barra de navegación, que contiene los enlaces:</p>
 
         <ol class="infoSize">
-            <li>Candidatos</li>
-            <li>Cursos</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Solicitantes</li>
+            <li>Solicitantes</li>
+            <li>Historias de HiLives</li>
+            <li>Mi área</li>
+            <li>Otros idiomas</li>
         </ol>
 
-        <p>Ainda na página inicial, as universidades terão acesso a informações sobre:</p>
+        <p>También en la página de inicio, las universidades tendrán acceso a información sobre:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Últimos registos de pessoas com DID</li>
-            <li>Últimas vagas publicadas por empresas</li>
+            <li>Textos explicativos de las principales funcionalidades</li>
+            <li>Enlaces recientes con Persona con DID</li>
         </ol>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>CONSEJO:</b> En cualquier página, al hacer clic en el logotipo de HiLives, el usuario será redirigido automáticamente a la página de inicio.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Empresa - Com sessão iniciada</h3>
+        <h3 class="subtitulo">Página de inicio de la empresa - Registro</h3>
 
-        <p>As empresas registadas terão, também, acesso a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>Aquí, las empresas registradas también tendrán acceso a <b>una</b> barra de navegación, que contiene los enlaces:</p>
 
         <ol class="infoSize">
-            <li>Candidatos</li>
-            <li>Vagas</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Solicitantes</li>
+            <li>Vacantes</li>
+            <li>Historias de HiLives</li>
+            <li>Mi área</li>
+            <li>Otros idiomas</li>
         </ol>
 
-        <p>Ainda na página inicial, as empresas terão acesso a informações sobre:</p>
+        <p>Además, en la página de inicio, las empresas tendrán acceso a información sobre:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Últimas ligações com Pessoas com DID</li>
+            <li>Textos explicativos de las principales funcionalidades</li>
+            <li>Enlaces recientes con Persona con DID</li>
         </ol>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>SUGERENCIA:</b> En cualquier página, al hacer clic en el logotipo de HiLives, el usuario será redirigido automáticamente a la página de inicio.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Rodapé</h3>
+        <h3 class="subtitulo">Pie de página</h3>
 
-        <p>Presente no fim de todas as páginas, a HiLives possui vários links, entre eles:</p>
+        <p>Presente en la parte inferior de cada página, HiLives dispone de varios enlaces, entre ellos:</p>
         <ol class="infoSize">
-            <li>Lista de parceiros da HiLives</li>
-            <li>Lista de atalhos para acesso rápido</li>
-            <li>Lista de outros links importantes (Acessibilidade, Política de Privacidade e Mapa da Aplicação)</li>
-            <li>Local para colocação de dúvidas ou sugestões</li>
-            <li>Ícones de acesso às redes sociais da HiLives (Facebook e Twitter)</li>
-            <li>Informações de direitos de autor</li>
+            <li>Lista de socios de HiLives</li>
+            <li>Lista de accesos directos para un acceso rápido</li>
+            <li>Lista de otros enlaces importantes (accesibilidad, política de privacidad y mapa de la plataforma)</li>
+            <li>Lugar para las preguntas o sugerencias</li>
+            <li>Iconos de acceso a las redes sociales de HiLives (Facebook y Twitter)</li>
+            <li>Información sobre derechos de autor</li>
         </ol>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Ícone de Acessibilidade (canto inferior direito)</h3>
+        <h3 class="subtitulo">Icono de accesibilidad (esquina inferior derecha)</h3>
 
-        <p>No canto inferior direito, presente também em todas as páginas, existe um <b>ícone representativo da acessibilidade</b>.</p>
+        <p>En la esquina inferior derecha, también presente en todas las páginas, hay un <b>icono que representa la accesibilidad</b>.</p>
 
-        <p>Ao ser clicado, vão ser mostradas aos utilizadores várias opções para melhorar a navegação dos mesmos, o que
-            torna a HiLives uma plataforma totalmente inclusiva e de simples navegação.</p>
+        <p>Al pulsarlo, se mostrarán a los usuarios varias opciones para mejorar su navegación, lo que convierte a HiLives en una plataforma totalmente inclusiva con una navegación sencilla.</p>
     </div>
 
     <div class="mt-5 mb-5">
-        <h2>Tens dúvidas ou sugestões?</h2>
+        <h2>¿Tiene preguntas o sugerencias?</h2>
 
-        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
+        <p>Si tienes alguna pregunta sobre HiLives, o una sugerencia para mejorarla, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envíanos un correo electrónico</a></b>. Estaremos encantados de ayudarte y de leer lo que tengas que contarnos.</p>
     </div>
 </div>

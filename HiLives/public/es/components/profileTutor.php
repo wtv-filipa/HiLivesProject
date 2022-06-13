@@ -20,7 +20,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
     WHERE idusers = ?";
 
     //Regions
-    $query2 = "SELECT name_region 
+    $query2 = "SELECT name_region_es 
     FROM region 
     INNER JOIN users_has_region ON region.idregion = users_has_region.region_idregion 
     WHERE users_has_region.users_idusers = ?";
@@ -37,17 +37,17 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                 <div class="row">
                     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4 col-md-6">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">A minha área</li>
+                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Volver a la página de inicio">Página de inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Mi área</li>
                         </ol>
                     </nav>
 
-                    <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="../../scripts/logout.php" title="Terminar sessão">
+                    <a class="marginButtonProfile col-md-6 text-sm-start text-md-end buttonEdit" href="../../scripts/logout_es.php" title="Cierre de sesión">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right align-middle" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
                             <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
                         </svg>
-                        <span class="ps-1 align-middle textEdit">Terminar sessão</span>
+                        <span class="ps-1 align-middle textEdit">Cierre de sesión</span>
                     </a>
                 </div>
 
@@ -56,17 +56,17 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                     $msg_show = true;
                     switch ($_SESSION["edit_tutor"]) {
                         case 1:
-                            $message = "Dados editados com sucesso.";
+                            $message = "Datos editados con éxito.";
                             $class = "alert-success";
                             $_SESSION["edit_tutor"] = 0;
                             break;
                         case 2:
-                            $message = "É necessário preencher todos os campos obrigatórios.";
+                            $message = "Deben rellenarse todos los campos obligatorios.";
                             $class = "alert-warning";
                             $_SESSION["edit_tutor"] = 0;
                             break;
                         case 3:
-                            $message = "Ocorreu um erro a processar o teu pedido, por favor tenta novamente mais tarde.";
+                            $message = "Se ha producido un error al procesar su solicitud, por favor inténtelo más tarde.";
                             $class = "alert-warning";
                             $_SESSION["edit_tutor"] = 0;
                             break;
@@ -106,11 +106,11 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
 
                                 if (isset($profile_img)) {
                                 ?>
-                                    <img id="img_perf" class="image_profile mb-4" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="imagem de perfil" title="imagem de perfil" />
+                                    <img id="img_perf" class="image_profile mb-4" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="foto de perfil" title="foto de perfil" />
                                 <?php
                                 } else {
                                 ?>
-                                    <img id="img_perf" class="image_profile mb-4" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="sem imagem de perfil" />
+                                    <img id="img_perf" class="image_profile mb-4" src="../../img/no_profile_img.png" alt="sin foto de perfil" title="sin foto de perfil" />
                                 <?php
                                 }
                                 ?>
@@ -120,7 +120,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Importar e cortar a imagem de perfil</h4>
+                                            <h4 class="modal-title">Importar y recortar la foto de perfil</h4>
                                             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar" aria-hidden=true></button>
                                         </div>
                                         <div class="modal-body">
@@ -137,7 +137,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                                     <button class="btn buttonDesign buttonWork buttonLoginSize crop_image" value="Upload Image" name="Submit"> Guardar </button>
                                                 </div>
                                                 <div class="col-md-4 ms-3">
-                                                    <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Fechar</button>
+                                                    <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Cerrar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                     </div>
 
                     <h1 class="pb-2"><?= $name_user ?></h1>
-                    <p>Região:
+                    <p>Región:
                         <?php
                         if (mysqli_stmt_prepare($stmt2, $query2)) {
                             mysqli_stmt_bind_param($stmt2, 'i', $idUser);
@@ -173,7 +173,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                 </svg>
-                                <span class="ps-2 align-middle textHideSmall">Informações</span>
+                                <span class="ps-2 align-middle textHideSmall">Información</span>
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -198,7 +198,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
 
                                 <div id="cardInfo" class="col-12 col-md-6 pb-3">
                                     <div class="items itemsStudy itemsSmaller">
-                                        <p class="mb-0"><b>Email</b>: <?= $email_user ?></p>
+                                        <p class="mb-0"><b>Correo electrónico</b>: <?= $email_user ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -206,27 +206,27 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
 
                         <!--EDIT PROFILE-->
                         <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-                            <form method="post" role="form" id="register-form" action="../../scripts/editProfileTutor.php?edit=<?= $idUser ?>">
+                            <form method="post" role="form" id="register-form" action="../../scripts/editProfileTutor_es.php?edit=<?= $idUser ?>">
 
                                 <!--NAME-->
                                 <div class="form-group pb-4">
-                                    <label class="boldFont mt-3 pb-2" for="username">Nome <span class="asterisk">*</span></label>
+                                    <label class="boldFont mt-3 pb-2" for="username">Nombre <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreva aqui o seu nome" aria-required="true" required="required" value="<?= $name_user ?>">
+                                        <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escriba su nombre aquí" aria-required="true" required="required" value="<?= $name_user ?>">
                                     </div>
                                 </div>
                                 <!--EMAIL-->
                                 <div class="form-group pb-4">
-                                    <label class="boldFont mt-3 pb-2" for="email">Email <span class="asterisk">*</span></label>
+                                    <label class="boldFont mt-3 pb-2" for="email">Correo electrónico <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreva aqui o seu email" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
+                                        <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escriba aquí su correo electrónico" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
                                     </div>
                                 </div>
                                 <!--MOBILE PHONE-->
                                 <div class="form-group pb-4">
                                     <label class="boldFont mt-3 pb-2" for="phone">Contacto telefónico <span class="asterisk">*</span></label>
                                     <div class="p-0 m-0">
-                                        <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreve aqui o seu número de telemóvel" aria-required="true" required="required" value="<?= $contact_user ?>">
+                                        <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Introduzca aquí su número de teléfono móvil" aria-required="true" required="required" value="<?= $contact_user ?>">
                                     </div>
                                 </div>
 
@@ -238,7 +238,7 @@ if (isset($_GET["user"]) && $_SESSION["idUser"]) {
 
                                 <hr>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="#" title="Pedir entrevista com um Tutor">Precisa de alterar a sua palavra-passe? Carregue aqui.</a>
+                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="construction.php" title="cambiar contraseña">¿Necesita cambiar su contraseña? Haga clic aquí.</a>
                                 </div>
 
                             </form>

@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="es">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Histórias</title>
+        <title>Historias</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_stories.php"; ?>
     </head>
