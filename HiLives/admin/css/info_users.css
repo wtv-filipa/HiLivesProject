@@ -22,11 +22,11 @@
     }
 
     .guardar_btn {
-        color: #00A5CF;
+        color: #005E89;
         padding: 0.3rem;
         font-size: 14px;
         font-family: "Quicksand", 'Montserrat', sans-serif !important;
-        border: 0.1em solid #00A5CF;
+        border: 0.1em solid #005E89;
         border-radius: 5px;
         font-weight: 800;
         width: 30%;
@@ -35,9 +35,9 @@
     }
 
     .guardar_btn:hover {
-        background-color: #00A5CF;
+        background-color: #005E89;
         color: #fff;
-        border: 0.1em solid #00A5CF;
+        border: 0.1em solid #005E89;
     }
 
     .cancel_btn {

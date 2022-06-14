@@ -119,20 +119,20 @@ if (isset($_GET["edit"])) {
                                     }
                                 }
                                 ?>
-                                <p style="font-size: 12px; color: #00A5CF !important;">* Campos de preenchimento obrigatório.</p>
+                                <p style="font-size: 12px; color: #005E89 !important;">* Campos de preenchimento obrigatório.</p>
 
                                 <div class="form-group text-left">
-                                    <label class="negrito mt-3" for="nome">Nome <span style="color: #00A5CF; font-weight: bold; font-size: 20px">*</span></label>
+                                    <label class="negrito mt-3" for="nome">Nome <span style="color: #005E89; font-weight: bold; font-size: 20px">*</span></label>
                                     <input type="text" id="nome" name="nome" placeholder="Escreva aqui o seu nome" required="required" class="form-control" value="<?= $name_user ?>">
                                 </div>
 
                                 <div class="form-group text-left">
-                                    <label class="negrito mt-3" for="email">Email <span style="color: #00A5CF; font-weight: bold; font-size: 20px">*</span></label>
+                                    <label class="negrito mt-3" for="email">Email <span style="color: #005E89; font-weight: bold; font-size: 20px">*</span></label>
                                     <input type="text" id="email" name="email" placeholder="Escreva aqui o seu email" required="required" class="form-control" value="<?= $email_user ?>">
                                 </div>
 
                                 <div class="form-group text-left">
-                                    <label class="negrito mt-3" for="born">Data de nascimento <span style="color: #00A5CF; font-weight: bold; font-size: 20px">*</span></label>
+                                    <label class="negrito mt-3" for="born">Data de nascimento <span style="color: #005E89; font-weight: bold; font-size: 20px">*</span></label>
                                     <input type="date" id="born" name="data_nasc" placeholder="data de nascimento" required="required" class="form-control" value="<?= $birth_date ?>">
                                 </div>
 
@@ -143,7 +143,7 @@ if (isset($_GET["edit"])) {
 
                                 <div class="form-group text-left">
                                     <label class="negrito mt-3" for="pais">Selecione o seu país:
-                                        <span style="color: #00A5CF; font-weight: bold; font-size: 20px">*</span></label>
+                                        <span style="color: #005E89; font-weight: bold; font-size: 20px">*</span></label>
                                     <select class="form-control" id="pais" required="required">
                                         <option value="pt">Portugal</option>
                                         <option value="es">Espanha</option>
@@ -155,7 +155,7 @@ if (isset($_GET["edit"])) {
                                 <div class="form-group formulario" id="pt">
                                     <div class="form-group text-left">
                                         <label class="negrito mt-3" for="regiao_pt">Região
-                                            <span style="color: #00A5CF; font-weight: bold; font-size: 20px">*</span>
+                                            <span style="color: #005E89; font-weight: bold; font-size: 20px">*</span>
                                         </label>
                                         <select class="form-control" id="regiao_pt" name="regiao">
                                             <option selected disabled>Selecione uma opção</option>
