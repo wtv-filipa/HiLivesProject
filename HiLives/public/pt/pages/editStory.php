@@ -25,7 +25,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
     </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
-    header("Location: admin/index.php");
+   header("Location: ../../../admin/index.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     header("Location: homeTutor.php");
 } else {

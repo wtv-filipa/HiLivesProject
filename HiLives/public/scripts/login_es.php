@@ -50,7 +50,7 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
                     } else if ($type_user == "Tutor") {
                         header("Location: ../es/pages/homeTutor.php");
                     } else if ($type_user == "Admin") {
-                        /*header("Location: ../../admin/index.php");*/
+                        header("Location: ../../admin/index.php");
                     }
                 } else {
                     session_start();

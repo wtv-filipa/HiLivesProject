@@ -24,7 +24,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
         </html>
 <?php
     } else if ($_SESSION["type"] == 4) {
-        header("Location: admin/index.php");
+       header("Location: ../../../admin/index.php");
     } else if ($_SESSION["type"] == 7) {
         header("Location: homeComp.php");
     }
