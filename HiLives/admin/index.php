@@ -38,12 +38,14 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
   </html>
 <?php
 } else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 7) {
-  header("Location: ../public/home_companies.php");
+  header("Location: ../public/pt/pages/homeComp.php");
 } else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 10) {
-  header("Location: ../public/home_people.php");
+  header("Location: ../public/pt/pages/homePerson.php");
 } else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 13) {
-  header("Location: ../public/home_uni.php");
+  header("Location: ../public/pt/pages/homeHei.php");
+} else if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 16) {
+  header("Location: ../public/pt/pages/homeTutor.php");
 } else {
-  header("Location: ../public/login.php");
+  header("Location: ../public/pt/pages/login.php");
 }
 ?>
