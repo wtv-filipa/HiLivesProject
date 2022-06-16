@@ -15,7 +15,7 @@ if (isset($_SESSION["idUser"])) {
 
   $array_val = mysqli_query($link, $query);
 ?>
-  <h1 class="h3 mb-2 text-gray-800">Higher Education Institutions</h1>
+  <h1 class="h3 mb-2">Higher Education Institutions</h1>
   <p class="mb-4">Here it is possible to view and manage all the Higher Education Institutions that signed up on the platform so far.</p>
   <?php
   if (isset($_SESSION["uni"])) {

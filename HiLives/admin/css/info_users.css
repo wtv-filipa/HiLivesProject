@@ -159,3 +159,97 @@
     .modal-content {
         width: 120% !important;
     }
+
+/*Buttons*/
+.buttonDesign {
+    padding: 0.1rem;
+    font-size: 16px;
+    font-family: "Quicksand", "Montserrat", sans-serif !important;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .buttonStudy {
+    border: 0.1em solid #ae0168;
+    color: #ae0168;
+  }
+  
+  .buttonStudy:hover {
+    background-color: #ae0168;
+    color: #ffffff;
+    border: 0.1em solid #ae0168;
+  }
+  
+  .buttonWork {
+    border: 0.1em solid #005e89;
+    color: #005e89;
+  }
+  
+  .buttonWork:hover {
+    background-color: #005e89;
+    color: #ffffff;
+    border: 0.1em solid #005e89;
+  }
+  
+  a .buttonWork {
+    color: #005e89 !important;
+  }
+  
+  a .buttonWork:hover {
+    color: #ffffff !important;
+  }
+  
+  .buttonCancel {
+    border: 0.1em solid #000000;
+    color: #000000;
+  }
+  
+  .buttonCancel:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: 0.1em solid #000000;
+  }
+  
+  .buttonLoginSize {
+    width: 8rem;
+  }
+  
+  .buttonLoginSizeSmaller {
+    width: 6rem;
+  }
+  
+  .buttonLoginSizeSmallerPT {
+    width: 7rem;
+  }
+  
+  .buttonHomeSize {
+    width: 14rem;
+  }
+  
+  .buttonHome {
+    border: 0.1em solid #000000;
+    color: #000000;
+  }
+  
+  .buttonHome:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: 0.1em solid #000000;
+  }
+  
+  .buttonRegisterSize {
+    width: 8rem;
+  }
+  
+  .buttonRegisterSizeHEI {
+    width: 16rem;
+  }
+  
+  .buttonHomeCompSize {
+    width: 10rem;
+  }
+  
+  .buttonMessageRegisterSize {
+    width: 13rem;
+  }

@@ -51,10 +51,36 @@
         <h6 class="collapse-header">Visual contents:</h6>
         <a class="collapse-item" href="hilives_stories.php">HiLives Stories</a>
         <div class="collapse-divider"></div>
-        <h6 class="collapse-header">Other contents:</h6>
-        <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
+        <h6 class="collapse-header">Other contents:</h6>        
         <a class="collapse-item" href="UC_jovem.php">People with IDD Courses</a>
         <a class="collapse-item" href="courses_hei.php">HEIs courses</a>
+        <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
+      </div>
+    </div>
+  </li>
+
+  <hr class="sidebar-divider">
+
+  <div class="sidebar-heading">
+    Translations Management
+  </div>
+
+  <li class="nav-item active">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTranslations" aria-expanded="true" aria-controls="collapseTranslations">
+      <i class="fas fa-fw fa-folder"></i>
+      <span style="color: #FFFFFF;">Translations</span>
+    </a>
+    <div id="collapseTranslations" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">Pages contents:</h6>
+        <a class="collapse-item" href="courses_t.php">People with IDD Courses</a>
+        <a class="collapse-item" href="courses_heis_t.php">HEIs courses</a>
+        <a class="collapse-item" href="vac_t.php">Vacancies</a>
+        <div class="collapse-divider"></div>
+        <h6 class="collapse-header">Other contents:</h6>
+        <!-- <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
+        <a class="collapse-item" href="UC_jovem.php">People with IDD Courses</a>
+        <a class="collapse-item" href="courses_hei.php">HEIs courses</a> -->
       </div>
     </div>
   </li>

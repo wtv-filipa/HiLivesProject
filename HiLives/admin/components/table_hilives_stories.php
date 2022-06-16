@@ -18,7 +18,7 @@ if (isset($_SESSION["idUser"])) {
 
 ?>
 
-  <h1 class="h3 mb-2 text-gray-800">HiLives Stories</h1>
+  <h1 class="h3 mb-2">HiLives Stories</h1>
   <p class="mb-4">Here you can manage all the stories published on the platform so far.</p>
   <?php
   if (isset($_SESSION["xp"])) {
