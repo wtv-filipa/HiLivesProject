@@ -1,5 +1,5 @@
 <?php
-require_once("../../connections/connection.php");
+require_once "../connections/connection.php";
 session_start();
 
 $link = new_db_connection();

@@ -19,8 +19,8 @@ if (isset($_GET["translate"])) {
         $primeiro = true;
         while (mysqli_stmt_fetch($stmt)) {
 ?>
-            <h1 class="h3 mb-2">Vacancy details</h1>
-            <p class="mb-4">On this page it is possible to see and manage all the details of the selected vacancy.</p>
+            <h1 class="h3 mb-2">Course details</h1>
+            <p class="mb-4">On this page it is possible to see and manage all the translations of the selected course.</p>
             <div class="card mb-5">
                 <form method="post" role="form" action="scripts/translate_course.php?uc=<?= $iddone_cu ?>">
                     <!--NAME-->
