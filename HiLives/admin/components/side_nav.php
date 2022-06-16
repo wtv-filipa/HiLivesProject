@@ -53,7 +53,8 @@
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Other contents:</h6>
         <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
-        <a class="collapse-item" href="UC_jovem.php">Courses made</a>
+        <a class="collapse-item" href="UC_jovem.php">People with IDD Courses</a>
+        <a class="collapse-item" href="courses_hei.php">HEIs courses</a>
       </div>
     </div>
   </li>

@@ -130,3 +130,41 @@
     </div>
   </div>
 </div>
+
+<!--Modal para apagar o curso das HEIs na página das informções-->
+<div class="modal fade" id="deleteCourseHei<?= $idcourses ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this course?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Once deleted the course cannot be restored. Press "Delete" to confirm.</div>
+      <div class="modal-footer">
+        <button class="btn btn_cancel" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-danger btn_apagar" href="scripts/delete_course_hei.php?apaga=<?= $idcourses ?>">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar o curso das HEIs nas tabelas-->
+<div class="modal fade" id="deleteCourseHei<?= $row_course['idcourses'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this course?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Once deleted the course cannot be restored. Press "Delete" to confirm.</div>
+      <div class="modal-footer">
+        <button class="btn btn_cancel" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-danger btn_apagar" href="scripts/delete_course_hei.php?apaga=<?= $row_course['idcourses'] ?>">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
