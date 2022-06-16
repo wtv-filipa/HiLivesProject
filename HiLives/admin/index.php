@@ -8,7 +8,7 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
 
   <head>
     <?php include "helpers/meta.php"; ?>
-    <title>Página Inicial</title>
+    <title>Dashboard</title>
     <?php include "helpers/fonts.php"; ?>
     <?php include "helpers/css.php"; ?>
 

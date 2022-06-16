@@ -7,7 +7,7 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
 
   <head>
     <?php include "helpers/meta.php"; ?>
-    <title>Informação da vaga</title>
+    <title>Vacancy details</title>
     <?php include "helpers/fonts.php"; ?>
     <?php include "helpers/css.php"; ?>
     <?php include "helpers/css_info_users.php"; ?>

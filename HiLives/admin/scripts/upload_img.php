@@ -29,7 +29,7 @@ if (isset($_POST["image"])) {
 
         $query = "UPDATE users
               SET  profile_img = ?
-              WHERE idUser = ?";
+              WHERE idusers = ?";
 
         if (mysqli_stmt_prepare($stmt, $query)) {
 

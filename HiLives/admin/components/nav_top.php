@@ -10,7 +10,7 @@ if (isset($_SESSION["idUser"])) {
 
   $query = "SELECT name_user, profile_img
           FROM users
-          WHERE idUser LIKE ?";
+          WHERE idusers = ?";
 ?>
   <nav class="navbar navbar-expand navbar-light bg-white1 topbar mb-4 static-top shadow">
 
@@ -33,11 +33,11 @@ if (isset($_SESSION["idUser"])) {
               <?php
               if (isset($img_perfil)) {
               ?>
-                <img class="img-profile rounded-circle" src="uploads/img_perfil/<?= $img_perfil; ?>" alt="imagem de perfil">
+                <img class="img-profile rounded-circle" src="uploads/img_perfil/<?= $img_perfil; ?>" alt="profile image">
               <?php
               } else {
               ?>
-                <img class="img-profile rounded-circle" src="img/no_profile_img.png" alt="imagem de perfil default">
+                <img class="img-profile rounded-circle" src="img/no_profile_img.png" alt="default profile image">
           <?php
               }
             }
@@ -48,13 +48,13 @@ if (isset($_SESSION["idUser"])) {
         </a>
 
         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="edit_profile.php?edit=<?= $idUser ?>">
+          <a class="dropdown-item" href="edit_profile.php?edit=<?= $idUser ?>" title="Go to edit profile page">
             <i class="fas fa-user-edit mr-2 text-gray-400"></i>
-            Editar perfil
+            Edit profile
           </a>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" title="Logout from administration">
             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-            Sair
+            Logout
           </a>
         </div>
       </li>

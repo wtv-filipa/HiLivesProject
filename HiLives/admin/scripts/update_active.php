@@ -1,26 +1,28 @@
 <?php
 session_start();
+
+require_once("../connections/connection.php");
+
+$link = new_db_connection();
+$stmt = mysqli_stmt_init($link);
+
+$link2 = new_db_connection();
+$stmt2 = mysqli_stmt_init($link2);
+
 if (isset($_GET["block"]) && isset($_GET["a"])) {
     $idUser = $_GET["block"];
     $active = $_GET["a"];
 
-    require_once("../connections/connection.php");
-
-    $link = new_db_connection();
-    $stmt = mysqli_stmt_init($link);
-    $link2 = new_db_connection();
-    $stmt2 = mysqli_stmt_init($link2);
-
-    $query2 = "SELECT User_type_idUser_type FROM users WHERE idUser = ?";
+    $query2 = "SELECT user_type_iduser_type FROM users WHERE idusers = ?";
 
     if ($active == 1) {
         $query = "UPDATE users
               SET active = 0
-              WHERE idUser = ?";
+              WHERE idusers = ?";
     } else {
         $query = "UPDATE users
               SET active = 1
-              WHERE idUser = ?";
+              WHERE idusers = ?";
     }
 
 
@@ -92,6 +94,28 @@ if (isset($_GET["block"]) && isset($_GET["a"])) {
                     mysqli_stmt_close($stmt);
                 } else {
                     header("Location: ../users_uni.php");
+                    $_SESSION["uni"] = 2;
+                }
+            } else if ($type_user == 16) {
+                $stmt = mysqli_stmt_init($link);
+                if (mysqli_stmt_prepare($stmt, $query)) {
+
+                    mysqli_stmt_bind_param($stmt, 'i', $idUser);
+                    if (!mysqli_stmt_execute($stmt)) {
+                        header("Location: ../users_tutor.php");
+                        $_SESSION["uni"] = 2;
+                    } else {
+                        if ($active == 1) {
+                            header("Location: ../users_tutor.php");
+                            $_SESSION["uni"] = 1;
+                        } else {
+                            header("Location: ../users_tutor.php");
+                            $_SESSION["uni"] = 3;
+                        }
+                    }
+                    mysqli_stmt_close($stmt);
+                } else {
+                    header("Location: ../users_tutor.php");
                     $_SESSION["uni"] = 2;
                 }
             } else {

@@ -17,19 +17,20 @@
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading">
-    Gestão de utilizadores
+    Users management
   </div>
 
   <li class="nav-item active">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
       <i class="fas fa-user-cog"></i>
-      <span style="color: #FFFFFF;">Utilizadores</span>
+      <span style="color: #FFFFFF;">Users</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="users_jovem.php">Jovens</a>
-        <a class="collapse-item" href="users_uni.php">Universidades</a>
-        <a class="collapse-item" href="users_emp.php">Empresas</a>
+        <a class="collapse-item" href="users_jovem.php">People with IDD</a>
+        <a class="collapse-item" href="users_uni.php">HEIs</a>
+        <a class="collapse-item" href="users_emp.php">Companies</a>
+        <a class="collapse-item" href="users_tutor.php">Tutors</a>
       </div>
     </div>
   </li>
@@ -37,23 +38,22 @@
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading">
-    Gestão de Páginas
+    Pages Management
   </div>
 
   <li class="nav-item active">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
       <i class="fas fa-fw fa-folder"></i>
-      <span style="color: #FFFFFF;">Páginas</span>
+      <span style="color: #FFFFFF;">Pages</span>
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Conteúdos visuais:</h6>
-        <a class="collapse-item" href="contents_jovem.php">Vídeos de jovens</a>
-        <a class="collapse-item" href="contents_emp.php">Vídeos de empresas</a>
+        <h6 class="collapse-header">Visual contents:</h6>
+        <a class="collapse-item" href="hilives_stories.php">HiLives Stories</a>
         <div class="collapse-divider"></div>
-        <h6 class="collapse-header">Outros conteúdos:</h6>
-        <a class="collapse-item" href="vacancies_emp.php">Vagas de empresas</a>
-        <a class="collapse-item" href="UC_jovem.php">UC's feitas</a>
+        <h6 class="collapse-header">Other contents:</h6>
+        <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
+        <a class="collapse-item" href="UC_jovem.php">Courses made</a>
       </div>
     </div>
   </li>

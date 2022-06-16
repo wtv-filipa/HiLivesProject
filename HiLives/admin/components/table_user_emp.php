@@ -6,37 +6,38 @@ if (isset($_SESSION["idUser"])) {
  
   $link = new_db_connection();
   $stmt = mysqli_stmt_init($link);
-  $query = "SELECT idUser, name_user, email_user, contact_user, birth_date, profile_img, website_ue, facebook_ue, instagram_ue, description_ue, history_ue, active
-            FROM users 
-            INNER JOIN user_type on users.User_type_idUser_type= user_type.idUser_type
-            WHERE type_user='Empresa'
-            ORDER BY idUser DESC";
+  $query = "SELECT idusers, name_user, email_user, contact_user, birth_date, website, active
+  FROM users 
+  INNER JOIN user_type ON users.User_type_idUser_type = user_type.iduser_type
+  WHERE type_user='Empresa'
+  ORDER BY idusers DESC";
+
   $array_val = mysqli_query($link, $query);
 ?>
  
-  <h1 class="h3 mb-2">Empresas</h1>
-  <p class="mb-4">Aqui é possível visualizar e gerir todas as Empresas inscritas na aplicação até ao momento.</p>
+  <h1 class="h3 mb-2">Companies</h1>
+  <p class="mb-4">Here it is possible to view and manage all the Companies that signed up on the platform so far.</p>
   <?php
   if (isset($_SESSION["emp"])) {
     $msg_show = true;
     switch ($_SESSION["emp"]) {
       case 1:
-        $message = "Utilizador bloqueado com sucesso!";
+        $message = "User successfully blocked!";
         $class = "alert-success";
         $_SESSION["emp"] = 0;
         break;
       case 2:
-        $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+        $message = "An error has occurred processing your request, please try again later.";
         $class = "alert-warning";
         $_SESSION["emp"] = 0;
         break;
       case 3:
-        $message = "Utilizador desbloqueado com sucesso!";
+        $message = "User successfully unlocked!";
         $class = "alert-success";
         $_SESSION["emp"] = 0;
         break;
       case 4:
-        $message = "Utilizador eliminado com sucesso!";
+        $message = "User successfully deleted!";
         $class = "alert-success";
         $_SESSION["emp"] = 0;
         break;
@@ -50,10 +51,10 @@ if (isset($_SESSION["idUser"])) {
 
     if ($msg_show == true) {
       echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
-                                <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                                <span aria-hidden=\"true\">&times;</span>
-                                </button>
-                                </div>";
+              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                <span aria-hidden=\"true\">&times;</span>
+              </button>
+            </div>";
       echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
     }
   }
@@ -64,29 +65,29 @@ if (isset($_SESSION["idUser"])) {
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Nome</th>
+              <th>Name</th>
               <th>Email</th>
-              <th>Contacto telefónico</th>
-              <th>Data de fundação</th>
+              <th>Phone number</th>
+              <th>Founding date</th>
               <th>Website</th>
-              <th>Ações</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Nome</th>
+              <th>Name</th>
               <th>Email</th>
-              <th>Contacto telefónico</th>
-              <th>Data de fundação</th>
+              <th>Phone number</th>
+              <th>Founding date</th>
               <th>Website</th>
-              <th>Ações</th>
+              <th>Actions</th>
             </tr>
           </tfoot>
           <tbody>
             <?php
             if (mysqli_stmt_prepare($stmt, $query)) {
               mysqli_stmt_execute($stmt);
-              mysqli_stmt_bind_result($stmt, $id_user_lista, $name_user, $email_user, $contact_user, $birth_date, $profile_img, $website_ue, $facebook_ue, $instagram_ue, $description_ue, $history_ue, $active);
+              mysqli_stmt_bind_result($stmt, $id_user_lista, $name_user, $email_user, $contact_user, $birth_date, $website, $active);
               while ($row_users = mysqli_fetch_assoc($array_val)) {
             ?>
                 <tr>
@@ -94,21 +95,21 @@ if (isset($_SESSION["idUser"])) {
                   <td><?= $row_users['email_user']; ?></td>
                   <td><?= $row_users['contact_user']; ?></td>
                   <td><?= $row_users['birth_date']; ?></td>
-                  <td><?= $row_users['website_ue']; ?></td>
+                  <td><?= $row_users['website']; ?></td>
                   <td>
-                    <a href="info_users.php?info=<?= $row_users['idUser'] ?>"><i class="fas fa-info-circle"></i></a>
+                    <a href="info_users.php?info=<?= $row_users['idusers'] ?>"><i class="fas fa-info-circle"></i></a>
                     <?php
                     if ($row_users['active'] == 1) {
                     ?>
-                      <a href="#" data-toggle="modal" data-target="#activeModal<?= $row_users['idUser'] ?>"><i class="fas fa-ban"></i></a>
+                      <a href="#" data-toggle="modal" data-target="#activeModal<?= $row_users['idusers'] ?>"><i class="fas fa-ban"></i></a>
                     <?php
                     } else {
                     ?>
-                      <a href="#" data-toggle="modal" data-target="#inactiveModal<?= $row_users['idUser'] ?>"><i class="fas fa-ban" style="color: #8DDCFA"></i></a>
+                      <a href="#" data-toggle="modal" data-target="#inactiveModal<?= $row_users['idusers'] ?>"><i class="fas fa-ban" style="color: #AE0168"></i></a>
                     <?php
                     }
                     ?>
-                    <a href="#" data-toggle="modal" data-target="#deleteModal<?= $row_users['idUser'] ?>"><i class="fas fa-trash"></i></a>
+                    <a href="#" data-toggle="modal" data-target="#deleteModal<?= $row_users['idusers'] ?>"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
             <?php

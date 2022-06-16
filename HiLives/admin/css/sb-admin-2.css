@@ -1,10 +1,69 @@
+/*hilives stories*/
+a.linkStory {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+  
+  .status {
+    margin: 11px 0;
+  }
+  
+  .wrapperStory {
+    background-color: #ffffff;
+    margin: 50px auto 0;
+    border-radius: 0.25rem;
+    padding: 30px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    margin-bottom: 5px;
+  }
+  
+  .img-content {
+    margin-bottom: 11px;
+  }
+  
+  audio {
+    width: 96%;
+  }
+  
+  .videoStory video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .videoSize {
+    max-height: 500px;
+  }
+  
+  .videoSize video {
+    max-height: 500px;
+  }
+  
+  .videoSize img {
+    max-height: 500px;
+  }
+/******/
+
+.text_translate{
+    color: #AE0168;
+}
 
 .btn_cancel {
-    color: #2F2F2F !important;
+    color: #000000 !important;
     padding: 0.3rem !important;
     font-size: 14px !important;
     font-family: "Quicksand", 'Montserrat', sans-serif !important;
-    border: 0.1em solid #2F2F2F !important;
+    border: 0.1em solid #000000 !important;
     border-radius: 5px !important;
     font-weight: 800 !important;
     width: 25% !important;
@@ -13,9 +72,9 @@
 }
 
 .btn_cancel:hover {
-    background-color: #2F2F2F !important;
+    background-color: #000000 !important;
     color: #fff !important;
-    border: 0.1em solid #2F2F2F !important;
+    border: 0.1em solid #000000 !important;
 }
 
 .btn_apagar {
@@ -61,7 +120,7 @@ a.hover:hover{
 }
 
 * {
-    color: #2f2f2f;
+    color: #000000;
 }
 
 
@@ -69,7 +128,7 @@ a.hover:hover{
 .home_btn {
     width: 30%!important;
     height: 10%!important;
-    color: #2f2f2f!important;
+    color: #000000!important;
     background-color: #D3D3D3!important;
     margin-bottom: 0.3125rem!important;
     text-decoration: none!important;
@@ -87,12 +146,12 @@ a.hover:hover{
     width: 30%!important;
     height: 10%!important;
     color: #fff!important;
-    background-color: #2F2F2F !important;
+    background-color: #000000 !important;
     margin-bottom: 0.3125rem!important;
     text-decoration: none!important;
     cursor: pointer!important;
     display: inline-block!important;
-    border-color: #2F2F2F!important;
+    border-color: #000000!important;
     border-radius: 40px!important;
     font-family: 'Quicksand', 'Montserrat', sans-serif !important;
     font-size: 16px !important;
@@ -202,7 +261,7 @@ a.hover:hover{
 }
 
 html {
-    font-family: 'Roboto', 'Open Sans', sans-serif !important;
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -223,7 +282,7 @@ section {
 
 body {
     margin: 0;
-    font-family: 'Roboto', 'Open Sans', sans-serif !important;
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -256,7 +315,7 @@ h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: 'Roboto', 'Open Sans', sans-serif !important;
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
 }
 
 abbr[title],
@@ -6070,7 +6129,7 @@ a.close.disabled {
     z-index: 1070;
     display: block;
     margin: 0;
-    font-family: 'Roboto', 'Open Sans', sans-serif !important;
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6195,7 +6254,7 @@ a.close.disabled {
     z-index: 1060;
     display: block;
     max-width: 276px;
-    font-family: 'Roboto', 'Open Sans', sans-serif !important;
+    font-family: "Avenir Book", "Roboto", "Open Sans", sans-serif !important;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -10600,7 +10659,7 @@ a:focus {
     text-transform: uppercase;
     font-weight: 800;
     font-size: 0.65rem;
-    color: #2F2F2F;
+    color: #000000;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item,
@@ -10608,7 +10667,7 @@ a:focus {
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     display: block;
-    color: #2F2F2F;
+    color: #000000;
     text-decoration: none;
     border-radius: 0.35rem;
     white-space: nowrap;
@@ -11471,6 +11530,9 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     padding: 2rem 0;
     flex-shrink: 0;
 }

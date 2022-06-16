@@ -7,28 +7,28 @@ if (isset($_SESSION["idUser"])) {
   
   $link = new_db_connection();
   $stmt = mysqli_stmt_init($link);
-  $query = "SELECT idVacancies, vacancie_name, number_free_vanc, name_user, Workday_name
+  $query = "SELECT idvacancies, vacancy_name_en, free_vac, name_user,	workday_name
           FROM vacancies 
-          INNER JOIN users on vacancies.User_publicou = users.idUser
-          INNER JOIN workday on vacancies.Workday_idWorkday = workday.idWorkday
-          ORDER BY User_publicou DESC";
+          INNER JOIN users on vacancies.company_id = users.	idusers
+          INNER JOIN workday on vacancies.workday_idworkday = workday.idworkday
+          ORDER BY company_id DESC";
 
   $array_val = mysqli_query($link, $query);
 
 ?>
-  <h1 class="h3 mb-2 text-gray-800">Vagas publicadas por empresas</h1>
-  <p class="mb-4">Aqui é possível visualizar e gerir todas as vagas publicadas por empresas na aplicação até ao momento.</p>
+  <h1 class="h3 mb-2 text-gray-800">Vacancies published by companies</h1>
+  <p class="mb-4">Here it is possible to view and manage all vacancies published by companies on the platform so far.</p>
   <?php
   if (isset($_SESSION["vac"])) {
     $msg_show = true;
     switch ($_SESSION["vac"]) {
       case 1:
-        $message = "Vaga eliminada com sucesso!";
+        $message = "Vacancy successfully deleted!";
         $class = "alert-success";
         $_SESSION["vac"] = 0;
         break;
       case 2:
-        $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+        $message = "An error has occurred while processing your request, please try again later.";
         $class = "alert-warning";
         $_SESSION["vac"] = 0;
         break;
@@ -42,10 +42,10 @@ if (isset($_SESSION["idUser"])) {
 
     if ($msg_show == true) {
       echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
-                                <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-                                <span aria-hidden=\"true\">&times;</span>
-                                </button>
-                                </div>";
+              <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                <span aria-hidden=\"true\">&times;</span>
+              </button>
+            </div>";
       echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
     }
   }
@@ -56,39 +56,49 @@ if (isset($_SESSION["idUser"])) {
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Empresa</th>
-              <th>Vaga</th>
-              <th>Jornada de trabalho</th>
-              <th>Número de vagas disponíveis</th>
-              <th>Ações</th>
+              <th>Company</th>
+              <th>Vacancy name</th>
+              <th>Working hours</th>
+              <th>Vacancies available</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Empresa</th>
-              <th>Vaga</th>
-              <th>Jornada de trabalho</th>
-              <th>Número de vagas disponíveis</th>
-              <th>Ações</th>
+              <th>Company</th>
+              <th>Vacancy name</th>
+              <th>Working hours</th>
+              <th>Vacancies available</th>
+              <th>Actions</th>
             </tr>
           </tfoot>
           <tbody>
             <?php
             if (mysqli_stmt_prepare($stmt, $query)) {
               mysqli_stmt_execute($stmt);
-              mysqli_stmt_bind_result($stmt, $idVacancies, $vacancie_name, $number_free_vanc, $name_user, $Workday_name);
+              mysqli_stmt_bind_result($stmt, $idVacancies, $vacancy_name_en, $free_vac, $name_user,	$workday_name);
               while ($row_vac = mysqli_fetch_assoc($array_val)) {
             ?>
                 <tr>
                   <td><?= $row_vac['name_user']; ?></td>
-                  <td><?= $row_vac['vacancie_name']; ?></td>
-                  <td><?= $row_vac['Workday_name']; ?></td>
-                  <td><?= $row_vac['number_free_vanc']; ?></td>
+                  <?php
+                  if (isset($row_vac['vacancy_name_en'])) {
+                  ?>
+                    <td><?= $row_vac['vacancy_name_en']; ?></td>
+                  <?php
+                  } else {
+                    ?>
+                    <td class="text_translate">Requires translation</td>
+                    <?php
+                  }
+                  ?>
+                  <td><?= $row_vac['workday_name']; ?></td>
+                  <td><?= $row_vac['free_vac']; ?></td>
                   <td>
-                    <a href="info_vac.php?info=<?= $row_vac['idVacancies'] ?>">
+                    <a href="info_vac.php?info=<?= $row_vac['idvacancies'] ?>">
                       <i class="fas fa-info-circle"></i>
                     </a>
-                    <a href="#" data-toggle="modal" data-target="#deletevac<?= $row_vac['idVacancies'] ?>">
+                    <a href="#" data-toggle="modal" data-target="#deletevac<?= $row_vac['idvacancies'] ?>">
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>

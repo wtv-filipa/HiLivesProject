@@ -7,14 +7,16 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
 
   <head>
     <?php include "helpers/meta.php"; ?>
-    <title>Vídeos- jovens</title>
+    <title>Registered tutors</title>
     <?php include "helpers/fonts.php"; ?>
     <?php include "helpers/css.php"; ?>
     <?php include "helpers/datatable.php"; ?>
   </head>
 
   <body id="page-top">
+
     <div id="wrapper">
+
       <?php include "components/side_nav.php"; ?>
 
       <div id="content-wrapper" class="d-flex flex-column">
@@ -24,14 +26,18 @@ if (isset($_SESSION["idUser"]) and $_SESSION["type"] == 4) {
           <?php include "components/nav_top.php"; ?>
 
           <div class="container-fluid">
-            <?php include "components/table_contents_jovem.php"; ?>
+            <?php include "components/table_user_tutor.php"; ?>
           </div>
           <?php include "components/footer.php"; ?>
-
         </div>
+
       </div>
       <?php include "components/scroll_button.php"; ?>
+
       <?php include "components/logout_modal.php"; ?>
+
+      <?php include "components/active_modal.php"; ?>
+
       <?php include "helpers/js_tables.php"; ?>
 
   </body>

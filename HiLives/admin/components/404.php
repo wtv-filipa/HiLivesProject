@@ -1,7 +1,7 @@
-<h1 class="letra">Erro 404</h1>
-<p class="zoom-area">Parece que o endereço que procuraste não existe! Por favor tenta outra endereço ou carrega no botão e volta para a página inicial.</p>
+<h1 class="letra">404 error</h1>
+<p class="zoom-area">It seems that the address you entered does not exist! Please try another address or click the button and return to the home page.</p>
 <div class="link-container">
-  <a target="_self" href="index.php" class="more-link"><button class="btn home_btn">Ir para a página inicial</button></a>
+  <a target="_self" href="index.php" class="more-link" title="Go back to homepage"><button class="btn home_btn">Back to homepage</button></a>
 </div>
 <section class="error-container">
   <span><span>4</span></span>

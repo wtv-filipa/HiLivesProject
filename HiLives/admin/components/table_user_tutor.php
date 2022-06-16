@@ -1,54 +1,51 @@
 <?php
-
 require_once("connections/connection.php");
 
 if (isset($_SESSION["idUser"])) {
   $idUser = $_SESSION["idUser"];
-
+ 
   $link = new_db_connection();
   $stmt = mysqli_stmt_init($link);
-
-  $query = "SELECT 	idusers, name_user, email_user, contact_user, birth_date, work_xp_en, description_en, profile_img, active
-  FROM users 
-  INNER JOIN user_type ON users.user_type_iduser_type= user_type.iduser_type
-  WHERE type_user='Pessoa'
-  ORDER BY 	idusers DESC";
-
+  $query = "SELECT idusers, name_user, email_user, contact_user, active
+            FROM users 
+            INNER JOIN user_type ON users.User_type_idUser_type = user_type.idUser_type
+            WHERE type_user='Tutor'
+            ORDER BY idusers DESC";
   $array_val = mysqli_query($link, $query);
-
 ?>
-  <h1 class="h3 mb-2">People with IDD</h1>
-  <p class="mb-4">Here you can view and manage all the people with IDD who have signed up to the platform so far. </p>
+ 
+  <h1 class="h3 mb-2">Tutors</h1>
+  <p class="mb-4">Here it is possible to view and manage all the Tutors that signed up on the platform so far.</p>
   <?php
-  if (isset($_SESSION["jovem"])) {
+  if (isset($_SESSION["tutor"])) {
     $msg_show = true;
-    switch ($_SESSION["jovem"]) {
+    switch ($_SESSION["tutor"]) {
       case 1:
         $message = "User successfully blocked!";
         $class = "alert-success";
-        $_SESSION["jovem"] = 0;
+        $_SESSION["tutor"] = 0;
         break;
       case 2:
         $message = "An error has occurred processing your request, please try again later.";
         $class = "alert-warning";
-        $_SESSION["jovem"] = 0;
+        $_SESSION["tutor"] = 0;
         break;
       case 3:
         $message = "User successfully unlocked!";
         $class = "alert-success";
-        $_SESSION["jovem"] = 0;
+        $_SESSION["tutor"] = 0;
         break;
       case 4:
         $message = "User successfully deleted!";
         $class = "alert-success";
-        $_SESSION["jovem"] = 0;
+        $_SESSION["tutor"] = 0;
         break;
       case 0:
         $msg_show = false;
         break;
       default:
         $msg_show = false;
-        $_SESSION["jovem"] = 0;
+        $_SESSION["tutor"] = 0;
     }
 
     if ($msg_show == true) {
@@ -70,9 +67,7 @@ if (isset($_SESSION["idUser"])) {
               <th>Name</th>
               <th>Email</th>
               <th>Phone number</th>
-              <th>Birth date</th>
-              <th>Work experience</th>
-              <th>Actions</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tfoot>
@@ -80,41 +75,26 @@ if (isset($_SESSION["idUser"])) {
               <th>Name</th>
               <th>Email</th>
               <th>Phone number</th>
-              <th>Birth date</th>
-              <th>Work experience</th>
-              <th>Actions</th>
+              <th>Ações</th>
             </tr>
           </tfoot>
           <tbody>
             <?php
             if (mysqli_stmt_prepare($stmt, $query)) {
               mysqli_stmt_execute($stmt);
-              mysqli_stmt_bind_result($stmt, $id_user_lista, $name_user, $email_user, $contact_user, $birth_date, $info_young, $work_xp, $profile_img, $active);
+              mysqli_stmt_bind_result($stmt, $id_user_lista, $name_user, $email_user, $contact_user, $active);
               while ($row_users = mysqli_fetch_assoc($array_val)) {
             ?>
-
                 <tr>
                   <td><?= $row_users['name_user']; ?></td>
                   <td><?= $row_users['email_user']; ?></td>
                   <td><?= $row_users['contact_user']; ?></td>
-                  <td><?= $row_users['birth_date']; ?></td>
-                  <?php
-                  if (isset($row_users['work_xp'])) {
-                  ?>
-                    <td><?= $row_users['work_xp']; ?></td>
-                  <?php
-                  } else {
-                  ?>
-                    <td class="text_translate">Requires translation</td>
-                  <?php
-                  }
-                  ?>
                   <td>
                     <a href="info_users.php?info=<?= $row_users['idusers'] ?>"><i class="fas fa-info-circle"></i></a>
                     <?php
                     if ($row_users['active'] == 1) {
                     ?>
-                      <a class="hover" href="#" data-toggle="modal" data-target="#activeModal<?= $row_users['idusers'] ?>"><i class="fas fa-ban"></i></a>
+                      <a href="#" data-toggle="modal" data-target="#activeModal<?= $row_users['idusers'] ?>"><i class="fas fa-ban"></i></a>
                     <?php
                     } else {
                     ?>
@@ -125,18 +105,16 @@ if (isset($_SESSION["idUser"])) {
                     <a href="#" data-toggle="modal" data-target="#deleteModal<?= $row_users['idusers'] ?>"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
-
             <?php
                 include('components/active_modal.php');
-
                 include('components/delete_modal.php');
               }
             }
             mysqli_stmt_close($stmt);
             mysqli_close($link);
             ?>
-          </tbody>
 
+          </tbody>
         </table>
       </div>
     </div>
