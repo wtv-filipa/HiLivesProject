@@ -79,9 +79,19 @@
         <a class="collapse-item" href="stories_t.php">HiLives Stories</a>
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Other contents:</h6>
-        <!-- <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
-        <a class="collapse-item" href="UC_jovem.php">People with IDD Courses</a>
-        <a class="collapse-item" href="courses_hei.php">HEIs courses</a> -->
+        <a class="collapse-item" href="accommodation_t.php">Accommodation</a>
+        <a class="collapse-item" href="areas_t.php">Areas</a>
+        <a class="collapse-item" href="capacities_t.php">Capacities</a>
+        <a class="collapse-item" href="country_t.php">Country</a>
+        <a class="collapse-item" href="regime_t.php">Course regime</a>
+        <a class="collapse-item" href="educ_t.php">Education level</a>
+        <a class="collapse-item" href="institution.php">Institution type</a>
+        <a class="collapse-item" href="learn_t.php">Learning type</a>
+        <a class="collapse-item" href="region_t.php">Region</a>
+        <a class="collapse-item" href="users_t.php">Users</a>
+        <a class="collapse-item" href="type_t.php">Users type</a>
+        <a class="collapse-item" href="workday_t.php">Workday</a>
+        <a class="collapse-item" href="environment_t.php">Work environment</a>
       </div>
     </div>
   </li>
