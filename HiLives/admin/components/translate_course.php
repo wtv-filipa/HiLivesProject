@@ -25,9 +25,9 @@ if (isset($_GET["translate"])) {
                 <form method="post" role="form" action="scripts/translate_course.php?uc=<?= $iddone_cu ?>">
                     <!--NAME-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="nomeuc">Name of the Curricular Unit or Course <span class="asteriskPink">*</span></label>
+                        <label class="boldFont mt-3 pb-2" for="nomeuc">Name of the Curricular Unit or Course in portuguese <span class="asteriskPink">*</span></label>
                         <div class="p-0 m-0">
-                            <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Escreve aqui o nome da Unidade Curricular/ Curso" disabled value="<?= $cu_name ?>">
+                            <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Type here the name of the Course/Curriculum Unit in portuguese" value="<?= $cu_name ?>">
                         </div>
                     </div>
 
@@ -65,9 +65,9 @@ if (isset($_GET["translate"])) {
 
                     <!--HEIS MADE-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="uniuc">Higher Education Institution where it was made </label>
+                        <label class="boldFont mt-3 pb-2" for="uniuc">Higher Education Institution where it was made in portuguese</label>
                         <div class="p-0 m-0">
-                            <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Escreve aqui o nome da Instituição de Ensino Superior onde concluíste a Unidade Curricular ou o Curso" disabled value="<?= $university_name ?>">
+                            <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Type here the name of the Higher Education Institution where the Curricular Unit or Course was completed in portuguese" value="<?= $university_name ?>">
                         </div>
                     </div>
 

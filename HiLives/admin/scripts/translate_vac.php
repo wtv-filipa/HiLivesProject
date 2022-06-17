@@ -8,7 +8,7 @@ $stmt = mysqli_stmt_init($link);
 $idVac = $_GET["vac"];
 
 $query = "UPDATE vacancies
-SET vacancy_name_en = ?, vacancy_name_es = ?, vacancy_name_be = ?, vacancy_name_is = ?, description_vac_en = ?, description_vac_es = ?, description_vac_be = ?, description_vac_is = ?, requirements_en = ?, requirements_es = ?, requirements_be = ?, requirements_is = ?
+SET vacancy_name = ?, vacancy_name_en = ?, vacancy_name_es = ?, vacancy_name_be = ?, vacancy_name_is = ?, description_vac = ?, description_vac_en = ?, description_vac_es = ?, description_vac_be = ?, description_vac_is = ?, requirements = ?, requirements_en = ?, requirements_es = ?, requirements_be = ?, requirements_is = ?
 WHERE idvacancies = ?";
 
 if (isset($_GET["vac"])) {
@@ -34,7 +34,7 @@ if (isset($_GET["vac"])) {
     $requirements_is = $_POST["requisitos_is"];   
 
     if (mysqli_stmt_prepare($stmt, $query)) {
-        mysqli_stmt_bind_param($stmt, 'ssssssssssssi', $vacancy_name_en, $vacancy_name_es, $vacancy_name_be, $vacancy_name_is, $description_vac_en, $description_vac_es, $description_vac_be, $description_vac_is, $requirements_en, $requirements_es, $requirements_be, $requirements_is, $idVac);
+        mysqli_stmt_bind_param($stmt, 'sssssssssssssssi', $vacancy_name, $vacancy_name_en, $vacancy_name_es, $vacancy_name_be, $vacancy_name_is, $description_vac, $description_vac_en, $description_vac_es, $description_vac_be, $description_vac_is, $requirements, $requirements_en, $requirements_es, $requirements_be, $requirements_is, $idVac);
         if (!mysqli_stmt_execute($stmt)) {        
            header("Location: ../vac_t.php");
             $_SESSION["vac"] = 2;
