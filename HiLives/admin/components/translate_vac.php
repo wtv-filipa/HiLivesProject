@@ -25,9 +25,9 @@ if (isset($_GET["translate"])) {
                 <form method="post" role="form" id="register-form" action="scripts/translate_vac.php?vac=<?= $idVac ?>">
                     <!--VACANCIE NAME-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="nomevaga">Position in the company </label>
+                        <label class="boldFont mt-3 pb-2" for="nomevaga">Position in the company in portuguese</label>
                         <div class="p-0 m-0">
-                            <input type="text" class="form-control greyBorder" id="nomevaga" name="nomevaga" placeholder="Type the name of the position available" disabled value="<?= $vacancy_name ?>">
+                            <input type="text" class="form-control greyBorder" id="nomevaga" name="nomevaga" placeholder="Type the name of the position available in portuguese"  value="<?= $vacancy_name ?>">
                         </div>
                     </div>
 
@@ -65,8 +65,8 @@ if (isset($_GET["translate"])) {
 
                     <!--DESCRIPTION-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="descricao">Vacancy description </label>
-                        <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insert a text that describes the vacancy you are advertising" maxlength="445" disabled><?= $description_vac ?></textarea>
+                        <label class="boldFont mt-3 pb-2" for="descricao">Vacancy description in portuguese</label>
+                        <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insert a text that describes the vacancy you are advertising in portuguese" maxlength="445" ><?= $description_vac ?></textarea>
                     </div>
 
                     <!--DESCRIPTION-->
@@ -95,8 +95,8 @@ if (isset($_GET["translate"])) {
 
                     <!--REQUIRENMENTS-->
                     <div class="form-group pb-4">
-                        <label class="boldFont mt-3 pb-2" for="requisitos">Requirements </label>
-                        <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Type a text that describes the vacancy you are advertising" disabled><?= $requirements ?></textarea>
+                        <label class="boldFont mt-3 pb-2" for="requisitos">Requirements in portuguese</label>
+                        <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Type a text that describes the vacancy you are advertising in portuguese" ><?= $requirements ?></textarea>
                     </div>
 
                     <!--REQUIRENMENTS-->
