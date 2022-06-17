@@ -413,19 +413,19 @@ if (isset($_GET["info"])) {
                         ?>
 
                         <div class="form-group mt-5">
-                            <a class="col-xs-12 col-md-6" href="#" data-toggle="modal" data-target="#deleteModal<?= $idUser ?>"> <button class="btn cancel_btn"><i class="fas fa-trash"></i> Apagar utilizador</button></a>
+                            <a class="col-xs-12 col-md-6" href="#" data-toggle="modal" data-target="#deleteModal<?= $idUser ?>"> <button class="btn cancel_btn"><i class="fas fa-trash"></i> Delete user</button></a>
                             <span></span>
                             <?php
                             if ($active == 1) {
                             ?>
                                 <a class="col-xs-12 col-md-6" href="#" data-toggle="modal" data-target="#activeModal<?= $idUser ?>">
-                                    <button class="btn cancel_btn"><i class="fas fa-ban"></i> Bloquear utilizador</button>
+                                    <button class="btn cancel_btn"><i class="fas fa-ban"></i> Block user</button>
                                 </a>
                             <?php
                             } else {
                             ?>
                                 <a class="col-xs-12 col-md-6" href="#" data-toggle="modal" data-target="#inactiveModal<?= $idUser ?>">
-                                    <button class="btn cancel_btn"><i class="fas fa-ban"></i> Desbloquear utilizador</button>
+                                    <button class="btn cancel_btn"><i class="fas fa-ban"></i> Unlock user</button>
                                 </a>
                             <?php
                             }
