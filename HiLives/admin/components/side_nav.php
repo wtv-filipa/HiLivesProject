@@ -76,6 +76,7 @@
         <a class="collapse-item" href="courses_t.php">People with IDD Courses</a>
         <a class="collapse-item" href="courses_heis_t.php">HEIs courses</a>
         <a class="collapse-item" href="vac_t.php">Vacancies</a>
+        <a class="collapse-item" href="stories_t.php">HiLives Stories</a>
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Other contents:</h6>
         <!-- <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>

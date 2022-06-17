@@ -111,8 +111,6 @@ if (isset($_SESSION["idUser"])) {
                   </td>
                 </tr>
             <?php
-
-                include('components/delete_modal.php');
               }
             }
             mysqli_stmt_close($stmt);

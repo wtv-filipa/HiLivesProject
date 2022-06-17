@@ -64,10 +64,10 @@ if (isset($_GET["xp"])) {
                         $last_id = mysqli_insert_id($link);
                     }
 
-                    $query2 = "INSERT INTO experiences (description, xp_type, users_idusers, content_idcontent) VALUES (?,?,?,?)";
+                    $query2 = "INSERT INTO experiences (description_en, xp_type, users_idusers, content_idcontent) VALUES (?,?,?,?)";
 
                     if (mysqli_stmt_prepare($stmt, $query2)) {
-                        mysqli_stmt_bind_param($stmt, 'ssii', $description, $xp_type, $User_idUser, $last_id);
+                        mysqli_stmt_bind_param($stmt, 'ssii', $_en, $xp_type, $User_idUser, $last_id);
                         $description = $_POST['descricao'];
                         //Define experience type
                         if ($vidFileType == "avi" || $vidFileType == "wmv" || $vidFileType == "mp4" || $vidFileType == "mov") {
@@ -106,7 +106,7 @@ if (isset($_GET["xp"])) {
         }
     } else if (!empty($_POST["descricao"]) && $_FILES["fileToUpload"]['size'] == 0) {
         //Story with only description
-        $query = "INSERT INTO experiences (description, xp_type, users_idusers) VALUES (?,?,?)";
+        $query = "INSERT INTO experiences (description_en, xp_type, users_idusers) VALUES (?,?,?)";
 
         if (mysqli_stmt_prepare($stmt, $query)) {
             mysqli_stmt_bind_param($stmt, 'ssi', $description, $xp_type, $User_idUser);
