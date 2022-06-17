@@ -77,6 +77,7 @@
         <a class="collapse-item" href="courses_heis_t.php">HEIs courses</a>
         <a class="collapse-item" href="vac_t.php">Vacancies</a>
         <a class="collapse-item" href="stories_t.php">HiLives Stories</a>
+        <a class="collapse-item" href="users_t.php">Users</a>
         <div class="collapse-divider"></div>
         <h6 class="collapse-header">Other contents:</h6>
         <a class="collapse-item" href="accommodation_t.php">Accommodation</a>
@@ -88,7 +89,6 @@
         <a class="collapse-item" href="institution.php">Institution type</a>
         <a class="collapse-item" href="learn_t.php">Learning type</a>
         <a class="collapse-item" href="region_t.php">Region</a>
-        <a class="collapse-item" href="users_t.php">Users</a>
         <a class="collapse-item" href="type_t.php">Users type</a>
         <a class="collapse-item" href="workday_t.php">Workday</a>
         <a class="collapse-item" href="environment_t.php">Work environment</a>
