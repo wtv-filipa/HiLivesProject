@@ -4,11 +4,11 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     if ($_SESSION["type"] == 10 || $_SESSION["type"] == 13 || $_SESSION["type"] == 16) {
 ?>
         <!DOCTYPE html>
-        <html lang="pt">
+        <html lang="is">
 
         <head>
             <?php include "../../helpers/meta.php"; ?>
-            <title>Informação do curso</title>
+            <title>Upplýsingar um námskeið</title>
             <?php include "../../helpers/fonts.php"; ?>
             <?php include "../../helpers/css_info.php"; ?>
         </head>

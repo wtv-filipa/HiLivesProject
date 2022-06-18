@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="is">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Adicionar uma vaga</title>
+        <title>Bæta við rauf</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_forms.php"; ?>
     </head>

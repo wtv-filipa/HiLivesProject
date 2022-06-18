@@ -2,11 +2,11 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="is">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>
-    <title>Ajuda - HiLives</title>
+    <title>Hjálpa - HiLives</title>
     <?php include "../../helpers/fonts.php"; ?>
     <?php include "../../helpers/css_infoPages.php"; ?>
 </head>

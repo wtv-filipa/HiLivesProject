@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"])) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="is">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Informação da vaga</title>
+        <title>Upplýsingar um laus störf</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_info.php"; ?>
     </head>

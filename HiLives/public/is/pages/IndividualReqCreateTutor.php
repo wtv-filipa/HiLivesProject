@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="is">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Pedido de registo</title>
+        <title>Umsókn um skráningu</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_IndRequests.php"; ?>
     </head>

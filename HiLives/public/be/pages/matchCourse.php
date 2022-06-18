@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="be">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>

@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="is">
 
 <head>
     <?php include "../../helpers/meta.php"; ?>

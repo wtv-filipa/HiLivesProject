@@ -3,11 +3,11 @@ session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] != 16 ) {
 ?>
     <!DOCTYPE html>
-    <html lang="pt">
+    <html lang="is">
 
     <head>
         <?php include "../../helpers/meta.php"; ?>
-        <title>Editar perfil</title>
+        <title>Breyta forstillingu</title>
         <?php include "../../helpers/fonts.php"; ?>
         <?php include "../../helpers/css_editProfile.php"; ?>
     </head>
