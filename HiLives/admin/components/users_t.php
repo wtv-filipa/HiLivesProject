@@ -11,8 +11,7 @@ if (isset($_SESSION["idUser"])) {
   $query = "SELECT idusers, name_user, description, description_en, description_es, description_be, description_is, work_xp, work_xp_en, work_xp_es, work_xp_be, work_xp_is, type_user
   FROM users 
   INNER JOIN user_type ON users.user_type_iduser_type= user_type.iduser_type
-  WHERE type_user = 'Pessoa' OR type_user = 'Empresa'
-  ORDER BY 	idusers DESC";
+  WHERE type_user = 'Pessoa' OR type_user = 'Empresa'";
 
   $array_val = mysqli_query($link, $query);
 

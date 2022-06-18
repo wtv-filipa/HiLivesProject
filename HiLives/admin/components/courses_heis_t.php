@@ -9,8 +9,7 @@ if (isset($_SESSION["idUser"])) {
   $stmt = mysqli_stmt_init($link);
   $query = "SELECT idcourses, name_course, name_course_en, name_course_es, name_course_be, name_course_is, description_course, description_course_en, description_course_es, description_course_be, description_course_is, name_user
   FROM courses 
-  INNER JOIN users on courses.users_idusers = users.	idusers
-  ORDER BY idcourses DESC";
+  INNER JOIN users on courses.users_idusers = users.	idusers";
 
   $array_val = mysqli_query($link, $query);
 

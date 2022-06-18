@@ -1,255 +1,263 @@
-    .card {
-        border-radius: 10px;
-        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-        margin-top: 5%;
-        padding: 20px;
-    }
+.asterisk{
+  color: #005e89;
+}
 
-    * {
-        color: #000000
-    }
+.card {
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  margin-top: 5%;
+  padding: 20px;
+}
 
-    h3, h6, input, label {
-        font-family: "Quicksand", 'Montserrat', sans-serif !important;
-    }
+* {
+  color: #000000;
+}
 
-    h3, label {
-        font-weight: bold;
-    }
+h3,
+h6,
+input,
+label {
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+}
 
-    .label-margin {
-        margin-left: -1%;
-    }
+h3,
+label {
+  font-weight: bold;
+}
 
-    .guardar_btn {
-        color: #005E89;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: "Quicksand", 'Montserrat', sans-serif !important;
-        border: 0.1em solid #005E89;
-        border-radius: 5px;
-        font-weight: 800;
-        width: 30%;
-        cursor: pointer;
-        background: #fff;
-    }
+.label-margin {
+  margin-left: -1%;
+}
 
-    .guardar_btn:hover {
-        background-color: #005E89;
-        color: #fff;
-        border: 0.1em solid #005E89;
-    }
+.guardar_btn {
+  color: #005e89;
+  padding: 0.3rem;
+  font-size: 14px;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  border: 0.1em solid #005e89;
+  border-radius: 5px;
+  font-weight: 800;
+  width: 30%;
+  cursor: pointer;
+  background: #fff;
+}
 
-    .cancel_btn {
-        color: #2F2F2F;
-        padding: 0.3rem;
-        font-size: 14px;
-        font-family: "Quicksand", 'Montserrat', sans-serif !important;
-        border: 0.1em solid #2F2F2F;
-        border-radius: 5px;
-        font-weight: 800;
-        width: 30%;
-        cursor: pointer;
-        background: #fff;
-    }
+.guardar_btn:hover {
+  background-color: #005e89;
+  color: #fff;
+  border: 0.1em solid #005e89;
+}
 
-    .cancel_btn:hover {
-        background-color: #2F2F2F;
-        color: #fff;
-        border: 0.1em solid #2F2F2F;
-    }
+.cancel_btn {
+  color: #000000;
+  padding: 0.3rem;
+  font-size: 14px;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  border: 0.1em solid #000000;
+  border-radius: 5px;
+  font-weight: 800;
+  width: 30%;
+  cursor: pointer;
+  background: #fff;
+}
 
-    .image_profile {
-        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-        border-radius: 50%;
-        width: 152px;
-        height: 152x;
-    }
+.cancel_btn:hover {
+  background-color: #000000;
+  color: #fff;
+  border: 0.1em solid #000000;
+}
 
-    .fundo_login {
-        background-image: url("../img/fundo_cinza_g.png");
-        width: 100%;
-        background-size: cover;
-    }
+.image_profile {
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 152px;
+  height: 152x;
+}
 
-    .avatar_modal {
-        vertical-align: middle;
-        width: 35px !important;
-        height: 57px !important;
-        border-radius: 50%;
-        margin-top: 4px;
-    }
+.fundo_login {
+  background-image: url("../img/fundo_cinza_g.png");
+  width: 100%;
+  background-size: cover;
+}
 
-    .avatar-upload {
-        position: relative;
-        max-width: 205px;
-        display: block;
-        margin: auto;
-    }
+.avatar_modal {
+  vertical-align: middle;
+  width: 35px !important;
+  height: 57px !important;
+  border-radius: 50%;
+  margin-top: 4px;
+}
 
-    .avatar-edit {
-        position: absolute;
-        z-index: 1;
-    }
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  display: block;
+  margin: auto;
+}
 
-    label.label :hover {
-        background: #ffffff;
-        border-color: #ffffff;
-    }
+.avatar-edit {
+  position: absolute;
+  z-index: 1;
+}
 
-    label.label::before {
-        color: #000000;
-        position: relative;
-        top: 17%;
-        text-align: center;
-        display: block;
-        margin: auto;
-    }
+label.label :hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
 
-    label.label {
-        align-content: end;
-        width: 34px;
-        height: 34px;
-        border-radius: 100%;
-        background: #FFFFFF;
-        border: 1px solid transparent;
-        box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        font-weight: normal;
-        transition: all 0.2s ease-in-out;
-        display: block;
-        margin-left: -85%;
-        z-index: 200;
-    }
+label.label::before {
+  color: #000000;
+  position: relative;
+  top: 17%;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
 
-    @media only screen and (max-width: 600px) {
-        .guardar_btn {
-            width: 50%!important;
-        }
-        .guardar_btn:hover {
-            width: 50%!important;
-        }
-        .cancel_btn {
-            width: 50%!important;
-            margin-top: 2%;
-        }
-        .cancel_btn:hover {
-            width: 50%!important;
-            margin-top: 2%;
-        }
-        .avatar-edit {
-            top: 12%;
-        }
-    }
+label.label {
+  align-content: end;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  background: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  margin-left: -85%;
+  z-index: 200;
+}
 
-    @media only screen and (min-width: 768px) {
-        .avatar-edit {
-            top: 7%;
-            right: -21%;
-        }
-    }
+@media only screen and (max-width: 600px) {
+  .guardar_btn {
+    width: 50% !important;
+  }
+  .guardar_btn:hover {
+    width: 50% !important;
+  }
+  .cancel_btn {
+    width: 50% !important;
+    margin-top: 2%;
+  }
+  .cancel_btn:hover {
+    width: 50% !important;
+    margin-top: 2%;
+  }
+  .avatar-edit {
+    top: 12%;
+  }
+}
 
-    @media only screen and (min-width: 992px) {
-        .avatar-edit {
-            right: -1%;
-            top: 7%;
-        }
-    }
+@media only screen and (min-width: 768px) {
+  .avatar-edit {
+    top: 7%;
+    right: -21%;
+  }
+}
 
-    .modal-content {
-        width: 120% !important;
-    }
+@media only screen and (min-width: 992px) {
+  .avatar-edit {
+    right: -1%;
+    top: 7%;
+  }
+}
+
+.modal-content {
+  width: 120% !important;
+}
 
 /*Buttons*/
 .buttonDesign {
-    padding: 0.1rem;
-    font-size: 16px;
-    font-family: "Quicksand", "Montserrat", sans-serif !important;
-    border-radius: 5px;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  
-  .buttonStudy {
-    border: 0.1em solid #ae0168;
-    color: #ae0168;
-  }
-  
-  .buttonStudy:hover {
-    background-color: #ae0168;
-    color: #ffffff;
-    border: 0.1em solid #ae0168;
-  }
-  
-  .buttonWork {
-    border: 0.1em solid #005e89;
-    color: #005e89;
-  }
-  
-  .buttonWork:hover {
-    background-color: #005e89;
-    color: #ffffff;
-    border: 0.1em solid #005e89;
-  }
-  
-  a .buttonWork {
-    color: #005e89 !important;
-  }
-  
-  a .buttonWork:hover {
-    color: #ffffff !important;
-  }
-  
-  .buttonCancel {
-    border: 0.1em solid #000000;
-    color: #000000;
-  }
-  
-  .buttonCancel:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border: 0.1em solid #000000;
-  }
-  
-  .buttonLoginSize {
-    width: 8rem;
-  }
-  
-  .buttonLoginSizeSmaller {
-    width: 6rem;
-  }
-  
-  .buttonLoginSizeSmallerPT {
-    width: 7rem;
-  }
-  
-  .buttonHomeSize {
-    width: 14rem;
-  }
-  
-  .buttonHome {
-    border: 0.1em solid #000000;
-    color: #000000;
-  }
-  
-  .buttonHome:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border: 0.1em solid #000000;
-  }
-  
-  .buttonRegisterSize {
-    width: 8rem;
-  }
-  
-  .buttonRegisterSizeHEI {
-    width: 16rem;
-  }
-  
-  .buttonHomeCompSize {
-    width: 10rem;
-  }
-  
-  .buttonMessageRegisterSize {
-    width: 13rem;
-  }
+  padding: 0.1rem;
+  font-size: 16px;
+  font-family: "Quicksand", "Montserrat", sans-serif !important;
+  border-radius: 5px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.buttonStudy {
+  border: 0.1em solid #ae0168;
+  color: #ae0168;
+}
+
+.buttonStudy:hover {
+  background-color: #ae0168;
+  color: #ffffff;
+  border: 0.1em solid #ae0168;
+}
+
+.buttonWork {
+  border: 0.1em solid #005e89;
+  color: #005e89;
+}
+
+.buttonWork:hover {
+  background-color: #005e89;
+  color: #ffffff;
+  border: 0.1em solid #005e89;
+}
+
+a .buttonWork {
+  color: #005e89 !important;
+}
+
+a .buttonWork:hover {
+  color: #ffffff !important;
+}
+
+.buttonCancel {
+  border: 0.1em solid #000000;
+  color: #000000;
+}
+
+.buttonCancel:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.1em solid #000000;
+}
+
+.buttonLoginSize {
+  width: 8rem;
+}
+
+.buttonLoginSizeSmaller {
+  width: 6rem;
+}
+
+.buttonLoginSizeSmallerPT {
+  width: 7rem;
+}
+
+.buttonHomeSize {
+  width: 14rem;
+}
+
+.buttonHome {
+  border: 0.1em solid #000000;
+  color: #000000;
+}
+
+.buttonHome:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 0.1em solid #000000;
+}
+
+.buttonRegisterSize {
+  width: 8rem;
+}
+
+.buttonRegisterSizeHEI {
+  width: 16rem;
+}
+
+.buttonHomeCompSize {
+  width: 10rem;
+}
+
+.buttonMessageRegisterSize {
+  width: 13rem;
+}

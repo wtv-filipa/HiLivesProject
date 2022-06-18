@@ -10,8 +10,7 @@ if (isset($_SESSION["idUser"])) {
   $query = "SELECT idvacancies, vacancy_name_en, description_vac_en, name_user
           FROM vacancies 
           INNER JOIN users on vacancies.company_id = users.	idusers
-          INNER JOIN workday on vacancies.workday_idworkday = workday.idworkday
-          ORDER BY company_id DESC";
+          INNER JOIN workday on vacancies.workday_idworkday = workday.idworkday";
 
   $array_val = mysqli_query($link, $query);
 

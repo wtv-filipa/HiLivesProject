@@ -125,7 +125,7 @@ if (isset($_GET["translate"])) {
 
                     <div class="form-group text-center mt-4">
                         <div class="mx-auto col-sm-10 pb-3 pt-2">
-                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize me-4">Save</button>
+                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize mr-4">Save</button>
 
                             <a href="vac_t.php" title="Exit translation">
                                 <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancel</button>
