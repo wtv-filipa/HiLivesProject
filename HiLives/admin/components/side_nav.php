@@ -89,7 +89,6 @@
         <a class="collapse-item" href="institution_t.php">Institution type</a>
         <a class="collapse-item" href="learn_t.php">Learning type</a>
         <a class="collapse-item" href="region_t.php">Region</a>
-        <a class="collapse-item" href="type_t.php">Users type</a>
         <a class="collapse-item" href="workday_t.php">Workday</a>
         <a class="collapse-item" href="environment_t.php">Work environment</a>
       </div>
