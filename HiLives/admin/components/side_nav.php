@@ -86,7 +86,7 @@
         <a class="collapse-item" href="country_t.php">Country</a>
         <a class="collapse-item" href="regime_t.php">Course regime</a>
         <a class="collapse-item" href="educ_t.php">Education level</a>
-        <a class="collapse-item" href="institution.php">Institution type</a>
+        <a class="collapse-item" href="institution_t.php">Institution type</a>
         <a class="collapse-item" href="learn_t.php">Learning type</a>
         <a class="collapse-item" href="region_t.php">Region</a>
         <a class="collapse-item" href="type_t.php">Users type</a>

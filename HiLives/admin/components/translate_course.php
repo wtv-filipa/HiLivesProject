@@ -115,7 +115,6 @@ if (isset($_GET["translate"])) {
             </div>
 
 <?php
-            include('components/delete_modal.php');
         }
     }
     mysqli_stmt_close($stmt);
