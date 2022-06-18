@@ -55,6 +55,7 @@
         <a class="collapse-item" href="UC_jovem.php">People with IDD Courses</a>
         <a class="collapse-item" href="courses_hei.php">HEIs courses</a>
         <a class="collapse-item" href="vacancies_emp.php">Companies Vacancies</a>
+        <a class="collapse-item" href="contact.php">Problems/suggestions</a>
       </div>
     </div>
   </li>
