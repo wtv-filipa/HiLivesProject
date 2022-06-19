@@ -1,9 +1,9 @@
 <div class="col-12 text-center mt-5">
-    <h1>Página em construção!</h1>
-    <p>Lamentamos, mas esta página ainda não se encontra finalizada...</p>
-    <a href="homePerson.php" title="Voltar à página inicial">
+    <h1>Síða í smíðum!</h1>
+    <p>Því miður, en þessari síðu er ekki lokið enn...</p>
+    <a href="homePerson.php" title="Aftur heim">
         <button class="btn buttonDesign buttonWork buttonRegisterSizeHEI m-0">
-            Voltar à página inicial
+            Aftur heim
         </button>
     </a>
 </div>

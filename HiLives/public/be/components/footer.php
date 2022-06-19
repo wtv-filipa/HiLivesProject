@@ -13,15 +13,15 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
       <div class="row">
         <div class="col-lg-5 col-xs-12 aboutCompany">
           <h3>HiLives</h3>
-          <p class="pr-5">A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia e entrarem no mercado de trabalho.</p>
+          <p class="pr-5">HiLives is een platform dat mensen met intellectuele en ontwikkelingsmoeilijkheden in staat stelt om kansen te vinden om te studeren aan verschillende universiteiten in de Europese Unie en de arbeidsmarkt te betreden.</p>
           <p class="socialLinks">
-            <a href="http://hilives.web.ua.pt/" class="me-3" title="Website da HiLives">
+            <a href="http://hilives.web.ua.pt/" class="me-3" title="Website Van HiLives">
               <i class="fa-solid fa-globe"></i>
             </a>
-            <a href="https://www.facebook.com/HiLives_Erasmus-111765073655672/" class="me-3" title="Facebook da HiLives">
+            <a href="https://www.facebook.com/HiLives_Erasmus-111765073655672/" class="me-3" title="Facebook Van HiLives">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com/HiLives_Erasmus" title="Twitter da HiLives">
+            <a href="https://twitter.com/HiLives_Erasmus" title="Twitter Van HiLives">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </p>
@@ -29,60 +29,60 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
         <div class="col-lg-3 col-xs-12 links mb-3">
           <h4 class="mt-lg-0 mt-sm-3">Parceiros</h4>
           <ul class="m-0 p-0">
-            <li><a href="https://www.ua.pt/" title="Website da Universidade de Aveiro">Universidade de Aveiro</a></li>
-            <li><a href="https://english.hi.is/university_of_iceland" title="Website da Universidade da Islândia">Universidade da Islândia (UI)</a></li>
-            <li><a href="https://www.usal.es/" title="Website da Universidade de Salamanca">Universidade de Salamanca</a></li>
-            <li><a href="https://www.ugent.be/en" title="Website da Universidade de Ghent">Universidade de Ghent</a></li>
-            <li><a href="https://assol.pt/" title="Website da ASSOL">ASSOL</a></li>
-            <li><a href="https://www.formem.org.pt/" title="Website da FORMEM">FORMEM</a></li>
-            <li><a href="https://paisemrede.pt/" title="Website da Pais em Rede">Pais em Rede</a></li>
-            <li><a href="https://www.facebook.com/pages/category/Organization/AVISPT21-Associa%C3%A7%C3%A3o-de-Viseu-de-Portadores-de-Trissomia-21-1642598149403790/" title="Website da AVISPT21">AVISPT21</a></li>
+            <li><a href="https://www.ua.pt/" title="Website van de Universiteit van Aveiro">Universiteit van Aveiro</a></li>
+            <li><a href="https://english.hi.is/university_of_iceland" title="Website van de Universiteit van IJsland">Universiteit van IJsland (IU)</a></li>
+            <li><a href="https://www.usal.es/" title="Website van de Universiteit van Salamanca">Universiteit van Salamanca</a></li>
+            <li><a href="https://www.ugent.be/en" title="Website universiteit Gent">Universiteit Gent</a></li>
+            <li><a href="https://assol.pt/" title="Website van ASSOL">ASSOL</a></li>
+            <li><a href="https://www.formem.org.pt/" title="Website van FORMEM">FORMEM</a></li>
+            <li><a href="https://paisemrede.pt/" title="Website van Pais em Rede">Pais em Rede</a></li>
+            <li><a href="https://www.facebook.com/pages/category/Organization/AVISPT21-Associa%C3%A7%C3%A3o-de-Viseu-de-Portadores-de-Trissomia-21-1642598149403790/" title="Website van AVISPT21">AVISPT21</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 links">
-          <h4 class="mt-lg-0 mt-sm-4">Outros</h4>
+          <h4 class="mt-lg-0 mt-sm-4">Overige</h4>
           <ul class="m-0 p-0">
             <?php
             if ($User_type == 7) {
             ?>
-            <!--Link with match-->
-              <li><a href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
-              <li><a href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a></li>
-              <li><a href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a></li>
+              <!--Link with match-->
+              <li><a href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Ga naar home"> Home</a></li>
+              <li><a href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a></li>
+              <li><a href="allVacanciesComp.php" title="Ga naar mijn vacaturepagina"> Vacatures</a></li>
             <?php
             } else if ($User_type == 10) {
             ?>
-            <!--Link with match-->
-              <li><a href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
-              <li><a href="matchCourse.php" title="Ir para a página das ligações com cursos">Eu quero estudar</a></li>
-              <li><a href="matchVacancy.php" title="Ir para a página das ligações com vagas">Eu quero trabalhar</a></li>
+              <!--Link with match-->
+              <li><a href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Ga naar home"> Home</a></li>
+              <li><a href="matchCourse.php" title="Ga naar de links pagina met cursussen">Ik wil studeren</a></li>
+              <li><a href="matchVacancy.php" title="Ga naar de vacaturelinks pagina">Wil werken</a></li>
             <?php
             } else if ($User_type == 13) {
             ?>
-            <!--Link with match-->
-              <li><a href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Ir para a página inicial">Página Inicial</a></li>
-              <li><a href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a></li>
-              <li><a href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a></li>
+              <!--Link with match-->
+              <li><a href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Ga naar home"> Home</a></li>
+              <li><a href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a></li>
+              <li><a href="allCoursesHeis.php" title="Ga naar mijn cursuspagina">Cursussen</a></li>
             <?php
             } else if ($User_type == 16) {
             ?>
-              <li><a href="homeTutor.php" title="Ir para a página inicial">Página Inicial</a></li>
-              <li><a href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a></li>
-              <li><a href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a></li>
+              <li><a href="homeTutor.php" title="Ga naar home"> Home</a></li>
+              <li><a href="registerRequestsTutor.php" title="Ga naar de pagina registratieverzoeken">Verzoeken</a></li>
+              <li><a href="editRequestsTutor.php" title="Ga naar de pagina bewerkingsverzoeken">Verzoeken bewerken</a></li>
             <?php
             }
             ?>
-            <li><a href="stories.php" title="Ir para a página das histórias da HiLives">Histórias da HiLives</a></li>
-            <li><a href="accessibility.php" title="Ir para a página da acessibilidade">Acessibilidade</a></li>
-            <li><a href="help.php" title="Ir para a página da ajuda">Ajuda</a></li>
-            <li><a href="construction.php" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></li>
+            <li><a href="stories.php" title="Ga naar hilives stories pagina">HiLives-verhalen</a></li>
+            <li><a href="accessibility.php" title="Ga naar de toegankelijkheidspagina">Toegankelijkheid</a></li>
+            <li><a href="help.php" title="Ga naar de helppagina">Help</a></li>
+            <li><a href="construction.php" title="Ga naar de platformkaart">Platform Map</a></li>
           </ul>
         </div>
       </div>
       <hr>
       <div class="row mt-2">
         <div class="col copyright">
-          <p><small> Copyright © HiLives 2022. Todos os direitos reservados.</small></p>
+          <p><small>Copyright © HiLives 2022. Alle rechten voorbehouden.</small></p>
         </div>
       </div>
     </div>
@@ -96,15 +96,15 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
       <div class="row">
         <div class="col-lg-5 col-xs-12 aboutCompany">
           <h3>HiLives</h3>
-          <p class="pr-5">A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
+          <p class="pr-5">HiLives is een platform waarmee mensen met intellectuele en ontwikkelingsmoeilijkheden mogelijkheden kunnen vinden om te studeren aan verschillende universiteiten in de Europese Unie.</p>
           <p class="socialLinks">
-            <a href="http://hilives.web.ua.pt/" class="me-3" title="Website da HiLives">
+            <a href="http://hilives.web.ua.pt/" class="me-3" title="Website Van HiLives">
               <i class="fa-solid fa-globe"></i>
             </a>
-            <a href="https://www.facebook.com/HiLives_Erasmus-111765073655672/" class="me-3" title="Facebook da HiLives">
+            <a href="https://www.facebook.com/HiLives_Erasmus-111765073655672/" class="me-3" title="Facebook Van HiLives">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com/HiLives_Erasmus" title="Twitter da HiLives">
+            <a href="https://twitter.com/HiLives_Erasmus" title="Twitter Van HiLives">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </p>
@@ -112,29 +112,29 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
         <div class="col-lg-3 col-xs-12 links mb-3">
           <h4 class="mt-lg-0 mt-sm-3">Parceiros</h4>
           <ul class="m-0 p-0">
-            <li><a href="https://www.ua.pt/" title="Website da Universidade de Aveiro">Universidade de Aveiro</a></li>
-            <li><a href="https://english.hi.is/university_of_iceland" title="Website da Universidade da Islândia">Universidade da Islândia (UI)</a></li>
-            <li><a href="https://www.usal.es/" title="Website da Universidade de Salamanca">Universidade de Salamanca</a></li>
-            <li><a href="https://www.ugent.be/en" title="Website da Universidade de Ghent">Universidade de Ghent</a></li>
-            <li><a href="https://assol.pt/" title="Website da ASSOL">ASSOL</a></li>
-            <li><a href="https://www.formem.org.pt/" title="Website da FORMEM">FORMEM</a></li>
-            <li><a href="https://paisemrede.pt/" title="Website da Pais em Rede">Pais em Rede</a></li>
-            <li><a href="https://www.facebook.com/pages/category/Organization/AVISPT21-Associa%C3%A7%C3%A3o-de-Viseu-de-Portadores-de-Trissomia-21-1642598149403790/" title="Website da AVISPT21">AVISPT21</a></li>
+            <li><a href="https://www.ua.pt/" title="Website van de Universiteit van Aveiro">Universiteit van Aveiro</a></li>
+            <li><a href="https://english.hi.is/university_of_iceland" title="Website van de Universiteit van IJsland">Universiteit van IJsland (IU)</a></li>
+            <li><a href="https://www.usal.es/" title="Website van de Universiteit van Salamanca">Universiteit van Salamanca</a></li>
+            <li><a href="https://www.ugent.be/en" title="Website universiteit Gent">Universiteit Gent</a></li>
+            <li><a href="https://assol.pt/" title="Website van ASSOL">ASSOL</a></li>
+            <li><a href="https://www.formem.org.pt/" title="Website van FORMEM">FORMEM</a></li>
+            <li><a href="https://paisemrede.pt/" title="Website van Pais em Rede">Pais em Rede</a></li>
+            <li><a href="https://www.facebook.com/pages/category/Organization/AVISPT21-Associa%C3%A7%C3%A3o-de-Viseu-de-Portadores-de-Trissomia-21-1642598149403790/" title="Website van AVISPT21">AVISPT21</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-xs-12 links">
-          <h4 class="mt-lg-0 mt-sm-4">Outros</h4>
+          <h4 class="mt-lg-0 mt-sm-4">Overige</h4>
           <ul class="m-0 p-0">
-            <li><a href="accessibility.php" title="Ir para a página da acessibilidade">Acessibilidade</a></li>
-            <li><a href="help.php" title="Ir para a página da ajuda">Ajuda</a></li>
-            <li><a href="construction.php" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></li>
+            <li><a href="accessibility.php" title="Ga naar de toegankelijkheidspagina">Toegankelijkheid</a></li>
+            <li><a href="help.php" title="Ga naar de helppagina">Help</a></li>
+            <li><a href="construction.php" title="Ga naar de platformkaart">Platform Map</a></li>
           </ul>
         </div>
       </div>
       <hr>
       <div class="row mt-2">
         <div class="col copyright">
-          <p><small> Copyright © HiLives 2022. Todos os direitos reservados.</small></p>
+          <p><small> Copyright © HiLives 2022. Alle rechten voorbehouden.</small></p>
         </div>
       </div>
     </div>

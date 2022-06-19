@@ -13,32 +13,32 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
     if ($idUser == $id_navegar) {
 
-        $query = "SELECT name_user, email_user, contact_user, birth_date, description, website, facebook, instagram, profile_img
+        $query = "SELECT name_user, email_user, contact_user, birth_date, description_be, website, facebook, instagram, profile_img
         FROM users 
         WHERE idusers =?";
 
-        $query2 = "SELECT idregion, name_region, region_idregion
+        $query2 = "SELECT idregion, name_region_be, region_idregion
         FROM region
         LEFT JOIN users_has_region
         ON  region.idregion = users_has_region.region_idregion AND users_has_region.users_idusers= ?
         INNER JOIN country ON region.country_idcountry = country.idcountry
         WHERE name_country = 'Portugal'";
 
-        $query3 = "SELECT idregion, name_region, region_idregion
+        $query3 = "SELECT idregion, name_region_be, region_idregion
         FROM region
         LEFT JOIN users_has_region
         ON  region.idregion = users_has_region.region_idregion AND users_has_region.users_idusers= ?
         INNER JOIN country ON region.country_idcountry = country.idcountry
         WHERE name_country = 'Espanha'";
 
-        $query4 = "SELECT idregion, name_region, region_idregion
+        $query4 = "SELECT idregion, name_region_be, region_idregion
         FROM region
         LEFT JOIN users_has_region
         ON  region.idregion = users_has_region.region_idregion AND users_has_region.users_idusers= ?
         INNER JOIN country ON region.country_idcountry = country.idcountry
         WHERE name_country = 'Bélgica'";
 
-        $query5 = "SELECT idregion, name_region, region_idregion
+        $query5 = "SELECT idregion, name_region_be, region_idregion
         FROM region
         LEFT JOIN users_has_region
         ON  region.idregion = users_has_region.region_idregion AND users_has_region.users_idusers= ?
@@ -56,9 +56,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                 <div class="container">
                     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="homeComp.php" title="Voltar à página inicial">Página Inicial</a></li>
-                            <li class="breadcrumb-item"><a href="profile.php" title="Voltar à minha área">A minha área</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Editar perfil</li>
+                            <li class="breadcrumb-item"><a href="homeComp.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="profile.php" title="Terug naar mijn profiel">Mijn profiel</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Profiel bewerken</li>
                         </ol>
                     </nav>
 
@@ -67,17 +67,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         $msg_show = true;
                         switch ($_SESSION["edit_comp"]) {
                             case 1:
-                                $message = "Dados editados com sucesso.";
+                                $message = "Gegevens met succes bewerkt.";
                                 $class = "alert-success";
                                 $_SESSION["edit_comp"] = 0;
                                 break;
                             case 2:
-                                $message = "É necessário preencher todos os campos obrigatórios.";
+                                $message = "U moet alle verplichte velden invullen.";
                                 $class = "alert-warning";
                                 $_SESSION["edit_comp"] = 0;
                                 break;
                             case 3:
-                                $message = "Ocorreu um erro a processar o teu pedido, por favor tenta novamente mais tarde.";
+                                $message = "Er is een fout opgetreden bij het verwerken van uw bestelling, probeer het later opnieuw.";
                                 $class = "alert-warning";
                                 $_SESSION["edit_comp"] = 0;
                                 break;
@@ -106,7 +106,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                     <div class="card o-hidden border-0 shadowCard my-5 paddingForms">
                         <div class="card-body p-0">
-                            <h1 class="text-center">Editar Perfil</h1>
+                            <h1 class="text-center">Profiel bewerken</h1>
                             <hr>
                             <div class="row">
                                 <!--PROFILE PICTURE-->
@@ -122,24 +122,24 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                                             if (isset($profile_img)) {
                                             ?>
-                                                <img id="img_perf" class="image_profile" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="imagem de perfil" title="imagem de perfil" />
+                                                <img id="img_perf" class="image_profile" src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" alt="profielfoto" title="profielfoto" />
                                             <?php
                                             } else {
                                             ?>
-                                                <img id="img_perf" class="image_profile" src="../../img/no_profile_img.png" alt="sem imagem de perfil" title="sem imagem de perfil" />
+                                                <img id="img_perf" class="image_profile" src="../../img/no_profile_img.png" alt="geen profielfoto" title="geen profielfoto" />
                                             <?php
                                             }
                                             ?>
                                         </div>
                                         <div class="alert alert-warning mt-3" role="alert">
-                                            <span>Carregue no botão que está em cima da imagem para alterar a sua fotografia.</span>
+                                            <span>Druk op de knop boven op de afbeelding om uw foto te wijzigen.</span>
                                         </div>
                                         <!----------------------MODAL DE CROP--------------->
                                         <div id="uploadimageModal" class="modal" tabindex="-1" role="dialog">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Importar e cortar a imagem de perfil</h4>
+                                                        <h4 class="modal-title">De profielfoto importeren en bijsnijden</h4>
                                                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar" aria-hidden=true></button>
                                                     </div>
                                                     <div class="modal-body">
@@ -153,10 +153,10 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                     <div class="modal-footer">
                                                         <div class="row">
                                                             <div class="col-md-4 me-3">
-                                                                <button class="btn buttonDesign buttonWork buttonLoginSize crop_image" value="Upload Image" name="Submit"> Guardar </button>
+                                                                <button class="btn buttonDesign buttonWork buttonLoginSize crop_image" value="Upload Image" name="Submit"> Redden </button>
                                                             </div>
                                                             <div class="col-md-4 ms-3">
-                                                                <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Fechar</button>
+                                                                <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize" data-bs-dismiss="modal">Sluiten</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -169,56 +169,55 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                 </div>
                                 <!--OTHER INFOS-->
                                 <div class="col-xs-12 col-md-8">
-                                    <form method="post" role="form" id="register-form" action="../../scripts/editProfileComp.php?edit=<?= $idUser ?>">
-                                        <p style="font-size: 14px; color: #005E89 !important;">* Preenchimento
-                                            obrigatório</p>
+                                    <form method="post" role="form" id="register-form" action="../../scripts/editProfileComp_be.php?edit=<?= $idUser ?>">
+                                        <p style="font-size: 14px; color: #005E89 !important;">* Verplicht</p>
                                         <!--NAME-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="username">Nome <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="username">Naam <span class="asterisk">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Escreva aqui o nome da empresa" aria-required="true" required="required" value="<?= $name_user ?>">
+                                                <input type="text" class="form-control greyBorder" id="username" name="nome" placeholder="Schrijf hier de bedrijfsnaam" aria-required="true" required="required" value="<?= $name_user ?>">
                                             </div>
                                         </div>
                                         <!--EMAIL-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="email">Email <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="email">E-mail <span class="asterisk">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Escreva aqui o email da empresa" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
+                                                <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Schrijf hier de e-mail van het bedrijf" aria-required="true" required="required" onchange="email_validate(this.value);" value="<?= $email_user ?>">
                                             </div>
                                         </div>
 
                                         <!--DATE OF BIRTH-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="data_nasc">Data de fundação <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="data_nasc">Datum van oprichting <span class="asterisk">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="date" class="form-control greyBorder" id="data_nasc" name="data_nasc" placeholder="data de nascimento" aria-required="true" required="required" value="<?= $birth_date ?>">
+                                                <input type="date" class="form-control greyBorder" id="data_nasc" name="data_nasc" placeholder="Datum van oprichting" aria-required="true" required="required" value="<?= $birth_date ?>">
                                             </div>
                                         </div>
 
                                         <!--MOBILE PHONE-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="phone">Contacto telefónico <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="phone">Roepen <span class="asterisk">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Escreve aqui o teu número de telemóvel" aria-required="true" required="required" value="<?= $contact_user ?>">
+                                                <input type="text" class="form-control greyBorder" id="phone" name="phone" placeholder="Schrijf hier uw mobiele nummer" aria-required="true" required="required" value="<?= $contact_user ?>">
                                             </div>
                                         </div>
 
                                         <!--COUNTRY-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="pais">País da Empresa <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="pais">Land van het bedrijf <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="pais">
                                                 <option value="pt">Portugal</option>
-                                                <option value="es">Espanha</option>
-                                                <option value="be">Bélgica</option>
-                                                <option value="ic">Islândia</option>
+                                                <option value="es">Spanje</option>
+                                                <option value="be">België</option>
+                                                <option value="ic">IJsland</option>
                                             </select>
                                         </div>
 
                                         <!--REGION PORTUGAL-->
                                         <div class="form-group pb-4 formulario" id="pt">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecteer de bedrijfsregio <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="regiao" name="regiao">
-                                                <option selected disabled>Selecione uma opção</option>
+                                                <option selected disabled>Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query2)) {
@@ -242,9 +241,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                                         <!--REGION SPAIN-->
                                         <div class="form-group pb-4 formulario" style="display:none;" id="es">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecteer de bedrijfsregio <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="regiao" name="regiao">
-                                                <option selected disabled>Selecione uma opção</option>
+                                                <option selected disabled>Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query3)) {
@@ -268,9 +267,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                                         <!--REGION BELGIUM-->
                                         <div class="form-group pb-4 formulario" style="display:none;" id="be">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecteer de bedrijfsregio <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="regiao" name="regiao">
-                                                <option selected disabled>Selecione uma opção</option>
+                                                <option selected disabled>Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query4)) {
@@ -294,9 +293,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                                         <!--REGION ICELAND-->
                                         <div class="form-group pb-4 formulario" style="display:none;" id="ic">
-                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecione a região da Empresa <span class="asterisk">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="regiao">Selecteer de bedrijfsregio <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="regiao" name="regiao">
-                                                <option selected disabled>Selecione uma opção</option>
+                                                <option selected disabled>Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query5)) {
@@ -322,7 +321,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="site">Website <span class="asterisk">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="site" name="site" placeholder="Insira aqui o website da empresa" aria-required="true" required="required" value="<?= $website ?>">
+                                                <input type="text" class="form-control greyBorder" id="site" name="site" placeholder="Ga hier naar de website van het bedrijf" aria-required="true" required="required" value="<?= $website ?>">
                                             </div>
                                         </div>
 
@@ -330,7 +329,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="face">Facebook </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="face" name="face" placeholder="Insira aqui o Facebook da empresa" value="<?= $facebook ?>">
+                                                <input type="text" class="form-control greyBorder" id="face" name="face" placeholder="Voer hier de Facebook van het bedrijf in" value="<?= $facebook ?>">
                                             </div>
                                         </div>
 
@@ -338,19 +337,19 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="insta">Instagram </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="insta" name="insta" placeholder="Insira aqui o Instagram da empresa" value="<?= $instagram ?>">
+                                                <input type="text" class="form-control greyBorder" id="insta" name="insta" placeholder="Plaats hier de Instagram van het bedrijf" value="<?= $instagram ?>">
                                             </div>
                                         </div>
 
                                         <!--DESCRIÇÃO-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="desc">Descrição <span class="asterisk">*</span></label>
-                                            <textarea class="form-control " id="exp_t" rows="5" name="desc" placeholder="Escreva aqui uma descrição" aria-required="true" required="required"> <?= $description ?> </textarea>
+                                            <label class="boldFont mt-3 pb-2" for="desc">Beschrijving <span class="asterisk">*</span></label>
+                                            <textarea class="form-control " id="exp_t" rows="5" name="desc" placeholder="Schrijf hier een beschrijving" aria-required="true" required="required"> <?= $description ?> </textarea>
                                         </div>
 
                                         <div class="form-group text-center mt-2">
                                             <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                                <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Guardar</button>
+                                                <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Redden</button>
                                             </div>
                                         </div>
                                     </form>

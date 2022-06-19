@@ -8,22 +8,22 @@
                 $msg_show = true;
                 switch ($_SESSION["login"]) {
                     case 1:
-                        $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                        $message = "Er is een fout opgetreden bij het verwerken van uw bestelling, probeer het later opnieuw.";
                         $class = "alert-warning";
                         $_SESSION["login"] = 0;
                         break;
                     case 2:
-                        $message = "É necessário ter todos os campos preenchidos.";
+                        $message = "U moet alle velden hebben ingevuld.";
                         $class = "alert-warning";
                         $_SESSION["login"] = 0;
                         break;
                     case 3:
-                        $message = "Dados inseridos incorretos, por favor tente novamente.";
+                        $message = "Onjuist ingevoerde gegevens, probeer het opnieuw.";
                         $class = "alert-warning";
                         $_SESSION["login"] = 0;
                         break;
                     case 4:
-                        $message = "Registo efetuado com sucesso!";
+                        $message = "Geslaagde registratie!";
                         $class = "alert-success";
                         $_SESSION["login"] = 0;
                         break;
@@ -55,37 +55,37 @@
                         <div class="col-lg-12">
                             <div class="paddingForms">
                                 <div class="text-center">
-                                    <a href="../../../index.php" title="Voltar à página inicial"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="Logótipo do HiLives" title="Bem-vindo à HiLives!"></a>
-                                    <h1 class="mb-4 weightTitle">Bem-vindo!</h1>
+                                    <a href="../../../indexBE.php" title="Terug naar home"><img class="pb-4 img-fluid reSize" src="../../img/logo.svg" alt="HiLives-logo" title="Welkom bij HiLives!"></a>
+                                    <h1 class="mb-4 weightTitle">Welkom!</h1>
                                 </div>
-                                <form method="post" role="form" id="register-form" action="../../scripts/login.php">
+                                <form method="post" role="form" id="register-form" action="../../scripts/login_be.php">
 
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="inputEmail">Email</label>
+                                        <label class="boldFont mt-3 pb-2" for="inputEmail">E-mail</label>
                                         <div class="p-0 m-0">
-                                            <input type="email" class="form-control greyBorder" id="inputEmail" name="email" placeholder="Escreve aqui o email da tua conta no HiLives" aria-required="true" required="required">
+                                            <input type="email" class="form-control greyBorder" id="inputEmail" name="email" placeholder="Schrijf hier uw HiLives account e-mail" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <div class="form-group pb-4">
-                                        <label class="boldFont mt-3 pb-2" for="password">Palavra-passe</label>
+                                        <label class="boldFont mt-3 pb-2" for="password">Wachtwoord</label>
                                         <div class="p-0 m-0">
-                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Escreve aqui a tua palavra-passe do HiLives" aria-required="true" required="required">
+                                            <input type="password" class="form-control greyBorder" id="password" name="password" placeholder="Schrijf hier uw HiLives wachtwoord" aria-required="true" required="required">
                                         </div>
                                     </div>
 
                                     <div class="form-group text-center mt-2">
                                         <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Entrar</button>
+                                            <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize">Aanmelden</button>
                                         </div>
                                     </div>
                                 </form>
                                 <hr>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para recuperares a tua palavra-passe" href="construction.php">Esqueceste-te da tua palavra-passe?</a>
+                                    <a class="small" title="Klik om uw wachtwoord te herstellen" href="construction.php">Bent u uw wachtwoord vergeten?</a>
                                 </div>
                                 <div class="text-center textForm">
-                                    <a class="small" title="Clica para te registares" href="../../../index.php">Ainda não estás inscrito? Faz o teu registo!</a>
+                                    <a class="small" title="Klik om te registreren" href="../../../indexBE.php">Ben je nog niet geregistreerd? Registreren!</a>
                                 </div>
                             </div>
                         </div>

@@ -1,17 +1,17 @@
 <div class="container pb-5">
 
     <div class="mt-5">
-        <h1>Ajuda - HiLives</h1>
+        <h1>Hulp - HiLives</h1>
     </div>
 
     <div class="mt-5">
-        <h2>O que é a HiLives?</h2>
-        <p>A HiLives é uma plataforma que permite a pessoas com Dificuldades Intelectuais e Desenvolvimentais encontrarem oportunidades para estudar em várias universidades da União Europeia.</p>
-        <p>Para além disto, a HiLives possibilita também que estas pessoas possam encontrar oportunidades de trabalho ajustadas ao seu perfil.</p>
-        <p>Se tens dúvidas acerca de como navegares pela aplicação, visita o <b><a href="construction.php" target="_blank" class="linkColor" title="Ir para o mapa da plataforma">Mapa da Plataforma</a></b>, e descobre como tudo está ordenado.</p>
+        <h2>Wat is HiLives?</h2>
+        <p>HiLives is een platform waarmee mensen met intellectuele en ontwikkelingsmoeilijkheden mogelijkheden kunnen vinden om te studeren aan verschillende universiteiten in de Europese Unie.</p>
+        <p>Daarnaast stelt HiLives deze mensen ook in staat om vacatures te vinden die zijn afgestemd op hun profiel.</p>
+        <p>Als u vragen hebt over hoe u door de app kunt navigeren, gaat u naar de <b><a href="construction.php" target="_blank" class="linkColor" title="Ga naar de platformkaart">Platform Map</a></b>, en ontdek hoe alles is geordend.</p>
 
         <div class="mt-5 mx-auto">
-            <h2 class="mb-3">Como utilizar a HiLives- vídeo explicativo</h2>
+            <h2 class="mb-3">Hoe HiLives te gebruiken - verklarende video</h2>
             <div class="videoContainer" controls>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -19,123 +19,115 @@
 
 
         <div class="mt-5">
-            <h3 class="subtitulo">Página Inicial - Sem início de sessão</h3>
+            <h3 class="subtitulo">Home - Geen login</h3>
 
-            <p>Existem <b>três opções</b> de registo:</p>
+            <p>Er <b>zijn drie</b> registratiemogelijkheden:</p>
             <ol class="infoSize">
-                <li>Pessoas</li>
-                <li>Instituições de Ensino Superior</li>
-                <li>Empresas</li>
+                <li>Volk</li>
+                <li>Instellingen voor hoger onderwijs</li>
+                <li>Bedrijven</li>
             </ol>
 
-            <p>É possível, dentro da mesma página, obter mais informações sobre o conteúdo da plataforma e ainda ver um vídeo promocional.</p>
+            <p>U kunt op dezelfde pagina meer informatie krijgen over de inhoud van het platform en toch een promotievideo bekijken.</p>
 
-            <p>Se a Pessoa, Instituição de Ensino Superior ou empresa já se tiver registado anteriormente, poderá <a href="login.php" title="Clica para iniciares sessão" target="_blank" class="linkColor" title="Iniciar sessão">iniciar a sua sessão</a></p>
+            <p>Als de persoon, instelling voor hoger onderwijs of bedrijf zich eerder heeft geregistreerd, kunt u <a href="login.php" title="Klik om in te loggen" target="_blank" class="linkColor" title="Aanmelden">Aanmelden</a></p>
         </div>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Pessoa com DID - Com sessão iniciada</h3>
+        <h3 class="subtitulo">Huis van persoon met DIS - Ingelogd</h3>
 
-        <p>O utilizador terá acesso a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>De gebruiker heeft toegang <b>tot</b> een navigatiebalk, die de koppelingen bevat:</p>
 
         <ol class="infoSize">
-            <li>Eu quero estudar</li>
-            <li>Eu quero trabalhar</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Ik wil studeren</li>
+            <li>Ik wil werken</li>
+            <li>HiLives Verhalen</li>
+            <li>Mijn omgeving</li>
+            <li>Andere talen</li>
         </ol>
 
-        <p>Ainda na página inicial, o utilizador poderá ver:</p>
+        <p>Ook op de startpagina kan de gebruiker zien:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Um vídeo de como interagir com a plataforma</li>
+            <li>Verklarende tekst van de belangrijkste kenmerken</li>
+            <li>Een video over hoe te communiceren met het platform</li>
         </ol>
 
-        <h3 class="mt-4">O que são as <b>Ligações</b>?</h3>
-        <p>As "Ligações" simbolizam o encontro de interesses entre as pessoas e as universidades, ou entre as pessoas e as vagas pulicadas por empresas. Se a pessoa tiver características que se adequam a uma determinada vaga, e o que esta procura numa pessoa, por exemplo, irá estabelecer-se uma "Ligação". Funciona de igual modo para as Instituições de Ensino Superior.</p>
+        <h3 class="mt-4">Wat zijn <b>verbindingen</b>?</h3>
+        <p>De "Verbindingen" symboliseren de ontmoeting van belangen tussen mensen en universiteiten, of tussen mensen en vacatures die door bedrijven worden besprongen. Als de persoon kenmerken heeft die passen bij een bepaalde vacature, en wat het bijvoorbeeld in een persoon zoekt, wordt een "Link" vastgesteld. Het werkt op dezelfde manier voor instellingen voor hoger onderwijs.</p>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>Tip:</b> Op elke pagina, door op het HiLives-logo te klikken, wordt u automatisch doorgestuurd naar de hoofdpagina.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Instituição de Ensino Superior - Com sessão iniciada</h3>
+        <h3 class="subtitulo">Home van de instelling voor hoger onderwijs - Ingelogd</h3>
 
-        <p>As Instituições de Ensino Superior registadas terão acesso, também, a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>Geregistreerde instellingen voor hoger onderwijs hebben ook toegang tot een <b>navigatiebalk</b>, die de links bevat:</p>
 
         <ol class="infoSize">
-            <li>Candidatos</li>
-            <li>Cursos</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Kandidaten</li>
+            <li>Cursussen</li>
+            <li>HiLives Verhalen</li>
+            <li>Mijn omgeving</li>
+            <li>Andere talen</li>
         </ol>
 
-        <p>Ainda na página inicial, as universidades terão acesso a informações sobre:</p>
+        <p>Ook op de homepage krijgen universiteiten toegang tot informatie over:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Últimos registos de pessoas com DID</li>
-            <li>Últimas vagas publicadas por empresas</li>
+            <li>Verklarende tekst van de belangrijkste kenmerken</li>
+            <li>Laatste links met mensen met intellectuele en ontwikkelingsmoeilijkheden</li>
         </ol>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>TIP:</b> Op elke pagina, door op het HiLives-logo te klikken, wordt u automatisch doorgestuurd naar de hoofdpagina.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Página Inicial da Empresa - Com sessão iniciada</h3>
+        <h3 class="subtitulo">Bedrijfshuis - Aangemeld</h3>
 
-        <p>As empresas registadas terão, também, acesso a <b>uma</b> barra de navegação, que contém os links:</p>
+        <p>Geregistreerde bedrijven hebben ook toegang tot een <b>navigatiebalk</b>, die de links bevat:</p>
 
         <ol class="infoSize">
-            <li>Candidatos</li>
-            <li>Vagas</li>
-            <li>Histórias do HiLives</li>
-            <li>A minha área</li>
-            <li>Outras línguas</li>
+            <li>Kandidaten</li>
+            <li>Vacatures</li>
+            <li>HiLives Verhalen</li>
+            <li>Mijn omgeving</li>
+            <li>Andere talen</li>
         </ol>
 
-        <p>Ainda na página inicial, as empresas terão acesso a informações sobre:</p>
+        <p>Ook op de homepage hebben bedrijven toegang tot informatie over:</p>
         <ol class="infoSize">
-            <li>Texto explicativos das principais funcionalidades</li>
-            <li>Últimas ligações com Pessoas com DID</li>
+            <li>Verklarende tekst van de belangrijkste kenmerken</li>
+            <li>Laatste links met mensen met intellectuele en ontwikkelingsmoeilijkheden</li>
         </ol>
 
-        <p><b>DICA:</b> Em qualquer página, ao clicar no logótipo da HiLives, o utilizador será automaticamente
-            redirecionado para a
-            página principal.</p>
+        <p><b>TIP:</b> Op elke pagina, door op het HiLives-logo te klikken, wordt u automatisch doorgestuurd naar de Thuis.</p>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Rodapé</h3>
+        <h3 class="subtitulo">Voettekst</h3>
 
-        <p>Presente no fim de todas as páginas, a HiLives possui vários links, entre eles:</p>
+        <p>HiLives is aanwezig aan het einde van alle pagina's en heeft verschillende links, waaronder:</p>
         <ol class="infoSize">
-            <li>Lista de parceiros da HiLives</li>
-            <li>Lista de atalhos para acesso rápido</li>
-            <li>Lista de outros links importantes (Acessibilidade, Política de Privacidade e Mapa da Aplicação)</li>
-            <li>Local para colocação de dúvidas ou sugestões</li>
-            <li>Ícones de acesso às redes sociais da HiLives (Facebook e Twitter)</li>
-            <li>Informações de direitos de autor</li>
+            <li>HiLives Partner lijst</li>
+            <li>Lijst met snelkoppelingen voor snelle toegang</li>
+            <li>Lijst met andere belangrijke links (toegankelijkheid, privacybeleid en app-kaart)</li>
+            <li>Plaats voor vraag of suggestie</li>
+            <li>HiLives toegangspictogrammen voor sociale media (Facebook en Twitter)</li>
+            <li>Copyright informatie</li>
         </ol>
     </div>
 
     <div class="mt-5">
-        <h3 class="subtitulo">Ícone de Acessibilidade (canto inferior direito)</h3>
+        <h3 class="subtitulo">Toegankelijkheidspictogram (rechtsonder)</h3>
 
-        <p>No canto inferior direito, presente também em todas as páginas, existe um <b>ícone representativo da acessibilidade</b>.</p>
+        <p>In de rechterbenedenhoek, ook aanwezig op alle pagina's, is er een <b>pictogram dat de toegankelijkheid vertegenwoordigt</b>.</p>
 
-        <p>Ao ser clicado, vão ser mostradas aos utilizadores várias opções para melhorar a navegação dos mesmos, o que
-            torna a HiLives uma plataforma totalmente inclusiva e de simples navegação.</p>
+        <p>Wanneer erop wordt geklikt, krijgen gebruikers verschillende opties te zien om hun navigatie te verbeteren, waardoor HiLives een volledig inclusief en eenvoudig navigatieplatform is.</p>
     </div>
 
     <div class="mt-5 mb-5">
-        <h2>Tens dúvidas ou sugestões?</h2>
+        <h2>Heeft u vragen of suggesties?</h2>
 
-        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
+        <p>Als je vragen hebt over HiLives, of een suggestie om het beter te maken, <b><a href="question_form.php" title="Klik om een e-mail te verzenden" target="_blank" class="linkColor" title="Contact HiLives">stuur ons een e-mail</a></b>. Wij helpen u graag verder en lezen wat u ons te vertellen heeft!</p>
     </div>
 </div>

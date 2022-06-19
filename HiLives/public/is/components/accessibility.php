@@ -1,52 +1,51 @@
 <div class="container pb-5">
 
     <div class="mt-5">
-        <h1>Acessibilidade</h1>
-        <p>Esta página apresenta um conjunto de indicações sobre a melhor forma de navegar na plataforma HiLives. Esta foi desenvolvida para oferecer o máximo de acessibilidade aos utilizadores, seguindo as Diretrizes para Acessibilidade de Conteúdos Web – WCAG 2.1, desenvolvidas pelo W3C – World Wide Web Consortium.</p>
-        <p>As várias etapas de validação, que decorreram ao longo do processo de desenvolvimento, permitiram oferecer uma plataforma cujo acesso pode ser feito pelo teclado e leitor de ecrã com sintetizador de voz. Todas a acessibilidade da plataforma pode ser ativa através do icon de acessibilidade localizado no canto inferior direito.</p>
+        <h1>Aðgengileiki</h1>
+        <p>Þessi síða veitir safn af ábendingum um hvernig best er að vafra um HiLives vettvang. Þetta var þróað til að veita notendum hámarks aðgengi, í samræmi við leiðbeiningar um aðgengi að vefefni - WCAG 2.1, þróað af W3C - World Wide Web Consortium.</p>
+        <p>Hin ýmsu staðfestingarskref, sem áttu sér stað í gegnum þróunarferlið, gerðu kleift að bjóða upp á vettvang þar sem hægt er að gera aðgang að lyklaborðinu og skjálesaranum með raddgervli. Allt aðgengi vettvangsins getur verið virkt í gegnum aðgengistáknið sem staðsett er í neðra hægra horninu.</p>
     </div>
 
     <div class="mt-5">
-        <h2>Descrição da plataforma</h2>
-        <p>A plataforma está organizada conforme descrito abaixo.</p>
+        <h2>Lýsing verkvangs</h2>
+        <p>Pallurinn er skipulagður eins og lýst er hér að neðan.</p>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Barra de Menu Geral</h3>
+            <h3 class="subtitulo">Almenn valmyndarslá</h3>
             <ol class="infoSize">
-                <li>Logo da HiLives, com link para a Página Inicial</li>
-                <li>Links para aceder às principais páginas da Plataforma</li>
-                <li>Ícone da foto de perfil</li>
-                <li>Link para acesso à área pessoa</li>
-                <li>Submenu para escolher o idioma</li>
+                <li>Merki merkisins HiLives, með tengingu við heimilið</li>
+                <li>Tenglar til að fá aðgang að aðalsíðum verkvangsins</li>
+                <li>Tákn prófílmyndar</li>
+                <li>Tengill til að fá aðgang að einstaklingssvæðinu</li>
+                <li>Undirvalmynd til að velja tungumálið</li>
             </ol>
         </div>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Área de conteúdos</h3>
-            <p>Na homepage das pessoas é possível encontrar:</p>
+            <h3 class="subtitulo">Efnissvæði</h3>
+            <p>Á heimasíðu people má finna:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Vídeo de como interagir com a plataforma</li>
+                <li>Helstu eiginleikar sömu</li>
+                <li>Myndband af því hvernig á að hafa samskipti við vettvang</li>
             </ol>
             <p>Na homepage das Instituições de Ensino Superior é possível encontrar:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Últimas entradas de pessoas</li>
-                <li>Últimas vagas publicadas por empresas</li>
+                <li>Helstu eiginleikar sömu</li>
+                <li>Nýleg símtöl</li>
             </ol>
             <p>Na homepage das empresas é possível encontrar:</p>
             <ol class="infoSize">
-                <li>Principais funcionalidades da mesma</li>
-                <li>Ligações recentes</li>
+                <li>Helstu eiginleikar sömu</li>
+                <li>Nýleg símtöl</li>
             </ol>
         </div>
 
         <div class="mt-2">
-            <h3 class="subtitulo">Rodapé</h3>
+            <h3 class="subtitulo">Fót</h3>
             <ol class="infoSize">
-                <li>Lista de parceiros, com respetivo link individual</li>
-                <li>Atalhos para conteúdos importantes da aplicação</li>
-                <li>Outros links importantes</li>
+                <li>Félagalisti, með einstökum tengli þeirra</li>
+                <li>Flýtileiðir í mikilvægt efni forrits</li>
+                <li>Aðrir mikilvægir tenglar</li>
             </ol>
         </div>
     </div>

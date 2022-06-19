@@ -11,17 +11,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
     $idUser = $_SESSION["idUser"];
     $idcourse = $_GET["course"];
 
-    $query = "SELECT name_course, description_course, website_course, facebook_course, instagram_course, course_director, email_course, phone_course, duration_course, credits_ects, languages, course_fee, certification, target, number_vac, stages, requirements, curriculum_plan, vocational_dimension, support, activities, course_regime_idcourse_regime, accommodation_idaccommodation
+    $query = "SELECT name_course_be, description_course_be, website_course, facebook_course, instagram_course, course_director, email_course, phone_course, duration_course_be, credits_ects_be, languages_be, course_fee_be, certification_be, target_be, number_vac, stages_be, requirements_be, curriculum_plan_be, vocational_dimension_be, support_be, activities_be, course_regime_idcourse_regime, accommodation_idaccommodation
     FROM courses
     WHERE users_idusers = ? AND idcourses = ?";
 
-    $query2 = "SELECT idcourse_regime, name_regime
+    $query2 = "SELECT idcourse_regime, name_regime_be
     FROM course_regime";
 
-    $query3 = "SELECT idaccommodation, name_accommodation
+    $query3 = "SELECT idaccommodation, name_accommodation_be
     FROM accommodation";
 
-    $query4 = "SELECT idareas, name_interested_area, areas_idareas
+    $query4 = "SELECT idareas, name_interested_area_be, areas_idareas
     FROM areas
     LEFT JOIN courses_has_areas
     ON  areas.idareas= courses_has_areas.areas_idareas AND courses_has_areas.courses_idcourses= ?";
@@ -37,9 +37,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
             <div class="container">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="homeHei.php" title="Voltar à página inicial">Página Inicial</a></li>
-                        <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Voltar aos meus cursos">Cursos</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Editar o curso <?= $name_course ?></li>
+                        <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar home"> Home</a></li>
+                        <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Terug naar mijn cursussen">Cursussen</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Bewerken of cursus <?= $name_course ?></li>
                     </ol>
                 </nav>
 
@@ -48,12 +48,12 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                     $msg_show = true;
                     switch ($_SESSION["course"]) {
                         case 1:
-                            $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                            $message = "Er is een fout opgetreden bij het verwerken van uw bestelling, probeer het later opnieuw.";
                             $class = "alert-warning";
                             $_SESSION["course"] = 0;
                             break;
                         case 2:
-                            $message = "É necessário preencher todos os campos obrigatórios.";
+                            $message = "U moet alle verplichte velden invullen.";
                             $class = "alert-warning";
                             $_SESSION["course"] = 0;
                             break;
@@ -87,26 +87,26 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                 <div class="paddingForms">
                                     <div class="text-center">
                                         <h1 class="mb-4 weightTitle">
-                                            Editar o curso <?= $name_course ?>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="Utilize uma linguagem simples e frases curtas. Sempre que encontrar um símbolo semelhante junto dos campos a preencher, poderá encontrar dicas de como preencher os mesmos. Caso pretenda que o texto apareça com parágrafos, coloque cada parágrafo entre '<p></p>'. Se pretender destacar alguma palavra coloque-a entre '<b></b>'">
+                                            Bewerken of cursus <?= $name_course ?>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dicas" data-bs-content="Gebruik eenvoudige taal en korte zinnen. Wanneer u een soortgelijk symbool vindt naast de in te vullen velden, kunt u tips vinden over hoe u deze kunt invullen. Als u wilt dat de tekst met alinea's wordt weergegeven, plaatst u elke alinea tussen '<p></p>'. Als je een woord wilt markeren, zet het dan tussen '<b></b>'">
                                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                 <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                             </svg>
                                         </h1>
                                     </div>
-                                    <form method="post" id="register-form" role="form" action="../../scripts/editCourseHei.php?course=<?= $idcourse ?>">
+                                    <form method="post" id="register-form" role="form" action="../../scripts/editCourseHei_be.php?course=<?= $idcourse ?>">
                                         <!--VACANCIE NAME-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="nome">Nome do Curso <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="nome">Naam cursus <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="nome" name="nome" placeholder="Insira aqui o nome do curso" aria-required="true" required="required" value="<?= $name_course ?>">
+                                                <input type="text" class="form-control greyBorder" id="nome" name="nome" placeholder="Vul hier de cursusnaam in" aria-required="true" required="required" value="<?= $name_course ?>">
                                             </div>
                                         </div>
 
                                         <!--DESCRIPTION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="descricao">Breve descrição do curso <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Insira uma pequena descrição relativamente ao curso" maxlength="445" aria-required="true" required="required"><?= $description_course ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="descricao">Korte cursusbeschrijving <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control textareaCountable" id="descricao" rows="5" name="descricao" placeholder="Voer een korte beschrijving van de cursus in" maxlength="445" aria-required="true" required="required"><?= $description_course ?></textarea>
                                             <div id="the-count">
                                                 <span id="current">0</span>
                                                 <span id="maximum">/ 445</span>
@@ -117,13 +117,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="website">
                                                 Website <span class="asteriskPink">*</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira o link do website sem o https//">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Voer de websitelink in zonder https://">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="website" name="website" placeholder="Insira o link do website com informação do curso" aria-required="true" required="required" value="<?= $website_course ?>">
+                                                <input type="text" class="form-control greyBorder" id="website" name="website" placeholder="Voer de websitelink met cursusinformatie in" aria-required="true" required="required" value="<?= $website_course ?>">
                                             </div>
                                         </div>
 
@@ -131,13 +131,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="facebook">
                                                 Facebook
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploFacebook">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Voer alleen de gebruikersnaam in. Bijvoorbeeld: @exemploFacebook">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="facebook" name="facebook" placeholder="Insira aqui o facebook do curso" value="<?= $facebook_course ?>">
+                                                <input type="text" class="form-control greyBorder" id="facebook" name="facebook" placeholder="Vul hier de cursus facebook in" value="<?= $facebook_course ?>">
                                             </div>
                                         </div>
 
@@ -145,48 +145,48 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="instagram">
                                                 Instagram
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas o nome de utilizador. Por exemplo: @exemploInstagram">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Voer alleen de gebruikersnaam in. Bijvoorbeeld: @exemploInstagram">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="instagram" name="instagram" placeholder="Insira aqui o instagram do curso" value="<?= $instagram_course ?>">
+                                                <input type="text" class="form-control greyBorder" id="instagram" name="instagram" placeholder="Plaats hier de instagram van de cursus" value="<?= $instagram_course ?>">
                                             </div>
                                         </div>
 
                                         <!--COURSE DIRECTOR-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="diretor">Diretor(a) do Curso <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="diretor">Cursusdirecteur <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="diretor" name="diretor" placeholder="Insira aqui o nome do diretor do curso" aria-required="true" required="required" value="<?= $course_director ?>">
+                                                <input type="text" class="form-control greyBorder" id="diretor" name="diretor" placeholder="Vul hier de naam van de cursusleider in" aria-required="true" required="required" value="<?= $course_director ?>">
                                             </div>
                                         </div>
 
                                         <!--EMAIL-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="email">Email do Curso <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="email">E-mail cursus <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Insira aqui o email que as pessoas podem contactar para esclarecer dúvidas do curso" aria-required="true" required="required" value="<?= $email_course ?>">
+                                                <input type="email" class="form-control greyBorder" id="email" name="email" placeholder="Vul hier het e-mailadres in waarmee mensen contact kunnen opnemen om vragen over de cursus te verduidelijken" aria-required="true" required="required" value="<?= $email_course ?>">
                                             </div>
                                         </div>
 
                                         <!--PHONE NUMBER-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="telefone">Telefone do curso <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="telefone">Reistelefoon <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="tel" class="form-control greyBorder" id="telefone" name="telefone" placeholder="Insira aqui o telefone que as pessoas podem contactar para esclarecer dúvidas do curso" aria-required="true" required="required" value="<?= $phone_course ?>">
+                                                <input type="tel" class="form-control greyBorder" id="telefone" name="telefone" placeholder="Vul hier de telefoon in waarmee mensen contact kunnen opnemen om vragen over de cursus te verduidelijken" aria-required="true" required="required" value="<?= $phone_course ?>">
                                             </div>
                                         </div>
 
                                         <!--secção-->
-                                        <h3 class="text-center" role="heading">Características gerais do Curso</h3>
+                                        <h3 class="text-center" role="heading">Algemene cursusfuncties</h3>
                                         <!----------->
 
                                         <!--AREAS-->
                                         <div class="form-group pb-4">
                                             <div class="row">
-                                                <label class="boldFont mt-3 pb-2" for="area">Selecione as áreas científicas que se adequam ao Curso <span class="asteriskPink">*</span></label>
+                                                <label class="boldFont mt-3 pb-2" for="area">Selecteer de wetenschappelijke gebieden die bij de cursus passen <span class="asteriskPink">*</span></label>
                                                 <?php
                                                 if (mysqli_stmt_prepare($stmt2, $query4)) {
                                                     mysqli_stmt_bind_param($stmt2, 'i', $idcourse);
@@ -216,28 +216,28 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <!--DURATION-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="duracao">
-                                                Duração do Curso <span class="asteriskPink">*</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique a duração do curso através de anos - semestres. Por exemplo: 1 ano - 2 semestres">
+                                                Duur van de cursus <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Geef de duur van de cursus door jaren heen aan - semesters. Bijvoorbeeld: 1 jaar - 2 semesters">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="duracao" name="duracao" placeholder="Indique a duração prevista do curso (em semestres)" aria-required="true" required="required" value="<?= $duration_course ?>">
+                                                <input type="text" class="form-control greyBorder" id="duracao" name="duracao" placeholder="Geef de verwachte duur van de cursus aan (in semesters)" aria-required="true" required="required" value="<?= $duration_course ?>">
                                             </div>
                                         </div>
 
                                         <!--ECTCS-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="ects">
-                                                Créditos ECTS <span class="asteriskPink">*</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique o apenas o número de ECTS. Por exemplo: 180">
+                                                ECTS-credits <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Vermeld alleen het ECTS-nummer. Bijvoorbeeld: 180">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="ects" name="ects" placeholder="Indique o número de ECTS que os estudantes podem adquirir" aria-required="true" required="required" value="<?= $credits_ects ?>">
+                                                <input type="text" class="form-control greyBorder" id="ects" name="ects" placeholder="Geef het aantal ECTS aan dat studenten kunnen kopen" aria-required="true" required="required" value="<?= $credits_ects ?>">
                                             </div>
                                         </div>
 
@@ -245,7 +245,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="regime">Regime <span class="asterisk">*</span></label>
                                             <select class="form-select greyBorder" id="regime" name="regime" aria-required="true" required="required">
-                                                <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
+                                                <option value="" selected disabled aria-disabled="true">Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query2)) {
@@ -271,101 +271,101 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="idioma">Idioma(s) de lecionação <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="idioma" name="idioma" placeholder="Insira o(s) idioma(s) em que o curso será lecionado" aria-required="true" required="required" value="<?= $languages ?>">
+                                                <input type="text" class="form-control greyBorder" id="idioma" name="idioma" placeholder="Voer de taal of talen in waarin de cursus zal worden gegeven" aria-required="true" required="required" value="<?= $languages ?>">
                                             </div>
                                         </div>
 
                                         <!--FEE-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="propina">
-                                                Valor da propina <span class="asteriskPink">*</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Indique se o valor é anual ou semestral. Por exemplo: 1000€/ano ou 1000€/semestre">
+                                                Collegegeld <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Geef aan of het bedrag jaarlijks of halfjaarlijks is. Bijvoorbeeld: 1000€/jaar of 1000€/semester">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="propina" name="propina" placeholder="Indique o valor da propina do curso" aria-required="true" required="required" value="<?= $course_fee ?>">
+                                                <input type="text" class="form-control greyBorder" id="propina" name="propina" placeholder="Vermeld de hoogte van het cursusgeld" aria-required="true" required="required" value="<?= $course_fee ?>">
                                             </div>
                                         </div>
 
                                         <!--CERTIFICATION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="certificacao">Certificação de curso <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="certificacao" rows="5" name="certificacao" placeholder="Indique o tipo de certificação que os estudantes irão obter ( se dão certificado, diploma ...)" aria-required="true" required="required"><?= $certification ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="certificacao">Cursus certificering <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="certificacao" rows="5" name="certificacao" placeholder="Geef het type certificering aan dat studenten zullen behalen (als ze een certificaat, diploma geven ...)" aria-required="true" required="required"><?= $certification ?></textarea>
                                         </div>
 
                                         <!--secção-->
-                                        <h3 class="text-center" role="heading">Destinatários e condições de admissão</h3>
+                                        <h3 class="text-center" role="heading">Ontvangers en toelatingsvoorwaarden</h3>
                                         <!----------->
 
                                         <!--TARGET-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="destinatarios">Destinatários <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="destinatarios" rows="5" name="destinatarios" placeholder="Indique a quem se destina o curso (todas as Pessoas com DID, a Pessoas com e sem DID, apenas a um grupo mais específico de DID...)" aria-required="true" required="required"><?= $target ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="destinatarios">Ontvangers <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="destinatarios" rows="5" name="destinatarios" placeholder="Geef aan voor wie de cursus bedoeld is (alle mensen met een verstandelijke beperking en ontwikkelingsstoornis, mensen met en zonder een verstandelijke beperking en ontwikkelingsstoornis, alleen een specifieke groep van mensen met een verstandelijke beperking en ontwikkelingsstoornis...)" aria-required="true" required="required"><?= $target ?></textarea>
                                         </div>
 
                                         <!--VACANCIES AVAILABLE-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="vagas">
-                                                Vagas disponíveis <span class="asteriskPink">*</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Insira apenas números.">
+                                            Vacatures beschikbaar <span class="asteriskPink">*</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16" data-bs-toggle="tooltip" data-bs-placement="right" title="Voer alleen getallen in.">
                                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
                                                 </svg>
                                             </label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="vagas" name="vagas" placeholder="Indique o número de vagas anuais disponíveis para o Curso" aria-required="true" required="required" value="<?= $number_vac ?>">
+                                                <input type="text" class="form-control greyBorder" id="vagas" name="vagas" placeholder="Geef het aantal jaarlijkse vacatures aan dat beschikbaar is voor de Cursus" aria-required="true" required="required" value="<?= $number_vac ?>">
                                             </div>
                                         </div>
 
                                         <!--STAGES-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="periodo">Fase(s) de candidatura <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="periodo">Fase(s) van de kandidatuur <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
-                                                <input type="text" class="form-control greyBorder" id="periodo" name="periodo" placeholder="Indique em que datas podem ser realizadas as candidaturas aos cursos" aria-required="true" required="required" value="<?= $stages ?>">
+                                                <input type="text" class="form-control greyBorder" id="periodo" name="periodo" placeholder="Geef aan op welke data aanvragen voor cursussen kunnen worden gedaan" aria-required="true" required="required" value="<?= $stages ?>">
                                             </div>
                                         </div>
 
                                         <!--REQUIREMENTS-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="requisitos">Requisitos <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Indique os requisitos que a pessoa deve cumprir para entrar no curso" aria-required="true" required="required"><?= $requirements ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="requisitos">Vereisten <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="requisitos" rows="5" name="requisitos" placeholder="Geef de vereisten aan waaraan de persoon moet voldoen om deel te nemen aan de cursus" aria-required="true" required="required"><?= $requirements ?></textarea>
                                         </div>
 
                                         <!--secção-->
-                                        <h3 class="text-center" role="heading">Detalhes do Curso</h3>
+                                        <h3 class="text-center" role="heading">Cursus details</h3>
                                         <!----------->
 
                                         <!--CURRICULUM PLAN-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="curricular">Tipo de plano curricular <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="curricular" rows="5" name="curricular" placeholder="Indique se é um Plano curricular com UCs para estudantes com DID e sem DID e/ou Plano curricular com UCs só para estudantes com DID (domínio académico e/ou domínio profissional)" aria-required="true" required="required"><?= $curriculum_plan ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="curricular">Type leerplan <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="curricular" rows="5" name="curricular" placeholder="Geef aan of het een curriculumplan is met currculaire eenheden voor studenten met intellectuele en ontwikkelingsstoornissen en zonder intellectuele en ontwikkelingsstoornissen en / of curriculumplan met currculaire eenheden alleen voor studenten met intellectuele en ontwikkelingsstoornissen (academisch domein en / of professioneel domein)" aria-required="true" required="required"><?= $curriculum_plan ?></textarea>
                                         </div>
 
                                         <!--VOCATIONAL DIMENSION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="vocacional">Dimensão profissional <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="vocacional" rows="5" name="vocacional" placeholder="Se o curso tem uma dimensão profissional ou se proporciona atividades do âmbito profissional. Se não existir, escreva: “Não existe esta dimensão no curso”" aria-required="true" required="required"><?= $vocational_dimension ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="vocacional">Professionele dimensie <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="vocacional" rows="5" name="vocacional" placeholder="Als de cursus een professionele dimensie heeft of als het activiteiten van de professionele reikwijdte biedt. Als het niet bestaat, schrijf dan: 'Er is geen dergelijke dimensie in de cursus'" aria-required="true" required="required"><?= $vocational_dimension ?></textarea>
                                         </div>
 
                                         <!--ACTIVITIES-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="atividades">Atividades extracurriculares <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="atividades" rows="5" name="atividades" placeholder="Se há atividades extracurriculares promovidas pela HE e/ou específicas para as pessoas com DID, bem como se estas atividades são obrigatórias ou não" aria-required="true" required="required"><?= $activities ?></textarea>
+                                            <label class="boldFont mt-3 pb-2" for="atividades">Buitenschoolse activiteiten <span class="asteriskPink">*</span></label>
+                                            <textarea class="form-control " id="atividades" rows="5" name="atividades" placeholder="Of er buitenschoolse activiteiten zijn die door de onderwijsinstelling worden gepromoot en /of specifiek zijn voor mensen met intellectuele en ontwikkelingsmoeilijkheden, evenals of deze activiteiten verplicht zijn of niet" aria-required="true" required="required"><?= $activities ?></textarea>
                                         </div>
 
                                         <!--SUPPORT-->
                                         <div class="form-group pb-4">
                                             <label class="boldFont mt-3 pb-2" for="apoios">Apoios <span class="asteriskPink">*</span></label>
-                                            <textarea class="form-control " id="apoios" rows="5" name="apoios" placeholder="Apoio ao nível académico, social, para uma vida independente (por exemplo: saber orientar-se) ou outro." aria-required="true" required="required"><?= $support ?></textarea>
+                                            <textarea class="form-control " id="apoios" rows="5" name="apoios" placeholder="Ondersteuning bij de academische, sociale, voor een zelfstandig leven (bijvoorbeeld weten hoe je elkaar moet oriënteren) of een ander." aria-required="true" required="required"><?= $support ?></textarea>
                                         </div>
 
                                         <!--ACCOMMODATION-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="alojamento">Alojamento <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="alojamento">Accommodatie <span class="asteriskPink">*</span></label>
                                             <select class="form-select greyBorder" id="alojamento" name="alojamento" aria-required="true" required="required">
-                                                <option value="" selected disabled aria-disabled="true">Selecionar uma opção</option>
+                                                <option value="" selected disabled aria-disabled="true">Selecteer een optie</option>
                                                 <?php
                                                 $stmt2 = mysqli_stmt_init($link2);
                                                 if (mysqli_stmt_prepare($stmt2, $query3)) {
@@ -389,10 +389,10 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <div class="form-group text-center mt-4">
                                             <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                                <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize me-4">Guardar</button>
+                                                <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize me-4">Redden</button>
 
-                                                <a href="profile.php?user=<?= $idUser ?>" title="Sair da edição">
-                                                    <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancelar</button>
+                                                <a href="profile.php?user=<?= $idUser ?>" title="Sluit de editie af">
+                                                    <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Annuleren</button>
                                                 </a>
                                             </div>
                                         </div>
