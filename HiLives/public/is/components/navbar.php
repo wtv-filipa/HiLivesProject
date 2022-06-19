@@ -17,26 +17,26 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             <?php
             if ($User_type == 7) {
             ?>
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 10) {
             ?>
-                <a class="navbar-brand me-5" href="matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 13) {
             ?>
-                <a class="navbar-brand me-5" href="matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 16) {
             ?>
-                <a class="navbar-brand me-5" href="homeTutor.php" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="homeTutor.php" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             }
@@ -48,53 +48,53 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                            <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
+                            <a class="nav-link" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
+                            <a class="nav-link" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
+                            <a class="nav-link" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 13) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                            <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
+                            <a class="nav-link" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página com as vagas das empresas">Vagas</a>
+                            <a class="nav-link" href="viewVacanciesHei.php" title="Fara á síðuna með lausum störfum fyrirtækja">Laus störf</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 16) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
+                            <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
+                            <a class="nav-link" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     }
@@ -104,7 +104,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             </div>
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Go to my area">
+                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Fara á svæðið mitt">
                     <?php
                     if (mysqli_stmt_prepare($stmt, $query)) {
                         mysqli_stmt_bind_param($stmt, 'i', $idUser);
@@ -114,11 +114,11 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if (isset($profile_img)) {
 
                     ?>
-                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="<?= $profile_img ?>" alt="Imagem de perfil" title="Imagem de perfil">
+                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="<?= $profile_img ?>" alt="Forstillingarmynd" title="Forstillingarmynd">
                             <?php
                             } else {
                             ?>
-                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="Sem imagem de perfil" title="Sem imagem de perfil">
+                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid alignMiddle" style="max-width:29px" alt="Engin prófílmynd" title="Engin prófílmynd">
                     <?php
                             }
                         }
@@ -126,7 +126,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     ?>
 
                     <span class="name mb-0 ms-2 align-middle">
-                        A minha área
+                        Svæðið mitt
                     </span>
                 </a>
                 <div class="alignMiddle">
@@ -135,35 +135,35 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle p-0" href="homePerson.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Traduzir para português">
-                        <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Portugal">
+                    <a class="nav-link dropdown-toggle p-0" href="homePerson.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Þýða á íslensku">
+                        <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Íslenski fáninn">
                         <span class="name ms-1 align-middle hideTextNav">
-                            Português
+                            Íslenska
                         </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../../en/pages/homePerson.php" title="Traduzir para inglês">
-                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Bandeira do Reino Unido">
+                        <li><a class="dropdown-item" href="../../en/pages/homePerson.php" title="Þýða á ensku">
+                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Fáni Bretlands">
                                 <span class="name ms-1 align-middle">
-                                    English
+                                    Enska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../es/pages/homePerson.php" title="Traduzir para espanhol">
-                                <img src="../../img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Espanha">
+                        <li><a class="dropdown-item" href="../../es/pages/homePerson.php" title="Þýða á spænsku">
+                                <img src="../../img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Fáni Spánar">
                                 <span class="name ms-1 align-middle">
-                                    Spanish
+                                    Spænska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../be/pages/homePerson.php" title="Traduzir para flamengo">
-                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Bélgica">
+                        <li><a class="dropdown-item" href="../../be/pages/homePerson.php" title="Þýða á flæmsku">
+                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Fáni Belgíu">
                                 <span class="name ms-1 align-middle">
-                                    Flemish
+                                    Flæmska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../is/pages/homePerson.php" title="Traduzir para islandês">
-                                <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Islândia">
+                        <li><a class="dropdown-item" href="../../pt/pages/homePerson.php" title="Þýða á portúgölsku">
+                                <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Fáni Portúgals">
                                 <span class="name ms-1 align-middle">
-                                    Icelandic
+                                    Portúgalska
                                 </span>
                             </a></li>
                     </ul>
@@ -180,28 +180,28 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             if ($User_type == 7) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 10) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 13) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 16) {
             ?>
-                <a class="navbar-brand me-5" href="homeTutor.php" title="Voltar à página inicial">
-                    <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+                <a class="navbar-brand me-5" href="homeTutor.php" title="Aftur heim">
+                    <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             }
@@ -209,7 +209,7 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
 
             <!--My area and language menu-->
             <div class="d-flex align-middle">
-                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Ir para a minha área">
+                <a href="profile.php?user=<?= $idUser ?>" class="alignMiddle" title="Fara á svæðið mitt">
                     <?php
                     $stmt = mysqli_stmt_init($link);
                     if (mysqli_stmt_prepare($stmt, $query)) {
@@ -220,11 +220,11 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if (isset($profile_img)) {
 
                     ?>
-                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid" style="max-width:29px" alt="<?= $profile_img ?>" alt="Imagem de perfil" title="Imagem de perfil">
+                                <img src="../../../admin/uploads/img_perfil/<?= $profile_img ?>" class="profileImg img-fluid" style="max-width:29px" alt="<?= $profile_img ?>" alt="Forstillingarmynd" title="Forstillingarmynd">
                             <?php
                             } else {
                             ?>
-                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Sem imagem de perfil" title="Sem imagem de perfil">
+                                <img src="../../img/no_profile_img.png" class="profileImg img-fluid" style="max-width:29px" alt="Engin prófílmynd" title="Engin prófílmynd">
                     <?php
                             }
                         }
@@ -239,35 +239,35 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle ps-0 pe-0" href="homePerson.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Traduzir para português">
-                        <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Portugal">
+                    <a class="nav-link dropdown-toggle ps-0 pe-0" href="homePerson.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Þýða á íslensku">
+                        <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Íslenski fáninn">
                         <span class="name ms-1 align-middle hideTextNav">
-                            Português
+                            Íslenska
                         </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../../en/pages/homePerson.php" title="Traduzir para inglês">
-                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Bandeira do Reino Unido">
+                        <li><a class="dropdown-item" href="../../en/pages/homePerson.php" title="Þýða á ensku">
+                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Fáni Bretlands">
                                 <span class="name ms-1 align-middle">
-                                    Inglês
+                                    Enska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../es/pages/homePerson.php" title="Traduzir para espanhol">
+                        <li><a class="dropdown-item" href="../../es/pages/homePerson.php" title="Þýða á spænsku">
                                 <img src="../../img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Espanho">
                                 <span class="name ms-1 align-middle">
-                                    Espanhol
+                                    Spænska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../be/pages/homePerson.php" title="Traduzir para flamengo">
-                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Bélgica">
+                        <li><a class="dropdown-item" href="../../be/pages/homePerson.php" title="Þýða á flæmsku">
+                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Fáni Belgíu">
                                 <span class="name ms-1 align-middle">
-                                    Flamengo
+                                    Flæmska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../is/pages/homePerson.php" title="Traduzir para islandês">
-                                <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Islândia">
+                        <li><a class="dropdown-item" href="../../pt/pages/homePerson.php" title="Þýða á portúgölsku">
+                                <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Fáni Portúgals">
                                 <span class="name ms-1 align-middle">
-                                    Islandês
+                                    Portúgalska
                                 </span>
                             </a></li>
                     </ul>
@@ -290,52 +290,52 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                                    <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
+                                    <a class="nav-link" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
+                                    <a class="nav-link" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
+                                    <a class="nav-link" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                                    <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
+                                    <a class="nav-link" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Vagas</a>
+                                    <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Laus störf</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
+                                    <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
+                                    <a class="nav-link" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             }
@@ -353,14 +353,14 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     <!--Navbar WITHOUT login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
         <div class="container">
-            <a class="navbar-brand me-5" href="../../../index.php" title="Voltar à página inicial">
-                <img src="../../img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+            <a class="navbar-brand me-5" href="../../../indexIS.php" title="Aftur heim">
+                <img src="../../img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
             </a>
             <div class="d-flex align-middle">
                 <div>
-                    <a href="login.php" title="Iniciar sessão">
+                    <a href="login.php" title="Skrá inn">
                         <button class="btn buttonDesign buttonWork buttonLoginSizeSmallerPT m-0">
-                            Iniciar Sessão
+                            Skrá inn
                         </button>
                     </a>
                     <span class="name ms-2 me-2 align-middle">
@@ -368,35 +368,35 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle p-0" href="index.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Traduzir para português">
-                        <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Portugal">
+                    <a class="nav-link dropdown-toggle p-0" href="indexIS.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Þýða á íslensku">
+                        <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Íslenski fáninn">
                         <span class="name ms-1 align-middle hideTextNav">
-                            Português
+                            Íslenska
                         </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="../../../indexEN.php" title="Traduzir para inglês">
-                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Bandeira do Reino Unido">
+                        <li><a class="dropdown-item" href="../../../indexEN.php" title="Þýða á ensku">
+                                <img src="../../img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Fáni Bretlands">
                                 <span class="name ms-1 align-middle">
-                                    Inglês
+                                    Enska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../../indexES.php" title="Traduzir para espanhol">
-                                <img src="../../img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Espanha">
+                        <li><a class="dropdown-item" href="../../../indexES.php" title="Þýða á spænsku">
+                                <img src="../../img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Fáni Spánar">
                                 <span class="name ms-1 align-middle">
-                                    Espanhol
+                                    Spænska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../../indexBE.php" title="Traduzir para flamengo">
-                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Bélgica">
+                        <li><a class="dropdown-item" href="../../../indexBE.php" title="Þýða á flæmsku">
+                                <img src="../../img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Fáni Belgíu">
                                 <span class="name ms-1 align-middle">
-                                    Flamengo
+                                    Flæmska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="../../../indexIS.php" title="Traduzir para islandês">
-                                <img src="../../img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Islândia">
+                        <li><a class="dropdown-item" href="../../../index.php" title="Þýða á portúgölsku">
+                                <img src="../../img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Fáni Portúgals">
                                 <span class="name ms-1 align-middle">
-                                    Islandês
+                                    Portúgalska
                                 </span>
                             </a></li>
                     </ul>

@@ -15,20 +15,20 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
     FROM users
     WHERE idusers = ?";
 
-    $query2 = "SELECT name_region
+    $query2 = "SELECT name_region_is
     FROM region
     INNER JOIN users_has_region ON region.idregion = users_has_region.region_idregion
     INNER JOIN users ON users_has_region.users_idusers = users.idusers
     WHERE idusers = ?";
 
-    $query3 = "SELECT users_has_courses.users_idusers, users_has_courses.courses_idcourses, courses.idcourses, courses.name_course, courses.users_idusers, users.name_user
+    $query3 = "SELECT users_has_courses.users_idusers, users_has_courses.courses_idcourses, courses.idcourses, courses.name_course_is, courses.users_idusers, users.name_user
     FROM users_has_courses
     INNER JOIN courses ON users_has_courses.courses_idcourses = courses.idcourses
     INNER JOIN users ON users.idusers = courses.users_idusers
     WHERE users_has_courses.users_idusers = ?
     ORDER BY id_match_course DESC";
 
-    $query4 = "SELECT id_match_vac, user_young, vacancies_idvacancies, match_perc, vacancy_name, company_id, name_user
+    $query4 = "SELECT id_match_vac, user_young, vacancies_idvacancies, match_perc, vacancy_name_is, company_id, name_user
     FROM users_has_vacancies
     INNER JOIN vacancies ON users_has_vacancies.vacancies_idvacancies = vacancies.idvacancies
     INNER JOIN users ON users.idusers = vacancies.company_id
@@ -49,9 +49,9 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         <!--BREADCRUMBS-->
                         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="pt-4">
                             <ol class="breadcrumb reqBreadcrumb">
-                                <li class="breadcrumb-item"><a href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a></li>
-                                <li class="breadcrumb-item"><a href="editRequestsTutor" title="Voltar aos pedidos de edição">Pedidos para editar o perfil</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Pedido de <?= $name_user ?></li>
+                                <li class="breadcrumb-item"><a href="homeTutor.php" title="Aftur heim">Heimasíða</a></li>
+                                <li class="breadcrumb-item"><a href="editRequestsTutor" title="Til baka í breytingar á beiðnum">Beiðnir um að breyta forstillingunni</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Beiðni um <?= $name_user ?></li>
                             </ol>
                         </nav>
 
@@ -60,17 +60,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             $msg_show = true;
                             switch ($_SESSION["edit"]) {
                                 case 1:
-                                    $message = "Perfil editado com sucesso!";
+                                    $message = "Prófíll breyttist!";
                                     $class = "alert-success";
                                     $_SESSION["edit"] = 0;
                                     break;
                                 case 2:
-                                    $message = "Ocorreu um erro a processar o seu pedido, por favor tente novamente mais tarde.";
+                                    $message = "Villa kom upp við vinnslu pöntunarinnar, vinsamlegast reyndu aftur síðar.";
                                     $class = "alert-warning";
                                     $_SESSION["edit"] = 0;
                                     break;
                                 case 3:
-                                    $message = "Estado do pedido atualizado com sucesso!";
+                                    $message = "Pöntunarstaða var uppfærð!";
                                     $class = "alert-success";
                                     $_SESSION["edit"] = 0;
                                     break;
@@ -97,7 +97,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         }
                         ?>
 
-                        <h1 class="pt-4 pb-2">Pedido para editar o perfil de</h1>
+                        <h1 class="pt-4 pb-2">Beiðni um að breyta forstillingunni á</h1>
                         <h3 class="pb-5 textBlue"><?= $name_user ?></h3>
                         <!--PROFILE STAGES BIG-->
                         <div class="row pb-4 bigBg">
@@ -106,15 +106,15 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                     <?php
                                     if ($status_edit == 1) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit1.svg" alt="Pedido em estado pendente" title="Pedido em estado pendente" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit1.svg" alt="Pöntun í bið" title="Pöntun í bið" />
                                     <?php
                                     } else if ($status_edit == 2) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit2.svg" alt="Entrevista marcada" title="Entrevista marcada" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit2.svg" alt="Áætlað viðtal" title="Áætlað viðtal" />
                                     <?php
                                     } else if ($status_edit == 3) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit3.svg" alt="Perfil completo" title="Perfil completo" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit3.svg" alt="Full forstilling" title="Full forstilling" />
                                     <?php
                                     }
                                     ?>
@@ -129,15 +129,15 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                     <?php
                                     if ($status_edit == 1) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit_small1.svg" alt="Pedido em estado pendente" title="Pedido em estado pendente" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit_small1.svg" alt="Pöntun í bið" title="Pöntun í bið" />
                                     <?php
                                     } else if ($status_edit == 2) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit_small2.svg" alt="Entrevista marcada" title="Entrevista marcada" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit_small2.svg" alt="Áætlað viðtal" title="Áætlað viðtal" />
                                     <?php
                                     } else if ($status_edit == 3) {
                                     ?>
-                                        <img class="mb-4 img-fluid" src="../../img/status/pending_edit_small3.svg" alt="Perfil completo" title="Perfil completo" />
+                                        <img class="mb-4 img-fluid" src="../../img/status/is/pending_edit_small3.svg" alt="Full forstilling" title="Full forstilling" />
                                     <?php
                                     }
                                     ?>
@@ -151,13 +151,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                 <!-- Info bigger devices-->
                 <section class="jumbotron bgCoverSection EditBg bigBg">
                     <div class="bg-white bg-whiteSizeAdjust ps-5 pe-3">
-                        <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
+                        <h1 class="pt-5 pb-2 text-center">Upplýsingar um</h1>
                         <h3 class="pb-4 text-center textBlue"><?= $name_user ?></h3>
-                        <p><b>Email</b>: <?= $email_user ?></p>
-                        <p><b>Contacto</b>: <?= $contact_user ?></p>
+                        <p><b>Tölvupóstur</b>: <?= $email_user ?></p>
+                        <p><b>Samband</b>: <?= $contact_user ?></p>
                         <p>
                             <b>
-                                Regiões de interesse:
+                                Áhugaverð svæði:
                             </b>
                             <?php
                             $first = true;
@@ -175,11 +175,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             }
                             ?>
                         </p>
-                        <p><b>Data de nascimento</b>: <?= $newDate ?> </p>
+                        <p><b>Fæðingardagur</b>: <?= $newDate ?> </p>
                         <div class="text-center pt-2">
-                            <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
+                            <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Breyta forstillingu">
                                 <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">
-                                    Editar perfil
+                                    Breyta forstillingu
                                 </button>
                             </a>
                         </div>
@@ -189,7 +189,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm">
-                                <a class="small linkRequest edit" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }
@@ -202,13 +202,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                 <section class="smallBg whiteBg">
                     <div class="jumbotron bgCoverSection EditBg smallBg"></div>
                     <div class="bg-white ps-3 pe-3">
-                        <h1 class="pt-5 pb-2 text-center">Informação sobre</h1>
+                        <h1 class="pt-5 pb-2 text-center">Upplýsingar um</h1>
                         <h3 class="pb-4 text-center textBlue"><?= $name_user ?></h3>
-                        <p><b>Email</b>: <?= $email_user ?></p>
-                        <p><b>Contacto</b>: <?= $contact_user ?></p>
+                        <p><b>Tölvupóstur</b>: <?= $email_user ?></p>
+                        <p><b>Samband</b>: <?= $contact_user ?></p>
                         <p>
                             <b>
-                                Regiões de interesse:
+                                Áhugaverð svæði:
                             </b>
                             <?php
                             $first = true;
@@ -226,11 +226,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             }
                             ?>
                         </p>
-                        <p><b>Data de nascimento</b>: <?= $newDate ?> </p>
+                        <p><b>Fæðingardagur</b>: <?= $newDate ?> </p>
                         <div class="text-center pt-2 pb-3">
-                            <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Editar perfil">
+                            <a href="editProfileTutor.php?edit=<?= $idUser ?>" title="Breyta forstillingu">
                                 <button class="btn buttonDesign buttonWork buttonRegisterSize m-0">
-                                    Editar perfil
+                                    Breyta forstillingu
                                 </button>
                             </a>
                         </div>
@@ -240,7 +240,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm pb-4">
-                                <a class="small linkRequest edit" title="Clique para atualizar o estado do pedido para 'Entrevista marcada'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Atualizar o estado do pedido">Já marcou a entrevista? Carregue aqui para atualizar o estado do pedido.</a>
+                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }
@@ -251,12 +251,12 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
 
                 <section class="container-fluid bgGreyReq">
                     <div class="container pt-5 pb-5">
-                        <h1 class="pb-5">Ligações de <?= $name_user ?></h1>
+                        <h1 class="pb-5">Tengingar við <?= $name_user ?></h1>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h3 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Cursos
+                                        Námskeið
                                     </button>
                                 </h3>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -272,13 +272,13 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                 if (mysqli_stmt_num_rows($stmt) > 0) {
                                                     while (mysqli_stmt_fetch($stmt)) {
                                             ?>
-                                                        <a href="infoCourse.php?course=<?= $courses_idcourses ?>" title="Ver informação do curso <?= $name_course ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
+                                                        <a href="infoCourse.php?course=<?= $courses_idcourses ?>" title="Skoða upplýsingar um námskeið <?= $name_course ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                                             <div class="list listStudy text-center">
                                                                 <p>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book align-middle" viewBox="0 0 16 16">
                                                                         <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                                                                     </svg>
-                                                                    <span class="ps-2 align-middle">Estudar</span>
+                                                                    <span class="ps-2 align-middle">Rannsókn</span>
                                                                 </p>
                                                                 <h4><?= $name_course ?></h4>
                                                                 <p><?= $name_user ?></p>
@@ -297,7 +297,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                                     </svg>
                                                                     <p class="mx-auto" style="font-size: 1rem;">
-                                                                        Esta pessoa ainda não tem nenhuma ligação com os cursos das Instituições de Ensino Superior. Por favor volte mais tarde.
+                                                                        Þessi einstaklingur hefur enn engin tengsl við námskeið æðri menntastofnana. Vinsamlega komið aftur síðar.
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -315,7 +315,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                             <div class="accordion-item">
                                 <h3 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Vagas
+                                        Laus störf
                                     </button>
                                 </h3>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -332,11 +332,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                     while (mysqli_stmt_fetch($stmt)) {
                                                         if ($match_perc == 0) {
                                             ?>
-                                                            <a href="infoVacancy.php?vac=<?= $vacancies_idvacancies ?>" title="Ver informação da vaga <?= $vacancy_name ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
+                                                            <a href="infoVacancy.php?vac=<?= $vacancies_idvacancies ?>" title="Skoða upplýsingar um laus störf <?= $vacancy_name ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                                             <?php
                                                         } else if ($match_perc == 1) {
                                                             ?>
-                                                                <a href="infoVacancyLearn.php?vac=<?= $vacancies_idvacancies ?>" title="Ver informação da vaga <?= $vacancy_name ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
+                                                                <a href="infoVacancyLearn.php?vac=<?= $vacancies_idvacancies ?>" title="Skoða upplýsingar um laus störf <?= $vacancy_name ?>" id="cardMatch" class="col-12 col-md-6 col-lg-4 pb-4">
                                                                 <?php
                                                             }
                                                                 ?>
@@ -345,7 +345,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
                                                                             <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
                                                                         </svg>
-                                                                        <span class="ps-2 align-middle">Trabalhar</span>
+                                                                        <span class="ps-2 align-middle">Vinna</span>
                                                                     </p>
                                                                     <h4><?= $vacancy_name ?></h4>
                                                                     <p><?= $name_user ?></p>
@@ -364,7 +364,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                                                             </svg>
                                                                             <p class="mx-auto" style="font-size: 1rem;">
-                                                                                Esta pessoa ainda não tem nenhuma ligação com as vagas das empresas. Por favor volte mais tarde.
+                                                                                Þessi einstaklingur hefur enn engin tengsl við laus störf fyrirtækjanna. Vinsamlega komið aftur síðar.
                                                                             </p>
                                                                         </div>
                                                                     </div>

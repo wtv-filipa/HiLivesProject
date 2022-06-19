@@ -36,7 +36,7 @@
                 </a>
             </div>
         </div>
-        <h3 class="pt-5 pb-3">Já tens conta?</h3>
+        <h3 class="pt-5 pb-3">Ertu með reikning?</h3>
         <a href="public/be/pages/login.php" title="Aanmelden">
             <button class="btn buttonDesign buttonHome buttonRegisterSize m-0">Aanmelden</button>
         </a>

@@ -8,14 +8,14 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
     <!--Navbar WITHOUT login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
         <div class="container">
-            <a class="navbar-brand me-5" href="index.php" title="Voltar à página inicial">
-                <img src="img/logo.svg" alt="logótipo da aplicação HiLives" class="img-fluid logo" title="HiLives">
+            <a class="navbar-brand me-5" href="indexIS.php" title="Aftur heim">
+                <img src="img/logo.svg" alt="HiLives app merki" class="img-fluid logo" title="HiLives">
             </a>
             <div class="d-flex align-middle">
                 <div>
-                    <a href="public/pt/pages/login.php" title="Iniciar sessão">
+                    <a href="public/pt/pages/login.php" title="Skrá inn">
                         <button class="btn buttonDesign buttonWork buttonLoginSizeSmallerPT m-0">
-                            Iniciar Sessão
+                            Skrá inn
                         </button>
                     </a>
                     <span class="name ms-2 me-2 align-middle">
@@ -23,35 +23,35 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
                     </span>
                 </div>
                 <div class="nav-item dropdown align-middle">
-                    <a class="nav-link dropdown-toggle p-0" href="index.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Traduzir para português">
-                        <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Portugal">
+                    <a class="nav-link dropdown-toggle p-0" href="indexIS.php" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Þýða á íslensku">
+                        <img src="public/img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Íslenski fáninn">
                         <span class="name ms-1 align-middle hideTextNav">
-                            Português
+                            Íslenska
                         </span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="indexEN.php" title="Traduzir para inglês">
-                                <img src="public/img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Bandeira do Reino Unido">
+                        <li><a class="dropdown-item" href="../../../indexEN.php" title="Þýða á ensku">
+                                <img src="public/img/flags/en.png" class="img-fluid" style="max-width:23px" alt="Fáni Bretlands">
                                 <span class="name ms-1 align-middle">
-                                    Inglês
+                                    Enska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexES.php" title="Traduzir para espanhol">
-                                <img src="public/img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Bandeira de Espanha">
+                        <li><a class="dropdown-item" href="../../../indexES.php" title="Þýða á spænsku">
+                                <img src="public/img/flags/es.png" class="img-fluid" style="max-width:23px" alt="Fáni Spánar">
                                 <span class="name ms-1 align-middle">
-                                    Espanhol
+                                    Spænska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexBE.php" title="Traduzir para flamengo">
-                                <img src="public/img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Bélgica">
+                        <li><a class="dropdown-item" href="../../../indexBE.php" title="Þýða á flæmsku">
+                                <img src="public/img/flags/be.png" class="img-fluid" style="max-width:23px" alt="Fáni Belgíu">
                                 <span class="name ms-1 align-middle">
-                                    Flamengo
+                                    Flæmska
                                 </span>
                             </a></li>
-                        <li><a class="dropdown-item" href="indexIS.php" title="Traduzir para islandês">
-                                <img src="public/img/flags/is.png" class="img-fluid" style="max-width:23px" alt="Bandeira da Islândia">
+                        <li><a class="dropdown-item" href="../../../index.php" title="Þýða á portúgölsku">
+                                <img src="public/img/flags/pt.png" class="img-fluid" style="max-width:23px" alt="Fáni Portúgals">
                                 <span class="name ms-1 align-middle">
-                                    Islandês
+                                    Portúgalska
                                 </span>
                             </a></li>
                     </ul>
