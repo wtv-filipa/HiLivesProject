@@ -8,9 +8,9 @@ $idUser = $_SESSION["idUser"];
 <div class="container">
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="homePerson.php" title="Voltar à página inicial">Página Inicial</a></li>
-            <li class="breadcrumb-item"><a href="profile.php" title="Voltar à minha área">A minha área</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Fazer o upload de uma nova Unidade Curricular ou Curso feito</li>
+            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar Startpagina"> Startpagina</a></li>
+            <li class="breadcrumb-item"><a href="profile.php" title="Terug naar mijn profiel" > Mijn profiel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Een nieuwe studieprogramma-eenheid of cursus uploaden</li>
         </ol>
     </nav>
     <?php
@@ -18,12 +18,12 @@ $idUser = $_SESSION["idUser"];
         $msg_show = true;
         switch ($_SESSION["doneCU"]) {
             case 1:
-                $message = "Ocorreu um erro a processar o teu pedido, por favor tenta novamente mais tarde.";
+                $message = "Er is een fout opgetreden bij het verwerken van uw bestelling, probeer het later opnieuw.";
                 $class = "alert-warning";
                 $_SESSION["doneCU"] = 0;
                 break;
             case 2:
-                $message = "É necessário preencher todos os campos obrigatórios.";
+                $message = "U moet alle verplichte velden invullen.";
                 $class = "alert-warning";
                 $_SESSION["doneCU"] = 0;
                 break;
@@ -55,36 +55,36 @@ $idUser = $_SESSION["idUser"];
                 <div class="col-lg-12">
                     <div class="paddingForms">
                         <div class="text-center">
-                            <h1 class="mb-4 weightTitle">Adicionar uma Unidade Curricular ou Curso feito</h1>
+                            <h1 class="mb-4 weightTitle">Een studieprogramma-eenheid of cursus toevoegen</h1>
                         </div>
-                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourse.php">
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadCourse_be.php">
                             <!--NAME-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="nomeuc">Nome da Unidade Curricular ou Curso <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="nomeuc">Naam van de curriculaire eenheid of cursus <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Escreve aqui o nome da Unidade Curricular/ Curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="nomeuc" name="nomeuc" placeholder="Schrijf hier de naam van de Curriculaire Eenheid / Cursus" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--HEIS MADE-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="uniuc">Instituição de Ensino Superior onde foi feita <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="uniuc">Instelling voor hoger onderwijs waar het is gemaakt <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Escreve aqui o nome da Instituição de Ensino Superior onde concluíste a Unidade Curricular ou o Curso" aria-required="true" required="required">
+                                    <input type="text" class="form-control greyBorder" id="uniuc" name="uniuc" placeholder="Schrijf hier de naam van de instelling voor hoger onderwijs waar u de curriculaire eenheid of de" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <!--CONCLUSION DATE-->
                             <div class="form-group pb-4">
-                                <label class="boldFont mt-3 pb-2" for="data">Data de conclusão <span class="asteriskPink">*</span></label>
+                                <label class="boldFont mt-3 pb-2" for="data">Voltooiingsdatum <span class="asteriskPink">*</span></label>
                                 <div class="p-0 m-0">
-                                    <input type="date" class="form-control greyBorder" id="data" name="data" placeholder="Escreve aqui o nome da Unidade Curricular/ Curso" aria-required="true" required="required">
+                                    <input type="date" class="form-control greyBorder" id="data" name="data" placeholder="Voltooiingsdatum" aria-required="true" required="required">
                                 </div>
                             </div>
 
                             <div class="form-group text-center mt-2">
                                 <div class="mx-auto col-sm-10 pb-3 pt-2">
-                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Adicionar</button>
+                                    <button type="submit" class="btn buttonDesign buttonStudy buttonLoginSize">Toevoegen</button>
                                 </div>
                             </div>
                         </form>

@@ -30,23 +30,23 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                         <?php
                         if ($User_type == 7) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeComp.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homeComp.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <?php
                         } else if ($User_type == 10) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <?php
                         } else if ($User_type == 13) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <?php
                         } else if ($User_type == 16) {
                         ?>
-                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <?php
                         }
                         ?>
-                        <li class="breadcrumb-item"><a href="stories" title="Terug naar verhalen"> HiLives Stories</a></li>
+                        <li class="breadcrumb-item"><a href="stories" title="Terug naar verhalen"> HiLives verhalen</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Een HiLives-verhaal bewerken</li>
                     </ol>
                 </nav>

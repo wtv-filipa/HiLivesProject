@@ -32,9 +32,9 @@
       <div class="col-lg-4 col-xs-12 links">
         <h4 class="mt-lg-0 mt-sm-4">Outros</h4>
         <ul class="m-0 p-0">
-          <li><a href="public/pt/pages/accessibility.php" title="Ga naar de toegankelijkheidspagina">Toegankelijkheid</a></li>
-          <li><a href="public/pt/pages/help.php" title="Ga naar de helppagina">Help</a></li>
-          <li><a href="public/pt/pages/construction.php" title="Ga naar de platformkaart">Platform Map</a></li>
+          <li><a href="public/be/pages/accessibility.php" title="Ga naar de toegankelijkheidspagina">Toegankelijkheid</a></li>
+          <li><a href="public/be/pages/help.php" title="Ga naar de helppagina">Help</a></li>
+          <li><a href="public/be/pages/construction.php" title="Ga naar de platformkaart">Platform Map</a></li>
         </ul>
       </div>
     </div>

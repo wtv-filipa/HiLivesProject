@@ -8,7 +8,7 @@ if (!isset($_SESSION["idUser"]) && !isset($_SESSION["type"])) {
     <!--Navbar WITHOUT login-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top">
         <div class="container">
-            <a class="navbar-brand me-5" href="index.php" title="Voltar à página inicial">
+            <a class="navbar-brand me-5" href="indexES.php" title="Voltar à página inicial">
                 <img src="img/logo.svg" alt="Logotipo de la aplicación HiLives" class="img-fluid logo" title="HiLives">
             </a>
             <div class="d-flex align-middle">

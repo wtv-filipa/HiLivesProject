@@ -37,7 +37,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
             <div class="container">
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mt-4">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar home"> Home</a></li>
+                        <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Terug naar mijn cursussen">Cursussen</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Bewerken of cursus <?= $name_course ?></li>
                     </ol>
@@ -269,7 +269,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--LANGUAGES-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="idioma">Idioma(s) de lecionação <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="idioma">Instructietaal/talen <span class="asteriskPink">*</span></label>
                                             <div class="p-0 m-0">
                                                 <input type="text" class="form-control greyBorder" id="idioma" name="idioma" placeholder="Voer de taal of talen in waarin de cursus zal worden gegeven" aria-required="true" required="required" value="<?= $languages ?>">
                                             </div>
@@ -357,7 +357,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"])) {
 
                                         <!--SUPPORT-->
                                         <div class="form-group pb-4">
-                                            <label class="boldFont mt-3 pb-2" for="apoios">Apoios <span class="asteriskPink">*</span></label>
+                                            <label class="boldFont mt-3 pb-2" for="apoios">Ondersteuning <span class="asteriskPink">*</span></label>
                                             <textarea class="form-control " id="apoios" rows="5" name="apoios" placeholder="Ondersteuning bij de academische, sociale, voor een zelfstandig leven (bijvoorbeeld weten hoe je elkaar moet oriënteren) of een ander." aria-required="true" required="required"><?= $support ?></textarea>
                                         </div>
 

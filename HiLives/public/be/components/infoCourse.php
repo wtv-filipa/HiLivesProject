@@ -44,17 +44,17 @@ if (isset($_SESSION["idUser"]) && isset($_GET["course"]) && isset($_SESSION["typ
                             <?php
                             if ($User_type == 10) {
                             ?>
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar Startpagina"> Startpagina</a></li>
                             <li class="breadcrumb-item"><a href="matchCourse.php" title="Terug naar mijn oproepen"> Ik wil studeren</a></li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar Startpagina"> Startpagina</a></li>
                             <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Terug naar mijn cursussen">Cursussen</a></li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar home"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="homePerson.php" title="Terug naar Startpagina"> Startpagina</a></li>
                             <li class="breadcrumb-item"><a href="IndividualReqEditTutor.php" title="Terug naar verzoek bewerken">Verzoek bewerken</a></li>
                             <?php
                             }
