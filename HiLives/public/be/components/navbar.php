@@ -17,19 +17,19 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             <?php
             if ($User_type == 7) {
             ?>
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 10) {
             ?>
-                <a class="navbar-brand me-5" href="matchLogo.php?person=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 13) {
             ?>
-                <a class="navbar-brand me-5" href="matchLogo.php?hei=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
@@ -180,21 +180,21 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
             if ($User_type == 7) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 10) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php
             } else if ($User_type == 13) {
             ?>
                 <!--Link with match-->
-                <a class="navbar-brand me-5" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Terug naar home">
+                <a class="navbar-brand me-5" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">
                     <img src="../../img/logo.svg" alt="HiLives Logootype" class="img-fluid logo" title="HiLives">
                 </a>
             <?php

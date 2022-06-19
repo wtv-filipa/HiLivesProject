@@ -21,32 +21,32 @@ if (isset($_GET["xp"])) {
             if ($check !== false) {
                 $uploadOk = 1;
             } else {
-                header("Location: ../en/pages/uploadStory.php");
+                header("Location: ../be/pages/uploadStory.php");
                 $_SESSION["xp_jovem"] = 1;
                 $uploadOk = 0;
             }
         }
 
         if (file_exists($target_file)) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 2;
             $uploadOk = 0;
         }
 
         if ($_FILES["fileToUpload"]["size"] > 70000000000) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 4;
             $uploadOk = 0;
         }
 
         if ($vidFileType != "avi" && $vidFileType != "wmv" && $vidFileType != "mp4" && $vidFileType != "mov" && $vidFileType != "jpg" && $vidFileType != "png" && $vidFileType != "svg" && $vidFileType != "ogg" && $vidFileType != "mp3" && $vidFileType != "wav") {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 5;
             $uploadOk = 0;
         }
 
         if ($uploadOk == 0) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 6;
             echo "uploadOK é 0";
         } else {
@@ -57,14 +57,14 @@ if (isset($_GET["xp"])) {
                 if (mysqli_stmt_prepare($stmt, $query)) {
                     mysqli_stmt_bind_param($stmt, 'ssi', $vidFileType, $ficheiro, $idUser);
                     if (!mysqli_stmt_execute($stmt)) {
-                        header("Location: ../en/pages/uploadStory.php");
+                        header("Location: ../be/pages/uploadStory.php");
                         $_SESSION["xp_jovem"] = 6;
                         echo "Erro na query files";
                     } else {
                         $last_id = mysqli_insert_id($link);
                     }
 
-                    $query2 = "INSERT INTO experiences (description_en, xp_type, users_idusers, content_idcontent) VALUES (?,?,?,?)";
+                    $query2 = "INSERT INTO experiences (description_be, xp_type, users_idusers, content_idcontent) VALUES (?,?,?,?)";
 
                     if (mysqli_stmt_prepare($stmt, $query2)) {
                         mysqli_stmt_bind_param($stmt, 'ssii', $description, $xp_type, $User_idUser, $last_id);
@@ -83,30 +83,30 @@ if (isset($_GET["xp"])) {
                         if (mysqli_stmt_execute($stmt)) {
                             mysqli_stmt_close($stmt);
                             mysqli_close($link);
-                            header("Location: ../en/pages/profile.php?user=$id_navegar");
+                            header("Location: ../be/pages/profile.php?user=$id_navegar");
                             $_SESSION["profile"] = 2;
                             echo "sucesso!";
                         } else {
-                            header("Location: ../en/pages/uploadStory.php");
+                            header("Location: ../be/pages/uploadStory.php");
                             $_SESSION["xp_jovem"] = 7;
                         }
                     } else {
-                        header("Location: ../en/pages/uploadStory.php");
+                        header("Location: ../be/pages/uploadStory.php");
                         $_SESSION["xp_jovem"] = 7;
                         mysqli_close($link);
                     }
                 } else {
-                    header("Location: ../en/pages/uploadStory.php");
+                    header("Location: ../be/pages/uploadStory.php");
                     $_SESSION["xp_jovem"] = 7;
                 }
             } else {
-                header("Location: ../en/pages/uploadStory.php");
+                header("Location: ../be/pages/uploadStory.php");
                 $_SESSION["xp_jovem"] = 7;
             }
         }
     } else if (!empty($_POST["descricao"]) && $_FILES["fileToUpload"]['size'] == 0) {
         //Story with only description
-        $query = "INSERT INTO experiences (description_en, xp_type, users_idusers) VALUES (?,?,?)";
+        $query = "INSERT INTO experiences (description_be, xp_type, users_idusers) VALUES (?,?,?)";
 
         if (mysqli_stmt_prepare($stmt, $query)) {
             mysqli_stmt_bind_param($stmt, 'ssi', $description, $xp_type, $User_idUser);
@@ -119,14 +119,14 @@ if (isset($_GET["xp"])) {
                 mysqli_stmt_close($stmt);
                 mysqli_close($link);
 
-                header("Location: ../en/pages/profile.php?user=$id_navegar");
+                header("Location: ../be/pages/profile.php?user=$id_navegar");
                 $_SESSION["profile"] = 2;
             } else {
-                header("Location: ../en/pages/uploadStory.php");
+                header("Location: ../be/pages/uploadStory.php");
                 $_SESSION["xp_jovem"] = 7;
             }
         } else {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 7;
         }
     } else if (empty($_POST["descricao"]) && $_FILES["fileToUpload"]['size'] != 0) {
@@ -141,32 +141,32 @@ if (isset($_GET["xp"])) {
             if ($check !== false) {
                 $uploadOk = 1;
             } else {
-                header("Location: ../en/pages/uploadStory.php");
+                header("Location: ../be/pages/uploadStory.php");
                 $_SESSION["xp_jovem"] = 1;
                 $uploadOk = 0;
             }
         }
 
         if (file_exists($target_file)) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 2;
             $uploadOk = 0;
         }
 
         if ($_FILES["fileToUpload"]["size"] > 70000000000) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 4;
             $uploadOk = 0;
         }
 
         if ($vidFileType != "avi" && $vidFileType != "wmv" && $vidFileType != "mp4" && $vidFileType != "mov" && $vidFileType != "jpg" && $vidFileType != "png" && $vidFileType != "svg" && $vidFileType != "ogg" && $vidFileType != "mp3" && $vidFileType != "wav") {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 5;
             $uploadOk = 0;
         }
 
         if ($uploadOk == 0) {
-            header("Location: ../en/pages/uploadStory.php");
+            header("Location: ../be/pages/uploadStory.php");
             $_SESSION["xp_jovem"] = 6;
             echo "uploadOK é 0";
         } else {
@@ -177,7 +177,7 @@ if (isset($_GET["xp"])) {
                 if (mysqli_stmt_prepare($stmt, $query)) {
                     mysqli_stmt_bind_param($stmt, 'ssi', $vidFileType, $ficheiro, $idUser);
                     if (!mysqli_stmt_execute($stmt)) {
-                        header("Location: ../en/pages/uploadStory.php");
+                        header("Location: ../be/pages/uploadStory.php");
                         $_SESSION["xp_jovem"] = 6;
                         echo "Erro na query files";
                     } else {
@@ -203,32 +203,32 @@ if (isset($_GET["xp"])) {
                         if (mysqli_stmt_execute($stmt)) {
                             mysqli_stmt_close($stmt);
                             mysqli_close($link);
-                            header("Location: ../en/pages/profile.php?user=$id_navegar");
+                            header("Location: ../be/pages/profile.php?user=$id_navegar");
                             $_SESSION["profile"] = 2;
                             echo "sucesso!";
                         } else {
-                            header("Location: ../en/pages/uploadStory.php");
+                            header("Location: ../be/pages/uploadStory.php");
                             $_SESSION["xp_jovem"] = 7;
                         }
                     } else {
-                        header("Location: ../en/pages/uploadStory.php");
+                        header("Location: ../be/pages/uploadStory.php");
                         $_SESSION["xp_jovem"] = 7;
                         mysqli_close($link);
                     }
                 } else {
-                    header("Location: ../en/pages/uploadStory.php");
+                    header("Location: ../be/pages/uploadStory.php");
                     $_SESSION["xp_jovem"] = 7;
                 }
             } else {
-                header("Location: ../en/pages/uploadStory.php");
+                header("Location: ../be/pages/uploadStory.php");
                 $_SESSION["xp_jovem"] = 7;
             }
         }
     } else {
-        header("Location: ../en/pages/uploadStory.php");
+        header("Location: ../be/pages/uploadStory.php");
         $_SESSION["xp_jovem"] = 3;
     }
 } else {
-    header("Location: ../en/pages/uploadStory.php");
+    header("Location: ../be/pages/uploadStory.php");
     $_SESSION["xp_jovem"] = 7;
 }
