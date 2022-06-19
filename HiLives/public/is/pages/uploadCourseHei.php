@@ -17,7 +17,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
         <?php include "../components/uploadCourseHei.php"; ?>
         <?php include "../components/footer.php"; ?>
 
-        <?php include "../../helpers/js_validateCheckbox.php"; ?>
+        <?php include "../../helpers/js_validateCheckbox_is.php"; ?>
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_characterCounter.php"; ?>
         <?php include "../../helpers/js_upload.php"; ?>

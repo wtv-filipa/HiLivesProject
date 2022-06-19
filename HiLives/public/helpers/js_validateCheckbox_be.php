@@ -1,0 +1,1 @@
+<script src="../../js/validateCheckbox_be.js"></script>
