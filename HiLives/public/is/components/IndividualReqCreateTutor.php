@@ -175,7 +175,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm">
-                                <a class="small linkRequest create" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
+                                <a class="small linkRequest create" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest_is.php?create=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }
@@ -226,7 +226,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["create"])) {
                         if ($status_create == 1) {
                         ?>
                             <div class="text-center textForm pb-4">
-                                <a class="small linkRequest create" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?create=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
+                                <a class="small linkRequest create" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest_is.php?create=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }

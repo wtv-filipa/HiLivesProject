@@ -189,7 +189,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm">
-                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
+                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest_is.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }
@@ -240,7 +240,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                         ?>
                             <hr>
                             <div class="text-center textForm pb-4">
-                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
+                                <a class="small linkRequest edit" title="Smelltu til að uppfæra pöntunarstöðuna í 'Viðtal athugað'" href="../../scripts/updateIndividualRequest_is.php?edit=<?= $idUser ?>" title="Uppfæra stöðu pöntunar">Ertu búinn að skipuleggja viðtalið? Smellt er hér til að uppfæra pöntunarstöðuna.</a>
                             </div>
                         <?php
                         }
