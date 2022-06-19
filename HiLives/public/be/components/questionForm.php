@@ -5,6 +5,49 @@
             <li class="breadcrumb-item active" aria-current="page">Contact</li>
         </ol>
     </nav>
+
+    <?php
+    if (isset($_SESSION["question"])) {
+        $msg_show = true;
+        switch ($_SESSION["question"]) {
+            case 1:
+                $message = "Er is een fout opgetreden bij het verzenden van het bericht, probeer het later opnieuw.";
+                $class = "alert-warning";
+                $_SESSION["question"] = 0;
+                break;
+            case 2:
+                $message = "U moet alle verplichte velden invullen.";
+                $class = "alert-warning";
+                $_SESSION["question"] = 0;
+                break;
+            case 3:
+                $message = "Twijfel/Suggestie succesvol verzonden! We nemen snel contact met je op.";
+                $class = "alert-success";
+                $_SESSION["question"] = 0;
+                break;
+            case 0:
+                $msg_show = false;
+                break;
+            default:
+                $msg_show = false;
+                $_SESSION["question"] = 0;
+        }
+
+        if ($msg_show == true) {
+            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                    <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 0.75rem 1.25rem;
+                        color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+        }
+    }
+    ?>
+
     <div class="card o-hidden border-0 shadowCard my-5">
         <div class="card-body p-0">
             <div class="row">
@@ -15,7 +58,7 @@
                             <p class="mt-5">Als je een vraag of suggestie hebt, stuur ons dan een bericht! Wij geven u graag
                                 antwoorden!</p>
                         </div>
-                        <form method="post" role="form" id="register-form" action="scripts/login.php">
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadContact_be.php">
                             <!--NAME-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="nome_user">Naam <span class="asterisk">*</span></label>

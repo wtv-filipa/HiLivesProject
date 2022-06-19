@@ -5,6 +5,49 @@
             <li class="breadcrumb-item active" aria-current="page">Contacto</li>
         </ol>
     </nav>
+
+    <?php
+    if (isset($_SESSION["question"])) {
+        $msg_show = true;
+        switch ($_SESSION["question"]) {
+            case 1:
+                $message = "Ocorreu um erro no envio da mensagem, por favor tenta novamente mais tarde.";
+                $class = "alert-warning";
+                $_SESSION["question"] = 0;
+                break;
+            case 2:
+                $message = "É necessário preencher todos os campos obrigatórios.";
+                $class = "alert-warning";
+                $_SESSION["question"] = 0;
+                break;
+            case 3:
+                $message = "Dúvida/Sugestão enviada com sucesso! Em breve entraremos em contacto.";
+                $class = "alert-success";
+                $_SESSION["question"] = 0;
+                break;
+            case 0:
+                $msg_show = false;
+                break;
+            default:
+                $msg_show = false;
+                $_SESSION["question"] = 0;
+        }
+
+        if ($msg_show == true) {
+            echo "<div class=\"alert $class alert-dismissible fade show mt-5\" role=\"alert\">" . $message . "
+                    <button type=\"button\" class=\"close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">
+                        <span title=\"Fechar\" aria-hidden=\"true\" style=\"position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 0.75rem 1.25rem;
+                        color: inherit;\">&times;</span>
+                    </button>
+                </div>";
+            echo '<script>window.onload=function (){$(\'.alert\').alert();}</script>';
+        }
+    }
+    ?>
+
     <div class="card o-hidden border-0 shadowCard my-5">
         <div class="card-body p-0">
             <div class="row">
@@ -15,7 +58,7 @@
                             <p class="mt-5">Se tiveres uma dúvida ou uma sugestão, envia-nos uma mensagem! Teremos muito gosto em te
                                 responder!</p>
                         </div>
-                        <form method="post" role="form" id="register-form" action="scripts/login.php">
+                        <form method="post" role="form" id="register-form" action="../../scripts/uploadContact.php">
                             <!--NAME-->
                             <div class="form-group pb-4">
                                 <label class="boldFont mt-3 pb-2" for="nome_user">Nome <span class="asterisk">*</span></label>

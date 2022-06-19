@@ -128,6 +128,6 @@
     <div class="mt-5 mb-5">
         <h2>Do you have questions or suggestions?</h2>
 
-        <p>If you have any questions about HiLives, or a suggestion to make it better, <b><a href="question_form.php" title="Click to send an e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">send us an email</a></b>. We will be happy to help you and read what you have to tell us!</p>
+        <p>If you have any questions about HiLives, or a suggestion to make it better, <b><a href="questionForm.php" title="Click to send an e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">send us an email</a></b>. We will be happy to help you and read what you have to tell us!</p>
     </div>
 </div>

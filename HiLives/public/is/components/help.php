@@ -128,6 +128,6 @@
     <div class="mt-5 mb-5">
         <h2>Hefur þú einhverjar spurningar eða tillögur?</h2>
 
-        <p>Ef þú hefur einhverjar spurningar um HiLives, eða uppástungur til að gera það betra, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Hafðu samband við HiLives">sendu okkur tölvupóst</a></b>. Við viljum vera fús til að hjálpa þér og lesa það sem þú hefur að segja okkur!</p>
+        <p>Ef þú hefur einhverjar spurningar um HiLives, eða uppástungur til að gera það betra, <b><a href="questionForm.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Hafðu samband við HiLives">sendu okkur tölvupóst</a></b>. Við viljum vera fús til að hjálpa þér og lesa það sem þú hefur að segja okkur!</p>
     </div>
 </div>

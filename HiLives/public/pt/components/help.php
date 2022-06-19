@@ -136,6 +136,6 @@
     <div class="mt-5 mb-5">
         <h2>Tens dúvidas ou sugestões?</h2>
 
-        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="question_form.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
+        <p>Se tiveres alguma dúvida sobre a HiLives, ou uma sugestão para a tornar melhor, <b><a href="questionForm.php" title="Clica para enviar um e-mail" target="_blank" class="linkColor" title="Contactar a HiLives">envia-nos um e-mail</a></b>. Teremos todo o gosto em ajudar-te e ler o que tens para nos dizer!</p>
     </div>
 </div>
