@@ -232,7 +232,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                 <div class="mx-auto col-sm-10 pb-3 pt-2">
                                     <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize me-4">Redden</button>
 
-                                    <a href="profile.php?user=<?= $idUser ?>" title="Sluit de editie af">
+                                    <a href="editRequestsTutor.php" title="Sluit de editie af">
                                         <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Annuleren</button>
                                     </a>
                                 </div>
