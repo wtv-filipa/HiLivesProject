@@ -67,7 +67,7 @@ if (isset($_GET["translate"])) {
                     <div class="form-group text-center mt-2">
                         <div class="mx-auto col-sm-10 pb-3 pt-2">
                             <button type="submit" class="btn buttonDesign buttonWork buttonLoginSize mr-4">Save</button>
-                            <a href="courses_t.php" title="Leave translations edition">
+                            <a href="areas_t.php" title="Leave translations edition">
                                 <button type="button" class="btn buttonDesign buttonCancel buttonLoginSize">Cancel</button>
                             </a>
                         </div>
