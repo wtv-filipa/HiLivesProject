@@ -40,10 +40,6 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                         ?>
                             <li class="breadcrumb-item"><a href="homeHei.php" title="Terug naar Startpagina"> Startpagina</a></li>
                         <?php
-                        } else if ($User_type == 16) {
-                        ?>
-                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Terug naar Startpagina"> Startpagina</a></li>
-                        <?php
                         }
                         ?>
                         <li class="breadcrumb-item"><a href="stories" title="Terug naar verhalen"> HiLives verhalen</a></li>

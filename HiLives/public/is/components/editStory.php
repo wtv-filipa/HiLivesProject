@@ -40,10 +40,6 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"]) && isset($_SESSION["type"
                         ?>
                             <li class="breadcrumb-item"><a href="homeHei.php" title="Aftur heim">Heimasíða</a></li>
                         <?php
-                        } else if ($User_type == 16) {
-                        ?>
-                            <li class="breadcrumb-item"><a href="homeTutor.php" title="Aftur heim">Heimasíða</a></li>
-                        <?php
                         }
                         ?>
                         <li class="breadcrumb-item"><a href="stories" title="Til baka í sögur"> Sögur af HiLives</a></li>
