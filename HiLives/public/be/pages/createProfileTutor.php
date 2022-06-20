@@ -2,29 +2,36 @@
 session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
 ?>
-<!DOCTYPE html>
-<html lang="be">
+    <!DOCTYPE html>
+    <html lang="be">
 
-<head>
-    <?php include "../../helpers/meta.php"; ?>
-    <title>Gebruiker registreren</title>
-    <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_editProfile.php"; ?>
-</head>
+    <head>
+        <?php include "../../helpers/meta.php"; ?>
+        <title>Gebruiker registreren</title>
+        <?php include "../../helpers/fonts.php"; ?>
+        <?php include "../../helpers/css_editProfile.php"; ?>
+    </head>
 
-<body class="bg_vertical_28">
-    <?php include "../components/navbar.php"; ?>
-    <?php include "../components/createProfileTutor.php"; ?>
-    <?php include "../components/footer.php"; ?>
+    <body class="bg_vertical_28">
+        <?php include "../components/loading_screen.php"; ?>
+        <?php include "../components/navbar.php"; ?>
+        <?php include "../components/createProfileTutor.php"; ?>
+        <?php include "../components/footer.php"; ?>
 
-    <?php include "../../helpers/js.php"; ?>
-    <?php include "../../helpers/js_validateTutor.php"; ?>
-</body>
+        <?php include "../../helpers/js.php"; ?>
+        <?php include "../../helpers/js_validateTutor.php"; ?>
 
-</html>
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
+    </body>
+
+    </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
-   header("Location: ../../../admin/index.php");
+    header("Location: ../../../admin/index.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     header("Location: homeComp.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
