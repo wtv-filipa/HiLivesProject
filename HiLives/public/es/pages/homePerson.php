@@ -2,28 +2,35 @@
 session_start();
 if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
 ?>
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html lang="es">
 
-<head>
-    <?php include "../../helpers/meta.php"; ?>
-    <title>Página de inicio</title>
-    <?php include "../../helpers/fonts.php"; ?>
-    <?php include "../../helpers/css_homePerson.php"; ?>
-</head>
+    <head>
+        <?php include "../../helpers/meta.php"; ?>
+        <title>Página de inicio</title>
+        <?php include "../../helpers/fonts.php"; ?>
+        <?php include "../../helpers/css_homePerson.php"; ?>
+    </head>
 
-<body>
-    <?php include "../components/navbar.php"; ?>
-    <?php include "../components/homePerson.php"; ?>
-    <?php include "../components/footer.php"; ?>
+    <body>
+        <?php include "../components/loading_screen.php"; ?>
+        <?php include "../components/navbar.php"; ?>
+        <?php include "../components/homePerson.php"; ?>
+        <?php include "../components/footer.php"; ?>
 
-    <?php include "../../helpers/js.php"; ?>
-</body>
+        <?php include "../../helpers/js.php"; ?>
 
-</html>
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
+    </body>
+
+    </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
-   header("Location: ../../../admin/index.php");
+    header("Location: ../../../admin/index.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     header("Location: homeComp.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] != 16 ) {
+if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] != 16) {
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -13,6 +13,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
     </head>
 
     <body class="bg_vertical_28">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/navbar.php"; ?>
         <?php
         if ($_SESSION["type"] == 7) {
@@ -28,6 +29,12 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_crop.php"; ?>
         <?php include "../../helpers/formsValidation.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>

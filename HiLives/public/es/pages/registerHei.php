@@ -13,16 +13,23 @@ if (!isset($_SESSION["idUser"])) {
     </head>
 
     <body class="bg_login_reg">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/registerHei.php"; ?>
 
         <?php include "../../helpers/formsValidation.php"; ?>
         <?php include "../../helpers/js.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
-   header("Location: ../../../admin/index.php");
+    header("Location: ../../../admin/index.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     header("Location: homeComp.php");
 } else  if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
