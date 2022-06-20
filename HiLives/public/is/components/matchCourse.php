@@ -53,6 +53,7 @@ if ($_SESSION["idUser"]) {
                                 </p>
                                 <h4><?= $name_course ?></h4>
                                 <p><?= $name_user ?></p>
+                                <p class="buttonKnowMoreStudy">Læra meira</p>
                             </div>
                         </a>
                     <?php
@@ -112,6 +113,7 @@ if ($_SESSION["idUser"]) {
                                                         </p>
                                                         <h4><?= $name_course ?></h4>
                                                         <p><?= $name_user ?></p>
+                                                        <p class="buttonKnowMoreStudy">Læra meira</p>
                                                     </div>
                                                 </a>
                                         <?php

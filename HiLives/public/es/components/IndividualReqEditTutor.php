@@ -282,6 +282,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                                 </p>
                                                                 <h4><?= $name_course ?></h4>
                                                                 <p><?= $name_user ?></p>
+                                                                <p class="buttonKnowMoreStudy">Saber más</p>
                                                             </div>
                                                         </a>
                                                     <?php
@@ -349,6 +350,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["edit"])) {
                                                                     </p>
                                                                     <h4><?= $vacancy_name ?></h4>
                                                                     <p><?= $name_user ?></p>
+                                                                    <p class="buttonKnowMore">Saber más</p>
                                                                 </div>
                                                                 </a>
                                                             <?php

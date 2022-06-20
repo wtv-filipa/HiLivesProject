@@ -395,3 +395,40 @@ a.linkRequest.edit:hover {
     min-height: 469px;
   }
 }
+
+
+/*Button*/
+
+p.buttonKnowMore {
+  padding: 0.3rem;
+  font-size: 14px;
+  border-bottom: 0.1em solid #000000;
+  display: block;
+  margin: auto;
+  width: 50%;
+  cursor: pointer;
+  background: #fff;
+}
+
+p.buttonKnowMore:hover {
+  color: #005e89 !important;
+  border-bottom: 0.1em solid #005e89 !important;
+  width: 70%;
+}
+
+p.buttonKnowMoreStudy {
+  padding: 0.3rem;
+  font-size: 14px;
+  border-bottom: 0.1em solid #000000;
+  display: block;
+  margin: auto;
+  width: 50%;
+  cursor: pointer;
+  background: #fff;
+}
+
+p.buttonKnowMoreStudy:hover {
+  color: #ae0168 !important;
+  border-bottom: 0.1em solid #ae0168 !important;
+  width: 70%;
+}
