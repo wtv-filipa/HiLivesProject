@@ -13,6 +13,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
     </head>
 
     <body class="bg_vertical_28">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/navbar.php"; ?>
         <?php include "../components/uploadVacancy.php"; ?>
         <?php include "../components/footer.php"; ?>
@@ -23,12 +24,18 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 7) {
         <?php include "../../helpers/js_upload.php"; ?>
         <?php include "../../helpers/js_enablePopover.php"; ?>
         <?php include "../../helpers/js_enableToltip.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>
 <?php
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 4) {
-   header("Location: ../../../admin/index.php");
+    header("Location: ../../../admin/index.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 10) {
     header("Location: homePerson.php");
 } else if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 13) {
