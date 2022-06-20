@@ -13,6 +13,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4) {
     </head>
 
     <body>
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/navbar.php"; ?>
 
         <?php
@@ -31,6 +32,12 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4) {
 
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_crop.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>

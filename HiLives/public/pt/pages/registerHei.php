@@ -13,10 +13,17 @@ if (!isset($_SESSION["idUser"])) {
     </head>
 
     <body class="bg_login_reg">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/registerHei.php"; ?>
 
         <?php include "../../helpers/formsValidation.php"; ?>
         <?php include "../../helpers/js.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>

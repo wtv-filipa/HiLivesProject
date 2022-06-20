@@ -13,9 +13,16 @@ if (!isset($_SESSION["idUser"])) {
     </head>
 
     <body class="bg_login">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/login.php"; ?>
 
         <?php include "../../helpers/js.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>

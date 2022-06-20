@@ -13,11 +13,18 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] == 16) {
     </head>
 
     <body>
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/navbar.php"; ?>
         <?php include "../components/IndividualReqEditTutor.php"; ?>
         <?php include "../components/footer.php"; ?>
 
         <?php include "../../helpers/js.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>

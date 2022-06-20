@@ -13,6 +13,7 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
     </head>
 
     <body class="bg_horizontal_28">
+        <?php include "../components/loading_screen.php"; ?>
         <?php include "../components/navbar.php"; ?>
         <?php include "../components/editStory.php"; ?>
         <?php include "../components/footer.php"; ?>
@@ -20,6 +21,12 @@ if (isset($_SESSION["idUser"]) && $_SESSION["type"] != 4 && $_SESSION["type"] !=
         <?php include "../../helpers/js.php"; ?>
         <?php include "../../helpers/js_enablePopover.php"; ?>
         <?php include "../../helpers/js_enableToltip.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
     </body>
 
     </html>
