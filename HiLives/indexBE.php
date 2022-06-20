@@ -13,21 +13,18 @@ if (!isset($_SESSION["idUser"])) {
     </head>
 
     <body>
+        <?php include "public/pt/components/loading_screen_noLogin.php"; ?>
         <?php include "public/be/components/navbarHomeNoLogin.php"; ?>
         <?php include "public/be/components/homepageNoLogin.php"; ?>
         <?php include "public/be/components/footerNoLogin.php"; ?>
 
-        <!-- <script>
-        $(function() {
-            $('a[href*=#]').on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                }, 500, 'linear');
+        <?php include "public/helpers/js.php"; ?>
+
+        <script>
+            $(window).on("load", function() {
+                $(".loader-wrapper").fadeOut("slow");
             });
-        });
-    </script> -->
-    <?php include "public/helpers/js.php"; ?>
+        </script>
     </body>
 
     </html>
