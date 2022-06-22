@@ -48,64 +48,64 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
+                            <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allVacanciesComp.php" title="Go to my vacancies page">Vacancies</a>
+                            <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Go to my vacancies page">Vacancies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                         </li>
                     <?php
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
+                            <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourse.php" title="Go to course connections">I want to study</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Go to course connections">I want to study</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="matchVacancy.php" title="Go to vacancies connections">I want to work</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Go to vacancies connections">I want to work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                         </li>
                     <?php
                     } else if ($User_type == 13) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
+                            <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allCoursesHeis.php" title="Go to my courses page">Courses</a>
+                            <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Go to my courses page">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viewVacanciesHei.php" title="Go to my courses page">Vacancies</a>
+                            <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Go to my courses page">Vacancies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                         </li>
                     <?php
                     } else if ($User_type == 16) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
+                            <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="IGo to the registration request page">Registration requests</a>
+                            <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="IGo to the registration request page">Registration requests</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editRequestsTutor.php" title="Go to the edit requests page">Editing requests</a>
+                            <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Go to the edit requests page">Editing requests</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                         </li>
                     <?php
                     }
@@ -301,64 +301,64 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                    <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allVacanciesComp.php" title="Go to my vacancies page">Vacancies</a>
+                                    <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Go to my vacancies page">Vacancies</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                                 </li>
                             <?php
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                    <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourse.php" title="Go to courses connections">I want to study</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Go to courses connections">I want to study</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="matchVacancy.php" title="Go to vacancies connections">I want to work</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Go to vacancies connections">I want to work</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                                 </li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                    <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allCoursesHeis.php" title="Go to my courses page">Courses</a>
+                                    <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Go to my courses page">Courses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="viewVacanciesHei.php" title="Go to my courses page">Vacancies</a>
+                                    <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Go to my courses page">Vacancies</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                                 </li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
+                                    <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Go to the registration requests page">Registration requests</a>
+                                    <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Go to the registration requests page">Registration requests</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="editRequestsTutor.php" title="Go to the edit requests page">Edit requests</a>
+                                    <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Go to the edit requests page">Edit requests</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Go to HiLives stories">HiLives stories</a>
                                 </li>
                             <?php
                             }

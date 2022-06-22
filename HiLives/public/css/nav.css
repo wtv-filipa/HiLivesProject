@@ -5,6 +5,11 @@
 }
 
 /*Nav properties*/
+.nav-link.active{
+  color: #005e89 !important;
+  font-weight: 600;
+}
+
 .dropdown-toggle::after {
   vertical-align: -0.0255em !important;
 }

@@ -10,6 +10,8 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $query = "SELECT profile_img
     FROM users
     WHERE idusers = ?";
+
+    $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
     <!--Navbar WITH login Bigger Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navBig">
@@ -48,65 +50,65 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                            <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
+                            <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                         </li>
                     <?php
-                    } else if ($User_type == 10) {
+                    } else if ($User_type == 10) {       
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                            <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                         </li>
                     <?php
                     } else if ($User_type == 13) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                            <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
+                            <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página com as vagas das empresas">Vagas</a>
+                            <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Ir para a página com as vagas das empresas">Vagas</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                         </li>
                     <?php
                     } else if ($User_type == 16) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a>
+                            <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
+                            <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
+                            <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                         </li>
                     <?php
                     }
@@ -302,64 +304,64 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                                    <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?comp=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
+                                    <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Ir para a página das minhas vagas">Vagas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                                 </li>
                             <?php
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                                    <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?person=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Ir para as ligações com cursos">Eu quero estudar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Ir para as ligações com vagas">Eu quero trabalhar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                                 </li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
+                                    <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo.php?hei=<?= $idUser ?>" title="Voltar à página inicial">Página Inicial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ir para a página das ligações com pessoas">Candidatos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
+                                    <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Ir para a página dos meus cursos">Cursos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Vagas</a>
+                                    <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Vagas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                                 </li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a>
+                                    <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Voltar à página inicial">Página Inicial</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
+                                    <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ir para a página de pedidos de registo">Pedidos de registo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
+                                    <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Ir para a página de pedidos de edição">Pedidos de edição</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ir para as histórias da HiLives">Histórias do HiLives</a>
                                 </li>
                             <?php
                             }

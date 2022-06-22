@@ -10,6 +10,8 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $query = "SELECT profile_img
     FROM users
     WHERE idusers = ?";
+
+    $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
     <!--Navbar WITH login Bigger Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navBig">
@@ -48,65 +50,65 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                            <a class="nav-link <?= ($activePage == 'homeComp') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active' : ''; ?>" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
+                            <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active' : ''; ?>" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                            <a class="nav-link <?= ($activePage == 'homePerson') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active' : ''; ?>" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active' : ''; ?>" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 13) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                            <a class="nav-link <?= ($activePage == 'homeHei') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active' : ''; ?>" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
+                            <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active' : ''; ?>" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="viewVacanciesHei.php" title="Fara á síðuna með lausum störfum fyrirtækja">Laus störf</a>
+                            <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active' : ''; ?>" href="viewVacanciesHei.php" title="Fara á síðuna með lausum störfum fyrirtækja">Laus störf</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     } else if ($User_type == 16) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="homeTutor.php" title="Aftur heim">Heimasíða</a>
+                            <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active' : ''; ?>" aria-current="page" href="homeTutor.php" title="Aftur heim">Heimasíða</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
+                            <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active' : ''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
+                            <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active' : ''; ?>" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                         </li>
                     <?php
                     }
@@ -302,64 +304,64 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                                    <a class="nav-link <?= ($activePage == 'homeComp') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?comp=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active' : ''; ?>" aria-current="page" href="matchVacancyComp.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
+                                    <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active' : ''; ?>" href="allVacanciesComp.php" title="Fara á síðuna mína um laus störf">Laus störf</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                                    <a class="nav-link <?= ($activePage == 'homePerson') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?person=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active' : ''; ?>" aria-current="page" href="matchCourse.php" title="Fara í tengla með námskeiðum">Mig langar að læra</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active' : ''; ?>" href="matchVacancy.php" title="Fara í tengingar við laus störf">Mig langar að vinna</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
+                                    <a class="nav-link <?= ($activePage == 'homeHei') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_is.php?hei=<?= $idUser ?>" title="Aftur heim">Heimasíða</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active' : ''; ?>" aria-current="page" href="matchCourseHeis.php" title="Fara á tenglana með fólk síðu">Frambjóðendur</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
+                                    <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active' : ''; ?>" href="allCoursesHeis.php" title="Fara á námskeiðasíðuna mína">Námskeið</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Laus störf</a>
+                                    <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active' : ''; ?>" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Laus störf</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="homeTutor.php" title="Aftur heim">Heimasíða</a>
+                                    <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active' : ''; ?>" aria-current="page" href="homeTutor.php" title="Aftur heim">Heimasíða</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
+                                    <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active' : ''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Fara á síðu skráningarbeiðna">Umsóknir um skráningu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
+                                    <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active' : ''; ?>" href="editRequestsTutor.php" title="Fara á síðuna breyta beiðnum">Beiðnum breytt</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Fara í HiLives sögur">HiLives sögur</a>
                                 </li>
                             <?php
                             }
