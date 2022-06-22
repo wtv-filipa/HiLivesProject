@@ -185,7 +185,7 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
             <!--All info-->
             <section class="container pt-5 pb-5">
                 <h1 class="pb-5">Toda la información sobre el trabajo</h1>
-                <ul class="nav nav-tabs nav-fill infoTabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs nav-fill infoTabs infoVac" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="requirements-tab" data-bs-toggle="tab" data-bs-target="#requirements" type="button" role="tab" aria-controls="requirements" aria-selected="true">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle align-middle" viewBox="0 0 16 16">
