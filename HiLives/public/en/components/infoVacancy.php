@@ -50,6 +50,11 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                                 <li class="breadcrumb-item"><a href="homePerson.php" title="Back to homepage">Homepage</a></li>
                                 <li class="breadcrumb-item"><a href="matchVacancy.php" title="Back to connections with vacancies">I want to work</a></li>
                             <?php
+                            } else if ($User_type == 13) {
+                            ?>
+                                <li class="breadcrumb-item"><a href="homeHei.php" title="Back to homepage">Homepage</a></li>
+                                <li class="breadcrumb-item"><a href="allCoursesHeis.php" title="Back to vacancies">Vacancies</a></li>
+                            <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="breadcrumb-item"><a href="homePerson.php" title="Back to homepage">Homepage</a></li>

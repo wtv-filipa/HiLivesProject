@@ -51,8 +51,19 @@ if (isset($_SESSION["idUser"]) && isset($_GET["vac"]) && isset($_SESSION["type"]
                     <!--BREADCRUMBS-->
                     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="pt-4">
                         <ol class="breadcrumb infosbreadcrumb">
-                            <li class="breadcrumb-item"><a href="homePerson.php" title="Aftur heim">Heimasíða</a></li>
-                            <li class="breadcrumb-item"><a href="matchVacancy.php" title="Til baka í tengsl við laus störf">Mig langar að vinna</a></li>
+                            <?php
+                            if ($User_type == 10) {
+                            ?>
+                                <li class="breadcrumb-item"><a href="homePerson.php" title="Aftur heim">Heimasíða</a></li>
+                                <li class="breadcrumb-item"><a href="matchVacancy.php" title="Til baka í tengsl við laus störf">Mig langar að vinna</a></li>
+                            <?php
+                            } else if ($User_type == 16) {
+                            ?>
+                                <li class="breadcrumb-item"><a href="homePerson.php" title="Aftur heim">Heimasíða</a></li>
+                                <li class="breadcrumb-item"><a href="IndividualReqEditTutor.php" title="Til baka í breytingarbeiðni">Fyrirséð er að breyta forstillingu</a></li>
+                            <?php
+                            }
+                            ?>
                             <li class="breadcrumb-item active" aria-current="page">Upplýsingar um laus störf</li>
                         </ol>
                     </nav>
