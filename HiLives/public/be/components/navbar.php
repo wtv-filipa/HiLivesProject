@@ -48,6 +48,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                         </li>
                         <li class="nav-item">
@@ -60,6 +63,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
                         </li>
                         <li class="nav-item">
@@ -71,6 +77,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <?php
                     } else if ($User_type == 13) {
                     ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                         </li>
@@ -87,6 +96,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <?php
                     } else if ($User_type == 16) {
                     ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
                         </li>
@@ -290,6 +302,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                                 </li>
                                 <li class="nav-item">
@@ -302,6 +317,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
                                 </li>
                                 <li class="nav-item">
@@ -313,6 +331,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             <?php
                             } else if ($User_type == 13) {
                             ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                                 </li>
@@ -328,6 +349,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             <?php
                             } else if ($User_type == 16) {
                             ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
                                 </li>

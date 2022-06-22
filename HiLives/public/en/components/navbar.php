@@ -48,6 +48,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
                         </li>
                         <li class="nav-item">
@@ -60,6 +63,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchCourse.php" title="Go to course connections">I want to study</a>
                         </li>
                         <li class="nav-item">
@@ -71,6 +77,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <?php
                     } else if ($User_type == 13) {
                     ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
                         </li>
@@ -86,6 +95,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     <?php
                     } else if ($User_type == 16) {
                     ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="IGo to the registration request page">Registration requests</a>
                         </li>
@@ -289,6 +301,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?comp=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchVacancyComp.php" title="Go to the connections with people page">Candidates</a>
                                 </li>
                                 <li class="nav-item">
@@ -301,6 +316,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?person=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchCourse.php" title="Go to courses connections">I want to study</a>
                                 </li>
                                 <li class="nav-item">
@@ -312,6 +330,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             <?php
                             } else if ($User_type == 13) {
                             ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../../scripts/matchLogo_en.php?hei=<?= $idUser ?>" title="Back to homepage">Home</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="matchCourseHeis.php" title="Go to the connections with people page">Candidates</a>
                                 </li>
@@ -327,6 +348,9 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             <?php
                             } else if ($User_type == 16) {
                             ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="homeTutor.php" title="Back to homepage">Home</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="registerRequestsTutor.php" title="Go to the registration requests page">Registration requests</a>
                                 </li>
