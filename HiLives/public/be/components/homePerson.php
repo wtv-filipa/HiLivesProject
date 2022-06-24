@@ -49,7 +49,7 @@
         <div class="text-center">
             <a href="stories.php" title="Bekijk HiLives-verhalen">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
-                   Bekijk HiLives Stories
+                    Bekijk HiLives Stories
                 </button>
             </a>
         </div>
@@ -68,7 +68,7 @@
         <div class="text-center">
             <a href="stories.php" title="Bekijk HiLives-verhalen">
                 <button class="btn buttonDesign buttonWork buttonHomeSize m-0">
-                   Bekijk HiLives Stories
+                    Bekijk HiLives Stories
                 </button>
             </a>
         </div>
@@ -79,7 +79,7 @@
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-3">Leer hoe u HiLives gebruikt</h2>
         <div class="videoContainer" controls>
-            <iframe width="560" height="75" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="75" src="https://www.youtube.com/embed/GG1W9Z5dlic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </section>

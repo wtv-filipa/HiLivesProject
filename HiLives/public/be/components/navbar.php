@@ -10,6 +10,8 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
     $query = "SELECT profile_img
     FROM users
     WHERE idusers = ?";
+
+    $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
     <!--Navbar WITH login Bigger Screens-->
     <nav class="navbar navbar-expand-lg navbar-light navColor sticky-top navBig">
@@ -48,65 +50,65 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                     if ($User_type == 7) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                            <a class="nav-link <?= ($activePage == 'homeComp') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active' : ''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Ga naar mijn vacaturepagina"> Vacatures</a>
+                            <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active' : ''; ?>" href="allVacanciesComp.php" title="Ga naar mijn vacaturepagina"> Vacatures</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                         </li>
                     <?php
                     } else if ($User_type == 10) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                            <a class="nav-link <?= ($activePage == 'homePerson') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active' : ''; ?>" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Ga naar de links met vacatures">Ik wil werken</a>
+                            <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active' : ''; ?>" href="matchVacancy.php" title="Ga naar de links met vacatures">Ik wil werken</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                         </li>
                     <?php
                     } else if ($User_type == 13) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                            <a class="nav-link <?= ($activePage == 'homeHei') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
+                            <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active' : ''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Ga naar mijn cursuspagina">Cursussen</a>
+                            <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active' : ''; ?>" href="allCoursesHeis.php" title="Ga naar mijn cursuspagina">Cursussen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Ga naar de pagina met de vacatures van bedrijven"> Vacatures</a>
+                            <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active' : ''; ?>" href="viewVacanciesHei.php" title="Ga naar de pagina met de vacatures van bedrijven"> Vacatures</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                         </li>
                     <?php
                     } else if ($User_type == 16) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
+                            <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active' : ''; ?>" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
+                            <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active' : ''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Ga naar de pagina bewerkingsverzoeken"> Verzoeken bewerken</a>
+                            <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active' : ''; ?>" href="editRequestsTutor.php" title="Ga naar de pagina bewerkingsverzoeken"> Verzoeken bewerken</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                            <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                         </li>
                     <?php
                     }
@@ -302,64 +304,64 @@ if (isset($_SESSION["idUser"]) && isset($_SESSION["type"])) {
                             if ($User_type == 7) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'homeComp') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                    <a class="nav-link <?= ($activePage == 'homeComp') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?comp=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active':''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancyComp') ? 'active' : ''; ?>" aria-current="page" href="matchVacancyComp.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active':''; ?>" href="allVacanciesComp.php" title="Ga naar mijn vacaturepagina"> Vacatures</a>
+                                    <a class="nav-link <?= ($activePage == 'allVacanciesComp') ? 'active' : ''; ?>" href="allVacanciesComp.php" title="Ga naar mijn vacaturepagina"> Vacatures</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                                 </li>
                             <?php
                             } else if ($User_type == 10) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'homePerson') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                    <a class="nav-link <?= ($activePage == 'homePerson') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?person=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active':''; ?>" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourse') ? 'active' : ''; ?>" aria-current="page" href="matchCourse.php" title="Ga naar de links met cursussen">Ik wil studeren</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active':''; ?>" href="matchVacancy.php" title="Ga naar de links met vacatures">Ik wil werken</a>
+                                    <a class="nav-link <?= ($activePage == 'matchVacancy') ? 'active' : ''; ?>" href="matchVacancy.php" title="Ga naar de links met vacatures">Ik wil werken</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                                 </li>
                             <?php
                             } else if ($User_type == 13) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'homeHei') ? 'active':''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
+                                    <a class="nav-link <?= ($activePage == 'homeHei') ? 'active' : ''; ?>" aria-current="page" href="../../scripts/matchLogo_be.php?hei=<?= $idUser ?>" title="Terug naar home">Hoofdpagina</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active':''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
+                                    <a class="nav-link <?= ($activePage == 'matchCourseHeis') ? 'active' : ''; ?>" aria-current="page" href="matchCourseHeis.php" title="Ga naar de pagina Personenlinks">Kandidaten</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active':''; ?>" href="allCoursesHeis.php" title="Ga naar mijn cursuspagina">Cursussen</a>
+                                    <a class="nav-link <?= ($activePage == 'allCoursesHeis') ? 'active' : ''; ?>" href="allCoursesHeis.php" title="Ga naar mijn cursuspagina">Cursussen</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active':''; ?>" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Vagas</a>
+                                    <a class="nav-link <?= ($activePage == 'viewVacanciesHei') ? 'active' : ''; ?>" href="viewVacanciesHei.php" title="Ir para a página das vagas das empresas">Vagas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                                 </li>
                             <?php
                             } else if ($User_type == 16) {
                             ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active':''; ?>" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
+                                    <a class="nav-link <?= ($activePage == 'homeTutor') ? 'active' : ''; ?>" aria-current="page" href="homeTutor.php" title="Terug naar home">Hoofdpagina</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active':''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
+                                    <a class="nav-link <?= ($activePage == 'registerRequestsTutor') ? 'active' : ''; ?>" aria-current="page" href="registerRequestsTutor.php" title="Ga naar de pagina Registratietoepassingen"> Registratieverzoeken</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active':''; ?>" href="editRequestsTutor.php" title="Ga naar de pagina bewerkingsverzoeken"> Verzoeken bewerken</a>
+                                    <a class="nav-link <?= ($activePage == 'editRequestsTutor') ? 'active' : ''; ?>" href="editRequestsTutor.php" title="Ga naar de pagina bewerkingsverzoeken"> Verzoeken bewerken</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active':''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
+                                    <a class="nav-link <?= ($activePage == 'stories') ? 'active' : ''; ?>" href="stories.php" title="Ga naar HiLives" verhalen>HiLives verhalen</a>
                                 </li>
                             <?php
                             }

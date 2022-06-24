@@ -86,7 +86,7 @@
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-3">Learn more about HiLives</h2>
         <div class="videoContainer" controls>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f4jbIHpa-OU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </section>

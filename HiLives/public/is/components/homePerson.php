@@ -20,7 +20,7 @@
                 <br>
                 <a href="matchCourse.php" title="Ver ligações com cursos">
                     <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
-                    Skoða námskeið
+                        Skoða námskeið
                     </button>
                 </a>
             </div>
@@ -31,7 +31,7 @@
                 <br>
                 <a href="matchVacancy.php" title="Skoða tengla með laus störf">
                     <button class="btn buttonDesign buttonWork buttonLoginSize m-0">
-                    Sjá laus störf
+                        Sjá laus störf
                     </button>
                 </a>
             </div>
@@ -79,7 +79,7 @@
     <div class="container text-center pt-5 pb-5">
         <h2 class="pb-3">Lærðu hvernig á að nota HiLives</h2>
         <div class="videoContainer" controls>
-            <iframe width="560" height="75" src="https://www.youtube.com/embed/SZqio3YCUNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="75" src="https://www.youtube.com/embed/3CLTV0HeUq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </section>
