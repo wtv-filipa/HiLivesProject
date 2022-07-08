@@ -122,7 +122,7 @@ $stmt = mysqli_stmt_init($link);
                                         <div class="row">
                                             <label class="boldFont mt-3 pb-2" for="regiao">Svæði þar sem mig langar að læra eða vinna <span class="asterisk">*</span></label>
                                             <?php
-                                            $query = "SELECT idRegion, name_region FROM region
+                                            $query = "SELECT idRegion, name_region_is FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
                                                       WHERE name_country = 'Portugal'";
                                             $stmt = mysqli_stmt_init($link);
@@ -151,7 +151,7 @@ $stmt = mysqli_stmt_init($link);
                                         <div class="row">
                                             <label class="boldFont mt-3 pb-2" for="regiao">Svæði þar sem mig langar að læra eða vinna <span class="asterisk">*</span></label>
                                             <?php
-                                            $query = "SELECT idRegion, name_region FROM region
+                                            $query = "SELECT idRegion, name_region_is FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
                                                       WHERE name_country = 'Espanha'";
                                             $stmt = mysqli_stmt_init($link);
@@ -180,7 +180,7 @@ $stmt = mysqli_stmt_init($link);
                                         <div class="row">
                                             <label class="boldFont mt-3 pb-2" for="regiao">Svæði þar sem mig langar að læra eða vinna <span class="asterisk">*</span></label>
                                             <?php
-                                            $query = "SELECT idRegion, name_region FROM region
+                                            $query = "SELECT idRegion, name_region_is FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
                                                       WHERE name_country = 'Bélgica'";
                                             $stmt = mysqli_stmt_init($link);
@@ -209,7 +209,7 @@ $stmt = mysqli_stmt_init($link);
                                         <div class="row">
                                             <label class="boldFont mt-3 pb-2" for="regiao">Svæði þar sem mig langar að læra eða vinna <span class="asterisk">*</span></label>
                                             <?php
-                                            $query = "SELECT idRegion, name_region FROM region
+                                            $query = "SELECT idRegion, name_region_is FROM region
                                                       INNER JOIN country ON region.country_idcountry = country.idcountry
                                                       WHERE name_country = 'Islândia'";
                                             $stmt = mysqli_stmt_init($link);
